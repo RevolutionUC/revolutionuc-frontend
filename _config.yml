@@ -1,0 +1,6 @@
+title: RevolutionUC
+description: "Student Hackathon held at the University of Cincinnati - March 3rd and 4th, 2017"
+
+sass:
+  sass_dir: _scss
+  style: :compressed

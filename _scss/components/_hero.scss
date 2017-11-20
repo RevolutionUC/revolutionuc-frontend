@@ -1,0 +1,19 @@
+.hero__wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 72px;
+    height: 85vh; // this essentially says 'lets use 85% height on .hero__wrapper'
+    background-color: $purple-light;
+    color: $white;
+}
+
+.hero {
+    .hero__heading {
+        margin: 0;
+    }
+
+    p {
+        margin: 0;
+    }
+}

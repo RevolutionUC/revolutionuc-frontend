@@ -1,0 +1,36 @@
+.btn {
+    display: inline-block;
+    margin: 0;
+    padding: 16px 20px;
+    background-color: $purple;
+    color: $white;
+    text-decoration: none;
+    font-size: $btn-font-size;
+    margin-bottom: 1rem;
+
+    &.btn--primary {
+        background-color: $purple;
+
+        &:hover {
+            background-color: darken($purple, 10%);
+        }
+    }
+
+    &.btn--secondary {
+        background-color: $grey;
+        color: $purple-light;
+
+        &:hover {
+            background-color: darken($grey, 10%);
+        }
+    }
+
+    &.btn--tertiary {
+        background-color: $purple-light;
+        color: $white;
+
+        &:hover {
+            background-color: darken($purple-light, 10%);
+        }
+    }
+}

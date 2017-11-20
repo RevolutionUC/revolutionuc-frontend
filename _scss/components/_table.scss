@@ -1,0 +1,15 @@
+.table {
+    &.table--past-hacks {
+        margin: 0 auto;
+
+        tr {
+            td {
+                text-align: center;
+            }
+        }
+
+        .past__hacks__image {
+            max-width: 100px;
+        }
+    }
+}
