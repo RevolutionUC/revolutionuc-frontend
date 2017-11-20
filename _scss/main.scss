@@ -1,11 +1,16 @@
 @import "variables";
 
+@import "neat"; // neat.bourbon.io
+
 @import "normalize";
+@import "fonts";
+
+@import "type/base";
 
 @import "layout/container";
 @import "layout/grid";
-@import "fonts";
 
+@import "components/section";
 @import "components/btn";
 @import "components/backgrounds";
 @import "components/hero";

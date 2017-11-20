@@ -1,10 +1,11 @@
 .call-to-action {
-    padding-top: 70px;
-    padding-bottom: 70px;
-
     p {
         color: $grey;
         margin-top: 16px;
         margin-bottom: 30px;
+    }
+
+    a {
+        color: inherit;
     }
 }
