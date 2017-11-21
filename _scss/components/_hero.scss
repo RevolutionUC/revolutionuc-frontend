@@ -1,11 +1,27 @@
 .hero__wrapper {
+    $hero-height: 95vh; // this essentially says 'lets use 90% height on .hero__wrapper'
+
     display: flex;
     flex-direction: column;
     justify-content: center;
     padding-top: 72px;
-    height: 85vh; // this essentially says 'lets use 85% height on .hero__wrapper'
-    background-color: $purple-light;
+    height: $hero-height;
+    min-height: 450px;
+    background-color: rgba($color: $purple, $alpha: 0.45);
     color: $white;
+
+    video {
+        // position: absolute;
+        // top: 0;
+        z-index: -1;
+        // width: 100%;
+        object-fit: cover;
+        width: 100vw;
+        height: $hero-height;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
 }
 
 .hero {
@@ -15,5 +31,9 @@
 
     p {
         margin: 0;
+    }
+
+    .btn {
+        margin-top: 1rem;
     }
 }

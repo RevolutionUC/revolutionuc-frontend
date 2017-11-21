@@ -2,22 +2,31 @@
     width: 100%;
     line-height: 1;
     position: fixed;
-    background-color: rgba($grey, 0.75);
-    padding-top: 16px;
-    padding-bottom: 16px;
+    z-index: 1;
+    // background-color: rgba($purple, 0.65);
+    padding: 0;
+    margin: 0;
 
     .header__container {
         margin: 0 auto;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
     }
 
     .header__title {
         display: inline-block;
         margin: 0;
+        line-height: 0;
+    }
+
+    .header__logo {
+        max-width: 125px;
     }
 
     .navbar {
         display: inline-block;
         float: right;
+        margin-top: 50px;
 
         ul {
             // display: inline-block;

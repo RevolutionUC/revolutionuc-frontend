@@ -4,6 +4,11 @@
     padding: 0 $padding;
     margin: 0 auto;
 
+    // serves as a larger container
+    &.container--large {
+        max-width: $container-width-large;
+    }
+
     // serves as a smaller container for some use cases (such as .hero)
     &.container--small {
         max-width: $container-width-small;
