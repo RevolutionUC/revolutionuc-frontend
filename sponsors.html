@@ -3,40 +3,22 @@ layout: default
 title: Home
 ---
 
-<section class="container row page--sponsors">
-    <div class="columns-12">
+<section class="container">
         <img src="/img/sponsors.jpg" alt="Thanks to our sponsors">
 
         <h1>Sponsors</h1>
         <p class="lead">A special thanks to the organizations that make RevolutionUC possible.</p>
-
-        <div class="row row--sponsors-logos">
-            <div class="columns-6">
-                <a href="https://www.8451.com/" target="_blank">
-                    <img src="https://revolutionuc.com/imgs/8451.png" alt="84.51 logo">
-                </a>
-            </div>
-            <div class="columns-6">
-                <a href="https://www.vantiv.com/" target="_blank">
-                    <img src="https://revolutionuc.com/imgs/Vantiv.jpg" alt="Vantiv logo">
-                </a>
-            </div>
-            <!-- <div class="columns-2"></div> -->
+</section>
+<section class="container section">
+        <div class="flex">
+            {% for sponsor in site.data.sponsors %}
+                <div class="sponsor-image">
+                    <a href="{{ sponsor.link }}" target="_blank">
+                        <img src="{{ sponsor.image }}" alt="{{ sponsor.name }} logo">
+                    </a>
+                </div>
+            {% endfor %}
         </div>
-
-        <div class="row row--sponsors-logos">
-            <div class="columns-6">
-                <a href="https://acmatuc.org/" target="_blank">
-                    <img src="https://acmatuc.org/assets/acmatuclogo.png" alt="ACM@UC logo">
-                </a>
-            </div>
-            <div class="columns-6">
-                <a href="https://mlh.io/about" target="_blank">
-                    <img src="https://static.mlh.io/brand-assets/logo/official/mlh-logo-color.png" alt="MLH logo">
-                </a>
-            </div>
-        </div>
-    </div>
 </section>
 
 <section class="background-purple-light">

@@ -4,26 +4,26 @@ title: Home
 ---
 
 <main>
-    <a name="main"/>
+    <a name="main"></a>
     <section class="container">
         <!-- <img src="/img/photo1.jpg" style="max-width: 100%" alt=""> -->
     </section>
     <br><br>
 
-    <section class="container row">
-        <div class="columns-4">
+    <section class="container row flex">
+        <div class="image">
             <img src="/img/photo1.jpg" alt="Photo taken at RevolutionUC">
         </div>
-        <div class="columns-8">
+        <div class="text">
             <p>RevolutionUC is a 24 hour student hackathon at the University of Cincinnati that is organized by <a href="http://acmatuc.org/" target="_blank">ACM@UC</a>. This year, RevolutionUC is on March 3rd and 4th. We invite you to join 300+ motivated students for a weekend of code, community, and self-improvement!</p>
         </div>
     </section>
 
-    <section class="container row">
-        <div class="columns-6">
+    <section class="container row flex">
+        <div class="text">
             <p>A hackathon is an 24 hour event where teams work together to build and learn something new to solve a problem, and have fun doing it! that Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum placeat nihil maiores enim. Deserunt tempora a, illo fugit ex rerum praesentium autem voluptas, sint, assumenda quaerat magni voluptatibus ab voluptatem!</p>
         </div>
-        <div class="columns-4">
+        <div class="image">
             <img src="/img/photo1.jpg" alt="Photo taken at RevolutionUC">
         </div>
     </section>
@@ -43,52 +43,22 @@ title: Home
         <div class="container container--small">
             <p>RevolutionUC has been a leader in the Cincinnati hacker community since our first event in 2014. Check out submissions from our previous hackathons.</p>
 
-            <table class="table table--past-hacks">
-                <tbody>
-                    <tr>
-                        <td>
-                            <a href="https://revolutionuc.devpost.com/" target="_blank">
-                                <img class="past__hacks__image" src="/img/revuc-logos/revuc-fall-2014.png" alt="RevolutionUC Fall 2014 logo">
+            <div class="past-hacks">
+                {% for hack in site.data.past-hacks %}
+                <div class="hack">
+                    {% if hack.link != null %}
+                        <div>
+                            <a href="{{hack.link}}" target="_blank">
+                                <img class="past__hacks__image" src="{{ hack.image }}" alt="{{ hack.name }} logo">
                             </a>
-                        </td>
-                        <td>
-                                <a href="https://revuc-iii.devpost.com/submissions" target="_blank">
-                                    <img class="past__hacks__image" src="/img/revuc-logos/revuc-spring-2015.png" alt="RevolutionUC Spring 2015 logo">
-                                </a>
-                            </td>
-                        <td>2015F</td>
-                        <td>
-                            <a href="https://revolutionuc-iv.devpost.com/submissions" target="_blank">
-                                <img class="past__hacks__image" src="/img/revuc-logos/revuc-spring-2016.png" alt="RevolutionUC Spring 2016 logo">
-                            </a>
-                        </td>
-                        <td>
-                            <a href="https://revolutionuc1.devpost.com/submissions" target="_blank">
-                                <img class="past__hacks__image" src="/img/revuc-logos/revuc-fall-2016.png" alt="RevolutionUC Fall 2016 logo">
-                            </a>
-                        </td>
-                        <td>
-                            <a href="https://revuc-vi.devpost.com/submissions" target="_blank">
-                                <img class="past__hacks__image" src="/img/revuc-logos/revuc-spring-2017.png" alt="RevolutionUC Spring 2017 logo">
-                            </a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>2014</td>
-                        <td>2015S</td>
-                        <td>2015F</td>
-                        <td>
-                            <a href="https://revolutionuc-iv.devpost.com/submissions" target="_blank">2016S</a>
-                        </td>
-                        <td>
-                            <a href="https://revolutionuc1.devpost.com/submissions" target="_blank">2016F</a>
-                        </td>
-                        <td>
-                            <a href="https://revuc-vi.devpost.com/submissions" target="_blank">2017</a>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
+                        </div>
+                    <div><a href="{{hack.link}}" target="_blank">{{hack.time}}</a></div>
+                    {% else %}
+                    <div>{{hack.time}}</div>
+                    {% endif %}
+                </div>
+                {% endfor %}
+            </div>
         </div>
     </section>
 

@@ -57,10 +57,11 @@
 
   .btn {
     margin-top: 1rem;
+    margin-right: 10px;
   }
 }
 
-@media (max-width: $x-small-breakpoint) {
+@media (max-width: $small-breakpoint) {
   // fixes issue with the buttons breaking lines on very small screens
   .hero {
     .btn {

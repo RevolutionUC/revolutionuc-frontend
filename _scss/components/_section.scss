@@ -1,9 +1,39 @@
 .section,
 section {
-    padding-top: 70px;
-    padding-bottom: 70px;
+  padding-top: 70px;
+  padding-bottom: 70px;
 
-    img {
-        border-radius: 6px;
-    }
+  img,
+  .masthead {
+    border-radius: 6px;
+  }
+  .masthead {
+    height: calc(75vh - 80px);
+    width: 100%;
+    background-size: cover;
+  }
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  .image,
+  .text,
+  .sponsor-image {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .image {
+    flex: 1 1 33%;
+    min-width: 200px;
+  }
+  .text {
+    flex: 2 2 66%;
+  }
+  .sponsor-image {
+    max-width: 400px;
+    min-width: 200px;
+  }
 }
