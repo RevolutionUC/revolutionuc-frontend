@@ -1,0 +1,23 @@
+{% include header.html %}
+
+<section class="hero__wrapper">
+    <div class="hero container container--small">
+        <h1 class="hero__heading">RevolutionUC</h1>
+        <p>Student Hackathon at the University of Cincinnati</p>
+        <p>March 3rd &amp; 4th, 2018</p>
+
+        <div class="hero__heading">
+            <a class="btn btn--primary" href="/register">Register Now</a> &nbsp;
+            <a class="btn btn--secondary" href="/about">Learn More</a>
+        </div>
+    </div>
+
+    <video poster="https://d1scc4yo7jg7j0.cloudfront.net/background-video-thumbnail.jpg" preload="meta" autoplay loop>
+        <!--<source src="/background-video-vp8.webm" type="video/webm">-->
+        <source src="https://d1scc4yo7jg7j0.cloudfront.net/background-video.mp4" type="video/mp4">
+    </video>
+</section>
+
+{{ content }}
+
+{% include footer.html %}

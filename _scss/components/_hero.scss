@@ -4,7 +4,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding-top: 72px;
+    padding-top: 125px;
     height: $hero-height;
     min-height: 450px;
     background-color: rgba($color: $purple, $alpha: 0.45);
@@ -18,6 +18,7 @@
         object-fit: cover;
         width: 100vw;
         height: $hero-height;
+        max-height: $hero-height;
         position: absolute;
         top: 0;
         left: 0;

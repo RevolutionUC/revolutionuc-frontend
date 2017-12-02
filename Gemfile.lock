@@ -32,8 +32,6 @@ GEM
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
     mercenary (0.3.6)
-    minima (2.1.1)
-      jekyll (~> 3.3)
     neat (2.1.0)
       sass (~> 3.4)
       thor (~> 0.19)
@@ -56,11 +54,10 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  bourbon
+  bourbon (= 4.3.4)
   jekyll (= 3.5.0)
   jekyll-feed (~> 0.6)
-  minima (~> 2.0)
-  neat
+  neat (= 2.1.0)
   tzinfo-data
 
 BUNDLED WITH

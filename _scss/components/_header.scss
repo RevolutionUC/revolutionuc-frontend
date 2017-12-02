@@ -2,8 +2,11 @@
     width: 100%;
     line-height: 1;
     position: fixed;
+    top: 0;
+    left: 0;
     z-index: 1;
-    // background-color: rgba($purple, 0.65);
+    background-color: transparent;
+    // background-color: rgba($color: $purple, $alpha: 0.05);
     padding: 0;
     margin: 0;
 
@@ -20,13 +23,13 @@
     }
 
     .header__logo {
-        max-width: 125px;
+        max-width: 100px;
     }
 
     .navbar {
         display: inline-block;
         float: right;
-        margin-top: 50px;
+        margin-top: 42px;
 
         ul {
             // display: inline-block;
@@ -38,21 +41,19 @@
                 display: inline-block;
     
                 a {
-                    color: $grey;
+                    color: $black;
                     text-decoration: none;
                     padding: $btn-padding;
                     font-size: 17px;
 
-                    &:hover {
+                    &:hover, &.navbar__active {
                         background-color: $purple;
-                    }
-
-                    &.navbar__active {
-                        background-color: $purple;
+                        color: $grey;
                     }
 
                     &.navbar__register {
                         background-color: $purple-light;
+                        color: $grey;
 
                         &:hover {
                             background-color: darken($purple-light, 10%);

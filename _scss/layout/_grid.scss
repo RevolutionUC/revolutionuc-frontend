@@ -24,6 +24,10 @@
         @include grid-column(1);
     }
 
+    .columns-shift-2 {
+        @include grid-shift(2);
+    }
+
     .columns-6,
     .columns-5,
     .columns-4,
