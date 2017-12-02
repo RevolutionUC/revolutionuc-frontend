@@ -1,35 +1,46 @@
-*, ::after, ::before {
-    box-sizing: border-box;
+*,
+::after,
+::before {
+  box-sizing: border-box;
 }
 
 html {
-    font-family: $body-font-family;
-    color: $black;
-    font-size: $base-font-size;
-    line-height: 1.5;
-    overflow-x: hidden;
-    background-color: $grey;
+  font-family: $body-font-family;
+  color: $black;
+  font-size: $base-font-size;
+  line-height: 1.5;
+  overflow-x: hidden;
+  background-color: $grey;
 }
 
-h1, h2, h3, h4, h5, h6 {
-    font-family: $heading-font-family;
+body {
+  overflow: hidden; // to accomodate elements wider than the screen
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $heading-font-family;
 }
 
 .text-center {
-    text-align: center;
+  text-align: center;
 }
 
 img {
-    margin: 0;
-    max-width: 100%;
+  margin: 0;
+  max-width: 100%;
 }
 
 p {
-    a {
-        color: $purple;
-    }
+  a {
+    color: $purple;
+  }
 
-    &.lead {
-        font-size: $lead-font-size;
-    }
+  &.lead {
+    font-size: $lead-font-size;
+  }
 }

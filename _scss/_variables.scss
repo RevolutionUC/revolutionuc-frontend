@@ -2,23 +2,20 @@
 $white: #fff;
 $black: #333;
 $grey: #f9f9f9;
-$purple: #3754A5;
-$purple-light: #9BA7CE;
+$purple: #3754a5;
+$purple-light: #9ba7ce;
 
 $body-background-color: $grey;
 
-
 // Fonts
-$body-font-family: 'Lato', sans-serif;
-$heading-font-family: 'Josefin Sans', sans-serif;
+$body-font-family: "Lato", sans-serif;
+$heading-font-family: "Josefin Sans", sans-serif;
 $base-font-size: 20px;
 $lead-font-size: 22px;
-
 
 // Buttons
 $btn-font-size: 22px;
 $btn-padding: 16px 20px;
-
 
 // Container
 $container-width: 850px;
@@ -26,7 +23,7 @@ $container-width-small: 700px;
 $container-width-large: 950px;
 $padding: 20px;
 
-
 // Breakpoints
+$x-small-breakpoint: 350px;
 $small-breakpoint: 560px;
 $medium-breakpoint: 790px;

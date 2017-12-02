@@ -1,40 +1,70 @@
 .hero__wrapper {
-    $hero-height: 95vh; // this essentially says 'lets use 90% height on .hero__wrapper'
+  $hero-height: 100vh; // this essentially says 'lets use 90% height on .hero__wrapper'
 
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding-top: 125px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: $hero-height;
+  min-height: 450px;
+  padding: 0;
+  background-color: rgba($color: $purple, $alpha: 0.45);
+  color: $white;
+  overflow: hidden;
+
+  video {
+    // position: absolute;
+    // top: 0;
+    z-index: -1;
+    // width: 100%;
+    object-fit: cover;
+    width: 100%;
     height: $hero-height;
-    min-height: 450px;
-    background-color: rgba($color: $purple, $alpha: 0.45);
-    color: $white;
+    max-height: $hero-height;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
 
-    video {
-        // position: absolute;
-        // top: 0;
-        z-index: -1;
-        // width: 100%;
-        object-fit: cover;
-        width: 100vw;
-        height: $hero-height;
-        max-height: $hero-height;
-        position: absolute;
-        top: 0;
-        left: 0;
-    }
+.down-chevron {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: block;
+  text-align: center;
+  font-size: 5em;
+  margin: 0 auto;
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: $purple;
+  }
 }
 
 .hero {
-    .hero__heading {
-        margin: 0;
-    }
+  .hero__heading {
+    margin: 0;
+  }
 
-    p {
-        margin: 0;
-    }
+  p {
+    margin: 0;
+  }
 
+  .btn {
+    margin-top: 1rem;
+  }
+}
+
+@media (max-width: $x-small-breakpoint) {
+  // fixes issue with the buttons breaking lines on very small screens
+  .hero {
     .btn {
-        margin-top: 1rem;
+      margin-bottom: 0;
     }
+  }
 }
