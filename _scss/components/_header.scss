@@ -6,7 +6,6 @@
   left: 0;
   z-index: 1;
   background-color: rgba(96, 118, 176, 0.97);
-  // background-color: rgba($color: $purple, $alpha: 0.05);
   padding: 0;
   margin: 0;
 
@@ -84,6 +83,8 @@
 
 @media (max-width: $medium-breakpoint) {
   .header {
+    line-height: 35px;
+
     .header__container {
       display: flex;
       justify-content: space-between;
@@ -102,7 +103,7 @@
         margin-top: 0;
 
         ul {
-          margin-top: 100px;
+          margin-top: 70px;
           text-align: right;
 
           li {
@@ -115,6 +116,10 @@
             }
           }
         }
+      }
+
+      .header__logo {
+        max-width: 50px;
       }
 
       // Toggle for the mobile nav menu
