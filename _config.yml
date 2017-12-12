@@ -6,4 +6,4 @@ sass:
   style: :compressed
 
 # items to exclude from the build
-exclude: ["README.md", "Gemfile", "Gemfile.lock", "README.md"]
+exclude: ["vendor", "README.md", "Gemfile", "Gemfile.lock", "README.md"]
