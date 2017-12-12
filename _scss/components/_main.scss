@@ -1,3 +1,7 @@
 .main {
     padding-top: 135px;
+
+    @media (max-width: $medium-breakpoint) {
+        padding-top: 95px;
+    }
 }

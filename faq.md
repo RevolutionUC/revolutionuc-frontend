@@ -1,4 +1,8 @@
-# FAQ
+---
+layout: default
+title: FAQ
+image: "/img/sponsors.jpg"
+---
 
 ### What is a hackathon?
 
@@ -55,14 +59,14 @@ parent/guardian sign the waiver.
 
 ### Where at the University of Cincinnati is the hackathon?
 
-The hackerspace will be located in Rhodes Hall. Look out for an email before the
+The hackerspace is located in [Rhodes Hall](https://www.uc.edu/content/dam/common/docs/maps/campus_map_west.pdf). Look out for an email before the
 hackathon for specific rooms and where to go when you arrive on campus.
 
 ### Where do I park?
 
-UC has plenty of parking garages! For a full list, check out UC’s Maps and
-Visitor Info page. The hackathon occurs on West Campus, so we would recommend
-parking at Woodside Garage or Campus Green Garage.
+UC has plenty of parking garages! For a full list, check out UC’s [Maps and
+Visitor Info page](https://www.uc.edu/parking/visitors-maps.html). The hackathon occurs on West Campus, so we would recommend
+parking at [Woodside Garage](https://www.uc.edu/parking/visitors-maps.html#wa) or [Campus Green Garage](https://www.uc.edu/parking/visitors-maps.html#cg).
 
 ### What should I bring?
 
@@ -77,15 +81,15 @@ a Wi-Fi connection.
 We offer carpool reimbursement on a case by case basis - receipts must be
 provided to receive travel reimbursement. We don’t offer reimbursement for
 flights. If you’d like more information please do not hesitate to email us at
-info@revolutionuc.com.
+[info@revolutionuc.com](mailto:info@revolutionuc.com).
 
 ### What if I have more questions?
 
 We will have organizers and volunteers present, so don't be shy and ask away!
-Feel free to tweet at us at @Revolution_UC with the hashtag #AskRevUC or send an
-email to info@revolutionuc.com.
+Feel free to tweet at us at [@Revolution_UC](http://www.twitter.com/Revolution_UC) with the hashtag #AskRevUC or send an
+email to [info@revolutionuc.com](mailto:info@revolutionuc.com).
 
 ### Is there a Code of Conduct?
 
-Absolutely! We operate on the Major League Hacking Code of Conduct to create an
+Absolutely! We operate on the [Major League Hacking Code of Conduct](https://static.mlh.io/docs/mlh-code-of-conduct.pdf) to create an
 all-inclusive environment for our hackers.

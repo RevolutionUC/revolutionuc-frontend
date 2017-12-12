@@ -42,5 +42,9 @@ p {
 
   &.lead {
     font-size: $lead-font-size;
+
+    @media (max-width: $medium-breakpoint) {
+      font-size: $lead-font-size * 0.8;
+    }
   }
 }

@@ -1,24 +1,21 @@
 ---
 layout: default
-title: Home
+title: Sponsors
+subtitle: "A special thanks to the organizations that make RevolutionUC possible"
+image: "/img/sponsors.jpg"
+useContainer: false
 ---
 
-<section class="container">
-        <img src="/img/sponsors.jpg" alt="Thanks to our sponsors">
-
-        <h1>Sponsors</h1>
-        <p class="lead">A special thanks to the organizations that make RevolutionUC possible.</p>
-</section>
 <section class="container section">
-        <div class="flex">
-            {% for sponsor in site.data.sponsors %}
-                <div class="sponsor-image">
-                    <a href="{{ sponsor.link }}" target="_blank">
-                        <img src="{{ sponsor.image }}" alt="{{ sponsor.name }} logo">
-                    </a>
-                </div>
-            {% endfor %}
-        </div>
+    <div class="flex">
+        {% for sponsor in site.data.sponsors %}
+            <div class="sponsor-image">
+                <a href="{{ sponsor.link }}" target="_blank">
+                    <img src="{{ sponsor.image }}" alt="{{ sponsor.name }} logo">
+                </a>
+            </div>
+        {% endfor %}
+    </div>
 </section>
 
 <section class="background-purple-light">

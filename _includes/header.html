@@ -3,8 +3,19 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>{{ page.title }} | {{ site.title }}</title>
-        <meta name="description" content="{{ description }}">
+
+        {% if page.title %}
+            <title>{{ page.title }} | {{ site.title }}</title>
+        {% else %}
+            <title>{{ site.title }}</title>
+        {% endif %}
+
+        {% if page.description %}
+            <meta name="description" content="{{ page.description }}">
+        {% else %}
+            <meta name="description" content="{{ description }}">
+        {% endif %}
+
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon/favicon-32x32.png">
