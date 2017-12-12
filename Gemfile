@@ -3,6 +3,7 @@ source "https://rubygems.org"
 # Use `bundle exec jekyll serve` to start the dev server
 
 gem "jekyll", "3.5.0"
+gem "html-proofer", "3.7.5"
 
 group :jekyll_plugins do
     gem "jekyll-feed", "~> 0.6"
