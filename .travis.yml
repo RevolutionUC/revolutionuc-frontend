@@ -5,6 +5,9 @@ python:
   - 3.6.3
 sudo: false
 exclude: [vendor]
+cache:
+  - bundler
+  - pip
 
 matrix:
   fast_finish: true
