@@ -1,6 +1,7 @@
 ---
 layout: default
 title: FAQ
+permalink: /faq/
 image: "/img/sponsors.jpg"
 ---
 
