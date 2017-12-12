@@ -1,0 +1,42 @@
+language: ruby
+rvm:
+  - 2.3.3
+python:
+  - 3.6.3
+sudo: false
+exclude: [vendor]
+
+matrix:
+  fast_finish: true
+  include:
+     - env: JOB=jekyll_run
+       script:
+         - bundle exec jekyll build
+     - env:
+         - JOB=lint_and_validation
+         - NOKOGIRI_USE_SYSTEM_LIBRARIES=true # speeds up installation of html-proofer
+       script:
+         - bundle exec jekyll build
+         - bundle exec htmlproofer ./_site
+  allow_failures:
+    - env: 
+       - JOB=lint_and_validation
+       - NOKOGIRI_USE_SYSTEM_LIBRARIES=true
+
+before_deploy:
+  - pip install --user awscli
+  - export PATH=$PATH:$HOME/.local/bin
+
+deploy:
+  provider: script
+  script: aws s3 sync ./_site s3://test.revolutionuc.com --region=us-east-2 --delete
+  skip_cleanup: true
+  on:
+    branch: master
+
+notifications:
+  slack: 
+    secure: "NADV/fRkspQo7iiVJtE69YFTv5y0dIivn1BBNiPo46HHGh8eIPCLaKyQwRohtvAFKmtyzmrx7Fe0jXxYI/FrJZuhQe5U5fF2lMLjDXGUOuEKyv09PbC6hXJtzP5LtAX7w43/5Ng4O6gvPlILFITSNEIW2cJjM7Pux74wn4HsXefbVgwKw/nOiyeAXNktRI8IrRBzo2mZudr+59OWHJ8FKCm343CQLyxSdyuh9uNL5B21FpIBLUHv3F1D5I8qbUL3DwTvJbZpx0wAKa0lFiy02nQ8HSyeMcw43DH0KvdY26SYNJ9jwJlQ+9lhf/QRxwT2lpWWRU70dUu/3R3ypdPGBmxFdti2NjjYPEEKKlP/PV/6z9JL/CL+Sc1wc2ddQDjaCQ2TA1S/JJg5ysKlnBYtfg3GSYj2PUKdRAr9vHlPlEHg2gTr6POvi3tb5xJm0znjB35qf7I/okWkKiZa6gF0L1lZDDHctj55OswwyysWxJvoP2LHNEHr8MCQWm75BDF6fPHck9bOdXr9svJtzs1TiWzpVOC26VpMTz5VVr3zzppgIap281SLzdAgQfSNaTuFWC9k1DFsoFN7PYsOzbZ+Oe5wNhqeWRKGVn09JmUGevlz/fEQ47zsKNesJo+rIQfydW7fpAI8zZBOEM2aW7bl9+tdkZGm68gZZlIeLY/NTd0="
+    on_success: change
+    on_failure: always
+  email: false
