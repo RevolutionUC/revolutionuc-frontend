@@ -41,12 +41,13 @@
                 </label>
 
                 <nav class="navbar">
+                    {% assign current = page.url | downcase | split: '/' %}  
                     <ul>
-                        <li><a class="navbar__active" href="/">Home</a></li>
-                        <!--<li><a href="/schedule">Schedule</a></li>-->
-                        <li><a href="/sponsors">Sponsors</a></li>
-                        <li><a href="/about">About</a></li>
-                        <li><a href="/faq">FAQ</a></li>
+                        <li><a {% if current == empty %} class="navbar__active" {% endif %} href="/">Home</a></li>
+                        <!--<li><a {% if current[1] == 'schedule' %} class="navbar__active" {% endif %} href="/schedule">Schedule</a></li>-->
+                        <li><a {% if current[1] == 'sponsors' %} class="navbar__active" {% endif %} href="/sponsors">Sponsors</a></li>
+                        <li><a {% if current[1] == 'about' %} class="navbar__active" {% endif %} href="/about">About</a></li>
+                        <li><a {% if current[1] == 'faq' %} class="navbar__active" {% endif %} href="/faq">FAQ</a></li>
                         <li><a class="navbar__register" href="/register">Register</a></li>
                     </ul>
                 </nav>
