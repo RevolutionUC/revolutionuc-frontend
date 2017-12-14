@@ -1,5 +1,5 @@
 .header {
-  width: 100%;
+  width: 100vw;
   line-height: 1;
   position: fixed;
   top: 0;
@@ -149,5 +149,10 @@
         transform: translateX(-100%);
       }
     }
+  }
+}
+@media(max-width: $medium-breakpoint) {
+  #mlh-trust-badge {
+    right: 25vw !important;
   }
 }
