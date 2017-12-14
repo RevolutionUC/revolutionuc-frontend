@@ -1,4 +1,6 @@
 .row {
+    width: 100%;
+    margin: 0 auto;
     @include grid-container;
   
     &.row--collapse {
@@ -32,10 +34,11 @@
     .columns-5,
     .columns-4,
     .columns-3, {
-    @media (max-width: $small-breakpoint) {
-        @include grid-column(12);
+        @media (max-width: $small-breakpoint) {
+            @include grid-column(12);
             width: 100% !important; // fixes a bug with last columns not being 100%
             float: none;
+            margin-left: 0;
         }
     }
 }
