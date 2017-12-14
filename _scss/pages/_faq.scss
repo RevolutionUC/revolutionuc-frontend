@@ -1,0 +1,17 @@
+.page--faq {
+    .faq__buttons {
+        color: darken($color: $white, $amount: 40%);
+
+        a {
+            color: inherit;
+        }
+    }
+
+    details {
+        margin-top: 24px;
+
+        summary {
+            cursor: pointer;
+        }
+    }
+}
