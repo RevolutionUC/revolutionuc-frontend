@@ -3,9 +3,13 @@
 }
 
 .row--sponsors-logos {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
     img {
-        display: block;
-        margin: 0 auto;
+        flex: 0 0 50%;
+        margin: 10px;
         max-width: 100%;
     }
 }
