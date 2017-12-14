@@ -15,5 +15,22 @@
         <script src="/js/video.js"></script>
         <script src="/js/scroll-chevron.js"></script>
         {% endif %}
+
+        {% if page.url == "/faq/" %}
+        <script>
+            const details = Array.prototype.slice.call(document.getElementsByTagName('details'), 0);
+            const expandAllButton = document.getElementsByClassName('expand-all')[0];
+            const collapseAllButton = document.getElementsByClassName('collapse-all')[0];
+            expandAllButton.onclick = function (event) {
+                event.preventDefault ? event.preventDefault() : event.returnValue = false;
+                details.forEach(function (item) { item.setAttribute('open', true) });
+            };
+            collapseAllButton.onclick = function (event) {
+                event.preventDefault ? event.preventDefault() : event.returnValue = false;
+                details.forEach(function (item) { item.removeAttribute('open') });
+            };
+        </script>
+        <script src="/js/vendor/details-element-polyfill.min.js"></script>
+        {% endif %}
     </body>
 </html>
