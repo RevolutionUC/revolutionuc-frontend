@@ -1,7 +1,9 @@
 .main {
     padding-top: 135px;
-    background-color: $body-background-color;
     @media (max-width: $medium-breakpoint) {
         padding-top: 95px;
     }
+}
+main {
+    background-color: $body-background-color;
 }
