@@ -11,5 +11,5 @@ Be sure you have [Jekyll](https://jekyllrb.com/), a static site builder, install
 git clone git@github.com:RevolutionUC/revolutionuc-frontend.git
 cd revolutionuc-frontend
 bundle install
-bundle exec jekyll serve
+rake #runs bundle exec jekyll serve
 ```
