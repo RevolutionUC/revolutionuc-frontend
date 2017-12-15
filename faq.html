@@ -1,0 +1,15 @@
+---
+layout: default
+title: FAQ
+permalink: /faq/
+image: "/img/faq.jpg"
+---
+
+<p class="faq__buttons"><small><a href="#" class="expand-all">expand all</a> | <a href="#" class="collapse-all">collapse all</a></small></p>
+
+{% for item in site.data.faq %}
+    <details>
+        <summary><strong>{{ item.q }}</strong></summary>
+        {{ item.a | markdownify }}
+    </details>
+{% endfor %}
