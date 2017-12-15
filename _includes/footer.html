@@ -15,5 +15,17 @@
         <script src="/js/video.js"></script>
         <script src="/js/scroll-chevron.js"></script>
         {% endif %}
+        <script type="text/javascript">
+        const menu_button = document.querySelector("#menu-toggle");
+        const mlh_badge = document.querySelector("#mlh-trust-badge"); 
+        menu_button.addEventListener( 'change', function() {
+            if(this.checked) {
+              mlh_badge.style.display = "none";
+            } 
+            else {
+              mlh_badge.style.display = "block";
+            }
+        });
+        </script>
     </body>
 </html>
