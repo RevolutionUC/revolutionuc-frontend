@@ -54,6 +54,16 @@ function header() {
   });
 
   checkScroll(last_known_scroll_position);
+  const menu_button = document.querySelector("#menu-toggle");
+  const mlh_badge = document.querySelector("#mlh-trust-badge");  
+  menu_button.addEventListener( 'change', function() {
+    if(this.checked) {
+      mlh_badge.style.display = "none";
+    } 
+    else {
+      mlh_badge.style.display = "block";
+    }
+});
 }
 
 header();
