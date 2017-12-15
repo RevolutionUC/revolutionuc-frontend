@@ -35,8 +35,24 @@ section {
     flex: 2 2 66%;
   }
   .sponsor-image {
-    padding: 10px;
-    flex: 1 1 50%;
-    min-width: 200px;
+    padding: 10px 20px;
+    flex-grow: 0;
+    flex-shrink: 0;
+
+    img {
+      height: 12vw;
+      min-height: 50px;
+      max-height: 90px;
+    }
+
+    * {
+      display: block;
+    }
   }
 }
+
+// @media (max-width: $x-small-breakpoint) {
+//   .main .section {
+//     padding: 20px 0;
+//   }
+// }
