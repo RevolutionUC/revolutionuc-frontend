@@ -3,20 +3,20 @@
   image: /img/revuc-logos/revuc-fall-2014.png
   name: RevolutionUC Fall 2014
 
-- time: 2015S
+- time: 2015
   link: https://revuc-iii.devpost.com/submissions
   image: /img/revuc-logos/revuc-spring-2015.png
   name: RevolutionUC Spring 2015
 
-- time: 2016S
+- time: 2016 Spring
   link: https://revolutionuc-iv.devpost.com/submissions
   image: /img/revuc-logos/revuc-spring-2016.png
-  name: RevolutionUC Fall 2016
+  name: RevolutionUC Spring 2016
 
-- time: 2016F
+- time: 2016 Fall
   link: https://revolutionuc1.devpost.com/submissions
   image: /img/revuc-logos/revuc-fall-2016.png
-  name: RevolutionUC Spring 2017
+  name: RevolutionUC Fall 2016
 
 - time: 2017
   link: https://revuc-vi.devpost.com/submissions
