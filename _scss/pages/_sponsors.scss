@@ -1,15 +1,23 @@
-.page--sponsors {
+.flex {
+  .sponsor-image {
+    display: flex;
+    padding: 10px 20px;
+    flex: 0 0 50%;
+    flex-grow: 0;
+    flex-shrink: 0;
+    justify-content: center;
 
+    img {
+      display: block;
+      height: 9.8vw;
+      min-height: 50px;
+      max-height: 90px;
+    }
+  }
 }
 
-.row--sponsors-logos {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
-    img {
-        flex: 0 0 50%;
-        margin: 20px;
-        max-width: 100%;
-    }
+@media (max-width: $small-breakpoint) {
+  .flex .sponsor-image {
+    flex: 0 0 100%;
+  }
 }
