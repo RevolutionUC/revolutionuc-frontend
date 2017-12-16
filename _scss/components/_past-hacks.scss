@@ -22,8 +22,8 @@
         width: 150px;
         filter: brightness(1);
         -webkit-transition: filter 300ms ease;
-            -ms-transition: filter 300ms ease;
-                transition: filter 300ms ease;
+        -ms-transition: filter 300ms ease;
+        transition: filter 300ms ease;
       }
 
       .hack__text {
@@ -38,12 +38,12 @@
           width: 100%;
           margin-top: initial;
           position: absolute;
-          top: 50%;
+          top: 46%;
           left: 50%;
-          transform: translate(-50%, -50%);
+          transform: translate(-50%, -46%);
           -webkit-transition: opacity 300ms ease;
-              -ms-transition: opacity 300ms ease;
-                  transition: opacity 300ms ease;
+          -ms-transition: opacity 300ms ease;
+          transition: opacity 300ms ease;
         }
       }
 
