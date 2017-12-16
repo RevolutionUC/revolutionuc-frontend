@@ -1,9 +1,13 @@
 title: RevolutionUC Spring 2018
 description: "Student Hackathon held at the University of Cincinnati - March 3rd and 4th, 2017"
+url: "http://revolutionuc.com"
 
 sass:
   sass_dir: _scss
   style: :compressed
 
 # items to exclude from the build
-exclude: ["vendor", "README.md", "Gemfile", "Gemfile.lock", "README.md"]
+exclude: ["vendor", "README.md", "Rakefile", "Gemfile", "Gemfile.lock", "LICENSE"]
+
+plugins:
+  - jekyll-sitemap
