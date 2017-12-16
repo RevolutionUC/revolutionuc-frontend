@@ -16,6 +16,8 @@ section {
 
 .flex {
   display: flex;
+  flex-direction: row;
+  align-items: center;
   justify-content: center;
   flex-wrap: wrap;
 
@@ -32,10 +34,10 @@ section {
   .text {
     flex: 2 2 66%;
   }
-  .sponsor-image {
-    max-width: 400px;
-    min-width: 200px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-  }
 }
+
+// @media (max-width: $x-small-breakpoint) {
+//   .main .section {
+//     padding: 20px 0;
+//   }
+// }
