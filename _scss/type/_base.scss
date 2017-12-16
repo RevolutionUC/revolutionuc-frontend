@@ -30,6 +30,14 @@ h6 {
   text-align: center;
 }
 
+.text-right {
+  text-align: right;
+
+  @media (max-width: $small-breakpoint) {
+    text-align: left;
+  }
+}
+
 img {
   margin: 0;
   max-width: 100%;

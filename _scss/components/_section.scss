@@ -1,7 +1,19 @@
-.section,
-section {
+.section, section {
   padding-top: 70px;
   padding-bottom: 70px;
+
+  @media (max-width: $small-breakpoint) {
+    padding-top: 35px;
+    padding-bottom: 35px;
+  }
+
+  &.section--no-padding-top {
+    padding-top: 0;
+  }
+
+  p {
+    margin-top: 0;
+  }
 
   img,
   .masthead {
@@ -18,20 +30,40 @@ section {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  
+  // reverse columns on smaller devices
+  &.flex--reverse-small {
+    @media (max-width: $small-breakpoint) {
+      flex-direction: column-reverse;
+    }
+  }
 
   .image,
   .text,
   .sponsor-image {
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
   }
+
   .image {
-    flex: 1 1 33%;
+    flex: 1 1 40%;
     min-width: 200px;
+    @include vertical-align;
   }
+
   .text {
-    flex: 2 2 66%;
+    flex: 2 2 60%;
+    @include vertical-align;
+
+    p {
+      margin: 0;
+
+      @media (max-width: $small-breakpoint) {
+        margin-top: 16px;
+      }
+    }
   }
+
   .sponsor-image {
     max-width: 400px;
     min-width: 200px;
