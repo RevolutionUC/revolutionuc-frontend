@@ -41,22 +41,18 @@ title: Home
 
     <section>
         <div class="container container--small">
-            <p>RevolutionUC has been a leader in the Cincinnati hacker community since our first event in 2014. Check out submissions from our previous hackathons.</p>
+            <p>RevolutionUC has been a leader in the Cincinnati hacker community since 2014. Check out submissions from previous hackathons.</p>
 
             <div class="past-hacks">
-                {% for hack in site.data.past-hacks %}
-                <div class="hack">
-                    {% if hack.link != null %}
-                        <div>
-                            <a href="{{hack.link}}" target="_blank">
+                {% for hack in site.data.past-hacks reversed %}
+                    <div class="hack hack--{{ hack.time | replace: ' ','-' }}">
+                        <div class="hack__image">
+                            <a href="{{ hack.link }}" target="_blank">
                                 <img class="past__hacks__image" src="{{ hack.image }}" alt="{{ hack.name }} logo">
+                                <div class="hack__text">{{ hack.time }}</div>
                             </a>
                         </div>
-                    <div><a href="{{hack.link}}" target="_blank">{{hack.time}}</a></div>
-                    {% else %}
-                    <div>{{hack.time}}</div>
-                    {% endif %}
-                </div>
+                    </div>
                 {% endfor %}
             </div>
         </div>

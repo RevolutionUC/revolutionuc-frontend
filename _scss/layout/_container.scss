@@ -18,3 +18,10 @@
         max-width: 100%;
     }
 }
+
+@media (max-width: $x-small-breakpoint) {
+    .main .container, .main.container {
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+}

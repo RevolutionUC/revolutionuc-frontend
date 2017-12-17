@@ -6,7 +6,7 @@ gem "jekyll", "3.5.0"
 gem "html-proofer", "3.7.5"
 
 group :jekyll_plugins do
-    gem "jekyll-feed", "~> 0.6"
+    gem "jekyll-sitemap", "1.1.1"
     gem "bourbon", "4.3.4"
     gem "neat", "2.1.0"
 end
