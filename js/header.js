@@ -20,17 +20,17 @@ function header() {
     var el = document.querySelector(".header");
     if (
       last_known_scroll_position >= transition_height &&
-      el.classList.contains("no-bg-header")
+      el.classList.contains("header--no-bg")
     ) {
-      removeClassFrom(el, "no-bg-header");
+      removeClassFrom(el, "header--no-bg");
       window.setTimeout(function() {
         ticking = false;
       }, 100);
     } else if (
       last_known_scroll_position < transition_height &&
-      !el.classList.contains("no-bg-header")
+      !el.classList.contains("header--no-bg")
     ) {
-      addClassTo(el, "no-bg-header");
+      addClassTo(el, "header--no-bg");
       window.setTimeout(function() {
         ticking = false;
       }, 100);
