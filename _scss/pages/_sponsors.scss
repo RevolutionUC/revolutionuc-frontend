@@ -1,3 +1,9 @@
+.page--sponsors {
+  .main {
+    background-color: $white;
+  }
+}
+
 .flex {
   .sponsor-image {
     display: flex;
@@ -12,6 +18,7 @@
       height: 9vw;
       min-height: 50px;
       max-height: 80px;
+      border-radius: 0;
     }
   }
 }
