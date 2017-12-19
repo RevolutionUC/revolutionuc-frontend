@@ -134,15 +134,15 @@
 
       label {
         display: inline-block;
-        font-size: 80px;
-        box-sizing: content-box;
-        vertical-align: middle;
-        color: white;
-        transform: scaleX(0.8);
+        line-height: 60px;
+        fill: $white;
+        -webkit-transition: fill $header-bg-transition-time ease;
+        -ms-transition: fill $header-bg-transition-time ease;
+        transition: fill $header-bg-transition-time ease;
       }
 
       input:checked ~ label {
-        color: black;
+        fill: $black;
       }
 
       input:checked ~ nav {
@@ -153,7 +153,4 @@
   #mlh-trust-badge {
     right: 25vw !important;
   }
-}
-@media(max-width: $medium-breakpoint) {
-
 }
