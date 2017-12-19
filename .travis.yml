@@ -32,7 +32,7 @@ before_deploy:
 
 deploy:
   provider: script
-  script: aws s3 sync ./_site s3://test.revolutionuc.com --region=us-east-2 --delete
+  script: aws s3 sync ./_site s3://revolutionuc.com --region=us-east-2 --delete
   skip_cleanup: true
   on:
     branch: master
