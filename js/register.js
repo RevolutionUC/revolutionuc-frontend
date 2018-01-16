@@ -33,7 +33,7 @@ class Registration {
     this._submitButton.disabled = true;
     this._submitButton.textContent = "Working...";
 
-    fetch('http://localhost:8080/registration/register', {
+    fetch('https://api.revolutionuc.com/registration/register', {
       method: 'POST',
       body: new FormData(this._formElement)
     })
