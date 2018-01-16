@@ -31,11 +31,16 @@ before_deploy:
   - export PATH=$PATH:$HOME/.local/bin
 
 deploy:
-  provider: script
-  script: aws s3 sync ./_site s3://revolutionuc.com --region=us-east-2 --delete
-  skip_cleanup: true
-  on:
-    branch: master
+  - provider: script
+    script: aws s3 sync ./_site s3://revolutionuc.com --region=us-east-2 --delete
+    skip_cleanup: true
+    on:
+      branch: master
+  - provider: script
+    script: aws s3 sync ./_site s3://test.revolutionuc.com --region=us-east-2 --delete
+    skip_cleanup: true
+    on:
+      branch: staging
 
 notifications:
   slack: 
