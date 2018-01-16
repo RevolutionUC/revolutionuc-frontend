@@ -56,7 +56,7 @@ class Registration {
       // ...Good news bears
       this._cleanDirtyLabels(this._labels);
       this._removeEmailRegisteredWarning();
-      this._router.go('check-email');
+      window.location = "/check-email";
     }
   }
 
