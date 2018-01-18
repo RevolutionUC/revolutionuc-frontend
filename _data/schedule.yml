@@ -1,0 +1,51 @@
+- date: March 3
+
+- time: 11:00 AM
+  event: Check-in Begins
+  location: Zimmer Lobby
+
+- time: 12:00 PM
+  event: Opening Ceremony/Lunch
+  location: Zimmer Auditorium
+
+- time: 12:45 PM
+  event: Team Formation
+  location: Zimmer Lobby/Plaza
+
+- time: 1:30 PM
+  event: Hacking Begins
+  location: Hackerspace
+
+- time: 2:00 PM-5:00 PM
+  event: Tech Talks
+  location: 6th Floor Baldwin Hall
+
+- time: 6:00 PM
+  event: Dinner
+  location: 544 Baldwin Hall
+
+- time: 10:00 PM
+  event: Cup Stacking
+  location: 801 Rhodes Lobby
+
+- date: March 4
+
+- time: 12:00 AM
+  event: Midnight Snack
+  location: 801 Rhodes Lobby
+
+- time: 8:00 AM
+  event: Breakfast
+  location: 801 Rhodes Lobby
+
+- time: 12:00 PM
+  event: Lunch
+  location: 544 Baldwin Hall
+
+- time: 1:30 PM
+  event: Hacking Ends
+  location: Hackerspace
+
+- time: 3:30 PM
+  event: Awards/Closing Ceremonies
+  location: Zimmer Auditorium
