@@ -8,7 +8,7 @@ form {
   .form-block {
     position: relative;
     min-height: 75px;
-    padding: 20px 15px;
+    padding: 40px 15px 10px 15px;
 
     .form-block__input {
       margin-bottom: 20px;
@@ -117,7 +117,7 @@ form {
 
   label.tag {
     position: absolute;
-    bottom: 0;
+    top: 0;
     left: 0;
     font-weight: bold;
     padding: 5px;
