@@ -28,4 +28,6 @@ function scrollChevron() {
     });
 }
 
-scrollChevron();
+document.addEventListener("turbolinks:load", function() {
+  scrollChevron();
+});
