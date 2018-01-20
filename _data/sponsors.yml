@@ -1,33 +1,41 @@
 - name: 84.51
   link: https://www.8451.com/
-  image: https://d1scc4yo7jg7j0.cloudfront.net/sponsor-logos/2018-spring/8451.png
+  image:
+    1x: /img/sponsors/8451.png
+    2x: /img/sponsors/8451@2x.png
 
 - name: Kroger Technology
   link: https://www.kroger.com/livekt/
-  image: https://d1scc4yo7jg7j0.cloudfront.net/sponsor-logos/2018-spring/kroger-technology.svg
+  image: /img/sponsors/kroger-technology.svg
 
 - name: Vantiv
   link: https://www.vantiv.com/
-  image: https://d1scc4yo7jg7j0.cloudfront.net/sponsor-logos/2018-spring/vantiv.jpg
+  image:
+    1x: /img/sponsors/vantiv.jpg
+    2x: /img/sponsors/vantiv@2x.jpg
 
 - name: GE Digital
   link: https://www.ge.com/digital/
-  image: https://d1scc4yo7jg7j0.cloudfront.net/sponsor-logos/2018-spring/ge-digital_blue.png
+  image:
+    1x: /img/sponsors/ge-digital_blue.png
+    2x: /img/sponsors/ge-digital_blue@2x.png
 
 - name: Bridgeable
   link: https://www.bridgeable.org/
-  image: https://d1scc4yo7jg7j0.cloudfront.net/sponsor-logos/2018-spring/bridgeable.svg
+  image: /img/sponsors/bridgeable.svg
 
 - name: School of IT
   link: http://cech.uc.edu/it.html
   image:
-    1x: https://d1scc4yo7jg7j0.cloudfront.net/sponsor-logos/2018-spring/school-of-it.png
-    2x: https://d1scc4yo7jg7j0.cloudfront.net/sponsor-logos/2018-spring/school-of-it@2x.png
+    1x: /img/sponsors/school-of-it.png
+    2x: /img/sponsors/school-of-it@2x.png
 
 - name: ACM@UC
   link: https://acmatuc.org/
-  image: https://d1scc4yo7jg7j0.cloudfront.net/sponsor-logos/2018-spring/acmatuc.png
+  image:
+    1x: /img/sponsors/acmatuc.png
+    2x: /img/sponsors/acmatuc@2x.png
 
 - name: MLH
   link: https://mlh.io/about
-  image: https://d1scc4yo7jg7j0.cloudfront.net/sponsor-logos/2018-spring/mlh.svg
+  image: /img/sponsors/mlh.svg
