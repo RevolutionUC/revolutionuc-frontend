@@ -18,6 +18,12 @@
   link: https://www.bridgeable.org/
   image: https://d1scc4yo7jg7j0.cloudfront.net/sponsor-logos/2018-spring/bridgeable.svg
 
+- name: School of IT
+  link: http://cech.uc.edu/it.html
+  image:
+    1x: https://d1scc4yo7jg7j0.cloudfront.net/sponsor-logos/2018-spring/school-of-it.png
+    2x: https://d1scc4yo7jg7j0.cloudfront.net/sponsor-logos/2018-spring/school-of-it@2x.png
+
 - name: ACM@UC
   link: https://acmatuc.org/
   image: https://d1scc4yo7jg7j0.cloudfront.net/sponsor-logos/2018-spring/acmatuc.png

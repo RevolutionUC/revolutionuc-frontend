@@ -12,7 +12,11 @@ useContainer: false
         {% for sponsor in site.data.sponsors %}
             <div class="sponsor-image">
                 <a href="{{ sponsor.link }}" target="_blank">
-                    <img src="{{ sponsor.image }}" alt="{{ sponsor.name }} logo">
+                    {% if sponsor.image["1x"] and sponsor.image["2x"] %}
+                        <img src="{{ sponsor.image["1x"] }}" srcset="{{ sponsor.image["1x"] }} 1x, {{ sponsor.image["2x"] }} 2x" alt="{{ sponsor.name }} logo">
+                    {% else %}
+                        <img src="{{ sponsor.image }}" alt="{{ sponsor.name }} logo">
+                    {% endif %}
                 </a>
             </div>
         {% endfor %}
