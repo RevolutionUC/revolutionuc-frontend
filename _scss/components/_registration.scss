@@ -11,6 +11,14 @@ form {
     padding: 35px 15px 15px 15px;
   }
 
+  .input--school {
+    margin-bottom: 10px;
+
+    &.hide {
+      display: none;
+    }
+  }
+
   h1#registrationTitle {
     margin: 0;
     padding: 0;
