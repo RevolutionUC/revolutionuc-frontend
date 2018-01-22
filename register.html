@@ -76,8 +76,8 @@ permalink: /register/
                 </div>
 
                 <div class="form-block__input">
-                  <input type="checkbox" class="button" id="school-other" data-toggle="true">
-                  <label for="school-other"><small>I can't find my school</small></label>
+                  <input name="schoolOther" id="schoolOther" type="checkbox" class="button" data-toggle="true">
+                  <label for="schoolOther"><small>I can't find my school</small></label>
                 </div>
               </div>
             </div>
@@ -285,7 +285,7 @@ permalink: /register/
     });
   });
 
-  const schoolOtherButton = document.getElementById('school-other');
+  const schoolOtherButton = document.getElementById('schoolOther');
   const schoolOtherInput = document.getElementsByClassName('input--school-other')[0];
   const schoolTypeaheadInput = document.getElementsByClassName('input--school-typeahead')[0];
 
