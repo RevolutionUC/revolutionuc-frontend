@@ -16,6 +16,7 @@ class Registration {
       'shirtSize',
       'email',
       'school',
+      'schoolOther',
       'major',
       'dob',
       'phoneNumber',
