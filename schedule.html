@@ -1,0 +1,33 @@
+---
+layout: default
+title: Schedule
+permalink: /schedule/
+image: "/img/about-1.jpg"
+useContainer: false
+---
+
+<div class="container">
+    <div class="schedule">
+        {% for item in site.data.schedule %}
+        <div class="schedule-item flex">
+            {% if item.date %}
+            <div class="schedule-date">
+                <strong>{{item.date}}</strong>
+            </div>
+            {% else %}
+            <div class="schedule-time">
+                {{item.time}}
+            </div>
+            <div class="schedule-event">
+                {{item.event}}
+            </div>
+            <div class="schedule-location">
+                {{item.location}}
+            </div>
+            {% endif %}
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+

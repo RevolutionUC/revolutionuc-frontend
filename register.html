@@ -32,22 +32,22 @@ permalink: /register/
             <div class="form-block" id="shirtSize">
               <label class="tag" for="shirtSize">Shirt Size*</label>
               <div class="form-block__input">
-                <div class="columns-3">
+                <div>
                   <input name="shirtSize" type="radio" id="small" value="small">
                   <label for="small">Small</label>
                 </div>
 
-                <div class="columns-3">
+                <div>
                   <input name="shirtSize" type="radio" id="medium" value="medium">
                   <label for="medium">Medium</label>
                 </div>
 
-                <div class="columns-3">
+                <div>
                   <input name="shirtSize" type="radio" id="large" value="large">
                   <label for="large">Large</label>
                 </div>
 
-                <div class="columns-3">
+                <div>
                   <input name="shirtSize" type="radio" id="x-large" value="x-large">
                   <label for="x-large">X-Large</label>
                 </div>
@@ -66,7 +66,11 @@ permalink: /register/
             <div class="form-block columns-4-table b-bottom">
               <label class="tag" for="school">School*</label>
               <div class="form-block__input">
-                <select style="display:block;width:100%;" name="school" id="school"></select>
+                <div class="full-width-flex flex">
+                  <input style="display:block;width:100%;" name="school" id="school" list="school-list" placeholder="Search" />
+                  <datalist id="school-list"></datalist>
+                  <div id="school-dropdown-btn" class="dropdown-btn">&#9660;</div>
+                </div>
               </div>
             </div>
 
@@ -256,7 +260,20 @@ permalink: /register/
       newOption.value = school;
       newOption.innerText = school;
       if (school == 'The University of Cincinnati') newOption.setAttribute('selected', '');
-      document.querySelector('select#school').append(newOption);
+      document.querySelector('datalist#school-list').append(newOption);
     }
+    var schoolComplete = new Awesomplete(document.getElementById("school"), {list: "#school-list", minChars: 0, maxItems: 1000000});
+    Awesomplete.$('#school-dropdown-btn').addEventListener("click", function() {
+      if (schoolComplete.ul.childNodes.length === 0) {
+        schoolComplete.minChars = 0;
+        schoolComplete.evaluate();
+      }
+      else if (schoolComplete.ul.hasAttribute('hidden')) {
+        schoolComplete.open();
+      }
+      else {
+        schoolComplete.close();
+      }
+    });
   });
 </script>

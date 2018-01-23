@@ -2,9 +2,17 @@
   link: https://www.8451.com/
   image: https://d1scc4yo7jg7j0.cloudfront.net/sponsor-logos/2018-spring/8451.png
 
+- name: Kroger Technology
+  link: https://www.kroger.com/livekt/
+  image: https://d1scc4yo7jg7j0.cloudfront.net/sponsor-logos/2018-spring/kroger-technology.svg
+
 - name: Vantiv
   link: https://www.vantiv.com/
   image: https://d1scc4yo7jg7j0.cloudfront.net/sponsor-logos/2018-spring/vantiv.jpg
+
+- name: GE Digital
+  link: https://www.ge.com/digital/
+  image: https://d1scc4yo7jg7j0.cloudfront.net/sponsor-logos/2018-spring/ge-digital_blue.png
 
 - name: Bridgeable
   link: https://www.bridgeable.org/

@@ -1,0 +1,38 @@
+.schedule {
+  padding-top: 20px;
+}
+
+.schedule-item {
+  width: 100%;
+  border-bottom: 1px solid $purple-light;
+  padding-bottom: 5px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.schedule-date,
+.schedule-time,
+.schedule-event,
+.schedule-location {
+  padding: 5px;
+  text-align: left;
+}
+
+.schedule-date {
+  padding-top: 20px;
+}
+
+.schedule-time {
+  flex: 0 1 30%;
+  min-width: 100px;
+}
+
+.schedule-event {
+  flex: 0 1 40%;
+  min-width: 150px;
+}
+
+.schedule-location {
+  flex: 0 1 30%;
+  min-width: 100px;
+}
