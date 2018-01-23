@@ -14,23 +14,6 @@
         <script src="/js/scroll-chevron.js?{{ site.time | date: '%s%N' }}"></script>
         {% endif %}
 
-        <script>
-        mlh_load = false;
-        if (!mlh_load) {
-            const menu_button = document.querySelector("#menu-toggle");
-            const mlh_badge = document.querySelector("#mlh-trust-badge"); 
-            menu_button.addEventListener( 'change', function() {
-                if(this.checked) {
-                mlh_badge.style.display = "none";
-                } 
-                else {
-                mlh_badge.style.display = "block";
-                }
-            });
-            mlh_load = true;
-        }
-        </script>
-
         {% if page.url == "/faq/" %}
         <script>
         collapseExpand_load = false;
