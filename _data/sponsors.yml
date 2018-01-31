@@ -14,6 +14,10 @@
     1x: /img/sponsors/vantiv.jpg
     2x: /img/sponsors/vantiv@2x.jpg
 
+- name: Fifth Third Bank
+  link: https://www.53.com/
+  image: /img/sponsors/53.svg
+
 - name: GE Digital
   link: https://www.ge.com/digital/
   image:
