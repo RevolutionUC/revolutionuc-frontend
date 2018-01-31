@@ -2,6 +2,7 @@
 layout: default
 title: Register
 permalink: /register/
+description: Registration for RevolutionUC — Hackathon at the University of Cincinnati from March 3-4, 2018
 ---
       <div class="container">
         <form name="registration">
@@ -65,8 +66,20 @@ permalink: /register/
           <div class="row b-bottom">
             <div class="form-block columns-4-table b-bottom">
               <label class="tag" for="school">School*</label>
+
               <div class="form-block__input">
-                <select style="display:block;width:100%;" name="school" id="school"></select>
+                <input class="input--school input--school-other hide" type="text" placeholder="Enter your school" />
+
+                <div class="full-width-flex flex input--school">
+                  <input class="input--school-typeahead" name="school" id="school" list="school-list" placeholder="Search your school" />
+                  <datalist id="school-list"></datalist>
+                  <div id="school-dropdown-btn" class="dropdown-btn">&#9660;</div>
+                </div>
+
+                <div class="form-block__input">
+                  <input name="schoolOther" id="schoolOther" type="checkbox" class="button" data-toggle="true">
+                  <label for="schoolOther"><small>I can't find my school</small></label>
+                </div>
               </div>
             </div>
 
@@ -256,7 +269,54 @@ permalink: /register/
       newOption.value = school;
       newOption.innerText = school;
       if (school == 'The University of Cincinnati') newOption.setAttribute('selected', '');
-      document.querySelector('select#school').append(newOption);
+      document.querySelector('datalist#school-list').append(newOption);
     }
+    var schoolComplete = new Awesomplete(document.getElementById("school"), {list: "#school-list", minChars: 0, maxItems: 1000000});
+    Awesomplete.$('#school-dropdown-btn').addEventListener("click", function() {
+      if (schoolComplete.ul.childNodes.length === 0) {
+        schoolComplete.minChars = 0;
+        schoolComplete.evaluate();
+      }
+      else if (schoolComplete.ul.hasAttribute('hidden')) {
+        schoolComplete.open();
+      }
+      else {
+        schoolComplete.close();
+      }
+    });
   });
+
+  const schoolOtherButton = document.getElementById('schoolOther');
+  const schoolOtherInput = document.getElementsByClassName('input--school-other')[0];
+  const schoolTypeaheadInput = document.getElementsByClassName('input--school-typeahead')[0];
+
+  schoolOtherButton.onclick = () => {
+    // switches between 'input--school-typeahead' and 'input--school-other'
+    // shows 'input--school-typeahead' by default
+    const toggle = schoolOtherButton.getAttribute('data-toggle');
+
+    if (toggle === 'true') {
+      // rollback to the 'other' (traditional) input
+      schoolOtherButton.setAttribute('data-toggle', 'false');
+      schoolOtherInput.setAttribute('name', 'school');
+      schoolOtherInput.setAttribute('id', 'school');
+      schoolTypeaheadInput.removeAttribute('name');
+      schoolTypeaheadInput.removeAttribute('id');
+
+      // hide the typeahead input, show the 'other' input
+      schoolOtherInput.classList.remove('hide');
+      document.getElementsByClassName('input--school')[1].classList.add('hide');
+    } else {
+      // use the typeahead input
+      schoolOtherButton.setAttribute('data-toggle', 'true');
+      schoolTypeaheadInput.setAttribute('name', 'school');
+      schoolTypeaheadInput.setAttribute('id', 'school');
+      schoolOtherInput.removeAttribute('name');
+      schoolOtherInput.removeAttribute('id');
+
+      // hide the 'other' input, show the typeahead input
+      document.getElementsByClassName('input--school')[1].classList.remove('hide');
+      schoolOtherInput.classList.add('hide');
+    }
+  };
 </script>

@@ -25,13 +25,13 @@
         <meta name="twitter:card" content="summary_large_image">
         <meta name="twitter:creator" content="@Revolution_UC">
         <meta name="twitter:title" content="RevolutionUC Hackathon">
-        <meta name="twitter:description" content="Student Hackathon held at the University of Cincinnati. March 3rd and 4th, 2018.">
+        <meta name="twitter:description" content="Midwest Student Hackathon held at the University of Cincinnati. March 3rd and 4th, 2018.">
         <meta name="twitter:image" content="https://revolutionuc.com/img/social-card.jpg">
         <meta name="twitter:image:alt" content="RevolutionUC Hex Logo">
 
         <!-- Facebook Meta -->
         <meta property="og:title" content="RevolutionUC">
-        <meta property="og:description" content="Student Hackathon held at the University of Cincinnati. March 3rd and 4th, 2018.">
+        <meta property="og:description" content="Midwest Student Hackathon held at the University of Cincinnati. March 3rd and 4th, 2018.">
         <meta property="og:image" content="https://revolutionuc.com/img/social-card.jpg">
         <meta property="og:url" content="https://revolutionuc.com">
 
@@ -42,7 +42,9 @@
         <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Josefin+Sans|Lato:400,700">
         <link rel="stylesheet" href="/css/main.min.css?{{ site.time | date: '%s%N' }}">
 
-        <script src="/js/turbolinks.js?{{ site.time | date: '%s%N' }}"></script>
+        {% if page.url == "/register/" %}
+        <script id="awesomplete-src" src="/js/vendor/awesomplete.min.js"></script>
+        {% endif %}
     </head>
     <body class="page page--{{ current[1] }}">
         <header class="header {% if current == empty %}header--no-bg{% endif %}">

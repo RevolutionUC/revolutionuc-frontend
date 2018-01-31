@@ -5,6 +5,7 @@ permalink: /sponsors/
 subtitle: "A special thanks to the organizations that make RevolutionUC possible"
 image: "/img/sponsors.jpg"
 useContainer: false
+description: Sponsoring organizations for RevolutionUC — Hackathon at the University of Cincinnati from March 3-4, 2018
 ---
 
 <section class="container section">
@@ -12,7 +13,11 @@ useContainer: false
         {% for sponsor in site.data.sponsors %}
             <div class="sponsor-image">
                 <a href="{{ sponsor.link }}" target="_blank">
-                    <img src="{{ sponsor.image }}" alt="{{ sponsor.name }} logo">
+                    {% if sponsor.image["1x"] and sponsor.image["2x"] %}
+                        <img src="{{ sponsor.image["1x"] }}" srcset="{{ sponsor.image["1x"] }} 1x, {{ sponsor.image["2x"] }} 2x" alt="{{ sponsor.name }} logo">
+                    {% else %}
+                        <img src="{{ sponsor.image }}" alt="{{ sponsor.name }} logo">
+                    {% endif %}
                 </a>
             </div>
         {% endfor %}
