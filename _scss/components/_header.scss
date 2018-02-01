@@ -149,6 +149,10 @@
       input:checked ~ nav {
         transform: translateX(-100%);
       }
+
+      input:checked ~ #mlh-trust-badge {
+        display: none !important;
+      }
     }
   }
   #mlh-trust-badge {
