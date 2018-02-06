@@ -43,3 +43,7 @@
 - name: MLH
   link: https://mlh.io/about
   image: /img/sponsors/mlh.svg
+
+- name: Sticker Mule
+  link: http://hackp.ac/mlh-stickermule-hackathons
+  image: /img/sponsors/sticker-mule.svg
