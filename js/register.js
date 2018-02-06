@@ -57,7 +57,7 @@ class Registration {
       response.json().then(jsonErrors => {
         this._updateLabels(jsonErrors);
       });
-      // set the button as enabled and the text to 'Register'
+      // Set the button as enabled and the text to 'Register'
       this._submitButton.disabled = false;
       this._submitButton.textContent = "Register";
     } else {
@@ -74,7 +74,7 @@ class Registration {
         .querySelector(`label[for=${error.param}]`)
         .classList.add("error");
       if (error.param == "email" && error.msg.includes("registered")) {
-        // email address has already been registered
+        // Email address has already been registered
         this._addEmailRegisteredWarning();
       } else if (error.param == "resume" && error.msg.startsWith("LIMIT")) {
         this._addResumeLimitError();
