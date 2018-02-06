@@ -3,13 +3,16 @@ function video() {
 
   function playVideo(curr_width, threshold) {
     var video = document.querySelector(".hero__video");
-    var videoSources = document.querySelectorAll('.hero__video source');
+    var videoSources = document.querySelectorAll(".hero__video source");
 
     if (curr_width > threshold) {
       // add video sources dynamically (if not already loaded)
       if (!loaded) {
         for (var i = 0; i < videoSources.length; i++) {
-          videoSources[i].setAttribute('src', videoSources[i].getAttribute('data-src'));
+          videoSources[i].setAttribute(
+            "src",
+            videoSources[i].getAttribute("data-src"),
+          );
         }
 
         video.load();
@@ -43,4 +46,6 @@ function video() {
   playVideo(document.documentElement.clientWidth, threshold);
 }
 
-video();
+document.addEventListener("DOMContentLoaded", function() {
+  video();
+});

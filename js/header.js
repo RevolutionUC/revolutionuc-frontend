@@ -39,21 +39,34 @@ function header() {
     }
   }
 
-  // Throttling based on MDN recommendation @
-  // https://developer.mozilla.org/en-US/docs/Web/Events/scroll
-  window.addEventListener("scroll", function(e) {
+  function scrollChecker(e) {
     last_known_scroll_position = window.scrollY;
 
     if (!ticking) {
       window.requestAnimationFrame(function() {
         checkScroll(last_known_scroll_position);
       });
-
-      ticking = true;
     }
-  });
+
+    ticking = true;
+  }
+
+  // Throttling based on MDN recommendation @
+  // https://developer.mozilla.org/en-US/docs/Web/Events/scroll
+  window.addEventListener("scroll", scrollChecker);
 
   checkScroll(last_known_scroll_position);
+
+  document.addEventListener("turbolinks:load", function() {
+    if (window.location.pathname != "/") {
+      window.removeEventListener("scroll", scrollChecker);
+    }
+  });
 }
 
-header();
+header_init = false;
+
+if (!header_init) {
+  header();
+  header_init = true;
+}
