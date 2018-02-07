@@ -257,66 +257,70 @@ description: Registration for RevolutionUC — Hackathon at the University of Ci
 
 <script src=/js/register.js async defer></script>
 <script>
-  let promise = fetch('https://raw.githubusercontent.com/MLH/mlh-policies/master/schools.csv');
-  promise
-    .then(response => response.text())
-    .then(schools => {
-    let arraySchools = schools.split("\n");
-    arraySchools.shift();
-    for (school of arraySchools) {
-      let newOption = document.createElement('option');
+  var typeahead_init = false;
+  if (!typeahead_init) {
+    let promise = fetch('https://raw.githubusercontent.com/MLH/mlh-policies/master/schools.csv');
+    promise
+      .then(response => response.text())
+      .then(schools => {
+      let arraySchools = schools.split("\n");
+      arraySchools.shift();
+      for (school of arraySchools) {
+        let newOption = document.createElement('option');
 
-      newOption.value = school;
-      newOption.innerText = school;
-      if (school == 'The University of Cincinnati') newOption.setAttribute('selected', '');
-      document.querySelector('datalist#school-list').append(newOption);
-    }
-    var schoolComplete = new Awesomplete(document.getElementById("school"), {list: "#school-list", minChars: 0, maxItems: 1000000});
-    Awesomplete.$('#school-dropdown-btn').addEventListener("click", function() {
-      if (schoolComplete.ul.childNodes.length === 0) {
-        schoolComplete.minChars = 0;
-        schoolComplete.evaluate();
+        newOption.value = school;
+        newOption.innerText = school;
+        if (school == 'The University of Cincinnati') newOption.setAttribute('selected', '');
+        document.querySelector('datalist#school-list').append(newOption);
       }
-      else if (schoolComplete.ul.hasAttribute('hidden')) {
-        schoolComplete.open();
-      }
-      else {
-        schoolComplete.close();
-      }
+      var schoolComplete = new Awesomplete(document.getElementById("school"), {list: "#school-list", minChars: 0, maxItems: 1000000});
+      Awesomplete.$('#school-dropdown-btn').addEventListener("click", function() {
+        if (schoolComplete.ul.childNodes.length === 0) {
+          schoolComplete.minChars = 0;
+          schoolComplete.evaluate();
+        }
+        else if (schoolComplete.ul.hasAttribute('hidden')) {
+          schoolComplete.open();
+        }
+        else {
+          schoolComplete.close();
+        }
+      });
     });
-  });
 
-  const schoolOtherButton = document.getElementById('schoolOther');
-  const schoolOtherInput = document.getElementsByClassName('input--school-other')[0];
-  const schoolTypeaheadInput = document.getElementsByClassName('input--school-typeahead')[0];
+    const schoolOtherButton = document.getElementById('schoolOther');
+    const schoolOtherInput = document.getElementsByClassName('input--school-other')[0];
+    const schoolTypeaheadInput = document.getElementsByClassName('input--school-typeahead')[0];
 
-  schoolOtherButton.onclick = () => {
-    // switches between 'input--school-typeahead' and 'input--school-other'
-    // shows 'input--school-typeahead' by default
-    const toggle = schoolOtherButton.getAttribute('data-toggle');
+    schoolOtherButton.onclick = () => {
+      // switches between 'input--school-typeahead' and 'input--school-other'
+      // shows 'input--school-typeahead' by default
+      const toggle = schoolOtherButton.getAttribute('data-toggle');
 
-    if (toggle === 'true') {
-      // rollback to the 'other' (traditional) input
-      schoolOtherButton.setAttribute('data-toggle', 'false');
-      schoolOtherInput.setAttribute('name', 'school');
-      schoolOtherInput.setAttribute('id', 'school');
-      schoolTypeaheadInput.removeAttribute('name');
-      schoolTypeaheadInput.removeAttribute('id');
+      if (toggle === 'true') {
+        // rollback to the 'other' (traditional) input
+        schoolOtherButton.setAttribute('data-toggle', 'false');
+        schoolOtherInput.setAttribute('name', 'school');
+        schoolOtherInput.setAttribute('id', 'school');
+        schoolTypeaheadInput.removeAttribute('name');
+        schoolTypeaheadInput.removeAttribute('id');
 
-      // hide the typeahead input, show the 'other' input
-      schoolOtherInput.classList.remove('hide');
-      document.getElementsByClassName('input--school')[1].classList.add('hide');
-    } else {
-      // use the typeahead input
-      schoolOtherButton.setAttribute('data-toggle', 'true');
-      schoolTypeaheadInput.setAttribute('name', 'school');
-      schoolTypeaheadInput.setAttribute('id', 'school');
-      schoolOtherInput.removeAttribute('name');
-      schoolOtherInput.removeAttribute('id');
+        // hide the typeahead input, show the 'other' input
+        schoolOtherInput.classList.remove('hide');
+        document.getElementsByClassName('input--school')[1].classList.add('hide');
+      } else {
+        // use the typeahead input
+        schoolOtherButton.setAttribute('data-toggle', 'true');
+        schoolTypeaheadInput.setAttribute('name', 'school');
+        schoolTypeaheadInput.setAttribute('id', 'school');
+        schoolOtherInput.removeAttribute('name');
+        schoolOtherInput.removeAttribute('id');
 
-      // hide the 'other' input, show the typeahead input
-      document.getElementsByClassName('input--school')[1].classList.remove('hide');
-      schoolOtherInput.classList.add('hide');
-    }
-  };
+        // hide the 'other' input, show the typeahead input
+        document.getElementsByClassName('input--school')[1].classList.remove('hide');
+        schoolOtherInput.classList.add('hide');
+      }
+    };
+    typeahead_init = true;
+  }
 </script>

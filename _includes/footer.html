@@ -9,10 +9,11 @@
         </footer>
 
         {% if page.url == "/" %}
-        <script src="/js/header.js?{{ site.time | date: '%s%N' }}"></script>
         <script src="/js/video.js?{{ site.time | date: '%s%N' }}"></script>
         <script src="/js/scroll-chevron.js?{{ site.time | date: '%s%N' }}"></script>
         {% endif %}
+
+        <script src="/js/header.js?{{ site.time | date: '%s%N' }}"></script>
 
         {% if page.url == "/faq/" %}
         <script>
