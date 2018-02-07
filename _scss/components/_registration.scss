@@ -307,21 +307,21 @@ form {
 }
 
 .awesomplete > ul > li:hover {
-  background: $purple-light;
-  color: black;
+  background: $purple;
+  color: $white;
 }
 
 .awesomplete > ul > li[aria-selected="true"] {
   background: $purple;
-  color: white;
+  color: $white;
 }
 
 .awesomplete mark {
-  background: hsl(65, 100%, 50%);
+  background: $purple-xtra-light;
 }
 
 .awesomplete li:hover mark {
-  background: hsl(68, 100%, 41%);
+  background: $purple-xtra-light;
 }
 
 .awesomplete li[aria-selected="true"] mark {
