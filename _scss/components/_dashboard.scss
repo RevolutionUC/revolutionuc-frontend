@@ -12,3 +12,9 @@ th {
   color: white;
   cursor: pointer;
 }
+
+a.paginate_button {
+  padding: 0 2px;
+  color: $purple;
+  text-decoration: underline;
+}
