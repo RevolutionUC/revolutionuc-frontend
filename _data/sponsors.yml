@@ -17,6 +17,10 @@
 - name: Fifth Third Bank
   link: https://www.53.com/
   image: /img/sponsors/53.svg
+  
+- name: JPMorgan Chase & Co
+  link: https://www.jpmorganchase.com/
+  image: /img/sponsors/JPMC_Logo_Black.png
 
 - name: GE Digital
   link: https://www.ge.com/digital/
