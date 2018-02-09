@@ -19,6 +19,11 @@
       min-height: 50px;
       max-height: 80px;
       border-radius: 0;
+
+      &.sponsor-image--jpmorgan-chase-co {
+        height: initial;
+        min-height: initial;
+      }
     }
   }
 }
