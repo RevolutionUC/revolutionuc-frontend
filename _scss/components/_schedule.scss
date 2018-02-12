@@ -36,3 +36,14 @@
   flex: 0 1 30%;
   min-width: 100px;
 }
+
+@media (max-width: $small-breakpoint) {
+  .schedule-item {
+    display: inline-block;
+  }
+  .schedule-time,
+  .schedule-event,
+  .schedule-location {
+    min-width: 0;
+  }
+}
