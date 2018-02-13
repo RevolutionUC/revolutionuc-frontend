@@ -12,6 +12,7 @@ function header() {
   var ticking = false;
   var header = document.querySelector(".header");
   var headerHeight = header.clientHeight;
+  var navToggle = document.querySelector(".menu-toggle");
 
   // Won't exist on non-root page
   if (window.location.pathname == "/") {
@@ -69,6 +70,7 @@ function header() {
           last_known_scroll_position > headerHeight / 2 &&
           !el.classList.contains("header--hidden")
         ) {
+          navToggle.checked = false; // collapse the mobile navbar
           addClassTo(el, "header--hidden");
         } else if (prev_frame_scroll_position > last_known_scroll_position) {
           removeClassFrom(el, "header--hidden");
