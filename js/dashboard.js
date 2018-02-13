@@ -1,8 +1,9 @@
 class Dashboard {
   static init() {
   console.log("Dashboard::init()");
-    //this.registrationBaseURL = "http://localhost:8080/registration";
-    this.registrationBaseURL = "https://api.revolutionuc.com/registration";
+    this.baseURL = "https://api.revolutionuc.com";
+    this.emailBaseURL = `${this.baseURL}/email`;
+    this.registrationBaseURL = `${this.baseURL}/registration`;
     this.apiKeyElement = document.querySelector("#apiKey");
     this.individualEmailElement = document.querySelector("#individualEmail");
   }
@@ -25,20 +26,20 @@ class Dashboard {
       });
   }
 
-  static sendWaitlistEmail() {
-    fetch(`${this.registrationBaseURL}/sendConfirmation?key=${this.apiKeyElement.value}`);
+  static sendConfirmation() {
+    fetch(`${this.emailBaseURL}/sendConfirmation?key=${this.apiKeyElement.value}`);
   }
 
-  static sendConfirmationIndividual() {
-    fetch(`${this.registrationBaseURL}/sendConfirmationIndividual?key=${this.apiKeyElement.value}&userEmail=${this.individualEmailElement.value}`);
+  static sendConfirmationToIndividual() {
+    fetch(`${this.emailBaseURL}/sendConfirmationToIndividual?key=${this.apiKeyElement.value}&userEmail=${this.individualEmailElement.value}`);
   }
 
   static sendConfirmationSittingDucks() {
-    fetch(`${this.registrationBaseURL}/sendConfirmationToSittingDucks?key=${this.apiKeyElement.value}&userEmail=${this.individualEmailElement.value}`);
+    fetch(`${this.emailBaseURL}/sendConfirmationToSittingDucks?key=${this.apiKeyElement.value}&userEmail=${this.individualEmailElement.value}`);
   }
 
   static sendConfirmationWaitlisted() {
-    fetch(`${this.registrationBaseURL}/sendConfirmationToWaitlisted?key=${this.apiKeyElement.value}&userEmail=${this.individualEmailElement.value}`);
+    fetch(`${this.emailBaseURL}/sendConfirmationToWaitlisted?key=${this.apiKeyElement.value}&userEmail=${this.individualEmailElement.value}`);
   }
 
   static checkIn() {
