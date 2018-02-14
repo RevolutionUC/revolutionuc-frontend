@@ -84,6 +84,8 @@ if (!registration_init) {
         }
       }
 
+      // TODO: consider removing this. Results in a
+      // prototype dependency that isn't shared across modules
       Array.prototype.diff = function(a) {
         return this.filter(function(i) {
           return a.indexOf(i) < 0;
