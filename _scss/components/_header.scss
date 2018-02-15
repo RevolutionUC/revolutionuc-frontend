@@ -9,15 +9,18 @@
   padding: 0;
   margin: 0;
 
-  -webkit-transition: background-color $header-bg-transition-time ease;
-  -ms-transition: background-color $header-bg-transition-time ease;
-  transition: background-color $header-bg-transition-time ease;
+  transform: translateY(0px);
 
+  transition: background-color $header-transition-time ease,
+    transform $header-transition-time ease;
   &.header--no-bg {
     background-color: transparent;
-    -webkit-transition: background-color $header-bg-transition-time ease;
-    -ms-transition: background-color $header-bg-transition-time ease;
-    transition: background-color $header-bg-transition-time ease;
+    transition: background-color $header-transition-time ease,
+      transform $header-transition-time ease;
+  }
+
+  &.header--hidden {
+    transform: translateY(-200px);
   }
 
   .header__container {
@@ -138,9 +141,9 @@
         display: inline-block;
         line-height: 60px;
         fill: $white;
-        -webkit-transition: fill $header-bg-transition-time ease;
-        -ms-transition: fill $header-bg-transition-time ease;
-        transition: fill $header-bg-transition-time ease;
+        -webkit-transition: fill $header-transition-time ease;
+        -ms-transition: fill $header-transition-time ease;
+        transition: fill $header-transition-time ease;
       }
 
       input:checked ~ label {

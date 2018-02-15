@@ -1,67 +1,93 @@
 function header() {
-  function addClassTo(el, className) {
-    el.className += " " + className;
-  }
-
-  function removeClassFrom(el, className) {
-    el.className = el.className.replace(" " + className, "");
-  }
-
-  var last_known_scroll_position = window.scrollY;
+  var prevFrameScrollPos = window.scrollY;
+  var lastKnownScrollPos = window.scrollY;
   var ticking = false;
   var header = document.querySelector(".header");
   var headerHeight = header.clientHeight;
-  var transition_height =
-    document.querySelector(".hero").getBoundingClientRect().top +
-    window.scrollY -
-    headerHeight;
+  var navToggle = document.querySelector(".menu-toggle");
 
-  function checkScroll(last_known_scroll_position) {
-    var el = document.querySelector(".header");
-    if (
-      last_known_scroll_position >= transition_height &&
-      el.classList.contains("header--no-bg")
-    ) {
-      removeClassFrom(el, "header--no-bg");
-      window.setTimeout(function() {
-        ticking = false;
-      }, 100);
-    } else if (
-      last_known_scroll_position < transition_height &&
-      !el.classList.contains("header--no-bg")
-    ) {
-      addClassTo(el, "header--no-bg");
-      window.setTimeout(function() {
-        ticking = false;
-      }, 100);
-    } else {
-      ticking = false;
-    }
+  // Won't exist on non-root page
+  if (window.location.pathname == "/") {
+    var triggerHeight =
+      document.querySelector(".hero").getBoundingClientRect().top +
+      window.scrollY -
+      headerHeight;
   }
 
-  function scrollChecker(e) {
-    last_known_scroll_position = window.scrollY;
+  var header = document.querySelector(".header");
+  var headerIsAnimating = false;
+  function doneAnimating() {
+    headerIsAnimating = false;
+  }
+  // Let below functions that control animation know
+  // that the animation is done.
+  header.addEventListener("transitionend", doneAnimating, false);
 
-    if (!ticking) {
+  function animateHeader() {
+    prevFrameScrollPos = lastKnownScrollPos;
+
+    if (!headerIsAnimating) {
       window.requestAnimationFrame(function() {
-        checkScroll(last_known_scroll_position);
+        lastKnownScrollPos = window.scrollY;
+        // Use the same trigger height if on root page
+        hideOrShowHeader(
+          lastKnownScrollPos,
+          prevFrameScrollPos,
+          triggerHeight || headerHeight,
+        );
+        // Only change transparency on root page.
+        if (window.location.pathname == "/") {
+          setHeaderTransparency(lastKnownScrollPos, triggerHeight);
+        }
       });
     }
-
-    ticking = true;
   }
 
-  // Throttling based on MDN recommendation @
-  // https://developer.mozilla.org/en-US/docs/Web/Events/scroll
-  window.addEventListener("scroll", scrollChecker);
-
-  checkScroll(last_known_scroll_position);
-
-  document.addEventListener("turbolinks:load", function() {
-    if (window.location.pathname != "/") {
-      window.removeEventListener("scroll", scrollChecker);
+  // Checks the scroll position and conditionally
+  // sets the transparency of the header.
+  function setHeaderTransparency(lastKnownScrollPos, triggerHeight) {
+    if (
+      lastKnownScrollPos >= triggerHeight &&
+      header.classList.contains("header--no-bg")
+    ) {
+      header.classList.remove("header--no-bg");
+      headerIsAnimating = true;
+    } else if (
+      lastKnownScrollPos < triggerHeight &&
+      !header.classList.contains("header--no-bg")
+    ) {
+      header.classList.add("header--no-bg");
+      headerIsAnimating = true;
     }
-  });
+  }
+
+  // Conditionally hides or shows the header
+  // based on the current scroll position.
+  function hideOrShowHeader(
+    lastKnownScrollPos,
+    prevFrameScrollPos,
+    triggerHeight,
+  ) {
+    if (
+      lastKnownScrollPos > prevFrameScrollPos &&
+      lastKnownScrollPos >= triggerHeight &&
+      !header.classList.contains("header--hidden")
+    ) {
+      navToggle.checked = false; // collapse the mobile navbar
+      header.classList.add("header--hidden");
+      headerIsAnimating = true;
+    } else if (
+      prevFrameScrollPos > lastKnownScrollPos &&
+      header.classList.contains("header--hidden")
+    ) {
+      header.classList.remove("header--hidden");
+      headerIsAnimating = true;
+    }
+  }
+
+  window.addEventListener("scroll", animateHeader);
+  // Do a first check
+  animateHeader();
 }
 
 header_init = false;
