@@ -12,4 +12,30 @@
             color: inherit;
         }
     }
+
+    .social-icons {
+        text-align: center;
+        list-style-type: none;
+        padding: 0;
+        margin-top: $padding;
+        margin-bottom: $padding;
+
+        li {
+            padding-left: 30px;
+            display: inline;
+
+            &:first-child {
+                padding-left: 0;
+            }
+
+            a {
+                text-decoration: none;
+            }
+
+            svg {
+                max-width: 40px;
+                fill: $purple;
+            }
+        }
+    }
 }

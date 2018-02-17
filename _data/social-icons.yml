@@ -1,0 +1,17 @@
+# Note: svgs are relative to the _includes/ directory
+
+- name: Twitter
+  link: https://twitter.com/Revolution_UC
+  svg: social/twitter.svg
+
+- name: Facebook
+  link: https://www.facebook.com/RevolutionUC/
+  svg: social/facebook.svg
+
+- name: Instagram
+  link: https://www.instagram.com/revolution_uc/
+  svg: social/instagram.svg
+
+- name: GitHub
+  link: https://github.com/RevolutionUC
+  svg: social/github.svg
