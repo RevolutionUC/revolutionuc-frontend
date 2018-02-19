@@ -7,7 +7,10 @@ function video() {
 
     if (curr_width > threshold) {
       // add video sources dynamically (if not already loaded)
-      if (!loaded) {
+      // uses readyState 4 (can be played through to the end without interruption)
+      // instead of a manual variable
+      // https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement/readyState
+      if (video.readyState !== 4) {
         for (var i = 0; i < videoSources.length; i++) {
           videoSources[i].setAttribute(
             "src",
@@ -16,7 +19,6 @@ function video() {
         }
 
         video.load();
-        loaded = true;
       }
 
       video.play();
@@ -44,6 +46,13 @@ function video() {
   });
 
   playVideo(document.documentElement.clientWidth, threshold);
+
+  // restart the video when we reload the page
+  document.addEventListener("turbolinks:load", function() {
+    if (window.location.pathname === "/") {
+      playVideo(document.documentElement.clientWidth, threshold);
+    }
+  });
 }
 
 document.addEventListener("DOMContentLoaded", function() {
