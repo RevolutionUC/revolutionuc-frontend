@@ -5,7 +5,8 @@ class Dashboard {
     this.emailBaseURL = `${this.baseURL}/email`;
     this.registrationBaseURL = `${this.baseURL}/registration`;
     this.apiKeyElement = document.querySelector("#apiKey");
-    this.individualEmailElement = document.querySelector("#individualEmail");
+    this.individualEmailConfirmation = document.querySelector("#individualEmailConfirmation");
+    this.individualEmailCheckIn = document.querySelector("#individualEmailCheckIn");
   }
 
   static fetchRegistrants() {
@@ -31,11 +32,11 @@ class Dashboard {
   }
 
   static sendConfirmationToIndividual() {
-    fetch(`${this.emailBaseURL}/sendConfirmationToIndividual?key=${this.apiKeyElement.value}&userEmail=${this.individualEmailElement.value}`);
+    fetch(`${this.emailBaseURL}/sendConfirmationToIndividual?key=${this.apiKeyElement.value}&userEmail=${this.individualEmailConfirmation.value}`);
   }
 
   static sendConfirmationSittingDucks() {
-    fetch(`${this.emailBaseURL}/sendConfirmationToSittingDucks?key=${this.apiKeyElement.value}&userEmail=${this.individualEmailElement.value}`);
+    fetch(`${this.emailBaseURL}/sendConfirmationToSittingDucks?key=${this.apiKeyElement.value}`);
   }
 
   static sendConfirmationWaitlisted() {
@@ -43,7 +44,7 @@ class Dashboard {
   }
 
   static checkIn() {
-    fetch(`${this.registrationBaseURL}/checkIn?key=${this.apiKeyElement.value}&userEmail=${this.individualEmailElement.value}`);
+    fetch(`${this.registrationBaseURL}/checkIn?key=${this.apiKeyElement.value}&userEmail=${this.individualEmailCheckIn.value}`);
   }
 };
 

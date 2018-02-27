@@ -22,32 +22,43 @@ permalink: /dashboard/
   <button onclick="Dashboard.sendConfirmation()">Send attendance confirmation email</button>
 
   <hr>
-  <h3>Send confirm attendance email to an individual:</h3>
-  <small><i>Note, this action removes the user from the waitlist if they are on it, and sends the attendance confirmation email regardless of whether they've already gotten one.</i></small>
-  <br>
-  <input id="individualEmail" type="text" placeholder="individual@mail.uc.edu">
+  <h3>Send confirm attendance email to an individual</h3>
+  <small><i>Note, this action should only be used in rare circumstances as it:</i></small>
+  <ol>
+    <li>Removes the individual registrant from the waitlist if they are on it</li>
+    <li>Sends the attendance confirmation email regardless of whether the registrant has received one</li>
+  </ol>
+
+  <input id="individualEmailConfirmation" type="text" placeholder="individual@mail.uc.edu">
   <button onclick="Dashboard.sendConfirmationToIndividual()">Send individual attendance confirmation</button>
 
   <hr>
-  <h3>Send confirmation email to sitting ducks:</h3>
-  <small><i>Note, this action sends confirmation attendance emails to people who have received them, but have not confirmed/denied their attendance yet.</i></small>
-  <br>
+  <h3>Send confirmation email to sitting ducks</h3>
+  <small><i>Note, a sitting duck is a registrant such that:</i></small>
+  <ol>
+    <li>Email has been verified</li>
+    <li>Has received an attendance confirmation email</li>
+    <li>Does not appear on the waitlist (implicitly true, as per above point)</li>
+    <li>Has neither confirmed nor denied their attendance yet</li>
+  </ol>
+
   <button onclick="Dashboard.sendConfirmationSittingDucks()">Send confirmation email to sitting ducks</button>
 
   <hr>
-  <h3>Send confirmation email to the waitlisted:</h3>
-  <small><i>Note, this action sends confirmation attendance emails to all people appearing on the waitlist, and takes them off of the waitlist.</i></small>
-  <br>
+  <h3>Send confirmation email to the waitlisted</h3>
+  <small><i>Note, this action sends confirmation attendance emails to registrants such that:</i></small>
+  <ol>
+    <li>Email has been verified</li>
+    <li>Has registered after we hit the waitlist threshold, or otherwise is waitlisted</li>
+  </ol>
   <button onclick="Dashboard.sendConfirmationWaitlisted()">Send confirmation email to the waitlisted</button>
 
-  <!--
   <hr>
   <h3>Perform Check-In</h3>
   <small><i>Note, this marks an individual user as "checked in", in the database regardless of their status in the database</i></small>
   <br>
-  <input id="individualEmail" type="text" placeholder="individual@mail.uc.edu">
+  <input id="individualEmailCheckIn" type="text" placeholder="individual@mail.uc.edu">
   <button onclick="Dashboard.checkIn()">Check In</button>
-  -->
 
   <hr>
   <h3>Fetch registrants</h3>
