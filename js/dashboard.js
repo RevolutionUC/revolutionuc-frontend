@@ -39,7 +39,7 @@ class Dashboard {
   }
 
   static sendConfirmationWaitlisted() {
-    fetch(`${this.emailBaseURL}/sendConfirmationToWaitlisted?key=${this.apiKeyElement.value}&userEmail=${this.individualEmailElement.value}`);
+    fetch(`${this.emailBaseURL}/sendConfirmationToWaitlisted?key=${this.apiKeyElement.value}`);
   }
 
   static checkIn() {
