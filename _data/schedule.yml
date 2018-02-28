@@ -34,6 +34,10 @@
   event: Midnight Snack (Provided by Vantiv, now Worldpay)
   location: 801 Rhodes Lobby
 
+- time: 1:00 AM
+  event: Lightning Talks
+  location: 544 Baldwin
+
 - time: 8:00 AM
   event: Breakfast
   location: 801 Rhodes Lobby
@@ -48,4 +52,8 @@
 
 - time: 3:30 PM
   event: Awards/Closing Ceremonies
+  location: Zimmer Auditorium
+
+- time: 4:30 PM
+  event: Event Ends
   location: Zimmer Auditorium
