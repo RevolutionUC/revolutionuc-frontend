@@ -17,8 +17,8 @@ class Dashboard {
         $("table").DataTable({
           data: data,
           columns: [
-            {"data": "firstName", title: "First Name"},
             {"data": "lastName", title: "Last Name"},
+            {"data": "firstName", title: "First Name"},
             {"data": "email", title: "Email"},
             {"data": "emailVerified", title: "Verified"},
             {"data": "waitList", title: "Waitlisted"},
