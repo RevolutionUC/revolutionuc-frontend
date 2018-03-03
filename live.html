@@ -1,23 +1,25 @@
 ---
 layout: default
-title: Live Site
+title:
 permalink: /live/
 useContainer: false
 description: RevolutionUC Live Site
 ---
 
 <div class="container container--fluid">
+    <h2 class="text-center">Live Site</h2>
     <div class="row">
-        <div class="columns-4">
-            <div class="item__text">
-                <h2 class="text-center">Quick Links</h2>
-                <ul>
-                    <li>Join our Slack</li>
-                    <li>Submit to Devpost</li>
-                </ul>
-            </div>
+        <div class="columns-2">
+            <h3 class="text-center">Quick Links</h2>
+            <ul>
+                <li><a href="https://www.slack.revolutionuc.com" target="_blank">Join our Slack</a></li>
+                <li><a href="https://revuc-vii.devpost.com/">Submit to Devpost</a></li>
+            </ul>
+            <h3 class="text-center">CTF</h3>
+            <p>If you wish to play Capture The Flag, please click <a href="http://ctf.revolutionuc.com/" target="_blank">here</a> to register. After registering post in the #ctf channel to get the competition URL. You can also post there for any questions/support.</p>
         </div>
-        <div class="columns-4">
+        <div class="columns-6">
+            <h3>Schedule</h3>
             <div class="schedule">
                 {% for item in site.data.schedule %}
                 <div class="schedule-item flex">
@@ -39,6 +41,7 @@ description: RevolutionUC Live Site
                 </div>
                 {% endfor %}
             </div>
+            <h3>Tech Talk Schedule</h3>
             <table>
                 <thead>
                     <th>Time</th>
