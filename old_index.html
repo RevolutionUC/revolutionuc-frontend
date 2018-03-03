@@ -1,0 +1,66 @@
+---
+layout: homepage
+title: Home
+---
+
+<main>
+    <a id="main" name="main"></a>
+
+    <div class="container container--large">
+        <section class="flex">
+            <div class="image">
+                <img src="/img/photo1.jpg" alt="Photo taken at RevolutionUC">
+            </div>
+
+            <div class="text">
+                <p><strong>RevolutionUC</strong> is a 24-hour student hackathon at the University of Cincinnati that is organized by <a href="http://acmatuc.org/" target="_blank">ACM@UC</a>. We invite you to join 300+ motivated students for an awesome weekend of code, community, and self-improvement! You don&rsquo;t have to have to be a computer science major or engineering student to attend. It&rsquo;s a learning experience for students of all skill levels!</p>
+            </div>
+        </section>
+
+        <section class="flex flex--reverse-small section--no-padding-top">
+            <div class="text">
+                <p class="text-right">A <strong>hackathon</strong> is an event where people get together, form teams, build something new to solve a problem, and have fun doing it! Some project ideas include websites, mobile apps, robots, and more! A hackathon is an all-inclusive environment, you&rsquo;ll learn something new and meet people who are passionate about technology.</p>
+            </div>
+
+            <div class="image">
+                <img src="/img/photo2.jpg" alt="Photo taken at RevolutionUC">
+            </div>
+        </section>
+    </div>
+
+    <section class="background-purple">
+        <div class="call-to-action container">
+            <p class="lead text-center">RevolutionUC is free and open to all students.</p>
+
+            <div class="text-center">
+                <a class="btn btn--tertiary" href="/register">Join Waitlist</a> &nbsp;
+                <a class="btn btn--secondary" href="/faq">See FAQ</a>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container container--small">
+            <p class="text-center">RevolutionUC has been a leader in the Cincinnati hacker community since 2014. Check out submissions from previous hackathons.</p>
+
+            <div class="past-hacks">
+                {% for hack in site.data.past-hacks reversed %}
+                    <div class="hack hack--{{ hack.time | replace: ' ','-' }}">
+                        <div class="hack__image">
+                            <a href="{{ hack.link }}" target="_blank">
+                                <img class="past__hacks__image" src="{{ hack.image }}" alt="{{ hack.name }} logo">
+                                <div class="hack__text">{{ hack.time }}</div>
+                            </a>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+
+    <section class="background-purple-light">
+        <div class="container call-to-action">
+            <p class="lead text-center">Interested in sponsoring RevolutionUC? It's a great way to connect with talented and motivated students! Send us an email at <a href="mailto:info@revolutionuc.com">info@revolutionuc.com</a> for information.</p>
+        </div>
+    </section>
+</main>
