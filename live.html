@@ -1,0 +1,99 @@
+---
+layout: default
+title: Live Site
+permalink: /live/
+useContainer: false
+description: RevolutionUC Live Site
+---
+
+<div class="container container--fluid">
+    <div class="row">
+        <div class="columns-4">
+            <div class="item__text">
+                <h2 class="text-center">Quick Links</h2>
+                <ul>
+                    <li>Join our Slack</li>
+                    <li>Submit to Devpost</li>
+                </ul>
+            </div>
+        </div>
+        <div class="columns-4">
+            <div class="schedule">
+                {% for item in site.data.schedule %}
+                <div class="schedule-item flex">
+                    {% if item.date %}
+                    <div class="schedule-date">
+                        <strong>{{item.date}}</strong>
+                    </div>
+                    {% else %}
+                    <div class="schedule-time">
+                        {{item.time}}
+                    </div>
+                    <div class="schedule-event">
+                        {{item.event}}
+                    </div>
+                    <div class="schedule-location">
+                        {{item.location}}
+                    </div>
+                    {% endif %}
+                </div>
+                {% endfor %}
+            </div>
+            <table>
+                <thead>
+                    <th>Time</th>
+                    <th>Company</th>
+                    <th>Topic</th>
+                    <th>Location</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <b>2:00 - 2:30</b>
+                        </td>
+                        <td>Fifth Third</td>
+                        <td>Blockchain</td>
+                        <td>Baldwin 645</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <b>2:35 - 3:05</b>
+                        </td>
+                        <td>TCS</td>
+                        <td>TCS Tech Talk</td>
+                        <td>Baldwin 649</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <b>3:10 - 3:40</b>
+                        </td>
+                        <td>JPMorgan</td>
+                        <td>Hack-A-Tips</td>
+                        <td>Baldwin 645</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <b>3:45 - 4:15</b>
+                        </td>
+                        <td>Kroger</td>
+                        <td>Storytelling through Software - how Kroger Feeds the Human Spirit</td>
+                        <td>Baldwin 649</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <b>4:20 - 4:50</b>
+                        </td>
+                        <td>84.51</td>
+                        <td>Understanding Scrum</td>
+                        <td>Baldwin 645</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="columns-4">
+            <a class="twitter-timeline" data-dnt="true" href="https://twitter.com/search?q=%40Revolution_UC%20OR%20RevolutionUC%20OR%20RevUC%20OR%20%23RevUC"
+                data-widget-id="969773732695826432">Tweets about @Revolution_UC OR RevolutionUC OR RevUC OR #RevUC</a>
+            <script>!function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/.test(d.location) ? 'http' : 'https'; if (!d.getElementById(id)) { js = d.createElement(s); js.id = id; js.src = p + "://platform.twitter.com/widgets.js"; fjs.parentNode.insertBefore(js, fjs); } }(document, "script", "twitter-wjs");</script>
+        </div>
+    </div>
+</div>
