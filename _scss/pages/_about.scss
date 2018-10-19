@@ -12,7 +12,7 @@
             .item__text {
                 padding-top: 16px;
                 padding-bottom: 16px;
-                background-color: $purple;
+                background-color: $prim-color-3;
                 position: absolute;
                 bottom: 0;
                 width: 100%;
@@ -33,7 +33,7 @@
                 background-image: url(/img/about-build.jpg);
 
                 .item__text {
-                    background-color: $purple;
+                    background-color: $prim-color-4;
                 }
             }
 
@@ -41,7 +41,7 @@
                 background-image: url(/img/about-learn.jpg);
 
                 .item__text {
-                    background-color: $purple-light;
+                    background-color: $prim-color-4;
                 }
             }
 

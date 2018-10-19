@@ -2,35 +2,35 @@
     display: inline-block;
     margin: 0;
     padding: 16px 20px;
-    background-color: $purple;
+    background-color: $prim-color-5;
     color: $white;
     text-decoration: none;
     font-size: $btn-font-size;
     margin-bottom: 1rem;
 
     &.btn--primary {
-        background-color: $purple;
+        background-color: $prim-color-5;
 
         &:hover {
-            background-color: darken($purple, 10%);
+            background-color: darken($prim-color-5, 10%);
         }
     }
 
     &.btn--secondary {
-        background-color: $grey;
-        color: $purple-light;
+        background-color: $prim-color-1;
+        color: $prim-color-3;
 
         &:hover {
-            background-color: darken($grey, 10%);
+            background-color: darken($prim-color-1, 10%);
         }
     }
 
     &.btn--tertiary {
-        background-color: $purple-light;
+        background-color: $prim-color-3;
         color: $white;
 
         &:hover {
-            background-color: darken($purple-light, 10%);
+            background-color: darken($prim-color-3, 10%);
         }
     }
 }

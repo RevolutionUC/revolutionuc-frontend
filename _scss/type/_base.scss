@@ -10,7 +10,7 @@ html {
   font-size: $base-font-size;
   line-height: 1.5;
   overflow-x: hidden;
-  background-color: $grey;
+  background-color: $prim-color-1;
 }
 
 body {
@@ -48,7 +48,7 @@ p {
   margin-bottom: 40px;
 
   a {
-    color: $purple;
+    color: $prim-color-3;
   }
 
   &.lead {
