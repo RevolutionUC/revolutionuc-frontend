@@ -1,5 +1,5 @@
 .footer {
-    // background-color: $purple-light;
+    background-color: $prim-color-2;
     padding-top: 30px;
     padding-bottom: 30px;
 
@@ -7,6 +7,7 @@
         margin: 0;
         font-size: 14px;
         text-align: center;
+        color: $prim-color-3;
 
         a {
             color: inherit;
@@ -34,7 +35,7 @@
 
             svg {
                 max-width: 40px;
-                fill: $purple;
+                fill: $prim-color-3;
             }
         }
     }

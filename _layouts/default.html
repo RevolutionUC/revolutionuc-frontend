@@ -3,7 +3,7 @@
 <main class="main {% if page.useContainer != false %}container{% endif %}">
     {% if page.image %}
         <div class="page-header {% if page.useContainer == false %}container{% endif %}">
-            <div class="page-header__img" style="background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.70)), url({{ page.image }});">
+            <div class="page-header__img" style="background: url({{ page.image }});">
             </div>
 
             <div class="page-header__content">

@@ -2,12 +2,12 @@ source "https://rubygems.org"
 
 # Use `bundle exec jekyll serve` to start the dev server
 
-gem "jekyll", "3.5.0"
-gem "html-proofer", "3.7.5"
+gem "jekyll", "3.8.4"
+gem "html-proofer", "3.9.0"
 
 group :jekyll_plugins do
     gem "jekyll-sitemap", "1.1.1"
-    gem "bourbon", "4.3.4"
+    gem "bourbon", "5.1.0"
     gem "neat", "2.1.0"
 end
 

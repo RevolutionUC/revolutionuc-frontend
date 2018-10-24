@@ -4,8 +4,8 @@
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 1;
-  background-color: rgba(96, 118, 176, 0.97);
+  z-index: 10;
+  background-color: $prim-color-2; //;rgba(96, 118, 176, 0.97);
   padding: 0;
   margin: 0;
 
@@ -43,7 +43,7 @@
           display: inline-block;
 
           a {
-            color: $grey;
+            color: $prim-color-3;
             text-decoration: none;
             padding: $btn-padding;
             font-size: 17px;
@@ -51,16 +51,16 @@
 
             &:hover,
             &.navbar__active {
-              background-color: $purple;
-              color: $grey;
+              background-color: $prim-color-3;
+              color: $prim-color-1;
             }
 
             &.navbar__register {
-              background-color: $purple-light;
-              color: $grey;
+              background-color: $prim-color-3;
+              color: $prim-color-1;
 
               &:hover {
-                background-color: darken($purple-light, 10%);
+                background-color: darken($prim-color-3, 10%);
               }
             }
           }

@@ -6,11 +6,11 @@
 
 html {
   font-family: $body-font-family;
-  color: $black;
+  color: $black;//$prim-color-1;
   font-size: $base-font-size;
   line-height: 1.5;
   overflow-x: hidden;
-  background-color: $grey;
+  background-color: $white; //$prim-color-1;
 }
 
 body {
@@ -48,7 +48,7 @@ p {
   margin-bottom: 40px;
 
   a {
-    color: $purple;
+    color: $prim-color-4;
   }
 
   &.lead {
