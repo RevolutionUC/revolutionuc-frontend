@@ -14,7 +14,8 @@ html {
 }
 
 body {
-  overflow: hidden; // to accomodate elements wider than the screen
+  overflow-x: hidden; // to accomodate elements wider than the screen
+  overflow-y: hidden;
 }
 
 h1,
