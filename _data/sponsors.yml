@@ -1,3 +1,7 @@
 - name: Worldpay
   link: https://www.worldpay.com
   image: /img/sponsors/worldpay.png
+
+- name: ACM@UC
+  link: https://acmatuc.org/
+  image: /img/sponsors/acmatuc.svg
