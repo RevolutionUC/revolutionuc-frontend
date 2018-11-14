@@ -24,6 +24,10 @@
         height: initial;
         min-height: initial;
       }
+
+      &.sponsor-image--ge-aviation {
+        max-height: 120px;
+      }
     }
   }
 }
