@@ -1,27 +1,28 @@
-        <footer class="footer">
-            <div class="container">
-                <ul class="social-icons">
-                    {% for icon in site.data.social-icons %}
-                        <li>
-                            <a href="{{ icon.link }}" target="_blank" alt="RevolutionUC on {{ icon.name }}">
-                                {% include {{ icon.svg }} %}
-                            </a>
-                        </li>
-                    {% endfor %}
-                </ul>
-            </div>
+<footer class="footer">
+    <div class="container">
+        <ul class="social-icons">
+            {% for icon in site.data.social-icons %}
+            <li>
+                <a href="{{ icon.link }}" target="_blank" alt="RevolutionUC on {{ icon.name }}">
+                    {% include {{ icon.svg }} %}
+                </a>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
 
-            <div class="container">
-                <p>Photos courtesy of Major League Hacking powered by Dell and Windows</p>
-                <p>RevolutionUC adheres to the <a href="https://static.mlh.io/docs/mlh-code-of-conduct.pdf" target="_blank">Major League Hacking Code Of Conduct</a></p>
-                <p>Questions? Send us an email at <a href="mailto:info@revolutionuc.com">info@revolutionuc.com</a></p>
-                <br>
-                <p>&copy; 2018 RevolutionUC</p>
-            </div>
-        </footer>
+    <div class="container">
+        <p>Photos courtesy of Major League Hacking powered by Dell and Windows</p>
+        <p>RevolutionUC adheres to the <a href="https://static.mlh.io/docs/mlh-code-of-conduct.pdf" target="_blank">Major
+                League Hacking Code Of Conduct</a></p>
+        <p>Questions? Send us an email at <a href="mailto:info@revolutionuc.com">info@revolutionuc.com</a></p>
+        <br>
+        <p>&copy; 2018 RevolutionUC</p>
+    </div>
+</footer>
 
         {% if page.url == "/" %}
-        <script src="/js/video.js?{{ site.time | date: '%s%N' }}"></script>
+        <!-- <script src="/js/video.js?{{ site.time | date: '%s%N' }}"></script> -->
         <script src="/js/scroll-chevron.js?{{ site.time | date: '%s%N' }}"></script>
         {% endif %}
 
