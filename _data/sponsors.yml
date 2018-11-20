@@ -25,6 +25,11 @@
   image: /img/sponsors/worldpay.png
   webp: /img/sponsors/worldpay.webp
 
+- name: Scripps
+  link: http://scripps.com
+  image: /img/sponsors/scripps.jpg
+  webp: /img/sponsors/scripps.webp
+
 - name: ACM@UC
   link: https://acmatuc.org/
   image: /img/sponsors/acmatuc.svg
