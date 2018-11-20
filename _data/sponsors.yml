@@ -1,11 +1,36 @@
+# sponsors.yml
+# How to use:
+# name: Name of the company
+# link: link to their webpage
+#
+# If we only have one size of their logo:
+# image: png, jpg of their logo
+# webp: webp version of their logo
+# 
+# If we have two sizes:
+# 1x, 2x: 1x and 2x png, jpg of their logo
+# webp1x, webp2x: webp versions
+# 
+# If it is an svg:
+# image: svg of the logo
+# svg: true <- this is REQUIRED
+
+- name: Tata Consultancy Services
+  link: https://www.tcs.com
+  image: /img/sponsors/tcs.png
+  webp: /img/sponsors/tcs.webp
+
 - name: Worldpay
   link: https://www.worldpay.com
   image: /img/sponsors/worldpay.png
+  webp: /img/sponsors/worldpay.webp
 
 - name: ACM@UC
   link: https://acmatuc.org/
   image: /img/sponsors/acmatuc.svg
+  svg: true
 
 - name: GE Aviation
   link: https://www.geaviation.com
   image: /img/sponsors/ge.svg
+  svg: true

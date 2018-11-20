@@ -13,11 +13,17 @@ description: Sponsoring organizations for RevolutionUC — Hackathon at the Univ
         {% for sponsor in site.data.sponsors %}
             <div class="sponsor-image">
                 <a href="{{ sponsor.link }}" target="_blank">
+                    <picture>
                     {% if sponsor.image["1x"] and sponsor.image["2x"] %}
+                        <source class="sponsor-image--{{ sponsor.name | slugify }}" srcset="{{ sponsor.image["webp1x"] }} 1x, {{ sponsor.image["webp2x"] }} 2x" type="image/webp">
                         <img class="sponsor-image--{{ sponsor.name | slugify }}" src="{{ sponsor.image["1x"] }}" srcset="{{ sponsor.image["1x"] }} 1x, {{ sponsor.image["2x"] }} 2x" alt="{{ sponsor.name }} logo">
+                    {% else if !sponsor.svg %}
+                        <source class="sponsor-image--{{ sponsor.name | slugify }}" srcset="{{ sponsor.webp }}" type="image/webp">
+                        <img class="sponsor-image--{{ sponsor.name | slugify }}" src="{{ sponsor.image }}" alt="{{ sponsor.name }} logo">
                     {% else %}
                         <img class="sponsor-image--{{ sponsor.name | slugify }}" src="{{ sponsor.image }}" alt="{{ sponsor.name }} logo">
                     {% endif %}
+                    </picture>
                 </a>
             </div>
         {% endfor %}
