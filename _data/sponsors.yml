@@ -30,12 +30,14 @@
   image: /img/sponsors/scripps.jpg
   webp: /img/sponsors/scripps.webp
 
+- name: GE Aviation
+  link: https://www.geaviation.com
+  image: /img/sponsors/ge.svg
+  svg: true
+
 - name: ACM@UC
   link: https://acmatuc.org/
   image: /img/sponsors/acmatuc.svg
   svg: true
 
-- name: GE Aviation
-  link: https://www.geaviation.com
-  image: /img/sponsors/ge.svg
-  svg: true
+
