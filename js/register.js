@@ -45,9 +45,15 @@ if (!registration_init) {
       this._submitButton.disabled = true;
       this._submitButton.textContent = "Working...";
 
+      var formData = new FormData(this._formElement)
+      let jsonObj = {}
+      for (const [key, value] of formData.entries()) {
+        jsonObj[key] = value
+      }
+
       fetch("https://api.revolutionuc.com/registration/register", {
         method: "POST",
-        body: new FormData(this._formElement),
+        body: jsonObj, //new FormData(this._formElement),
       }).then(response => {
         this._updateFormUI(response);
       });
