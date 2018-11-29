@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Join Waitlist
+title: Register
 permalink: /register/
 description: Registration for RevolutionUC — Hackathon at the University of Cincinnati from March 2-3, 2019
 ---
@@ -83,10 +83,26 @@ description: Registration for RevolutionUC — Hackathon at the University of Ci
               </div>
             </div>
 
-            <div class="form-block columns-4-table b-bottom">
+            <!-- <div class="form-block columns-4-table b-bottom">
               <label class="tag" for="major">Major*</label>
               <div class="form-block__input">
                 <input name="major" id="major" type="text" placeholder="Computer Science">
+              </div>
+            </div> -->
+
+            <div class="form-block columns-4-table b-bottom">
+              <label class="tag" for="major">Major*</label>
+              <div class="form-block__input">
+                <select name="major" id="major">
+                  <option value="" disabled selected>Major</option>
+                    {% for row in site.data.majors %}
+                      <option>
+                          {% for cell in row %}
+                            {{ cell[1] }}
+                          {% endfor %}
+                      </option>
+                    {% endfor %}
+                </select>
               </div>
             </div>
 
@@ -168,6 +184,21 @@ description: Registration for RevolutionUC — Hackathon at the University of Ci
             </div>
 
             <div class="form-block columns-4-table b-bottom">
+              <label class="tag" for="graduation">Expected Graduation Year*</label>
+              <div class="form-block__input">
+                <select name="graduation" id="graduation">
+                  <option value="" disabled selected>Expected Graduation Year</option>
+                  <option value="2019">2019</option>
+                  <option value="2020">2020</option>
+                  <option value="2021">2021</option>
+                  <option value="2022">2022</option>
+                  <option value="2023">2023</option>
+                  <option value="2024">2024</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-block columns-4-table b-bottom">
               <label for="gender" class="tag">Gender*</label>
               <div class="form-block__input">
                 <select name="gender" id="gender">
@@ -175,7 +206,13 @@ description: Registration for RevolutionUC — Hackathon at the University of Ci
                   <option value="male">Male</option>
                   <option value="female">Female</option>
                   <option value="non-binary">Non-binary</option>
+                  <option value="transgender">Transgender</option>
+                  <option value="intersex">Intersex</option>
+                  <option value="gender-non-conforming">Gender Non-Conforming</option>
+                  <option value="other">Other</option>
+                  <option value="prefer-not-to-say">Prefer not to respond</option>
                 </select>
+
               </div>
             </div>
 
@@ -241,10 +278,10 @@ description: Registration for RevolutionUC — Hackathon at the University of Ci
 
           <div class="row">
             <div class="form-block">
-                <h4 style="margin-top: -10px">We have hit our projected capacity for RevolutionUC. 
+                <!-- <h4 style="margin-top: -10px">We have hit our projected capacity for RevolutionUC. 
                     As we confirm attendance, spots may open up, which we will give to waitlisted
-                    participants in order of registration.</h4>
-              <button name="registrationSubmit" type="submit" disabled class="button button--secondary">Join Waitlist</button>
+                    participants in order of registration.</h4> -->
+              <button name="registrationSubmit" type="submit" disabled class="button button--secondary">Register</button>
             </div>
           </div>
         </form>
@@ -326,3 +363,7 @@ description: Registration for RevolutionUC — Hackathon at the University of Ci
     typeahead_init = true;
   }
 </script>
+<script
+src="https://code.jquery.com/jquery-3.3.1.js"
+integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+crossorigin="anonymous"></script>
