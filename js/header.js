@@ -18,6 +18,9 @@ function header() {
   var headerIsAnimating = false;
   function doneAnimating() {
     headerIsAnimating = false;
+    if (window.scrollY == 0) {
+      animateHeader()  
+    }
   }
   // Let below functions that control animation know
   // that the animation is done.
