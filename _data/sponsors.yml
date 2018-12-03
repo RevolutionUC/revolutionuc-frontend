@@ -35,6 +35,11 @@
   image: /img/sponsors/ge.svg
   svg: true
 
+- name: Major League Hacking
+  link: https://mlh.io/
+  image: /img/sponsors/mlh.svg
+  svg: true
+
 - name: ACM@UC
   link: https://acmatuc.org/
   image: /img/sponsors/acmatuc.svg
