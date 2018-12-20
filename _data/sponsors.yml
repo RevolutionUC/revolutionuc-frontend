@@ -15,6 +15,11 @@
 # image: svg of the logo
 # svg: true <- this is REQUIRED
 
+- name: Kinetic Vision
+  link: https://kinetic-vision.com/
+  image: /img/sponsors/kineticvision.png
+  webp: /img/sponsors/kineticvision.webp
+
 - name: Tata Consultancy Services
   link: https://www.tcs.com
   image: /img/sponsors/tcs.png
