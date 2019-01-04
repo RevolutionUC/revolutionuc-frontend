@@ -1,16 +1,16 @@
-- date: March 3
+- date: March 2
 
 - time: 11:00 AM
   event: Check-in Begins
-  location: Zimmer Lobby
+  location: 525 Old Chem
 
 - time: 12:00 PM
   event: Opening Ceremony/Lunch
-  location: Zimmer Auditorium
+  location: 525 Old Chem
 
 - time: 12:45 PM
   event: Team Formation
-  location: Zimmer Lobby/Plaza
+  location: Rhodes 8th floor
 
 - time: 1:30 PM
   event: Hacking Begins
@@ -24,14 +24,18 @@
   event: Dinner
   location: 544 Baldwin Hall
 
-- time: 9:00 PM
+- time: 8:00 PM
   event: Cup Stacking
   location: 801 Rhodes Lobby
 
-- date: March 4
+- time: 11:00 PM
+  event: Paper Airplane
+  location: 801 Rhodes Lobby
+
+- date: March 3
 
 - time: 12:00 AM
-  event: Midnight Snack (Provided by Vantiv, now Worldpay)
+  event: Midnight Snack
   location: 801 Rhodes Lobby
 
 - time: 1:00 AM
@@ -52,8 +56,8 @@
 
 - time: 3:30 PM
   event: Awards/Closing Ceremonies
-  location: Zimmer Auditorium
+  location: 525 Old Chem
 
 - time: 4:30 PM
   event: Event Ends
-  location: Zimmer Auditorium
+  location: 525 Old Chem
