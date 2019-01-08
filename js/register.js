@@ -88,7 +88,7 @@ if (!registration_init) {
       }).then(data => {
         console.log(data);
         let form = new FormData();
-        form.append(formData.get("resume")["name"], formData.get("resume"));
+        form.append("resume", formData.get("resume"));
         this._uploadResume(data, form)
       });
     }
