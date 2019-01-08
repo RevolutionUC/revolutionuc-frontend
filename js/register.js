@@ -51,11 +51,56 @@ if (!registration_init) {
         jsonObj[key] = value
       }
 
-      fetch("https://api.revolutionuc.com/registration/register", {
+      let jsonData = {}
+      jsonData["firstName"] = jsonObj["firstName"]
+      jsonData["lastName"] = jsonObj["lastName"]
+      jsonData["email"] = jsonObj["email"]
+      jsonData["phoneNumber"] = jsonObj["phoneNumber"]
+      jsonData["school"] = jsonObj["school"]
+      jsonData["major"] = jsonObj["major"]
+      jsonData["gender"] = jsonObj["gender"]
+      jsonData["ethnicity"] = jsonObj["ethnicity"]
+      jsonData["howYouHeard"] = jsonObj["howYouHeard"]
+      jsonData["hackathons"] = parseInt(jsonObj["hackathons"])
+      jsonData["shirtSize"] = jsonObj["shirtSize"]
+      jsonData["githubUsername"] = jsonObj["githubUsername"]
+      jsonData["dateOfBirth"] = new Date(jsonObj["dob"]).toISOString()
+      jsonData["allergens"] = []
+      if(jsonObj["vegetarian"] == "on"){jsonData["allergens"].push("Vegetatian")}
+      if(jsonObj["vegan"] == "on"){jsonData["allergens"].push("Vegan")}
+      if(jsonObj["peanutAllergy"] == "on"){jsonData["allergens"].push("PeanutAllergy")}
+      if(jsonObj["glutenFree"] == "on"){jsonData["allergens"].push("GlutenFree")}
+      jsonData["otherAllergens"] = jsonObj["otherDietaryRestrictions"]
+      jsonData["educationLevel"] = jsonObj["education"]
+
+      var regHeaders = new Headers();
+      regHeaders.append('Content-Type', 'application/json');
+      //regHeaders.append('Accept', 'application/json');
+      var uploadKey = ""
+
+      fetch("https://revolutionuc-api.herokuapp.com/api/registrant", {
         method: "POST",
-        body: jsonObj, //new FormData(this._formElement),
+        headers: regHeaders,
+        body: JSON.stringify(jsonData), //new FormData(this._formElement),
       }).then(response => {
         this._updateFormUI(response);
+        return response.json();
+      }).then(data => {
+        console.log(data);
+        let form = new FormData();
+        form.append(formData.get("resume")["name"], formData.get("resume"));
+        this._uploadResume(data, form)
+      });
+    }
+
+    static _uploadResume(data, form) {
+      fetch("https://revolutionuc-api.herokuapp.com/api/uploadResume/" + data["uploadKey"], {
+        method: "POST",
+        //headers: regHeaders,
+        body: form,
+      }).then(response => {
+        console.log(response);
+        window.location = "/check-email";
       });
     }
 
@@ -73,7 +118,8 @@ if (!registration_init) {
         // ...Good news bears
         this._cleanDirtyLabels(this._labels);
         this._removeEmailRegisteredWarning();
-        window.location = "/check-email";
+        console.log(response);
+        //window.location = "/check-email";
       }
     }
 
