@@ -35,9 +35,19 @@
   image: /img/sponsors/scripps.jpg
   webp: /img/sponsors/scripps.webp
 
+- name: JPMorgan Chase
+  link: https://www.jpmorganchase.com
+  image: /img/sponsors/jpmc.svg
+  svg: true
+
 - name: GE Aviation
   link: https://www.geaviation.com
   image: /img/sponsors/ge.svg
+  svg: true
+
+- name: Wolfram Language
+  link: http://www.wolfram.com/hackathons/
+  image: /img/sponsors/wolfram.svg
   svg: true
 
 - name: Major League Hacking
