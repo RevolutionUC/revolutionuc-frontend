@@ -15,11 +15,6 @@
 # image: svg of the logo
 # svg: true <- this is REQUIRED
 
-- name: Kinetic Vision
-  link: https://kinetic-vision.com/
-  image: /img/sponsors/kineticvision.png
-  webp: /img/sponsors/kineticvision.webp
-
 - name: Tata Consultancy Services
   link: https://www.tcs.com
   image: /img/sponsors/tcs.png
@@ -44,6 +39,11 @@
   link: https://www.geaviation.com
   image: /img/sponsors/ge.svg
   svg: true
+
+- name: Kinetic Vision
+  link: https://kinetic-vision.com/
+  image: /img/sponsors/kineticvision.png
+  webp: /img/sponsors/kineticvision.webp
 
 - name: Wolfram Language
   link: http://www.wolfram.com/hackathons/
