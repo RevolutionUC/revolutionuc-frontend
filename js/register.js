@@ -4,6 +4,35 @@ if (!registration_init) {
   class Registration {
     static init() {
       console.log("Registration::init()");
+
+      // reguired fields
+      this._firstName = document.querySelector("input[name=firstName]");
+      this._lastName = document.querySelector("input[name=lastName]");
+      this._shirtSize = document.querySelector("input[name=shirtSize]");
+      this._email = document.querySelector("input[name=email]");
+      this._school = document.querySelector("input[name=school]");
+      this._major = document.querySelector("input[name=major]");
+      this._dob = document.querySelector("input[name=_dob]");
+      this._phoneNumber = document.querySelector("input[name=phoneNumber]");
+      this._education = document.querySelector("input[name=education]");
+      this._gender = document.querySelector("input[name=gender]");
+      this._ethnicity = document.querySelector("input[name=ethnicity]");
+
+      this._firstName.addEventListener();
+      this._lastName.addEventListener();
+      this._shirtSize.addEventListener();
+      this._email.addEventListener();
+      this._school.addEventListener();
+      this._major.addEventListener();
+      this._dob.addEventListener();
+      this._phoneNumber.addEventListener();
+      this._education.addEventListener();
+      this._gender.addEventListener();
+      this._ethnicity.addEventListener();
+
+
+
+
       this._dataSharingBox = document.querySelector("input[name=dataSharing]");
       this._codeOfConductBox = document.querySelector(
         "input[name=codeOfConduct]",
@@ -72,6 +101,20 @@ if (!registration_init) {
       if(jsonObj["glutenFree"] == "on"){jsonData["allergens"].push("GlutenFree")}
       jsonData["otherAllergens"] = jsonObj["otherDietaryRestrictions"]
       jsonData["educationLevel"] = jsonObj["education"]
+
+      //check if all reguired entries are filled in
+      if(jsonData["firstName"]!= "" &&
+         this._lastName.textContent != "" &&
+         this._shirtSize.value != "" &&
+         this._email.textContent != "" &&
+         this._school.textContent != "" &&
+         this._major.textContent != "" &&
+         this._dob.textContent != "" &&
+         this._phoneNumber.textContent != "" &&
+         this._education.textContent != "" &&
+         this._gender.textContent != "" &&
+         this._ethnicity.textContent != ""
+         ){}
 
       var regHeaders = new Headers();
       regHeaders.append('Content-Type', 'application/json');
