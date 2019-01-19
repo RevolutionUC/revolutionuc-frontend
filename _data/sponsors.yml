@@ -45,6 +45,11 @@
   image: /img/sponsors/kineticvision.png
   webp: /img/sponsors/kineticvision.webp
 
+- name: Tangram Flex
+  link: https://www.tangramflex.com/
+  image: /img/sponsors/tangram-flex.svg
+  svg: true
+
 - name: Wolfram Language
   link: http://www.wolfram.com/hackathons/
   image: /img/sponsors/wolfram.svg
@@ -59,5 +64,3 @@
   link: https://acmatuc.org/
   image: /img/sponsors/acmatuc.svg
   svg: true
-
-
