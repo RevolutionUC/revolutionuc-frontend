@@ -25,6 +25,11 @@
   image: /img/sponsors/worldpay.png
   webp: /img/sponsors/worldpay.webp
 
+- name: Fifth Third Bank
+  link: http://53.com
+  image: /img/sponsors/FifthThird.svg
+  svg: true
+
 - name: Scripps
   link: http://scripps.com
   image: /img/sponsors/scripps.jpg
