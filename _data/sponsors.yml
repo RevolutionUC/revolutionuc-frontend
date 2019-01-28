@@ -60,6 +60,11 @@
   image: /img/sponsors/wolfram.svg
   svg: true
 
+- name: Sticker Mule
+  link: http://hackp.ac/mlh-stickermule-hackathons
+  image: /img/sponsors/sticker-mule.svg
+  svg: true
+
 - name: Major League Hacking
   link: https://mlh.io/
   image: /img/sponsors/mlh.svg
