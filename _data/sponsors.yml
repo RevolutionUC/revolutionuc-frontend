@@ -55,6 +55,11 @@
   image: /img/sponsors/tangram-flex.svg
   svg: true
 
+- name: UC BCS
+  link: http://www.wolfram.com/hackathons/
+  image: /img/sponsors/bcs.png
+  webp: /img/sponsors/bcs.webp
+
 - name: Wolfram Language
   link: http://www.wolfram.com/hackathons/
   image: /img/sponsors/wolfram.svg
