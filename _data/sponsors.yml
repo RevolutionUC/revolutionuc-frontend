@@ -70,6 +70,11 @@
   image: /img/sponsors/sticker-mule.svg
   svg: true
 
+- name: Cyber@UC
+  link: https://www.cyberatuc.org
+  image: /img/sponsors/cyberatuc.svg
+  svg: true
+
 - name: Major League Hacking
   link: https://mlh.io/
   image: /img/sponsors/mlh.svg
