@@ -55,6 +55,11 @@
   image: /img/sponsors/tangram-flex.svg
   svg: true
 
+- name: Twilio
+  link: https://www.twilio.com
+  image: /img/sponsors/twilio.svg
+  svg: true
+
 - name: UC BCS
   link: https://www.uc.edu/af/bcs.html
   image: /img/sponsors/bcs.png
