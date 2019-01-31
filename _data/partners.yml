@@ -1,0 +1,26 @@
+# sponsors.yml
+# How to use:
+# name: Name of the company
+# link: link to their webpage
+#
+# If we only have one size of their logo:
+# image: png, jpg of their logo
+# webp: webp version of their logo
+# 
+# If we have two sizes:
+# 1x, 2x: 1x and 2x png, jpg of their logo
+# webp1x, webp2x: webp versions
+# 
+# If it is an svg:
+# image: svg of the logo
+# svg: true <- this is REQUIRED
+
+- name: Cyber@UC
+  link: https://www.cyberatuc.org
+  image: /img/sponsors/cyberatuc.svg
+  svg: true
+
+- name: Major League Hacking
+  link: https://mlh.io/
+  image: /img/sponsors/mlh.svg
+  svg: true

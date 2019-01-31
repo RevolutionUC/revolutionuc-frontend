@@ -74,18 +74,3 @@
   link: http://hackp.ac/mlh-stickermule-hackathons
   image: /img/sponsors/sticker-mule.svg
   svg: true
-
-- name: Cyber@UC
-  link: https://www.cyberatuc.org
-  image: /img/sponsors/cyberatuc.svg
-  svg: true
-
-- name: Major League Hacking
-  link: https://mlh.io/
-  image: /img/sponsors/mlh.svg
-  svg: true
-
-- name: ACM@UC
-  link: https://acmatuc.org/
-  image: /img/sponsors/acmatuc.svg
-  svg: true

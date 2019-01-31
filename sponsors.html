@@ -9,27 +9,108 @@ description: Sponsoring organizations for RevolutionUC — Hackathon at the Univ
 ---
 
 <section class="container section">
-    <div class="flex">
-        {% for sponsor in site.data.sponsors %}
-            <div class="sponsor-image">
-                <a href="{{ sponsor.link }}" target="_blank">
-                    <picture>
-                    {% if sponsor.image["1x"] and sponsor.image["2x"] %}
-                        <source class="sponsor-image--{{ sponsor.name | slugify }}" srcset="{{ sponsor.image["webp1x"] }} 1x, {{ sponsor.image["webp2x"] }} 2x" type="image/webp">
-                        <img class="sponsor-image--{{ sponsor.name | slugify }}" src="{{ sponsor.image["1x"] }}" srcset="{{ sponsor.image["1x"] }} 1x, {{ sponsor.image["2x"] }} 2x" alt="{{ sponsor.name }} logo">
-                    {% else if !sponsor.svg %}
-                        <source class="sponsor-image--{{ sponsor.name | slugify }}" srcset="{{ sponsor.webp }}" type="image/webp">
-                        <img class="sponsor-image--{{ sponsor.name | slugify }}" src="{{ sponsor.image }}" alt="{{ sponsor.name }} logo">
-                    {% else %}
-                        <img class="sponsor-image--{{ sponsor.name | slugify }}" src="{{ sponsor.image }}" alt="{{ sponsor.name }} logo">
-                    {% endif %}
-                    </picture>
-                </a>
-            </div>
-        {% endfor %}
+  <div class="flex">
+    {% for sponsor in site.data.sponsors %}
+    <div class="sponsor-image">
+      <a href="{{ sponsor.link }}" target="_blank">
+        <picture>
+          {% if sponsor.image["1x"] and sponsor.image["2x"] %} <source
+          class="sponsor-image--{{ sponsor.name | slugify }}" srcset="{{
+            sponsor.image["webp1x"]
+          }}
+          1x, {{ sponsor.image["webp2x"] }} 2x" type="image/webp"> <img
+          class="sponsor-image--{{ sponsor.name | slugify }}" src="{{
+            sponsor.image["1x"]
+          }}" srcset="{{ sponsor.image["1x"] }} 1x,
+          {{ sponsor.image["2x"] }} 2x" alt="{{ sponsor.name }} logo"> {% else
+          if !sponsor.svg %}
+          <source
+            class="sponsor-image--{{ sponsor.name | slugify }}"
+            srcset="{{ sponsor.webp }}"
+            type="image/webp"
+          />
+          <img
+            class="sponsor-image--{{ sponsor.name | slugify }}"
+            src="{{ sponsor.image }}"
+            alt="{{ sponsor.name }} logo"
+          />
+          {% else %}
+          <img
+            class="sponsor-image--{{ sponsor.name | slugify }}"
+            src="{{ sponsor.image }}"
+            alt="{{ sponsor.name }} logo"
+          />
+          {% endif %}
+        </picture>
+      </a>
     </div>
+    {% endfor %}
+  </div>
 </section>
-<br/>
+
+<section class="background-color-light">
+  <div class="container"><h1 class="text-center">Partners</h1></div>
+
+  <section class="container section">
+    <div class="flex">
+      {% for sponsor in site.data.partners %}
+      <div class="sponsor-image">
+        <a href="{{ sponsor.link }}" target="_blank">
+          <picture>
+            {% if sponsor.image["1x"] and sponsor.image["2x"] %} <source
+            class="sponsor-image--{{ sponsor.name | slugify }}" srcset="{{
+              sponsor.image["webp1x"]
+            }}
+            1x, {{ sponsor.image["webp2x"] }} 2x" type="image/webp"> <img
+            class="sponsor-image--{{ sponsor.name | slugify }}" src="{{
+              sponsor.image["1x"]
+            }}" srcset="{{ sponsor.image["1x"] }} 1x,
+            {{ sponsor.image["2x"] }} 2x" alt="{{ sponsor.name }} logo"> {% else
+            if !sponsor.svg %}
+            <source
+              class="sponsor-image--{{ sponsor.name | slugify }}"
+              srcset="{{ sponsor.webp }}"
+              type="image/webp"
+            />
+            <img
+              class="sponsor-image--{{ sponsor.name | slugify }}"
+              src="{{ sponsor.image }}"
+              alt="{{ sponsor.name }} logo"
+            />
+            {% else %}
+            <img
+              class="sponsor-image--{{ sponsor.name | slugify }}"
+              src="{{ sponsor.image }}"
+              alt="{{ sponsor.name }} logo"
+            />
+            {% endif %}
+          </picture>
+        </a>
+      </div>
+      {% endfor %}
+    </div>
+  </section>
+
+  <div class="container"><h1 class="text-center">Organized By</h1></div>
+
+  <section class="container section">
+    <div class="flex">
+      <div class="sponsor-image">
+        <a href="https://acmatuc.org/" target="_blank">
+          <picture>
+            <source class="sponsor-image--acm@uc" srcset="" type="image/webp" />
+            <img
+              class="sponsor-image--acm@uc"
+              src="/img/sponsors/acmatuc.svg"
+              alt="ACM@UC logo"
+            />
+          </picture>
+        </a>
+      </div>
+    </div>
+  </section>
+  <br />
+</section>
 
 <!-- <section class="background-color-light">
     <div class="container call-to-action">
