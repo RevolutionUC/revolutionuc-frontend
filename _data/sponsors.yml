@@ -25,6 +25,11 @@
   image: /img/sponsors/worldpay.png
   webp: /img/sponsors/worldpay.webp
 
+- name: 84.51
+  link: https://8451.com/
+  image: /img/sponsors/8451.png
+  webp: /img/sponsors/8451.webp
+
 - name: Fifth Third Bank
   link: http://53.com
   image: /img/sponsors/FifthThird.svg
@@ -40,9 +45,19 @@
   image: /img/sponsors/jpmc.svg
   svg: true
 
+- name: Twilio
+  link: https://www.twilio.com
+  image: /img/sponsors/twilio.svg
+  svg: true
+
 - name: GE Aviation
   link: https://www.geaviation.com
   image: /img/sponsors/ge.svg
+  svg: true
+
+- name: Kroger Technology
+  link: https://www.kroger.com/livekt/
+  image: /img/sponsors/kroger.svg
   svg: true
 
 - name: Kinetic Vision
@@ -53,11 +68,6 @@
 - name: Tangram Flex
   link: https://www.tangramflex.com/
   image: /img/sponsors/tangram-flex.svg
-  svg: true
-
-- name: Twilio
-  link: https://www.twilio.com
-  image: /img/sponsors/twilio.svg
   svg: true
 
 - name: UC BCS
