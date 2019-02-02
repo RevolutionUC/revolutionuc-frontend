@@ -70,6 +70,11 @@
   image: /img/sponsors/tangram-flex.svg
   svg: true
 
+- name: UC School of Information Technology
+  link: https://cech.uc.edu/it.html
+  image: /img/sponsors/school-of-it.jpg
+  webp: /img/sponsors/school-of-it.webp
+
 - name: UC BCS
   link: https://www.uc.edu/af/bcs.html
   image: /img/sponsors/bcs.png
