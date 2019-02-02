@@ -20,35 +20,35 @@
   image: /img/sponsors/tcs.png
   webp: /img/sponsors/tcs.webp
 
-- name: Worldpay
-  link: https://www.worldpay.com
-  image: /img/sponsors/worldpay.png
-  webp: /img/sponsors/worldpay.webp
-
-- name: 84-51
-  link: https://8451.com/
-  image: /img/sponsors/8451.png
-  webp: /img/sponsors/8451.webp
-
 - name: Fifth Third Bank
   link: http://53.com
   image: /img/sponsors/FifthThird.svg
   svg: true
 
-- name: Scripps
-  link: http://scripps.com
-  image: /img/sponsors/scripps.jpg
-  webp: /img/sponsors/scripps.webp
+- name: "84.51°"
+  link: https://8451.com/
+  image: /img/sponsors/8451.png
+  webp: /img/sponsors/8451.webp
+
+- name: Worldpay
+  link: https://www.worldpay.com
+  image: /img/sponsors/worldpay.png
+  webp: /img/sponsors/worldpay.webp
+
+- name: Twilio
+  link: https://www.twilio.com
+  image: /img/sponsors/twilio.svg
+  svg: true
 
 - name: JPMorgan Chase
   link: https://www.jpmorganchase.com
   image: /img/sponsors/jpmc.svg
   svg: true
 
-- name: Twilio
-  link: https://www.twilio.com
-  image: /img/sponsors/twilio.svg
-  svg: true
+- name: Scripps
+  link: http://scripps.com
+  image: /img/sponsors/scripps.jpg
+  webp: /img/sponsors/scripps.webp
 
 - name: GE Aviation
   link: https://www.geaviation.com
