@@ -1,0 +1,20 @@
+---
+layout: default
+title: Hack Ideas
+permalink: /hack-ideas/
+subtitle: "Are you stuck coming up with a project idea?  Use these Hack Ideas to help guide you."
+image: "/img/hack-ideas.jpg"
+useContainer: false
+description: Hack Ideas to help guide your project at this year's RevolutionUC
+---
+
+<br/>
+
+{% for topic in site.data.hack-ideas %}
+<div class="container">
+    <h3 class="text-center">{{ topic.topic }}</h3>
+    {% for idea in topic.ideas %}
+        <p>{{ idea.idea }}</p>
+    {% endfor %}
+</div>
+{% endfor %}
