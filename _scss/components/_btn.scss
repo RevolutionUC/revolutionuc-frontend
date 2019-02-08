@@ -45,6 +45,11 @@
         &:hover {
             background-color: darken($prim-color-5, 10%);
         }
+        
+        &:disabled {
+            background-color: lightgray;
+            color: gray;
+        }
     }
 
     &.btn--upload-resume {
