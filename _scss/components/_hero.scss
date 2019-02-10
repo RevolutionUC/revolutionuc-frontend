@@ -51,6 +51,7 @@
   .hero__heading {
     margin: 0;
     z-index: 10;
+    font-size: 5em;
   }
 
   p {
@@ -68,6 +69,14 @@
   .hero {
     .btn {
       margin-bottom: 0;
+    }
+  }
+}
+
+@media (max-width: $small-breakpoint) {
+  .hero{
+    .hero__heading {
+      font-size: 2em;
     }
   }
 }
