@@ -40,6 +40,11 @@
   image: /img/sponsors/twilio.svg
   svg: true
 
+- name: Siemens PLM
+  link: https://www.plm.automation.siemens.com/
+  image: /img/sponsors/siemens.svg
+  svg: true
+
 - name: JPMorgan Chase
   link: https://www.jpmorganchase.com
   image: /img/sponsors/jpmc.svg
