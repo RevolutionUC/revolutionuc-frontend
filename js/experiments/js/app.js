@@ -23,10 +23,10 @@ particlesJS('particles-js',
         }
       },
       "color": {
-        "value": ["#D4B3C8", "#DEB9CF", "#BC869F", "#9F5C76", "#D4B3C8", "#DEB9CF", "#BC869F", "#9F5C76","#FF9F0A"]
+        "value": ["#D4B3C8", "#DEB9CF", "#BC869F", "#9F5C76", "#D4B3C8", "#DEB9CF", "#BC869F", "#9F5C76", "#FF9F0A"]
       },
       "shape": {
-        "type": "circle",
+        "type": ["circle", "image"],
         "stroke": {
           "width": 0,
           "color": "#000000"
@@ -35,7 +35,7 @@ particlesJS('particles-js',
           "nb_sides": 5
         },
         "image": {
-          "src": "img/github.svg",
+          "src": "/img/heart.png",
           "width": 100,
           "height": 100
         }
