@@ -9,11 +9,11 @@
     "orientation": "portrait-primary",
     "description": "Home of RevolutionUC.  Cincinnati's largest student organized hackathon.",
     "icons": [{
-      "src": "img/webapp-icon/webapp-icon-192.png",
+      "src": "img/webapp-icons/webapp-icon-192.png",
       "sizes": "192x192",
       "type": "image/png"
     }, {
-      "src": "img/webapp-icon/webapp-icon-512.png",
+      "src": "img/webapp-icons/webapp-icon-512.png",
       "sizes": "512x512",
       "type": "image/png"
     }]
