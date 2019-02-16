@@ -1,27 +1,31 @@
 - date: March 2
 
 - time: 11:00 AM
-  event: Check-in Begins
-  location: 525 Old Chem
+  event: Check-in and Sponsor Expo Begins
+  location: "Old Chem 5th & 6th Floors"
 
 - time: 12:00 PM
   event: Opening Ceremony/Lunch
   location: 525 Old Chem
 
-- time: 12:45 PM
+- time: 1:00 PM
   event: Team Formation
   location: Rhodes 8th Floor
 
 - time: 1:30 PM
   event: Hacking Begins
-  location: Hackerspace
+  location: Rhodes Hall Hackerspace
 
-- time: 2:00 PM-5:00 PM
+- time: 2:00 PM-4:30 PM
   event: Workshops
   location: 6th Floor Baldwin Hall
 
 - time: 6:00 PM
   event: Dinner
+  location: 544 Baldwin Hall
+  
+- time: 6:00 PM
+  event: Capture The Flag Intro Session
   location: 544 Baldwin Hall
 
 - time: 8:00 PM
@@ -52,12 +56,20 @@
 
 - time: 1:30 PM
   event: Hacking Ends
-  location: Hackerspace
+  location: Rhodes Hall Hackerspace
+  
+- time: 1:30 PM
+  event: Judging Begins
+  location: Rhodes Hall Hackerspace
+
+- time: 3:00 PM
+  event: Final Demos
+  location: Zimmer Auditorium
 
 - time: 3:30 PM
   event: Awards/Closing Ceremonies
-  location: 525 Old Chem
+  location: Zimmer Auditorium
 
 - time: 4:30 PM
   event: Event Ends
-  location: 525 Old Chem
+  location: Zimmer Auditorium
