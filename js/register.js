@@ -86,7 +86,7 @@ if (!registration_init) {
           this._submitButton.disabled = false;
            this._submitButton.textContent = "Register";
            return;
-      } 
+      }
 
       let jsonData = {}
       jsonData["firstName"] = jsonObj["firstName"]

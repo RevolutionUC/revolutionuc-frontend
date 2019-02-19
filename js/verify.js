@@ -53,14 +53,14 @@ if (window.location.href.indexOf("attendance") > -1) {
     document.title = "Confirm Attendance";
     h1.textContent = "Attendance Confirmed";
     content.textContent =
-      "Thank You!  You have confirmed your attendance to RevolutionUC 2018!";
+      "Thank You!  You have confirmed your attendance to RevolutionUC 2019!";
 
     var regHeaders = new Headers();
     regHeaders.append('Content-Type', 'application/json');
 
     let jsonData = {};
     jsonData["uuid"] = id;
-    jsonData["isConfirmed"] = confirm;
+    jsonData["isConfirmed"] = (confirm == 'true') ;
 
     fetch(
       "https://revolutionuc-api.herokuapp.com/api/confirmAttendance/",
