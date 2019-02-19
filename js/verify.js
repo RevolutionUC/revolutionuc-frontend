@@ -48,13 +48,16 @@ if (window.location.href.indexOf("attendance") > -1) {
   var h1 = document.getElementsByTagName("h1")[1];
   var content = document.getElementsByName("textValue")[0];
 
-  if (confirm != "true" || id == "none") {
+  if (confirm == "none" || id == "none") {
   } else {
     document.title = "Confirm Attendance";
     h1.textContent = "Attendance Confirmed";
-    content.textContent =
-      "Thank You!  You have confirmed your attendance to RevolutionUC 2019!";
-
+    if (confirm == 'true') {
+      content.textContent = "Thank You!  You have confirmed your attendance to RevolutionUC 2019!";
+    } else if (confirm == 'false') {
+      content.textContent = "Thank You!  You have confirmed that you will NOT be attending RevolutionUC 2019.";
+    }
+    
     var regHeaders = new Headers();
     regHeaders.append('Content-Type', 'application/json');
 
