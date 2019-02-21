@@ -35,6 +35,7 @@ if (window.location.href.indexOf("verify") > -1) {
     }).then(response => {
       if (response.status == 200 || response.status == 201) {
       } else {
+        h1.textContent = "Error";
         content.textContent =
           "There was a problem verifying your registration.  Please contact us at info@revolutionuc.com.";
       }
@@ -75,6 +76,7 @@ if (window.location.href.indexOf("attendance") > -1) {
     ).then(response => {
       if (response.status == 200 || response.status == 201) {
       } else {
+        h1.textContent = "Error";
         content.textContent =
           "There was a problem confirming your attendance.  Please contact us at info@revolutionuc.com.";
       }
