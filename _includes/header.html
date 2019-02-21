@@ -9,6 +9,10 @@
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+        {% if page.redirect %}
+            <meta http-equiv="refresh" content="0; url={{ page.redirect }}" />
+        {% endif %}
+
         {% assign current = page.url | downcase | split: '/' %}
 
         {% if page.title %}
