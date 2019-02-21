@@ -40,4 +40,4 @@ function initProgressBar(start, end) {
   }
 }
 
-initProgressBar("2019/02/02 13:30:00", "2019/03/02 13:30:00");
+initProgressBar("2019/02/02 00:00:00", "2019/03/02 00:00:00");
