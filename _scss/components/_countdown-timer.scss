@@ -6,6 +6,7 @@
 
     @media (max-width: $small-breakpoint) {
         visibility: hidden;
+        margin-bottom: 0rem;
     }
 }
 .barForeground { // this bar shrinks to show the progress behing made
