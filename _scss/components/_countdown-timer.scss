@@ -1,0 +1,36 @@
+.barBackground {
+    width: 100% !important;
+    height: 40px;
+    background-color: #FF9F0A;
+    margin-bottom: 1rem;
+
+    @media (max-width: $small-breakpoint) {
+        visibility: hidden;
+    }
+}
+.barForeground { // this bar shrinks to show the progress behing made
+    height: 40px;
+    width: 99%; //99%;
+    background-color: grey;
+    float: right;
+
+    @media (max-width: $small-breakpoint) {
+        visibility: hidden;
+    }
+}
+
+.countdownText {
+    float: left;
+    padding-left: 10px;
+    padding-top: 5px;
+
+    @media (max-width: $small-breakpoint) {
+        visibility: hidden;
+    }
+}
+
+// .barBackground, .barForeground, .countdownText {
+//     @media (max-width: $small-breakpoint) {
+//         visibility: hidden;
+//     }
+// }

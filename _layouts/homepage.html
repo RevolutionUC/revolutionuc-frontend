@@ -1,28 +1,42 @@
 {% include header.html %}
 
 <section class="hero__wrapper">
-    <div class="hero container container--small" style="z-index: 5;">
-        <h1 class="hero__heading">RevolutionUC</h1>
+  <div class="hero container container--small" style="z-index: 5;">
+    <h1 class="hero__heading">RevolutionUC</h1>
 
-        <p>Hackathon at the University of Cincinnati - March 2nd and 3rd, 2019</p>
-        <p>Interested? Register to participate!</p>
-
-        <div class="hero__heading">
-            <a class="btn btn--primary" href="/register">Register Now</a>
-        </div>
-
-        <div class="down-chevron"><a href="#main">&#x2304;</a></div>
-
+    <div class="barBackground" id="barBackground">
+      <span>
+        <p class="countdownText" id="countdownText">Time is running out!</p>
+        <div class="barForeground" id="barForeground"></div>
+      </span>
     </div>
 
-    <div style="overflow-x: hidden; overflow-y: hidden; width: 100%; position: absolute;top: 0;left: 0; height: 100%">
-        <!-- particles.js container -->
-        <div id="particles-js" style="overflow-x: hidden; overflow-y: hidden; height: 100%;"></div>
+    <!-- <br/> -->
 
-        <!-- scripts -->
-        <script src="/js/experiments/particles.js"></script>
-        <script src="/js/experiments/js/app.js"></script>
+    <p>Hackathon at the University of Cincinnati - March 2nd and 3rd, 2019</p>
+    <p>Interested? Register to participate!</p>
+
+    <div class="hero__heading">
+      <a class="btn btn--primary" href="/register">Register Now</a>
     </div>
+
+    <div class="down-chevron"><a href="#main">&#x2304;</a></div>
+  </div>
+
+  <div
+    style="overflow-x: hidden; overflow-y: hidden; width: 100%; position: absolute;top: 0;left: 0; height: 100%"
+  >
+    <!-- particles.js container -->
+    <div
+      id="particles-js"
+      style="overflow-x: hidden; overflow-y: hidden; height: 100%;"
+    ></div>
+
+    <!-- scripts -->
+    <script src="/js/experiments/particles.js"></script>
+    <script src="/js/experiments/js/app.js"></script>
+    <script src="/js/countdown-timer.js"></script>
+  </div>
 </section>
 
 {{ content }}
