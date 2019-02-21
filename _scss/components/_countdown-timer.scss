@@ -5,7 +5,7 @@
     margin-bottom: 1rem;
 
     @media (max-width: $small-breakpoint) {
-        visibility: hidden;
+        display: none;
         margin-bottom: 0rem;
     }
 }
@@ -29,9 +29,3 @@
         visibility: hidden;
     }
 }
-
-// .barBackground, .barForeground, .countdownText {
-//     @media (max-width: $small-breakpoint) {
-//         visibility: hidden;
-//     }
-// }
