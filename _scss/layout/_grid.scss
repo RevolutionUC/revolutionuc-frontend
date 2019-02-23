@@ -1,44 +1,79 @@
-.row {
-    width: 100%;
-    margin: 0 auto;
-    @include grid-container;
+// .row {
+//     width: 100%;
+//     margin: 0 auto;
+//     // @include grid-container;
+//     display: grid;
+//     grid-template-columns: auto auto auto;
   
-    &.row--collapse {
-        @include grid-collapse;
+//     &.row--collapse {
+//         // @include grid-collapse;
+//     }
+
+//     .columns-6 {
+//         // @include grid-column(6);
+//     }
+//     .columns-5 {
+//         // @include grid-column(5);
+//     }
+//     .columns-4 {
+//         // @include grid-column(4);
+//     }
+//     .columns-3 {
+//         // @include grid-column(3);
+//     }
+//     .columns-2 {
+//         // @include grid-column(2);
+//     }
+//     .columns-1 {
+//         // @include grid-column(1);
+//     }
+
+//     .columns-shift-2 {
+//         // @include grid-shift(2);
+//     }
+
+//     .columns-6,
+//     .columns-5,
+//     .columns-4,
+//     .columns-3 {
+//         @media (max-width: $small-breakpoint) {
+//             // @include grid-column(12);
+//             width: 100% !important; // fixes a bug with last columns not being 100%
+//             float: none;
+//             margin-left: 0;
+//         }
+//     }
+// }
+
+.row {
+    width: auto;
+    margin: 0 auto;
+    // @include grid-container;
+    display: grid;
+    grid-template-columns: auto auto auto;
+
+    @media (max-width : $medium-breakpoint) {
+        grid-template-columns: auto;
     }
 
-    .columns-6 {
-        @include grid-column(6);
-    }
-    .columns-5 {
-        @include grid-column(5);
-    }
-    .columns-4 {
-        @include grid-column(4);
-    }
-    .columns-3 {
-        @include grid-column(3);
-    }
-    .columns-2 {
-        @include grid-column(2);
-    }
-    .columns-1 {
-        @include grid-column(1);
-    }
+    // @media (max-width: $small-breakpoint) {
+    //     width: 100% !important; // fixes a bug with last columns not being 100%
+    //     float: none;
+    //     margin-left: 0;
+    // }
+}
 
-    .columns-shift-2 {
-        @include grid-shift(2);
-    }
+.section {
+    // background-color: #444;
+    // color: #fff;
+    border-radius: 5px;
+    // padding: 20px;
+    margin: 20px;
+    // font-size: 150%;
 
-    .columns-6,
-    .columns-5,
-    .columns-4,
-    .columns-3, {
-        @media (max-width: $small-breakpoint) {
-            @include grid-column(12);
-            width: 100% !important; // fixes a bug with last columns not being 100%
-            float: none;
-            margin-left: 0;
+    &.section--twitter {
+        @media (max-width: $medium-breakpoint) {
+            display: none;
         }
     }
 }
