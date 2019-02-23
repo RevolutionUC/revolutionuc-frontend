@@ -50,53 +50,20 @@ description: RevolutionUC Live Site
                     <th>Location</th>
                 </thead>
                 <tbody>
+                    {% for item in site.data.lightning-talks %}
                     <tr>
                         <td>
-                            <b>2:00 - 2:30</b>
+                            <b>{{item.time}}</b>
                         </td>
-                        <td>Fifth Third</td>
-                        <td>Blockchain</td>
-                        <td>Baldwin 645</td>
+                        <td>{{item.company}}</td>
+                        <td>{{item.topic}}</td>
+                        <td>{{item.room}}</td>
                     </tr>
-                    <tr>
-                        <td>
-                            <b>2:35 - 3:05</b>
-                        </td>
-                        <td>TCS</td>
-                        <td>TCS Tech Talk</td>
-                        <td>Baldwin 649</td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <b>3:10 - 3:40</b>
-                        </td>
-                        <td>JPMorgan</td>
-                        <td>Hack-A-Tips</td>
-                        <td>Baldwin 645</td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <b>3:45 - 4:15</b>
-                        </td>
-                        <td>Kroger</td>
-                        <td>Storytelling through Software - how Kroger Feeds the Human Spirit</td>
-                        <td>Baldwin 649</td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <b>4:20 - 4:50</b>
-                        </td>
-                        <td>84.51</td>
-                        <td>Understanding Scrum</td>
-                        <td>Baldwin 645</td>
-                    </tr>
+                    {% endfor %}
                 </tbody>
             </table>
         </div>
         <div class="section section--twitter columns-4">
-            <!-- <a class="twitter-timeline" data-dnt="true" href="https://twitter.com/search?q=%40Revolution_UC%20OR%20RevolutionUC%20OR%20RevUC%20OR%20%23RevUC"
-                data-widget-id="969773732695826432">Tweets about @Revolution_UC OR RevolutionUC OR RevUC OR #RevUC</a>
-            <script>!function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/.test(d.location) ? 'http' : 'https'; if (!d.getElementById(id)) { js = d.createElement(s); js.id = id; js.src = p + "://platform.twitter.com/widgets.js"; fjs.parentNode.insertBefore(js, fjs); } }(document, "script", "twitter-wjs");</script> -->
             <a class="twitter-timeline" data-lang="en" data-width="560" data-height="1600" data-dnt="true" data-theme="light" href="https://twitter.com/Revolution_UC?ref_src=twsrc%5Etfw">Tweets by Revolution_UC</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
         </div>
     </div>
