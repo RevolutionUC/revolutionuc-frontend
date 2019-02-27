@@ -1,8 +1,12 @@
 - date: March 2
 
 - time: 11:00 AM
-  event: Check-in and Sponsor Expo Begins
-  location: "Old Chem 5th & 6th Floors"
+  event: Check-In Opens
+  location: "5th Floor Zimmer Hall"
+  
+- time: 11:00 AM
+  event: Sponsor Expo Begins
+  location: "5th Floor Old Chem"
 
 - time: 12:00 PM
   event: Opening Ceremony/Lunch
