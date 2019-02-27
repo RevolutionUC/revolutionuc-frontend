@@ -1,0 +1,38 @@
+- category: Top Prize Category
+  prizes:
+    - prize: First Place
+    - prize: Second Place
+    - prize: Third Place
+
+- category: MLH Prize Category
+  prizes:
+    - prize: Best use of Domain.com
+    - prize: Best use of Google Cloud Platform
+    - prize: Best IoT Hack
+    - prize: Best use of Snap Kit
+
+- category: RevolutionUC Prize Categories
+  prizes:
+    - prize: Best use of Azure
+    - prize: Best Useless Hack
+    - prize: Best Design
+    - prize: Best High School Hack
+    - prize: Best hardware hack
+
+- category: GE
+  prizes:
+    - prize: A prize will be awarded coutesy of GE
+
+- category: 84.51
+  prizes:
+    - prize: Make the Customer’s Life Easier
+
+- category: Office of Undergraduate Research
+  prizes:
+    - prize: Best Undergrad Hack
+
+- category: CTF Prize Category
+  prizes:
+    - prize: First Place
+    - prize: Second Place
+    - prize: Third Place

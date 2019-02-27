@@ -1,0 +1,21 @@
+---
+layout: default
+title: Prize Categories
+permalink: /prize-categories/
+image: "/img/hack-ideas.jpg"
+useContainer: false
+---
+
+<br/>
+
+{% for category in site.data.prize-categories %}
+<div class="container card">
+    <!-- <br/> -->
+    <h3 class="text-center">{{ category.category }}</h3>
+    {% for prize in category.prizes %}
+        <p>{{ prize.prize }}</p>
+    {% endfor %}
+    <!-- <br/> -->
+</div>
+<br/>
+{% endfor %}
