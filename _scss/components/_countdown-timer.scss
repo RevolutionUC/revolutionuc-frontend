@@ -4,9 +4,11 @@
     background-color: #FF9F0A;
     margin-bottom: 1rem;
 
-    @media (max-width: $small-breakpoint) {
-        display: none;
-        // margin-bottom: 0rem;
+    &.barBackground--home {
+        @media (max-width: $small-breakpoint) {
+            display: none;
+            // margin-bottom: 0rem;
+        }
     }
 }
 .barForeground { // this bar shrinks to show the progress behing made
@@ -15,17 +17,26 @@
     background-color: grey;
     float: right;
 
-    @media (max-width: $small-breakpoint) {
-        visibility: hidden;
+    &.barForeground--home {
+        @media (max-width: $small-breakpoint) {
+            display: none;
+        }
     }
 }
 
 .countdownText {
-    float: left;
-    padding-left: 10px;
-    padding-top: 5px;
 
-    @media (max-width: $small-breakpoint) {
-        visibility: hidden;
+    &.countdownText--home {
+        float: left;
+        padding-left: 10px;
+        padding-top: 5px;
+        @media (max-width: $small-breakpoint) {
+            display: none;
+        }
+    }
+
+    &.countdownText--live {
+        float: none;
+        text-align: center;
     }
 }

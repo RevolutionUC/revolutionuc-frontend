@@ -1,7 +1,8 @@
-.row {
+.live-row {
     width: 100%;
     margin: 0 auto;
     @include grid-container;
+    grid-template: auto auto auto;
   
     &.row--collapse {
         @include grid-collapse;
@@ -35,6 +36,29 @@
     .columns-4,
     .columns-3 {
         @media (max-width: $small-breakpoint) {
+            @include grid-column(12);
+            width: 100% !important; // fixes a bug with last columns not being 100%
+            float: none;
+            margin-left: 0;
+        }
+    }
+
+    .live-section {
+        // width: 100% !important;
+        // background-color: #444;
+        // color: #fff;
+        border-radius: 5px;
+        padding: 20px;
+        // margin: 20px;
+        // font-size: 150%;
+    
+        &.live-section--twitter {
+            @media (max-width: $medium-breakpoint) {
+                display: none;
+            }
+        }
+    
+        @media (max-width: $medium-breakpoint) {
             @include grid-column(12);
             width: 100% !important; // fixes a bug with last columns not being 100%
             float: none;
