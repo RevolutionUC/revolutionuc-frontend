@@ -19,13 +19,17 @@
     - prize: Best High School Hack
     - prize: Best Hardware Hack
 
-- category: GE
+- category: GE Aviation
   prizes:
-    - prize: A prize will be awarded courtesy of GE
+    - prize: Best Aviation Solution
 
 - category: 84.51
   prizes:
     - prize: Make the Customer’s Life Easier
+
+- category: JP Morgan Chase & Co.
+  prizes:
+    - prize: Best Hack for Social Good
 
 - category: Office of Undergraduate Research
   prizes:
