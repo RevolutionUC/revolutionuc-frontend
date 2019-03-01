@@ -1,45 +1,34 @@
-- category: Top Prize Category
+- category: General Prizing
   prizes:
     - prize: First Place
     - prize: Second Place
     - prize: Third Place
 
-- category: MLH Prize Category
+- category: MLH Prizing
   prizes:
-    - prize: Best use of Domain.com
-    - prize: Best use of Google Cloud Platform
-    - prize: Best IoT Hack
-    - prize: Best use of Snap Kit
+    - prize: Best Use of Google Cloud Platform
+    - prize: Best Domain Registered With Domain.com
+    - prize: Best Use of Snap Kit
+    - prize: Best IoT Hack Using a Qualcomm Device
 
-- category: RevolutionUC Prize Category
+- category: Category Prizing
   prizes:
-    - prize: Best use of Azure
-    - prize: Best Useless Hack
     - prize: Best Design
     - prize: Best High School Hack
     - prize: Best Hardware Hack
-
-- category: GE Aviation
+    - prize: Best Useless Hack
+    
+- category: Sponsored Prizing
   prizes:
-    - prize: Best Aviation Solution
+    - prize: Making the Customer’s Life Easier - Kroger Technology and 84.51
+    - prize: Best Aviation Solution - GE Aviation
+    - prize: Best Hack for Social Good - JP Morgan Chase & Co.
+    - prize: Best Demonstration of the Use of Data to Enable Better Customer Experiences - Fifth Third Bank
+    - prize: Best Use of Azure - Microsoft
+    - prize: Best Undergrad Hack - UC Office of Undergraduate Research
+    - prize: Best Use of Wolfram|One and Wolfram|Alpha Pro - Wolfram
 
-- category: 84.51
-  prizes:
-    - prize: Make the Customer’s Life Easier
-
-- category: JP Morgan Chase & Co.
-  prizes:
-    - prize: Best Hack for Social Good
-
-- category: Fifth Third Bank
-  prizes:
-    - prize: Best Demonstration of the Use of Data to Enable Better Customer Experiences 
-
-- category: Office of Undergraduate Research
-  prizes:
-    - prize: Best Undergrad Hack
-
-- category: CTF Prize Category
+- category: CTF Prizing
   prizes:
     - prize: First Place
     - prize: Second Place
