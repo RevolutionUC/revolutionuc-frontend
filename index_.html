@@ -1,0 +1,87 @@
+---
+layout: default
+container: false
+title: Home
+---
+
+        <div class="container container--fluid">
+                <div class="container container--fluid">
+                    <h2 class="text-center">Live Site</h2>
+                    <p class="countdownText countdownText--live" id="countdownText">Time is running out!</p>
+                    <div class="barBackground" id="barBackground">
+                        <span>
+                            <!-- <p class="countdownText" id="countdownText">Time is running out!</p> -->
+                            <div class="barForeground" id="barForeground"></div>
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="live-row">
+                    <div class="live-section card columns-2"> <!-- columns-2 -->
+                        <h3 class="text-center">Quick Links</h2>
+                        <ul style="list-style: none; text-align: center; padding-left: 0%; margin-top: 0%;">
+                            <li style="align-content: center;"><a href="https://slack.revolutionuc.com" target="_blank"><img src = '/img/icons/slack.png' style='vertical-align: middle' />Join our Slack</a></li>
+                            <li style="align-content: center;"><a href="https://revuc-viii.devpost.com/" targer="_blank"><img src = '/img/icons/devpost.png' style='vertical-align: middle' />Submit to Devpost</a></li>
+                            <li style="align-content: center;"><a href="/old_index"><img src = '/img/icons/revuc.png' style='vertical-align: middle' />Go to our homepage</a></li>
+                        </ul>
+            
+                        <h3 class="text-center" style="margin-top: 2em;">CTF</h3>
+                        <p style="margin-top: 0%;">If you wish to play Capture The Flag, please click <a href="http://54.224.29.246/" target="_blank">here</a> to register. After registering post in the #ctf channel to get the competition URL. You can also post there for any questions/support.</p>
+                    </div>
+                    <div class="live-section card columns-6"> <!-- columns-6 -->
+                        <h3 style="margin-bottom: 0;">Schedule</h3>
+                        <div>
+                            {% for item in site.data.schedule %}
+                            <div class="schedule-item flex">
+                                {% if item.date %}
+                                <div class="schedule-date">
+                                    <strong>{{item.date}}</strong>
+                                </div>
+                                {% else %}
+                                <div class="schedule-time">
+                                    {{item.time}}
+                                </div>
+                                <div class="schedule-event">
+                                    {{item.event}}
+                                </div>
+                                <div class="schedule-location">
+                                    {{item.location}}
+                                </div>
+                                {% endif %}
+                            </div>
+                            {% endfor %}
+                        </div>
+                        <h3>Workshop Schedule</h3>
+                        <table class="live-table">
+                            <thead>
+                                <th>Time</th>
+                                <th>Company</th>
+                                <th>Topic</th>
+                                <th>Location</th>
+                            </thead>
+                            <tbody>
+                                {% for item in site.data.workshops %}
+                                <tr>
+                                    <td>
+                                        <b>{{item.time}}</b>
+                                    </td>
+                                    <td>{{item.company}}</td>
+                                    <td>{{item.topic}}</td>
+                                    <td>{{item.room}}</td>
+                                </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="live-section live-section--twitter card columns-4"> <!-- columns-4 -->
+                        <a class="twitter-timeline" data-lang="en" data-width="480" data-height="1600" data-dnt="true" data-theme="light" href="https://twitter.com/Revolution_UC?ref_src=twsrc%5Etfw">Tweets by Revolution_UC</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
+                    </div>
+                </div>
+            </div>
+            
+            <br/>
+            
+            <script src="/js/countdown-timer.js"></script>
+            <script>initProgressBar("2019/03/02 13:30:00", "2019/03/03 13:30:00", "hour");</script>
+            <!-- <script>initProgressBar("2019/02/25 12:00:00", "2019/02/25 18:21:00", "hour");</script> -->
+            
