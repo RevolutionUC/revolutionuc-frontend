@@ -3,8 +3,6 @@ function initProgressBar(start, end, time = "day") {
   var back = document.getElementById("barBackground");
   var text = document.getElementById("countdownText");
 
-  var width = 100;
-
   var startDate = new Date(start); // new Date("2019/02/02 20:25:00");
   var endDate = new Date(end); // new Date("2019/03/02 20:25:00");
 
@@ -22,6 +20,8 @@ function initProgressBar(start, end, time = "day") {
   var bigDif = endDate.getTime() - startDate.getTime();
   var dif = endDate.getTime() - now.getTime();
 
+  var width = 100; // bigDif / 1000
+
   var one_day = 1000 * 60 * 60 * 24;
   var one_hour = 1000 * 60 * 60;
   var one_minute = 1000 * 60;
@@ -32,25 +32,29 @@ function initProgressBar(start, end, time = "day") {
 
   var startFill = dif / t;
 
+  console.log("t: " + t);
+
   try {
     document.getElementById("countdownText").innerHTML = textContent;
   } catch (error) {}
 
-  var id = setInterval(frame, t);
+  var id = setInterval(frame, 1000); // t
 
-  elem.style.width = startFill + "%";
+  width = Math.floor(startFill);
+  elem.style.width = width + "%";
   console.log("test");
 
   function frame() {
-    if (width <= 0) {
+    if (width < 0) {
       clearInterval(id);
       console.log("width: " + width);
+      elem.style.width = 0 + "%";
     } else {
-      width--;
+      width = width - (1/((bigDif/1000)/100));
       elem.style.width = width + "%";
       //text.content = t;
       try {
-        document.getElementById("countdownText").innerHTML = width;
+        // document.getElementById("countdownText").innerHTML = width;
       } catch (error) {}
       console.log("width: " + width);
     }
@@ -79,7 +83,7 @@ function initProgressBar(start, end, time = "day") {
         var secNum = Math.floor(((endDate.getTime() - now.getTime()) % one_minute) / one_second);
         var secStr = (minStr == 1 ? " second " : " seconds ");
         textContent = hoursNum + hoursStr + " " + minNum + minStr + + " " + secNum + secStr + "until hacking ends!";
-        if (secNum <= 0) {textContent = "Stop Hacking!"}
+        if (secNum < 0) {textContent = "Stop Hacking!"}
         console.log("hour");
       }
       return textContent;
