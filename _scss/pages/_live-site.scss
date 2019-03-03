@@ -63,6 +63,7 @@
             width: 100% !important; // fixes a bug with last columns not being 100%
             float: none;
             margin-left: 0;
+            margin-bottom: 20px;
         }
     }
 }
@@ -70,4 +71,15 @@
 .live-table {
     font-size: 2vmin;
     width: 100%;
+}
+
+.live-section--judging {
+    margin: 20px;
+
+    @media (max-width: $medium-breakpoint) {
+        @include grid-column(12);
+        width: 100% !important; // fixes a bug with last columns not being 100%
+        float: none;
+        margin-left: 0;
+    }
 }
