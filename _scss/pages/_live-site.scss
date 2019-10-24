@@ -1,34 +1,29 @@
 .live-row {
     width: 100%;
     margin: 0 auto;
-    @include grid-container;
-    grid-template: auto auto auto;
+    // grid-template: auto auto auto;
   
-    &.row--collapse {
-        @include grid-collapse;
-    }
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-gap: 20px;
 
     .columns-6 {
-        @include grid-column(6);
+        grid-column: span 6;
     }
     .columns-5 {
-        @include grid-column(5);
+        grid-column: span 5;
     }
     .columns-4 {
-        @include grid-column(4);
+        grid-column: span 4;
     }
     .columns-3 {
-        @include grid-column(3);
+        grid-column: span 3;
     }
     .columns-2 {
-        @include grid-column(2);
+        grid-column: span 2;
     }
     .columns-1 {
-        @include grid-column(1);
-    }
-
-    .columns-shift-2 {
-        @include grid-shift(2);
+        grid-column: span 1;
     }
 
     .columns-6,
@@ -36,7 +31,7 @@
     .columns-4,
     .columns-3 {
         @media (max-width: $small-breakpoint) {
-            @include grid-column(12);
+            grid-column: span 12;
             width: 100% !important; // fixes a bug with last columns not being 100%
             float: none;
             margin-left: 0;
@@ -59,7 +54,7 @@
         }
     
         @media (max-width: $medium-breakpoint) {
-            @include grid-column(12);
+            grid-column: span 12;
             width: 100% !important; // fixes a bug with last columns not being 100%
             float: none;
             margin-left: 0;
@@ -77,7 +72,7 @@
     margin: 20px;
 
     @media (max-width: $medium-breakpoint) {
-        @include grid-column(12);
+        grid-column: span 12;
         width: 100% !important; // fixes a bug with last columns not being 100%
         float: none;
         margin-left: 0;

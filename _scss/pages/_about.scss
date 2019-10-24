@@ -24,7 +24,7 @@
             }
 
             @media (min-width: $small-breakpoint) and (max-width: $container-width-large) {
-                @include grid-column(12);
+                grid-column: span 12;
                 margin: 0;
                 width: 100%;
             }
