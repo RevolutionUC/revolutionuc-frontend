@@ -7,12 +7,12 @@
             background-size: cover;
             background-position: center center;
             position: relative;
-            background-color: $black;
+            background-color: $grey;
 
             .item__text {
                 padding-top: 16px;
                 padding-bottom: 16px;
-                background-color: $prim-color-3;
+                background-color: $white;
                 position: absolute;
                 bottom: 0;
                 width: 100%;
@@ -30,26 +30,26 @@
             }
 
             &:nth-child(1) {
-                background-image: url(/img/about-build.jpg);
+                background-image: url(/img/placeholder.png);
 
                 .item__text {
-                    background-color: $prim-color-4;
+                    background-color: $grey;
                 }
             }
 
             &:nth-child(2) {
-                background-image: url(/img/about-learn.jpg);
+                background-image: url(/img/placeholder.png);
 
                 .item__text {
-                    background-color: $prim-color-3;
+                    background-color: $grey;
                 }
             }
 
             &:nth-child(3) {
-                background-image: url(/img/about-grow.jpg);
+                background-image: url(/img/placeholder.png);
 
                 .item__text {
-                    background-color: $prim-color-2;
+                    background-color: $grey ;
                 }
             }
         }

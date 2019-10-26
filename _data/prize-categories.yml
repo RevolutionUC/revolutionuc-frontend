@@ -6,27 +6,21 @@
 
 - category: MLH Prizing
   prizes:
-    - prize: Best Use of Google Cloud Platform
-    - prize: Best Domain Registered With Domain.com
-    - prize: Best Use of Snap Kit
-    - prize: Best IoT Hack Using a Qualcomm Device
+    - prize: MLH Prize 1
+    - prize: MLH Prize 2
+    - prize: MLH Prize 3
 
 - category: Category Prizing
   prizes:
-    - prize: Best Design
-    - prize: Best High School Hack
-    - prize: Best Hardware Hack
-    - prize: Best Useless Hack
+    - prize: Best Prize 1
+    - prize: Best Prize 2
+    - prize: Best Prize 3
     
 - category: Sponsored Prizing
   prizes:
-    - prize: Making the Customer’s Life Easier - Kroger Technology and 84.51
-    - prize: Best Aviation Solution - GE Aviation
-    - prize: Best Hack for Social Good - JP Morgan Chase & Co.
-    - prize: Best Demonstration of the Use of Data to Enable Better Customer Experiences - Fifth Third Bank
-    - prize: Best Use of Azure - Microsoft
-    - prize: Best Undergrad Hack - UC Office of Undergraduate Research
-    - prize: Best Use of Wolfram|One and Wolfram|Alpha Pro - Wolfram
+    - prize: Sponsor Prize 1
+    - prize: Sponsor Prize 2
+    - prize: Sponsor Prize 3
 
 - category: CTF Prizing
   prizes:

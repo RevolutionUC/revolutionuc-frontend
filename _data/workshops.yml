@@ -1,19 +1,14 @@
 - time: 2:00 - 2:30
-  company: Cyber@UC
-  topic: CTF Introduction
-  room: Baldwin 649
+  company: Company 1
+  topic: Topic 1
+  room: Room 101
 
 - time: 2:45 - 3:15
-  company: TCS
-  topic: Data Sovereignty and Blockchain
-  room: Baldwin 643
+  company: Company 2
+  topic: Topic 2
+  room: Room 102
 
 - time: 3:30 - 4:00
-  company: 84.51
-  topic: Tips for Interviewing That NO ONE Tells You
-  room: Baldwin 649
-
-- time: 4:15 - 4:45
-  company: Fifth Third
-  topic: Data Visualization and the Benefits of Open Banking
-  room: Baldwin 643
+  company: Company 3
+  topic: Topic 3
+  room: Room 103

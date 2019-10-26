@@ -6,6 +6,24 @@
     grid-template-columns: repeat(12, 1fr);
     grid-gap: 20px;
 
+    .columns-12 {
+        grid-column: span 12;
+    }
+    .columns-11 {
+        grid-column: span 11;
+    }
+    .columns-10 {
+        grid-column: span 10;
+    }
+    .columns-9 {
+        grid-column: span 9;
+    }
+    .columns-8 {
+        grid-column: span 8;
+    }
+    .columns-7 {
+        grid-column: span 7;
+    }
     .columns-6 {
         grid-column: span 6;
     }

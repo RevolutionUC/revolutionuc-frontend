@@ -1,7 +1,7 @@
 .barBackground {
     width: 100% !important;
     height: 40px;
-    background-color: #FF9F0A;
+    background-color: $grey;
     margin-bottom: 1rem;
 
     &.barBackground--home {
@@ -14,7 +14,7 @@
 .barForeground { // this bar shrinks to show the progress behing made
     height: 40px;
     width: 99%; //99%;
-    background-color: grey;
+    background-color: $white;
     float: right;
 
     &.barForeground--home {

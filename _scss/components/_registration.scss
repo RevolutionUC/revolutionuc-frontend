@@ -3,7 +3,7 @@ $tablet-breakpoint: 992px;
 form {
   width: 100%;
   position: relative;
-  border: 2px solid $prim-color-1;
+  border: 2px solid $grey;
 
   .form-block {
     position: relative;
@@ -25,29 +25,29 @@ form {
     font-size: 40px;
     letter-spacing: 2px;
     text-align: center;
-    color: $prim-color-3;
+    color: $black;
   }
 
   /* Borders */
   .b-top {
-    border-top: 2px solid $prim-color-3;
+    border-top: 2px solid $grey;
   }
   .b-bottom {
-    border-bottom: 2px solid $prim-color-3;
+    border-bottom: 2px solid $grey;
   }
   .b-left {
-    border-left: 2px solid $prim-color-3;
+    border-left: 2px solid $grey;
 
     @media (max-width: $tablet-breakpoint) {
       border: none;
     }
   }
   .b-right {
-    border-right: 2px solid $prim-color-3;
+    border-right: 2px solid $grey;
 
     @media (max-width: $tablet-breakpoint) {
       border: none;
-      border-bottom: 2px solid $prim-color-3;
+      border-bottom: 2px solid $grey;
     }
   }
 
@@ -59,7 +59,7 @@ form {
     position: absolute;
 
     background-color: white;
-    border: 2px solid $prim-color-3;
+    border: 2px solid $grey;
     border-radius: 50%;
   }
 
@@ -119,7 +119,7 @@ form {
     height: 24px;
     padding-left: 8px;
     padding-right: 8px;
-    border: 2px solid $prim-color-3;
+    border: 2px solid $grey;
     font-size: 15px;
     text-transform: uppercase;
 
@@ -150,7 +150,7 @@ form {
     font-size: 12px;
     color: white;
 
-    background-color: $prim-color-3;
+    background-color: $grey;
     transition: background-color 0.3s cubic-bezier(0, 0, 0.3, 1);
   }
 
@@ -178,12 +178,12 @@ form {
     text-align: center;
     line-height: 13px;
 
-    border: 2px solid $prim-color-3;
+    border: 2px solid $grey;
     border-radius: 50%;
   }
 
   input[type="radio"]:checked + label:before {
-    background-color: $prim-color-3;
+    background-color: $grey;
     padding-left: 1px;
   }
 
@@ -202,13 +202,13 @@ form {
         margin-bottom: 4px;
         padding: 0;
         vertical-align: middle;
-        border: 2px solid $prim-color-3;
+        border: 2px solid $grey;
       }
     }
 
     &:checked + label {
       &:before {
-        background-color: $prim-color-3 !important;
+        background-color: $grey !important;
       }
     }
   }
@@ -225,7 +225,7 @@ form {
   padding-left: 8px;
   padding-right: 8px;
   margin-left: 3px;
-  border: 2px solid $prim-color-3;
+  border: 2px solid $grey;
   font-size: 14px;
   flex: 0 0;
 }
@@ -264,7 +264,7 @@ form {
   list-style: none;
   padding: 0;
   margin: 0;
-  background: #fff;
+  background: $white;
   text-transform: uppercase;
   font-size: 15px;
 }
@@ -307,21 +307,21 @@ form {
 }
 
 .awesomplete > ul > li:hover {
-  background: $prim-color-3;
+  background: $grey;
   color: $white;
 }
 
 .awesomplete > ul > li[aria-selected="true"] {
-  background: $prim-color-3;
+  background: $grey;
   color: $white;
 }
 
 .awesomplete mark {
-  background: $prim-color-4;
+  background: $grey;
 }
 
 .awesomplete li:hover mark {
-  background: $prim-color-4;
+  background: $grey;
 }
 
 .awesomplete li[aria-selected="true"] mark {

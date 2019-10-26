@@ -1,12 +1,33 @@
 .live-row {
     width: 100%;
-    margin: 0 auto;
+    margin: 20 auto;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
     // grid-template: auto auto auto;
   
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     grid-gap: 20px;
 
+    .columns-12 {
+        grid-column: span 12;
+    }
+    .columns-11 {
+        grid-column: span 11;
+    }
+    .columns-10 {
+        grid-column: span 10;
+    }
+    .columns-9 {
+        grid-column: span 9;
+    }
+    .columns-8 {
+        grid-column: span 8;
+    }
+    .columns-7 {
+        grid-column: span 7;
+    }
     .columns-6 {
         grid-column: span 6;
     }
@@ -43,7 +64,7 @@
         // background-color: #444;
         // color: #fff;
         border-radius: 5px;
-        padding: 20px;
+        // padding: 20px;
         // margin: 20px;
         // font-size: 150%;
     
@@ -69,7 +90,7 @@
 }
 
 .live-section--judging {
-    margin: 20px;
+    // margin: 20px;
 
     @media (max-width: $medium-breakpoint) {
         grid-column: span 12;

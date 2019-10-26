@@ -2,40 +2,40 @@
     display: inline-block;
     margin: 0;
     padding: 16px 20px;
-    background-color: $prim-color-5;
+    background-color: $grey;
     color: $white;
     text-decoration: none;
     font-size: $btn-font-size;
     margin-bottom: 1rem;
 
     &.btn--primary {
-        background-color: $prim-color-5;
+        background-color: $grey;
 
         &:hover {
-            background-color: darken($prim-color-5, 10%);
+            background-color: darken($grey, 10%);
         }
     }
 
     &.btn--secondary {
-        background-color: $prim-color-3;
-        color: $prim-color-1;
+        background-color: $grey;
+        color: $white;
 
         &:hover {
-            background-color: darken($prim-color-3, 10%);
+            background-color: darken($grey, 10%);
         }
     }
 
     &.btn--tertiary {
-        background-color: $prim-color-3;
+        background-color: $grey;
         color: $white;
 
         &:hover {
-            background-color: darken($prim-color-3, 10%);
+            background-color: darken($grey, 10%);
         }
     }
 
     &.btn--register {
-        background-color: $prim-color-5;
+        background-color: $grey;
         color: $white;
         -webkit-appearance: none;
         border: 0;
@@ -43,7 +43,7 @@
         border-radius: 5px;
 
         &:hover {
-            background-color: darken($prim-color-5, 10%);
+            background-color: darken($grey, 10%);
         }
         
         &:disabled {
@@ -53,7 +53,7 @@
     }
 
     &.btn--upload-resume {
-        background-color: $prim-color-5;
+        background-color: $grey;
         color: $white;
         -webkit-appearance: none;
         border: 0;
@@ -62,7 +62,7 @@
         padding: 5px 5px;
 
         &:hover {
-            background-color: darken($prim-color-5, 10%);
+            background-color: darken($grey, 10%);
         }
     }
 }
