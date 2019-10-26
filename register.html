@@ -11,51 +11,45 @@ description: Registration for RevolutionUC — Hackathon at the University of Ci
           <div class="circle bottom left"></div>
           <div class="circle bottom right"></div>
 
-          <div class="row">
-            <div class="columns-12 form-block b-bottom">
-              <label class="tag" for="firstName">First Name*</label>
-              <div class="form-block__input">
-                <input name="firstName" id="firstName" type="text" placeholder="Bob">
-              </div>
+          <div class=" form-block b-bottom">
+            <label class="tag" for="firstName">First Name*</label>
+            <div class="form-block__input">
+              <input name="firstName" id="firstName" type="text" placeholder="Bob">
             </div>
           </div>
 
-          <div class="row">
-            <div class="columns-12 form-block b-bottom">
-              <label class="tag" for="lastName">Last Name*</label>
-              <div class="form-block__input">
-                <input name="lastName" id="lastName" type="text" placeholder="Evans">
-              </div>
+          <div class="form-block b-bottom">
+            <label class="tag" for="lastName">Last Name*</label>
+            <div class="form-block__input">
+              <input name="lastName" id="lastName" type="text" placeholder="Evans">
             </div>
           </div>
 
-          <div class="row b-bottom">
-            <div class="form-block" id="shirtSize">
-              <label class="tag" for="shirtSize">Shirt Size*</label>
-              <div class="form-block__input">
-                <div>
-                  <input name="shirtSize" type="radio" id="Small" value="Small">
-                  <label for="Small">Small</label>
-                </div>
+          <div class="form-block b-bottom" id="shirtSize">
+            <label class="tag" for="shirtSize">Shirt Size*</label>
+            <div class="form-block__input">
+              <div>
+                <input name="shirtSize" type="radio" id="Small" value="Small">
+                <label for="Small">Small</label>
+              </div>
 
-                <div>
-                  <input name="shirtSize" type="radio" id="Medium" value="Medium">
-                  <label for="Medium">Medium</label>
-                </div>
+              <div>
+                <input name="shirtSize" type="radio" id="Medium" value="Medium">
+                <label for="Medium">Medium</label>
+              </div>
 
-                <div>
-                  <input name="shirtSize" type="radio" id="Large" value="Large">
-                  <label for="Large">Large</label>
-                </div>
+              <div>
+                <input name="shirtSize" type="radio" id="Large" value="Large">
+                <label for="Large">Large</label>
+              </div>
 
-                <div>
-                  <input name="shirtSize" type="radio" id="X-Large" value="X-Large">
-                  <label for="X-Large">X-Large</label>
-                </div>
+              <div>
+                <input name="shirtSize" type="radio" id="X-Large" value="X-Large">
+                <label for="X-Large">X-Large</label>
               </div>
             </div>
           </div>
-
+          
           <div class="form-block b-bottom">
             <label class="tag" for="email">Email*</label>
             <div class="form-block__input">
@@ -63,259 +57,203 @@ description: Registration for RevolutionUC — Hackathon at the University of Ci
             </div>
           </div>
 
-          <div class="row b-bottom">
-            <div class="form-block columns-4-table b-bottom">
-              <label class="tag" for="school">School*</label>
+          <div class="form-block b-bottom">
+            <label class="tag" for="school">School*</label>
 
-              <div class="form-block__input">
-                <input class="input--school input--school-other hide" type="text" placeholder="Enter your school" />
+            <div class="form-block__input">
+              <input class="input--school input--school-other hide" type="text" placeholder="Enter your school" />
 
-                <div class="full-width-flex flex input--school">
-                  <input class="input--school-typeahead" name="school" id="school" list="school-list" placeholder="Search your school" />
-                  <datalist id="school-list"></datalist>
-                  <div id="school-dropdown-btn" class="dropdown-btn">&#9660;</div>
-                </div>
-
-                <div class="form-block__input">
-                  <input name="schoolOther" id="schoolOther" type="checkbox" class="button" data-toggle="true">
-                  <label for="schoolOther"><small>I can't find my school</small></label>
-                </div>
+              <div class="full-width-flex flex input--school">
+                <input class="input--school-typeahead" name="school" id="school" list="school-list" placeholder="Search your school" />
+                <datalist id="school-list"></datalist>
+                <div id="school-dropdown-btn" class="dropdown-btn">&#9660;</div>
               </div>
-            </div>
 
-            <!-- <div class="form-block columns-4-table b-bottom">
-              <label class="tag" for="major">Major*</label>
               <div class="form-block__input">
-                <input name="major" id="major" type="text" placeholder="Computer Science">
-              </div>
-            </div> -->
-
-            <div class="form-block columns-4-table b-bottom">
-              <label class="tag" for="major">Major*</label>
-              <div class="form-block__input">
-                <select name="major" id="major">
-                  <option value="" disabled selected>Major</option>
-                    {% for row in site.data.majors %}
-                      <option>
-                          {% for cell in row %}
-                            {{ cell[1] }}
-                          {% endfor %}
-                      </option>
-                    {% endfor %}
-                </select>
-              </div>
-            </div>
-
-            <div class="form-block columns-4-table">
-              <label class="tag" for="dob">Date of birth*</label>
-              <div class="form-block__input">
-                <input type="date" placeholder="mm/dd/yyyy" name="dob" id="dob">
+                <input name="schoolOther" id="schoolOther" type="checkbox" class="button" data-toggle="true">
+                <label for="schoolOther"><small>I can't find my school</small></label>
               </div>
             </div>
           </div>
 
-          <div class="row">
-            <div class="columns-12 form-block b-bottom">
-              <label class="tag" for="phoneNumber">Phone Number*</label>
-              <div class="form-block__input">
-                <input name="phoneNumber" id="phoneNumber" type="text" placeholder="513-867-5309">
+          <div class="form-block b-bottom">
+            <label class="tag" for="major">Major*</label>
+            <div class="form-block__input">
+              <select name="major" id="major">
+                <option value="" disabled selected>Major</option>
+                  {% for row in site.data.majors %}
+                    <option>
+                        {% for cell in row %}
+                          {{ cell[1] }}
+                        {% endfor %}
+                    </option>
+                  {% endfor %}
+              </select>
+            </div>
+          </div>
+
+          <div class="form-block b-bottom">
+            <label class="tag" for="dob">Date of birth*</label>
+            <div class="form-block__input">
+              <input type="date" placeholder="mm/dd/yyyy" name="dob" id="dob">
+            </div>
+          </div>
+
+          <div class="form-block b-bottom">
+            <label class="tag" for="phoneNumber">Phone Number*</label>
+            <div class="form-block__input">
+              <input name="phoneNumber" id="phoneNumber" type="text" placeholder="513-867-5309">
+            </div>
+          </div>
+
+          <div class="form-block b-bottom">
+            <label class="tag" for="dietaryRestrictions">Dietary Restrictions</label>
+            <div class="form-block__input">
+              <div>
+              <input name="vegetarian" id="vegetarian" type="checkbox">
+              <label for="vegetarian">Vegetarian</label>
+              </div>
+
+              <div>
+              <input name="vegan" id="vegan" type="checkbox">
+              <label for="vegan">Vegan</label>
+              </div>
+
+              <div>
+              <input name="peanutAllergy" id="peanutAllergy" type="checkbox">
+              <label for="peanutAllergy">Peanut&nbsp;Allergy</label>
+              </div>
+
+              <div>
+              <input name="glutenFree" id="glutenFree" type="checkbox">
+              <label for="glutenFree">Gluten&nbsp;Free</label>
               </div>
             </div>
           </div>
 
-<!-- New Allergy Section -->
-          <div class="row">
-            <div class="columns-12 form-block b-bottom">
-              <label class="tag" for="dietaryRestrictions">Dietary Restrictions</label>
-              <div class="form-block__input">
-                <div>
-                <input name="vegetarian" id="vegetarian" type="checkbox">
-                <label for="vegetarian">Vegetarian</label>
-                </div>
-
-                <div>
-                <input name="vegan" id="vegan" type="checkbox">
-                <label for="vegan">Vegan</label>
-                </div>
-
-                <div>
-                <input name="peanutAllergy" id="peanutAllergy" type="checkbox">
-                <label for="peanutAllergy">Peanut&nbsp;Allergy</label>
-                </div>
-
-                <div>
-                <input name="glutenFree" id="glutenFree" type="checkbox">
-                <label for="glutenFree">Gluten&nbsp;Free</label>
-                </div>
-              </div>
-            </div>
-          </div>
-<!-- New Allergy Section -->
-
-          <div class="row b-bottom">
-            <div class="form-block columns-6-table">
-              <label class="tag">Other dietary restrictions</label>
-              <div class="form-block__input">
-                <textarea name="otherDietaryRestrictions" cols="30" rows="5" placeholder="List other dietary restrictions here"></textarea>
-              </div>
+          <div class="form-block b-bottom">
+            <label class="tag">Other dietary restrictions</label>
+            <div class="form-block__input">
+              <textarea name="otherDietaryRestrictions" cols="30" rows="5" placeholder="List other dietary restrictions here"></textarea>
             </div>
           </div>
 
-          <div class="row">
-            <div class="form-block columns-12 b-bottom">
-              <label class="tag">GitHub</label>
-              <div class="form-block__input">
-                <input name="githubUsername" type="text" placeholder="GitHub username">
-              </div>
+          <div class="form-block b-bottom">
+            <label class="tag">GitHub</label>
+            <div class="form-block__input">
+              <input name="githubUsername" type="text" placeholder="GitHub username">
             </div>
           </div>
 
-          <div class="row b-bottom">
-            <div class="form-block columns-4-table b-bottom">
-              <label class="tag" for="education">Education*</label>
-              <div class="form-block__input">
-                <select name="education" id="education">
-                  <option value="" disabled selected>Level of Education</option>
-                  <option value="HighSchool">High School (16+)</option>
-                  <option value="Undergraduate">Undergraduate</option>
-                  <option value="Graduate">Graduate</option>
-                </select>
-              </div>
-            </div>
-
-            <!-- <div class="form-block columns-4-table b-bottom">
-              <label class="tag" for="graduation">Expected Graduation Year*</label>
-              <div class="form-block__input">
-                <select name="graduation" id="graduation">
-                  <option value="" disabled selected>Expected Graduation Year</option>
-                  <option value="2019">2019</option>
-                  <option value="2020">2020</option>
-                  <option value="2021">2021</option>
-                  <option value="2022">2022</option>
-                  <option value="2023">2023</option>
-                  <option value="2024">2024</option>
-                </select>
-              </div>
-            </div> -->
-
-            <div class="form-block columns-4-table b-bottom">
-              <label for="gender" class="tag">Gender*</label>
-              <div class="form-block__input">
-                <select name="gender" id="gender">
-                  <option value="" disabled selected>Gender</option>
-                  <option value="Male">Male</option>
-                  <option value="Female">Female</option>
-                  <option value="NonBinary">Non-binary / Third Gender</option>
-                  <option value="Other">Other</option>
-                  <option value="PreferNot">Prefer not to say</option>
-                  <!-- <option value="transgender">Transgender</option>
-                  <option value="intersex">Intersex</option>
-                  <option value="gender-non-conforming">Gender Non-Conforming</option>
-                  <option value="other">Other</option>
-                  <option value="prefer-not-to-say">Prefer not to respond</option> -->
-                </select>
-
-              </div>
-            </div>
-
-            <div class="form-block columns-4-table">
-              <label class="tag" for="resume">Resume</label>
-              <div class="form-block__input">
-                <input name="resume" id="resume" type="file">
-              </div>
+          <div class="form-block b-bottom">
+            <label class="tag" for="education">Education*</label>
+            <div class="form-block__input">
+              <select name="education" id="education">
+                <option value="" disabled selected>Level of Education</option>
+                <option value="HighSchool">High School (16+)</option>
+                <option value="Undergraduate">Undergraduate</option>
+                <option value="Graduate">Graduate</option>
+              </select>
             </div>
           </div>
 
-          <div class="row b-bottom">
-            <div class="form-block columns-12">
-              <label class="tag" for="ethnicity">Race/Ethnicity*</label>
-              <div class="form-block__input">
-                <select name="ethnicity" id="ethnicity">
-                  <option value="" disabled selected>Race or Ethnicity</option>
-                  <option value="Indian">American Indian or Alaskan Native</option>
-                  <option value="Asian">Asian</option>
-                  <option value="Black">Black or African American</option>
-                  <option value="Islander">Native Hawaiian or other Pacific Islander</option>
-                  <option value="White">White</option>
-                  <option value="Latino">Hispanic or Latino</option>
-                  <option value="Prefer Not">Prefer not to respond</option>
-                </select>
-              </div>
+          <div class="form-block b-bottom">
+            <label for="gender" class="tag">Gender*</label>
+            <div class="form-block__input">
+              <select name="gender" id="gender">
+                <option value="" disabled selected>Gender</option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+                <option value="NonBinary">Non-binary / Third Gender</option>
+                <option value="Other">Other</option>
+                <option value="PreferNot">Prefer not to say</option>
+              </select>
             </div>
           </div>
 
-          <div class="row b-bottom">
-            <!-- <div class="form-block columns-6-table b-bottom">
-              <label class="tag" for="hackathons">How many hackathons have you attended?</label>
-              <div class="form-block__input">
-                <input name="hackathons" id="hackathons" type="text" placeholder="So many...">
-              </div>
-            </div> -->
-
-            <div class="form-block columns-4-table b-bottom">
-              <label class="tag" for="hackathons">How many hackathons have you attended?</label>
-              <div class="form-block__input">
-                <select name="hackathons" id="hackathons">
-                  <option value="0">0</option>
-                  <option value="1">1</option>
-                  <option value="2">2</option>
-                  <option value="3">3</option>
-                  <option value="4">4</option>
-                  <option value="5">5</option>
-                  <option value="6">6</option>
-                  <option value="7">7</option>
-                  <option value="8">8</option>
-                  <option value="9">9</option>
-                  <option value="10">10</option>
-                  <option value="11">11</option>
-                  <option value="12">12</option>
-                  <option value="13">13</option>
-                  <option value="14">14</option>
-                  <option value="15">15</option>
-                  <option value="16">16</option>
-                  <option value="17">17</option>
-                  <option value="18">18</option>
-                  <option value="19">19</option>
-                  <option value="20">20</option>
-                </select>
-              </div>
-            </div>
-
-            <div class="form-block columns-6-table">
-              <label class="tag" for="howYouHeard">How did you hear about RevUC?</label>
-              <div class="form-block__input">
-                <input name="howYouHeard" id="howYouHeard" type="text" placeholder="Twitter!">
-              </div>
+          <div class="form-block b-bottom">
+            <label class="tag" for="resume">Resume</label>
+            <div class="form-block__input">
+              <input name="resume" id="resume" type="file">
             </div>
           </div>
 
-          <div class="row b-bottom">
-            <div class="form-block columns-6-table b-bottom">
-              <div class="form-block__input">
-                <input name="dataSharing" type="checkbox" class="button" id="dataSharing">
-                <label for="dataSharing">MLH Data Sharing<sup><a data-turbolinks="false" href="#agree-1">1</a></sup></label>
-              </div>
-              <label class="tag">I agree*</label>
-            </div>
-
-            <div class="form-block columns-6-table">
-              <div class="form-block__input">
-                <input name="codeOfConduct" type="checkbox" class="button" id="codeOfConduct">
-                <label for="codeOfConduct">MLH Code of Conduct<sup><a data-turbolinks="false" href="#agree-2">2</a></sup></label>
-              </div>
-              <label class="tag">I agree*</label>
+          <div class="form-block b-bottom">
+            <label class="tag" for="ethnicity">Race/Ethnicity*</label>
+            <div class="form-block__input">
+              <select name="ethnicity" id="ethnicity">
+                <option value="" disabled selected>Race or Ethnicity</option>
+                <option value="Indian">American Indian or Alaskan Native</option>
+                <option value="Asian">Asian</option>
+                <option value="Black">Black or African American</option>
+                <option value="Islander">Native Hawaiian or other Pacific Islander</option>
+                <option value="White">White</option>
+                <option value="Latino">Hispanic or Latino</option>
+                <option value="Prefer Not">Prefer not to respond</option>
+              </select>
             </div>
           </div>
 
-          <div class="row">
-            <div class="form-block">
-                <!-- <h4 style="margin-top: -10px">We have hit our projected capacity for RevolutionUC. 
-                    As we confirm attendance, spots may open up, which we will give to waitlisted
-                    participants in order of registration.</h4> -->
-              <button name="registrationSubmit" type="submit" disabled class="btn btn--register">Register</button>
+          <div class="form-block b-bottom">
+            <label class="tag" for="hackathons">How many hackathons have you attended?</label>
+            <div class="form-block__input">
+              <select name="hackathons" id="hackathons">
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+                <option value="13">13</option>
+                <option value="14">14</option>
+                <option value="15">15</option>
+                <option value="16">16</option>
+                <option value="17">17</option>
+                <option value="18">18</option>
+                <option value="19">19</option>
+                <option value="20">20</option>
+              </select>
             </div>
+          </div>
+
+          <div class="form-block b-bottom">
+            <label class="tag" for="howYouHeard">How did you hear about RevUC?</label>
+            <div class="form-block__input">
+              <input name="howYouHeard" id="howYouHeard" type="text" placeholder="Twitter!">
+            </div>
+          </div>
+
+          <div class="form-block b-bottom">
+            <div class="form-block__input">
+              <input name="dataSharing" type="checkbox" class="button" id="dataSharing">
+              <label for="dataSharing">MLH Data Sharing<sup><a data-turbolinks="false" href="#agree-1">1</a></sup></label>
+            </div>
+            <label class="tag">I agree*</label>
+          </div>
+
+          <div class="form-block b-bottom">
+            <div class="form-block__input">
+              <input name="codeOfConduct" type="checkbox" class="button" id="codeOfConduct">
+              <label for="codeOfConduct">MLH Code of Conduct<sup><a data-turbolinks="false" href="#agree-2">2</a></sup></label>
+            </div>
+            <label class="tag">I agree*</label>
+          </div>
+
+          <div class="form-block">
+              <!-- <h4 style="margin-top: -10px">We have hit our projected capacity for RevolutionUC. 
+                  As we confirm attendance, spots may open up, which we will give to waitlisted
+                  participants in order of registration.</h4> -->
+            <button name="registrationSubmit" type="submit" disabled class="btn btn--register">Register</button>
           </div>
         </form>
+
         <section>
           <p>
             <small><sup id="agree-1">1</sup> I agree to the terms of both the <a href="https://github.com/MLH/mlh-policies/tree/master/prize-terms-and-conditions" target="_blank">MLH Contest Terms and Conditions</a> and the <a href="https://mlh.io/privacy" target="_blank">MLH Privacy Policy</a>. Please note that you may receive pre and post-event informational e-mails and occasional messages about hackathons from MLH as per the MLH Privacy Policy.</small>
