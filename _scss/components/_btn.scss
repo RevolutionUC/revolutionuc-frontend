@@ -9,11 +9,11 @@
     margin-bottom: 1rem;
 
     &.btn--primary {
-        background-color: $prim-color-5;
+        background-color: $prim-color-3;
         color: $prim-color-1;
 
         &:hover {
-            background-color: darken($prim-color-5, 10%);
+            background-color: darken($prim-color-3, 10%);
         }
     }
 
