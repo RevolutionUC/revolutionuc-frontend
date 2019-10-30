@@ -10,7 +10,7 @@
 
     &.btn--primary {
         background-color: $prim-color-3;
-        color: $prim-color-1;
+        color: $white;
 
         &:hover {
             background-color: darken($prim-color-3, 10%);
