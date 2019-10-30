@@ -140,14 +140,10 @@
       label {
         display: inline-block;
         line-height: 60px;
-        fill: $white;
+        fill: $lightgrey;
         -webkit-transition: fill $header-transition-time ease;
         -ms-transition: fill $header-transition-time ease;
         transition: fill $header-transition-time ease;
-      }
-
-      svg {
-        fill: $black;
       }
 
       input:checked ~ label {
