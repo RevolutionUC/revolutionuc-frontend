@@ -27,10 +27,103 @@
     style="overflow-x: hidden; overflow-y: hidden; width: 100%; position: absolute;top: 0;left: 0; height: 100%"
   >
     <!-- particles.js container -->
-    <div
-      id="particles-js"
-      style="overflow-x: hidden; overflow-y: hidden; height: 100%;"
-    ></div>
+    <div id="particles-js" style="overflow-x: hidden; overflow-y: hidden; height: 100%;">
+      <canvas id="hero-canvas" class="particles-js-canvas-el" style="width: 100%; height: 100%;"></canvas>
+    </div>
+
+    <script>
+        window.requestAnimFrame = (function(callback) {
+          return window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame || window.oRequestAnimationFrame || window.msRequestAnimationFrame ||
+          function(callback) {
+            window.setTimeout(callback, 1000 / 60);
+          };
+        })();
+  
+        function drawRectangle(myRectangle, context, alpha) {
+          context.beginPath();
+          context.rect(myRectangle.x, myRectangle.y, myRectangle.width, myRectangle.height);
+          alphaNum = Math.floor(alpha * 255)
+          alphaStr = alphaNum.toString(16)
+          alphaStr = alphaNum < 16 ? '0' + alphaStr : alphaStr;
+          context.fillStyle = myRectangle.fill + alphaStr;
+          context.fill();
+        }
+        function animate(shapes, canvas, context, startTime) {
+          console.log("Shape");
+          // clear
+          context.clearRect(0, 0, canvas.width, canvas.height);
+
+          canvas.width  = window.innerWidth;
+          canvas.height = window.innerHeight;
+          // context.transform(1,0.2,0.5,1,0,0);
+          context.rotate(30 * Math.PI / 180);
+
+          // update
+          var time = (new Date()).getTime() - startTime;
+  
+          var linearSpeed = 100;
+          // pixels / second
+          var newX = linearSpeed * time / 1000;
+
+          var alpha = 1.0;
+
+          for(var i = 0; i < shapes.length; i++) {
+            console.log("Shape: " + i);
+            var myRectangle = shapes[i];
+
+            if(newX < canvas.width - myRectangle.width - myRectangle.borderWidth / 2) {
+              myRectangle.x = newX;
+            }
+  
+            // // clear
+            // context.clearRect(0, 0, canvas.width, canvas.height);
+
+            alpha = Math.abs(alpha - (time % 10000)/10000);
+            context.fillStyle.alpha = 0.5;
+  
+            drawRectangle(myRectangle, context, alpha);
+          }
+  
+          // request new frame
+          requestAnimFrame(function() {
+            animate(shapes, canvas, context, startTime);
+          });
+        }
+        
+        var canvas = document.getElementById('hero-canvas');
+        var context = canvas.getContext('2d');
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+        var startHeight = window.innerHeight/2;
+        var stripeWidth = Math.trunc(Math.sqrt(Math.pow(window.innerWidth, 2) + Math.pow(window.innerHeight, 2)));
+  
+        var rect1 = {x: 0, y: startHeight, width: stripeWidth, height: 50, borderWidth: 5, fill: '#1D9B42'};
+        var rect2 = {x: 0, y: startHeight + 75 * 1, width: stripeWidth, height: 50, borderWidth: 5, fill: '#7CC444'};
+        var rect3 = {x: 0, y: startHeight + 75 * 2, width: stripeWidth, height: 50, borderWidth: 5, fill: '#EBF348'};
+        var rect4 = {x: 0, y: startHeight + 75 * 3, width: stripeWidth, height: 50, borderWidth: 5, fill: '#FFC04B'};
+  
+        // context.setTransform(1,0.2,0.5,1,0,0);
+        context.rotate(30 * Math.PI / 180);
+        drawRectangle(rect1, context, 1);
+        drawRectangle(rect2, context, 1);
+        drawRectangle(rect3, context, 1);
+        drawRectangle(rect4, context, 1);
+
+        var shapes = [];
+        shapes.push(rect1);
+        shapes.push(rect2);
+        shapes.push(rect3);
+        shapes.push(rect4);
+  
+        // wait one second before starting animation
+        setTimeout(function() {
+          var startTime = (new Date()).getTime();
+          animate(shapes, canvas, context, startTime);
+        }, 1000);
+      </script>
+    </body>
+  </html>      
+
 
     <!-- scripts -->
     <!-- <script src="/js/experiments/particles.js"></script>
