@@ -60,7 +60,7 @@
           // update
           var time = (new Date()).getTime() - startTime;
 
-          var alpha = 1.0;
+          var alpha = 0.5;
 
           for(var i = 0; i < shapes.length; i++) {
             var rec = shapes[i];
@@ -70,7 +70,6 @@
             rec.width = Math.trunc(Math.sqrt(Math.pow(window.innerWidth, 2) + Math.pow(window.innerHeight, 2)));
 
             alpha = Math.abs(alpha - (time % 10000)/10000);
-            context.fillStyle.alpha = 0.5;
   
             drawRectangle(rec, context, alpha);
           }
@@ -95,10 +94,10 @@
   
         // context.setTransform(1,0.2,0.5,1,0,0);
         context.rotate(30 * Math.PI / 180);
-        drawRectangle(rect1, context, 1);
-        drawRectangle(rect2, context, 1);
-        drawRectangle(rect3, context, 1);
-        drawRectangle(rect4, context, 1);
+        drawRectangle(rect1, context, 0.5);
+        drawRectangle(rect2, context, 0.5);
+        drawRectangle(rect3, context, 0.5);
+        drawRectangle(rect4, context, 0.5);
 
         var shapes = [];
         shapes.push(rect1);
@@ -114,11 +113,6 @@
       </script>
     </body>
   </html>      
-
-
-    <!-- scripts -->
-    <!-- <script src="/js/experiments/particles.js"></script>
-    <script src="/js/experiments/js/app.js"></script> -->
 
     <!-- <script src="/js/countdown-timer.js"></script>
     <script>initProgressBar("2019/02/02 00:00:00", "2019/03/02 00:00:00");</script> -->
