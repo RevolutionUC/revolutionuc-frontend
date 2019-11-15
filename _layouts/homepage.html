@@ -39,49 +39,40 @@
           };
         })();
   
-        function drawRectangle(myRectangle, context, alpha) {
+        function drawRectangle(rect, context, alpha) {
           context.beginPath();
-          context.rect(myRectangle.x, myRectangle.y, myRectangle.width, myRectangle.height);
+          context.rect(rect.x, rect.y, rect.width, rect.height);
           alphaNum = Math.floor(alpha * 255)
           alphaStr = alphaNum.toString(16)
           alphaStr = alphaNum < 16 ? '0' + alphaStr : alphaStr;
-          context.fillStyle = myRectangle.fill + alphaStr;
+          context.fillStyle = rect.fill + alphaStr;
           context.fill();
         }
+        
         function animate(shapes, canvas, context, startTime) {
-          console.log("Shape");
           // clear
           context.clearRect(0, 0, canvas.width, canvas.height);
 
           canvas.width  = window.innerWidth;
           canvas.height = window.innerHeight;
-          // context.transform(1,0.2,0.5,1,0,0);
           context.rotate(30 * Math.PI / 180);
 
           // update
           var time = (new Date()).getTime() - startTime;
-  
-          var linearSpeed = 100;
-          // pixels / second
-          var newX = linearSpeed * time / 1000;
 
           var alpha = 1.0;
 
           for(var i = 0; i < shapes.length; i++) {
-            console.log("Shape: " + i);
-            var myRectangle = shapes[i];
+            var rec = shapes[i];
 
-            if(newX < canvas.width - myRectangle.width - myRectangle.borderWidth / 2) {
-              myRectangle.x = newX;
-            }
-  
-            // // clear
-            // context.clearRect(0, 0, canvas.width, canvas.height);
+            var startHeight = window.innerHeight/2;
+            rec.y = startHeight + 75 * i;
+            rec.width = Math.trunc(Math.sqrt(Math.pow(window.innerWidth, 2) + Math.pow(window.innerHeight, 2)));
 
             alpha = Math.abs(alpha - (time % 10000)/10000);
             context.fillStyle.alpha = 0.5;
   
-            drawRectangle(myRectangle, context, alpha);
+            drawRectangle(rec, context, alpha);
           }
   
           // request new frame
