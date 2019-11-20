@@ -30,26 +30,26 @@
             }
 
             &:nth-child(1) {
-                background-image: url(/img/placeholder.png);
+                background-image: url(/img/pages/about/build-1.webp);
 
                 .item__text {
-                    background-color: $grey;
+                    background-color: $prim-color-1;
                 }
             }
 
             &:nth-child(2) {
-                background-image: url(/img/placeholder.png);
+                background-image: url(/img/pages/about/learn-1.webp);
 
                 .item__text {
-                    background-color: $grey;
+                    background-color: $prim-color-2;
                 }
             }
 
             &:nth-child(3) {
-                background-image: url(/img/placeholder.png);
+                background-image: url(/img/pages/about/grow-1.webp);
 
                 .item__text {
-                    background-color: $grey ;
+                    background-color: $prim-color-3;
                 }
             }
         }
