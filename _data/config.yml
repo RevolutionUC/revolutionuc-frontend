@@ -1,0 +1,9 @@
+# configure which items show in the nav bar
+navbar:
+  schedule: true
+  hack-ideas: true
+  prizing: true
+  sponsors: true
+  about: true
+  faq: true
+  register: true
