@@ -76,12 +76,13 @@
                 <nav class="navbar">
                     <ul>
                         <li><a {% if current == empty %} class="navbar__active" {% endif %} href="/">Home</a></li>
-                        <li><a {% if current[1] == 'schedule' %} class="navbar__active" {% endif %} href="/schedule">Schedule</a></li>
-                        <li><a {% if current[1] == 'hack-ideas' %} class="navbar__active" {% endif %} href="/hack-ideas">Hack Ideas</a></li>
-                        <li><a {% if current[1] == 'prizing' %} class="navbar__active" {% endif %} href="/prizing">Prizing</a></li>
-                        <li><a {% if current[1] == 'sponsors' %} class="navbar__active" {% endif %} href="/sponsors">Sponsors</a></li>
-                        <li><a {% if current[1] == 'about' %} class="navbar__active" {% endif %} href="/about">About</a></li>
-                        <li><a {% if current[1] == 'faq' %} class="navbar__active" {% endif %} href="/faq">FAQ</a></li>
+                        {% if site.data.config.navbar.schedule%}<li><a {% if current[1] == 'schedule' %} class="navbar__active" {% endif %} href="/schedule">Schedule</a></li>{% endif %}
+                        {% if site.data.config.navbar.hack-ideas%}<li><a {% if current[1] == 'hack-ideas' %} class="navbar__active" {% endif %} href="/hack-ideas">Hack Ideas</a></li>{% endif %}
+                        {% if site.data.config.navbar.prizing%}<li><a {% if current[1] == 'prizing' %} class="navbar__active" {% endif %} href="/prizing">Prizing</a></li>{% endif %}
+                        {% if site.data.config.navbar.sponsors%}<li><a {% if current[1] == 'sponsors' %} class="navbar__active" {% endif %} href="/sponsors">Sponsors</a></li>{% endif %}
+                        {% if site.data.config.navbar.about%}<li><a {% if current[1] == 'about' %} class="navbar__active" {% endif %} href="/about">About</a></li>{% endif %}
+                        {% if site.data.config.navbar.faq%}<li><a {% if current[1] == 'faq' %} class="navbar__active" {% endif %} href="/faq">FAQ</a></li>{% endif %}
+                        {% if site.data.config.navbar.register%}<li><a class="navbar__register" href="/register">Register</a></li>{% endif %}
                     </ul>
                 </nav>
                 <!-- <a id="mlh-trust-badge" style="display:block;max-width:100px;min-width:60px;position:fixed;right:50px;top:0;width:10%;z-index:10000" href="https://mlh.io/seasons/na-2019/events?utm_source=na-hackathon&utm_medium=TrustBadge&utm_campaign=2019-season&utm_content=white" target="_blank"><img src="https://s3.amazonaws.com/logged-assets/trust-badge/2019/mlh-trust-badge-2019-white.svg" alt="Major League Hacking 2019 Hackathon Season" style="width:100%"></a> -->
