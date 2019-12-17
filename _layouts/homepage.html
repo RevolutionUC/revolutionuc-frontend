@@ -4,29 +4,42 @@
   <div class="hero container container--small" style="z-index: 5;">
     <h1 class="hero__heading">RevolutionUC</h1>
 
-    <!-- <div class="barBackground barBackground--home" id="barBackground">
-      <span>
-        <p class="countdownText countdownText--home" id="countdownText">Time is running out!</p>
-        <div class="barForeground barForeground--home" id="barForeground"></div>
-      </span>
-    </div> -->
+    <!-- ========== Interest form info and button ========== -->
+    {% if site.data.config.homepage.timeline == "pre-registration" %}
+    <p>Hackathon at the University of Cincinnati - {{ site.data.config.eventData.date }}</p>
+    <p>Fill out the interest form to get updates about RevolutionUC 2020</p>
+    <p>And be notified when registration goes live!</p>
+    <div class="hero__heading">
+      <!-- Link to interest form -->
+      <a class="btn btn--primary" href="{{ site.data.config.eventData.interestForm }}" target="_">Interest Form</a>
+    </div>
+    {% endif %}
+    <!-- ================================================== -->
 
-    <!-- <br/> -->
-
-    <p>Hackathon at the University of Cincinnati - February 22nd and 23rd, 2020</p>
+    <!-- ========== Registration info and button ========== -->
+    {% if site.data.config.homepage.timeline == "registration" %}
+    <p>Hackathon at the University of Cincinnati - {{ site.data.config.eventData.date }}</p>
     <p>Interested? Register to participate!</p>
-
     <div class="hero__heading">
       <a class="btn btn--primary" href="/register">Register Now</a>
     </div>
+    {% endif %}
+    <!-- ================================================== -->
+
+    <!-- ========== Post hackathon info and button ========== -->
+    {% if site.data.config.homepage.timeline == "post-registration" %}
+    <p>Thank you all for participating in this year's RevolutionUC!</p>
+    <div class="hero__heading">
+      <!-- Link to submissions -->
+      <a class="btn btn--primary" href="{{ site.data.config.eventData.submissions }}" target="_">View Submissions</a>
+    </div>
+    {% endif %}
+    <!-- ================================================== -->
 
     <div class="down-chevron"><a href="#main">&#x2304;</a></div>
   </div>
 
-  <div
-    style="overflow-x: hidden; overflow-y: hidden; width: 100%; position: absolute;top: 0;left: 0; height: 100%"
-  >
-    <!-- particles.js container -->
+  <div style="overflow-x: hidden; overflow-y: hidden; width: 100%; position: absolute;top: 0;left: 0; height: 100%">
     <div style="overflow-x: hidden; overflow-y: hidden; height: 100%;">
       <canvas id="hero-canvas" style="width: 100%; height: 100%;"></canvas>
     </div>
@@ -110,12 +123,10 @@
           var startTime = (new Date()).getTime();
           animate(shapes, canvas, context, startTime);
         }, 1000);
-      </script>
+    </script>
     </body>
   </html>      
 
-    <!-- <script src="/js/countdown-timer.js"></script>
-    <script>initProgressBar("2019/02/02 00:00:00", "2019/03/02 00:00:00");</script> -->
   </div>
 </section>
 
