@@ -16,8 +16,8 @@ homepage:
 
 eventData:
   # Hackathon data
-  date: MONTH DAY and DAY, YEAR
+  date: February 22nd and 23rd, 2020
   # Interest form url
-  interestForm: 
+  interestForm: https://forms.gle/LrmB5fpVQbaSy6To6
   # Submissions url
   submissions: 
