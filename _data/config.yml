@@ -9,6 +9,7 @@ navbar:
   register: true
 
 homepage:
+  # Set false for normal homepage and true for livesite
   livesite: false
 
   # the timeline options are: pre-registration, registration, post-registration
