@@ -2,11 +2,11 @@
 navbar:
   schedule: true
   hack-ideas: true
-  prizing: true
-  sponsors: true
+  prizing: false
+  sponsors: false
   about: true
   faq: true
-  register: true
+  register: false
 
 homepage:
   # Set false for normal homepage and true for livesite
