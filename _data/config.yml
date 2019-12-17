@@ -7,3 +7,17 @@ navbar:
   about: true
   faq: true
   register: true
+
+homepage:
+  livesite: false
+
+  # the timeline options are: pre-registration, registration, post-registration
+  timeline: pre-registration
+
+eventData:
+  # Hackathon data
+  date: MONTH DAY and DAY, YEAR
+  # Interest form url
+  interestForm: 
+  # Submissions url
+  submissions: 
