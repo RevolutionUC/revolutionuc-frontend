@@ -15,17 +15,22 @@
 # image: svg of the logo
 # svg: true <- this is REQUIRED
 
-- name: Cyber@UC
-  link: https://www.cyberatuc.org
-  image: /img/sponsors/cyberatuc.svg
-  svg: true
+- name: Partner 1
+  link: /sponsors/
+  image: /img/sponsors/placeholder.png
+  # webp: /img/sponsors/placeholder.webp
 
-- name: Major League Hacking
-  link: https://mlh.io/
-  image: /img/sponsors/mlh.svg
-  svg: true
+- name: Partner 2
+  link: /sponsors/
+  image: /img/sponsors/placeholder.png
+  # webp: /img/sponsors/placeholder.webp
 
-- name: UC Undergrad Research
-  link: https://www.uc.edu/campus-life/careereducation/get-experience/research.html
-  image: /img/sponsors/uc-undergrad-research.jpg
-  webp: /img/sponsors/uc-undergrad-research.webp
+- name: Partner 3
+  link: /sponsors/
+  image: /img/sponsors/placeholder.png
+  # webp: /img/sponsors/placeholder.webp
+
+# - name: Partner 4
+#   link: /sponsors/
+#   image: /img/sponsors/placeholder.svg
+#   svg: true

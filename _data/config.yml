@@ -1,0 +1,24 @@
+# configure which items show in the nav bar
+navbar:
+  schedule: true
+  hack-ideas: true
+  prizing: false
+  sponsors: false
+  about: true
+  faq: true
+  register: false
+
+homepage:
+  # Set false for normal homepage and true for livesite
+  livesite: false
+
+  # the timeline options are: pre-registration, registration, post-registration
+  timeline: pre-registration
+
+eventData:
+  # Hackathon data
+  date: February 22nd and 23rd, 2020
+  # Interest form url
+  interestForm: https://forms.gle/LrmB5fpVQbaSy6To6
+  # Submissions url
+  submissions: 

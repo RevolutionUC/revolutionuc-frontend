@@ -8,13 +8,13 @@ th, td {
 }
 
 th {
-  background-color: $prim-color-2;
+  background-color: $grey;
   color: white;
   cursor: pointer;
 }
 
 a.paginate_button {
   padding: 0 2px;
-  color: $prim-color-2;
+  color: $grey;
   text-decoration: underline;
 }

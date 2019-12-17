@@ -15,82 +15,27 @@
 # image: svg of the logo
 # svg: true <- this is REQUIRED
 
-- name: Tata Consultancy Services
-  link: https://www.tcs.com
-  image: /img/sponsors/tcs.png
-  webp: /img/sponsors/tcs.webp
+- name: Sponsor 1
+  link: /sponsors/
+  image: /img/sponsors/placeholder.png
+  # webp: /img/sponsors/placeholder.webp
 
-- name: Fifth Third Bank
-  link: http://53.com
-  image: /img/sponsors/FifthThird.svg
-  svg: true
+- name: Sponsor 2
+  link: /sponsors/
+  image: /img/sponsors/placeholder.png
+  # webp: /img/sponsors/placeholder.webp
 
-- name: "84.51°"
-  link: https://8451.com/
-  image: /img/sponsors/8451.png
-  webp: /img/sponsors/8451.webp
+- name: Sponsor 3
+  link: /sponsors/
+  image: /img/sponsors/placeholder.png
+  # webp: /img/sponsors/placeholder.webp
 
-- name: Worldpay
-  link: https://www.worldpay.com
-  image: /img/sponsors/worldpay.png
-  webp: /img/sponsors/worldpay.webp
-
-- name: Twilio
-  link: https://www.twilio.com
-  image: /img/sponsors/twilio.svg
-  svg: true
-
-- name: Siemens PLM
-  link: https://www.plm.automation.siemens.com/
-  image: /img/sponsors/siemens.svg
-  svg: true
-
-- name: JPMorgan Chase
-  link: https://www.jpmorganchase.com
-  image: /img/sponsors/jpmc.svg
-  svg: true
-
-- name: Scripps
-  link: http://scripps.com
-  image: /img/sponsors/scripps.jpg
-  webp: /img/sponsors/scripps.webp
-
-- name: GE Aviation
-  link: https://www.geaviation.com
-  image: /img/sponsors/ge.svg
-  svg: true
-
-- name: Kroger Technology
-  link: https://www.kroger.com/livekt/
-  image: /img/sponsors/kroger.svg
-  svg: true
-
-- name: Kinetic Vision
-  link: https://kinetic-vision.com/
-  image: /img/sponsors/kineticvision.png
-  webp: /img/sponsors/kineticvision.webp
-
-- name: Tangram Flex
-  link: https://www.tangramflex.com/
-  image: /img/sponsors/tangram-flex.svg
-  svg: true
-
-- name: UC School of Information Technology
-  link: https://cech.uc.edu/it.html
-  image: /img/sponsors/school-of-it.jpg
-  webp: /img/sponsors/school-of-it.webp
-
-- name: UC BCS
-  link: https://www.uc.edu/af/bcs.html
-  image: /img/sponsors/bcs.png
-  webp: /img/sponsors/bcs.webp
-
-- name: Wolfram Language
-  link: http://www.wolfram.com/hackathons/
-  image: /img/sponsors/wolfram.svg
-  svg: true
-
-- name: Sticker Mule
-  link: http://hackp.ac/mlh-stickermule-hackathons
-  image: /img/sponsors/sticker-mule.svg
-  svg: true
+- name: Sponsor 4
+  link: /sponsors/
+  image: /img/sponsors/placeholder.png
+  # webp: /img/sponsors/placeholder.webp
+  
+# - name: Sponsor 5
+#   link: /sponsors/
+#   image: /img/sponsors/placeholder.svg
+#   svg: true

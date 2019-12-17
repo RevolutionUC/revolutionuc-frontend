@@ -6,7 +6,7 @@
 
 html {
   font-family: $body-font-family;
-  color: $black;//$prim-color-1;
+  color: $black;
   font-size: $base-font-size;
   line-height: 1.5;
   overflow-x: hidden;
@@ -49,7 +49,7 @@ p {
   margin-bottom: 40px;
 
   a {
-    color: $prim-color-4;
+    color: $grey;
   }
 
   &.lead {

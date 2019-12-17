@@ -1,46 +1,46 @@
-- date: March 2
+- date: February 22nd
 
 - time: 11:00 AM
   event: Check-In Opens
-  location: "5th Floor Zimmer Hall"
-  
+  location: 5th Floor Zimmer 
+
 - time: 11:00 AM
   event: Sponsor Expo Begins
-  location: "5th Floor Old Chem"
+  location: 5th Floor Zimmer 
+
+- time: 11:00 AM
+  event: Lunch
+  location: Zimmer Auditorium
 
 - time: 12:00 PM
-  event: Opening Ceremony/Lunch
-  location: 525 Old Chem
+  event: Opening Ceremony
+  location: Zimmer Auditorium
 
 - time: 1:00 PM
   event: Team Formation
-  location: 661 Baldwin Hall
+  location: 6th Floor Baldwin
 
 - time: 1:30 PM
   event: Hacking Begins
-  location: Rhodes Hall Hackerspace
+  location: Rhodes Hackerspace
 
 - time: 2:00 PM
   event: Capture The Flag Intro Session
-  location: 649 Baldwin Hall
+  location: 6th Floor Baldwin
 
-- time: 2:45 PM-4:30 PM
+- time: 2:45 PM - 4:30 PM
   event: Workshops
-  location: 6th Floor Baldwin Hall
+  location: 6th Floor Baldwin
 
 - time: 6:00 PM
   event: Dinner
-  location: 544 Baldwin Hall
+  location: 5th/6th Floor Baldwin
 
 - time: 8:00 PM
   event: Cup Stacking
   location: 801 Rhodes Lobby
 
-- time: 11:00 PM
-  event: Paper Airplane Contest
-  location: 801 Rhodes Lobby
-
-- date: March 3
+- date: February 23rd
 
 - time: 12:00 AM
   event: Midnight Snack
@@ -48,7 +48,7 @@
 
 - time: 1:00 AM
   event: Lightning Talks
-  location: 544 Baldwin
+  location: 5th/6th Floor Baldwin
 
 - time: 8:00 AM
   event: Breakfast
@@ -56,22 +56,22 @@
 
 - time: 12:00 PM
   event: Lunch
-  location: 544 Baldwin Hall
+  location: 5th/6th Floor Baldwin
 
 - time: 1:30 PM
   event: Hacking Ends
-  location: Rhodes Hall Hackerspace
-  
+  location: Rhodes Hackerspace
+
 - time: 1:30 PM
   event: Judging Begins
-  location: Rhodes Hall Hackerspace
+  location: Rhodes Hackerspace
 
 - time: 3:00 PM
   event: Final Demos
   location: Zimmer Auditorium
 
 - time: 3:30 PM
-  event: Awards/Closing Ceremonies
+  event: Awards/Closing Ceremony
   location: Zimmer Auditorium
 
 - time: 4:30 PM
