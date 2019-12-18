@@ -1,4 +1,4 @@
-# configure which items show in the nav bar
+# Configure which items show in the nav bar
 navbar:
   schedule: true
   hack-ideas: true
@@ -12,7 +12,7 @@ homepage:
   # Set false for normal homepage and true for livesite
   livesite: false
 
-  # the timeline options are: pre-registration, registration, post-registration
+  # The timeline options are: pre-registration, registration, post-registration
   timeline: pre-registration
 
 eventData:
@@ -22,3 +22,9 @@ eventData:
   interestForm: https://forms.gle/LrmB5fpVQbaSy6To6
   # Submissions url
   submissions: 
+
+MLH:
+  # Change this to true when MLH accepts our hackathon application
+  showBanner: false
+  # Be sure to update this for the current year, check the MLH website for the code for this badge
+  banner: <a id="mlh-trust-badge" style="display:block;max-width:100px;min-width:60px;position:fixed;right:50px;top:0;width:10%;z-index:10000" href="https://mlh.io/seasons/na-2020/events?utm_source=na-hackathon&utm_medium=TrustBadge&utm_campaign=2020-season&utm_content=white" target="_blank"><img src="https://s3.amazonaws.com/logged-assets/trust-badge/2020/mlh-trust-badge-2020-white.svg" alt="Major League Hacking 2020 Hackathon Season" style="width:100%"></a>
