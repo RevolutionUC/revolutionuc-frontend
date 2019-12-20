@@ -4,20 +4,21 @@ title: Hack Ideas
 permalink: /hack-ideas/
 subtitle: "Don't have a project idea?  Use these Hack Ideas to help guide you."
 image: "/img/placeholder.png"
-useContainer: true
+useContainer: false
 description: Hack Ideas to help guide your project at this year's RevolutionUC
 ---
 
+<div class="container container--fluid"></div>
 <br/>
 
 {% for topic in site.data.hack-ideas %}
 <div class="container card">
-    <!-- <br/> -->
     <h3 class="text-center">{{ topic.topic }}</h3>
     {% for idea in topic.ideas %}
         <p>{{ idea.idea }}</p>
     {% endfor %}
-    <!-- <br/> -->
 </div>
 <br/>
 {% endfor %}
+
+</div>
