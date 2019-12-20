@@ -8,7 +8,7 @@ useContainer: false
 description: Hack Ideas to help guide your project at this year's RevolutionUC
 ---
 
-<div class="container container--fluid"></div>
+<!-- <div class="container container--fluid">
 <br/>
 
 {% for topic in site.data.hack-ideas %}
@@ -21,4 +21,62 @@ description: Hack Ideas to help guide your project at this year's RevolutionUC
 <br/>
 {% endfor %}
 
+</div> -->
+
+
+
+
+
+
+<div class="live-row hack-ideas">
+    {% assign i = 0 %}
+    {% for topic in site.data.hack-ideas %}
+    <a id="open-{{ i }}" class="live-section card columns-4 topic" href="javascript:void(0);">
+        <img class="hack__ideas__image" src="{{ topic.image }}" alt="{{ topic.topic }} image">
+        <!-- <div class="topic__text">{{ topic.topic }}</div> -->
+        <h3 class="hack-idea-title">{{ topic.topic }}</h3>
+    </a>
+    <!-- The Modal -->
+    <div id="modal-{{ i }}" class="modal">
+            <!-- Modal content -->
+            <div class="modal-content">
+                <span id="close-{{ i }}" class="close">&times;</span>
+                <img class="hack__ideas__modal-image" src="{{ topic.image }}" alt="{{ topic.topic }} image">
+                {% for idea in topic.ideas %}
+                <p>{{ idea.idea }}</p>
+                {% endfor %}
+            </div>
+        </div>
+
+    <script>
+        var modal{{ i }} = document.getElementById("modal-{{ i }}");  // Get the modal
+        var btn{{ i }} = document.getElementById("open-{{ i }}"); // Get the button that opens the modal
+        var span{{ i }} = document.getElementById("close-{{ i }}"); // Get the <span> element that closes the modal
+        // When the user clicks on the button, open the modal
+        btn{{ i }}.onclick = function() {
+            modal{{ i }}.style.display = "block";
+
+            window.onclick = function(event) {
+                console.log("Click");
+                console.log(event.target);
+                console.log(modal{{ i }});
+                if (event.target == modal{{ i }}) {
+                    modal{{ i }}.style.display = "none";
+                }
+            }
+        }
+        // When the user clicks on <span> (x), close the modal
+        span{{ i }}.onclick = function() {
+            modal{{ i }}.style.display = "none";
+        }
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+            if (event.target == modal{{ i }}) {
+                modalmodal{{ i }}.style.display = "none";
+            }
+        }
+    </script>
+
+    {% assign i = i | plus:1 %}
+    {% endfor %}
 </div>
