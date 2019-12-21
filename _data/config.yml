@@ -16,7 +16,12 @@ homepage:
 
 eventData:
   # Hackathon data
-  date: MONTH DAY and DAY, YEAR
+  fullDate: MONTH DAY and DAY, YEAR
+  date:
+    month: MONTH
+    firstDay: DAY
+    secondDay: DAY
+    year: YEAR
   # Interest form url
   interestForm: 
   # Submissions url
