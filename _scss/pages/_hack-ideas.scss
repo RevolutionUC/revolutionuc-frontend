@@ -79,7 +79,8 @@
     margin: 0 auto;
     position: relative;
     padding-top: 12px;
-    width: 50%;
+    max-height: 400px;
+    width: 80%;
     @media (max-width: $medium-breakpoint) {
         width: 100%;
     }
