@@ -1,50 +1,35 @@
-- topic: Beginner
-  ideas:
-    - idea: New to hackathons? New to tech? Try anything and ask for help!
+- topic: Topic 1
+  image: /img/placeholder.png
+  idea: Vitae sed nulla est consequatur. Vel placeat perspiciatis autem quibusdam laborum perferendis dolorem. Libero vel at deserunt sint. Et distinctio sunt adipisci ipsa amet non. Laborum molestiae minima nulla qui et cumque similique in. Iure sed tempora doloremque quasi eius laudantium aliquam.
 
-- topic: Health and Well-Being
-  ideas:
-    - idea: Design and develop new and creative solutions to personal health.
-    - idea: How can we improve the life of a patient?
-    - idea: Innovate the way we learn, diagnose, and treat illness.
+- topic: Topic 2
+  image: /img/placeholder.png
+  idea: Vitae sed nulla est consequatur. Vel placeat perspiciatis autem quibusdam laborum perferendis dolorem. Libero vel at deserunt sint. Et distinctio sunt adipisci ipsa amet non. Laborum molestiae minima nulla qui et cumque similique in. Iure sed tempora doloremque quasi eius laudantium aliquam.
 
-- topic: Equality & Inclusion
-  ideas:
-    - idea: Work to solve problems related to gender equality and inclusivity for marginalized groups.
-    - idea: How can we tackle a problem related to gender equality?
-    - idea: How can we promote inclusiveness for marginalized groups?
-
-- topic: Education
-  ideas:
-    - idea: Help to educate the next generation of students.
-    - idea: How can we better engage students?
-    - idea: How can we bring the classroom into the 21st century?
-
-- topic: Demystify Data
-  ideas:
-    - idea: Find new ways to analyze and use data.
-    - idea: How can we turn an arbitrary data set into something useful?
-    - idea: Is there a better way to analyze and easily view a large data set?
-
-- topic: Cyber Security
-  ideas:
-    - idea: Ensure that platforms are stable and secure.
-    - idea: How can we prepare for known vulnerabilities, and ensure our system is designed to be secure?
-    - idea: How can we detect vulnerabilities or traces of an intrusion?
-
-- topic: Outreach
-  ideas:
-    - idea: Find ways to hep organizations and other individuals better communicate and organize.
-    - idea: How can we help organizations better reach their consumers?
-    - idea: How can we bring tech to all people?
-
-- topic: Professional Development/Soft Skills
-  ideas:
-    - idea: The tech industry involves much more than programming or hardware. Find a way to use your non technical skills to improve the industry, or the world.
-    - idea: Have an amazing business idea? Develop a plan and realize how you can bring it to life.
-    - idea: Talk with mentors to discover their biggest non technical needs. How can we help them? Get creative, and unleash your ideas!
-
-- topic: Other
-  ideas:
-    - idea: Hackathons are fun, and so are puns. Incorporate your best puns into your projects.
-    - idea: Memes have become a cultural norm. Find a way to revolutionize how society creates or uses them.
+- topic: Topic 3
+  image: /img/placeholder.png
+  idea: Vitae sed nulla est consequatur. Vel placeat perspiciatis autem quibusdam laborum perferendis dolorem. Libero vel at deserunt sint. Et distinctio sunt adipisci ipsa amet non. Laborum molestiae minima nulla qui et cumque similique in. Iure sed tempora doloremque quasi eius laudantium aliquam.
+    
+- topic: Topic 4
+  image: /img/placeholder.png
+  idea: Vitae sed nulla est consequatur. Vel placeat perspiciatis autem quibusdam laborum perferendis dolorem. Libero vel at deserunt sint. Et distinctio sunt adipisci ipsa amet non. Laborum molestiae minima nulla qui et cumque similique in. Iure sed tempora doloremque quasi eius laudantium aliquam.
+    
+- topic: Topic 5
+  image: /img/placeholder.png
+  idea: Vitae sed nulla est consequatur. Vel placeat perspiciatis autem quibusdam laborum perferendis dolorem. Libero vel at deserunt sint. Et distinctio sunt adipisci ipsa amet non. Laborum molestiae minima nulla qui et cumque similique in. Iure sed tempora doloremque quasi eius laudantium aliquam.
+    
+- topic: Topic 6
+  image: /img/placeholder.png
+  idea: Vitae sed nulla est consequatur. Vel placeat perspiciatis autem quibusdam laborum perferendis dolorem. Libero vel at deserunt sint. Et distinctio sunt adipisci ipsa amet non. Laborum molestiae minima nulla qui et cumque similique in. Iure sed tempora doloremque quasi eius laudantium aliquam.
+    
+- topic: Topic 7
+  image: /img/placeholder.png
+  idea: Vitae sed nulla est consequatur. Vel placeat perspiciatis autem quibusdam laborum perferendis dolorem. Libero vel at deserunt sint. Et distinctio sunt adipisci ipsa amet non. Laborum molestiae minima nulla qui et cumque similique in. Iure sed tempora doloremque quasi eius laudantium aliquam.
+    
+- topic: Topic 8
+  image: /img/placeholder.png
+  idea: Vitae sed nulla est consequatur. Vel placeat perspiciatis autem quibusdam laborum perferendis dolorem. Libero vel at deserunt sint. Et distinctio sunt adipisci ipsa amet non. Laborum molestiae minima nulla qui et cumque similique in. Iure sed tempora doloremque quasi eius laudantium aliquam.
+    
+- topic: Topic 9
+  image: /img/placeholder.png
+  idea: Vitae sed nulla est consequatur. Vel placeat perspiciatis autem quibusdam laborum perferendis dolorem. Libero vel at deserunt sint. Et distinctio sunt adipisci ipsa amet non. Laborum molestiae minima nulla qui et cumque similique in. Iure sed tempora doloremque quasi eius laudantium aliquam.
