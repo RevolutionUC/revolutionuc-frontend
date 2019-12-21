@@ -18,7 +18,6 @@
     background-color: $white;
     margin: 5% 25%; /* 5% from the top and centered */
     padding: 1rem;
-    padding-top: 8px;
     width: 50%; /* Could be more or less, depending on screen size */
     @media (max-width: $medium-breakpoint) {
         width: 90%;

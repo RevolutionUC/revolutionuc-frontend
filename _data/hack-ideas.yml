@@ -1,63 +1,35 @@
 - topic: Topic 1
-  # image: /img/placeholder.png
-  image: /img/ideas/0_beginner.svg
-  ideas:
-    - idea: Idea 1
-    - idea: Idea 2
-    - idea: Idea 3
+  image: /img/placeholder.png
+  idea: Vitae sed nulla est consequatur. Vel placeat perspiciatis autem quibusdam laborum perferendis dolorem. Libero vel at deserunt sint. Et distinctio sunt adipisci ipsa amet non. Laborum molestiae minima nulla qui et cumque similique in. Iure sed tempora doloremque quasi eius laudantium aliquam.
 
 - topic: Topic 2
-  image: /img/ideas/1_health.svg
-  ideas:
-    - idea: Idea 1
-    - idea: Idea 2
-    - idea: Idea 3
+  image: /img/placeholder.png
+  idea: Vitae sed nulla est consequatur. Vel placeat perspiciatis autem quibusdam laborum perferendis dolorem. Libero vel at deserunt sint. Et distinctio sunt adipisci ipsa amet non. Laborum molestiae minima nulla qui et cumque similique in. Iure sed tempora doloremque quasi eius laudantium aliquam.
 
 - topic: Topic 3
-  image: /img/ideas/2_equality.svg
-  ideas:
-    - idea: Idea 1
-    - idea: Idea 2
-    - idea: Idea 3
-
+  image: /img/placeholder.png
+  idea: Vitae sed nulla est consequatur. Vel placeat perspiciatis autem quibusdam laborum perferendis dolorem. Libero vel at deserunt sint. Et distinctio sunt adipisci ipsa amet non. Laborum molestiae minima nulla qui et cumque similique in. Iure sed tempora doloremque quasi eius laudantium aliquam.
+    
 - topic: Topic 4
-  image: /img/ideas/3_education.svg
-  ideas:
-    - idea: Idea 1
-    - idea: Idea 2
-    - idea: Idea 3
-
+  image: /img/placeholder.png
+  idea: Vitae sed nulla est consequatur. Vel placeat perspiciatis autem quibusdam laborum perferendis dolorem. Libero vel at deserunt sint. Et distinctio sunt adipisci ipsa amet non. Laborum molestiae minima nulla qui et cumque similique in. Iure sed tempora doloremque quasi eius laudantium aliquam.
+    
 - topic: Topic 5
-  image: /img/ideas/4_data.svg
-  ideas:
-    - idea: Idea 1
-    - idea: Idea 2
-    - idea: Idea 3
-
+  image: /img/placeholder.png
+  idea: Vitae sed nulla est consequatur. Vel placeat perspiciatis autem quibusdam laborum perferendis dolorem. Libero vel at deserunt sint. Et distinctio sunt adipisci ipsa amet non. Laborum molestiae minima nulla qui et cumque similique in. Iure sed tempora doloremque quasi eius laudantium aliquam.
+    
 - topic: Topic 6
-  image: /img/ideas/5_security.svg
-  ideas:
-    - idea: Idea 1
-    - idea: Idea 2
-    - idea: Idea 3
-
+  image: /img/placeholder.png
+  idea: Vitae sed nulla est consequatur. Vel placeat perspiciatis autem quibusdam laborum perferendis dolorem. Libero vel at deserunt sint. Et distinctio sunt adipisci ipsa amet non. Laborum molestiae minima nulla qui et cumque similique in. Iure sed tempora doloremque quasi eius laudantium aliquam.
+    
 - topic: Topic 7
-  image: /img/ideas/6_outreach.svg
-  ideas:
-    - idea: Idea 1
-    - idea: Idea 2
-    - idea: Idea 3
-
+  image: /img/placeholder.png
+  idea: Vitae sed nulla est consequatur. Vel placeat perspiciatis autem quibusdam laborum perferendis dolorem. Libero vel at deserunt sint. Et distinctio sunt adipisci ipsa amet non. Laborum molestiae minima nulla qui et cumque similique in. Iure sed tempora doloremque quasi eius laudantium aliquam.
+    
 - topic: Topic 8
-  image: /img/ideas/7_professional.svg
-  ideas:
-    - idea: Idea 1
-    - idea: Idea 2
-    - idea: Idea 3
-
+  image: /img/placeholder.png
+  idea: Vitae sed nulla est consequatur. Vel placeat perspiciatis autem quibusdam laborum perferendis dolorem. Libero vel at deserunt sint. Et distinctio sunt adipisci ipsa amet non. Laborum molestiae minima nulla qui et cumque similique in. Iure sed tempora doloremque quasi eius laudantium aliquam.
+    
 - topic: Topic 9
-  image: /img/ideas/8_other.svg
-  ideas:
-    - idea: Idea 1
-    - idea: Idea 2
-    - idea: Idea 3
+  image: /img/placeholder.png
+  idea: Vitae sed nulla est consequatur. Vel placeat perspiciatis autem quibusdam laborum perferendis dolorem. Libero vel at deserunt sint. Et distinctio sunt adipisci ipsa amet non. Laborum molestiae minima nulla qui et cumque similique in. Iure sed tempora doloremque quasi eius laudantium aliquam.
