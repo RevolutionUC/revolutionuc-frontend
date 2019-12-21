@@ -8,17 +8,97 @@ useContainer: true
 description: Hack Ideas to help guide your project at this year's RevolutionUC
 ---
 
-<div class="container container--fluid"></div>
-<br/>
+<div class="live-row hack-ideas">
+    {% assign i = 0 %}
+    {% for topic in site.data.hack-ideas %}
+    <a id="open-{{ i }}" class="live-section card columns-4 topic" href="javascript:void(0);">
+        <img class="hack__ideas__image" src="{{ topic.image }}" alt="{{ topic.topic }} image">
+        <h3 class="hack-idea-title">{{ topic.topic }}</h3>
+    </a>
+    <!-- The Modal -->
+    <div id="modal-{{ i }}" class="modal">
+            <!-- Modal content -->
+            <div class="modal-content">
+                <span id="close-{{ i }}" class="close">&times;</span>
 
-{% for topic in site.data.hack-ideas %}
-<div class="container card">
-    <h3 class="text-center">{{ topic.topic }}</h3>
-    {% for idea in topic.ideas %}
-        <p>{{ idea.idea }}</p>
+                <div class=live-row>
+                    <img class="hack__ideas__modal-image columns-12" src="{{ topic.image }}" alt="{{ topic.topic }} image">
+                </div>
+                
+                
+                <div class=live-row>
+                    <div id="prev-{{ i }}" class="columns-2 modal-nav__prev">&lt;</div>
+                    <div class="columns-8">
+                        <h3 class="hack-idea-title">{{ topic.topic }}</h3>
+                    </div>
+                    <div id="next-{{ i }}" class="columns-2 modal-nav__next">&gt;</div>
+                </div>
+                
+                <p class="hack__ideas__modal-text">{{ topic.idea }}</p>
+            </div>
+        </div>
+
+    <script>
+        var modal{{ i }} = document.getElementById("modal-{{ i }}");  // Get the modal
+        var btn{{ i }} = document.getElementById("open-{{ i }}"); // Get the button that opens the modal
+        var span{{ i }} = document.getElementById("close-{{ i }}"); // Get the <span> element that closes the modal
+        // When the user clicks on the button, open the modal
+        btn{{ i }}.onclick = function() {
+            modal{{ i }}.style.display = "block";
+            window.onclick = function(event) {
+                console.log("Click");
+                console.log(event.target);
+                console.log(modal{{ i }});
+                if (event.target == modal{{ i }}) {
+                    modal{{ i }}.style.display = "none";
+                }
+            }
+        }
+
+        // When the user clicks on <span> (x), close the modal
+        span{{ i }}.onclick = function() {
+            modal{{ i }}.style.display = "none";
+        }
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+            if (event.target == modal{{ i }}) {
+                modal{{ i }}.style.display = "none";
+            }
+        }
+
+        var prev{{ i }} = document.getElementById("prev-{{ i }}");
+        var next{{ i }} = document.getElementById("next-{{ i }}");
+
+        prev{{ i }}.onclick = function() {
+            modal{{ i }}.style.display = "none";
+            {% if i != 0 %}
+            modal{{ i | minus:1 }}.style.display = "block";
+            {% endif %}
+        }
+        next{{ i }}.onclick = function() {
+            modal{{ i }}.style.display = "none";
+            modal{{ i | plus:1 }}.style.display = "block";
+        }
+    </script>
+
+    {% assign i = i | plus:1 %}
     {% endfor %}
-</div>
-<br/>
-{% endfor %}
+    {% assign i = i | minus:1 %}  <!-- Reassign i to the last index -->
 
+    <script>
+        var modal0 = document.getElementById("modal-0");  // Get the first modal
+        var modal{{ i }} = document.getElementById("modal-{{ i }}");  // Get the last modal
+        var prev0 = document.getElementById("prev-0"); // Get the previous button on the first modal
+        var next{{ i }} = document.getElementById("next-{{ i }}");  // Get next button on the last modal
+        // Set onclick of the first modal's previous button to go to the last modal
+        prev0.onclick = function() {
+            modal0.style.display = "none";
+            modal{{ i }}.style.display = "block";
+        }
+        // Set onclick of the last modal's next button to go to the first modal
+        next{{ i }}.onclick = function() {
+            modal{{ i }}.style.display = "none";
+            modal0.style.display = "block";
+        }
+    </script>
 </div>

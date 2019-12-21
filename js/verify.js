@@ -54,7 +54,7 @@ if (window.location.href.indexOf("attendance") > -1) {
     document.title = "Confirm Attendance";
     h1.textContent = "Attendance Confirmed";
     if (confirm == 'true') {
-      content.textContent = "Thank You!  You have confirmed your attendance to RevolutionUC 2019!";
+      content.textContent = "Thank You!  You have confirmed your attendance to RevolutionUC {{ site.data.config.eventData.date.year }}!";
     } else if (confirm == 'false') {
       content.textContent = "Thank You!  You have confirmed that you will NOT be attending RevolutionUC 2019.";
     }
