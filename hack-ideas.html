@@ -46,9 +46,6 @@ description: Hack Ideas to help guide your project at this year's RevolutionUC
         btn{{ i }}.onclick = function() {
             modal{{ i }}.style.display = "block";
             window.onclick = function(event) {
-                console.log("Click");
-                console.log(event.target);
-                console.log(modal{{ i }});
                 if (event.target == modal{{ i }}) {
                     modal{{ i }}.style.display = "none";
                 }
