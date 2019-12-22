@@ -174,8 +174,7 @@ if (!registration_init) {
       //regHeaders.append('Accept', 'application/json');
       var uploadKey = ""
 
-      // fetch("https://revolutionuc-api.herokuapp.com/api/registrant", {
-      fetch("http://localhost:8080/test", {
+      fetch("https://revolutionuc-api.herokuapp.com/api/registrant", {
         method: "POST",
         headers: regHeaders,
         body: JSON.stringify(jsonData), //new FormData(this._formElement),
@@ -191,8 +190,7 @@ if (!registration_init) {
     }
 
     static _uploadResume(data, form) {
-      // fetch("https://revolutionuc-api.herokuapp.com/api/uploadResume/" + data["uploadKey"], {
-      fetch("http://localhost:8080/test", {
+      fetch("https://revolutionuc-api.herokuapp.com/api/uploadResume/" + data["uploadKey"], {
         mode: "no-cors",
         method: "POST",
         //headers: regHeaders,
