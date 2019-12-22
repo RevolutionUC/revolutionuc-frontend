@@ -2,18 +2,17 @@
     display: inline-block;
     margin: 0;
     padding: 16px 20px;
-    background-color: $prim-color-3;
+    background-color: $grey;
     color: $white;
     text-decoration: none;
     font-size: $btn-font-size;
     margin-bottom: 1rem;
 
     &.btn--primary {
-        background-color: $prim-color-3;
-        color: $white;
+        background-color: $grey;
 
         &:hover {
-            background-color: darken($prim-color-3, 10%);
+            background-color: darken($grey, 10%);
         }
     }
 

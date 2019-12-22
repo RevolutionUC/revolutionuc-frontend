@@ -1,6 +1,5 @@
 .hack-idea-title {
     text-align: center;
-    // margin: 0 0;
     margin-top: 16px;
     margin-bottom: 0;
 }
@@ -25,49 +24,13 @@
       position: relative;
       width: 50%;
 
+      filter: brightness(1);
+      -webkit-transition: filter 300ms ease;
+      -ms-transition: filter 300ms ease;
+      transition: filter 300ms ease;
+
       a {
         text-decoration: none;
-      }
-
-      img {
-        width: 25%;
-        filter: brightness(1);
-        -webkit-transition: filter 300ms ease;
-        -ms-transition: filter 300ms ease;
-        transition: filter 300ms ease;
-      }
-
-      .topic__text {
-        text-align: center;
-        color: $black;
-        margin-top: -12px;
-
-        @media (min-width: $small-breakpoint) {
-          color: $white;
-          font-weight: 700;
-          opacity: 0;
-          width: 100%;
-          margin-top: initial;
-          position: absolute;
-          top: 46%;
-          left: 50%;
-          transform: translate(-50%, -46%);
-          -webkit-transition: opacity 300ms ease;
-          -ms-transition: opacity 300ms ease;
-          transition: opacity 300ms ease;
-        }
-      }
-
-      @media (min-width: $small-breakpoint) {
-        &:hover {
-          img {
-            filter: brightness(0.7);
-          }
-
-          .hack__text {
-            opacity: 1;
-          }
-        }
       }
     }
   }
@@ -93,4 +56,8 @@
     a {
       text-decoration: none;
     }
+}
+
+.hack__ideas__modal-text {
+  margin: 0 2rem;
 }

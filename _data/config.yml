@@ -2,14 +2,13 @@
 navbar:
   schedule: true
   hack-ideas: true
-  prizing: false
-  sponsors: false
+  prizing: true
+  sponsors: true
   about: true
   faq: true
-  register: false
+  register: true
 
 homepage:
-  # Set false for normal homepage and true for livesite
   livesite: false
 
   # The timeline options are: pre-registration, registration, post-registration
@@ -17,14 +16,19 @@ homepage:
 
 eventData:
   # Hackathon data
-  date: February 22nd and 23rd, 2020
+  fullDate: MONTH DAY and DAY, YEAR
+  date:
+    month: MONTH
+    firstDay: DAY
+    secondDay: DAY
+    year: YEAR
   # Interest form url
-  interestForm: https://forms.gle/LrmB5fpVQbaSy6To6
+  interestForm: 
   # Submissions url
   submissions: 
 
 MLH:
   # Change this to true when MLH accepts our hackathon application
-  showBanner: true
+  showBanner: false
   # Be sure to update this for the current year, check the MLH website for the code for this badge
   banner: <a id="mlh-trust-badge" style="display:block;max-width:100px;min-width:60px;position:fixed;right:50px;top:0;width:10%;z-index:10000" href="https://mlh.io/seasons/na-2020/events?utm_source=na-hackathon&utm_medium=TrustBadge&utm_campaign=2020-season&utm_content=white" target="_blank"><img src="https://s3.amazonaws.com/logged-assets/trust-badge/2020/mlh-trust-badge-2020-white.svg" alt="Major League Hacking 2020 Hackathon Season" style="width:100%"></a>

@@ -33,17 +33,17 @@
         <meta name="twitter:card" content="summary_large_image">
         <meta name="twitter:creator" content="@Revolution_UC">
         <meta name="twitter:title" content="RevolutionUC Hackathon">
-        <meta name="twitter:description" content="Midwest Student Hackathon held at the University of Cincinnati. March 2nd and 3rd, 2019.">
+        <meta name="twitter:description" content="Midwest Student Hackathon held at the University of Cincinnati. {{ site.data.eventData.fullDate }}.">
         <meta name="twitter:image" content="https://revolutionuc.com/img/social-card.png">
         <meta name="twitter:image:alt" content="RevolutionUC Hex Logo">
 
         <!-- Facebook Meta -->
         <meta property="og:title" content="RevolutionUC">
-        <meta property="og:description" content="Midwest Student Hackathon held at the University of Cincinnati. March 2nd and 3rd, 2019.">
+        <meta property="og:description" content="Midwest Student Hackathon held at the University of Cincinnati. {{ site.data.eventData.fullDate }}.">
         <meta property="og:image" content="https://revolutionuc.com/img/social-card.png">
         <meta property="og:url" content="https://revolutionuc.com">
 
-        <meta name="theme-color" content="#007049">
+        <meta name="theme-color" content="#761E3D">
 
         <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon/favicon-32x32.png">
         <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon/favicon-16x16.png">
@@ -59,11 +59,13 @@
         {% endif %}
     </head>
     <body class="page page--{{ current[1] }}">
+        <!-- <header class="header {% if current == empty %}header--no-bg{% endif %}"> -->
             <header class="header">
             <div class="header__container container">
                 <h1 class="header__title">
                     <a href="/">
-                        <img class="header__logo" src="/img/revuc-logos/revuc-spring-2020.webp" srcset="/img/revuc-logos/revuc-spring-2020.webp 1x, /img/revuc-logos/revuc-spring-2020.webp 2x" src="" srcset="" onerror="this.onerror=null; this.src='/img/revuc-logos/revuc-spring-2020.png'; this.srcset='/img/revuc-logos/revuc-spring-2020.png 1x, /img/revuc-logos/revuc-spring-2020.png 2x'" alt="RevolutionUC logo">
+                        <!-- <img class="header__logo" src="https://d1scc4yo7jg7j0.cloudfront.net/logos/2017-logo.png" srcset="https://d1scc4yo7jg7j0.cloudfront.net/logos/2017-logo.png 1x, https://d1scc4yo7jg7j0.cloudfront.net/logos/2017-logo@2x.png 2x" alt="RevolutionUC logo"> -->
+                        <img class="header__logo" src="/img/revuc-logos/revuc-spring-z-clean.webp" srcset="/img/revuc-logos/revuc-spring-z-clean.webp 1x, /img/revuc-logos/revuc-spring-z-clean.webp 2x" src="" srcset="" onerror="this.onerror=null; this.src='/img/revuc-logos/revuc-spring-z-clean.png'; this.srcset='/img/revuc-logos/revuc-spring-z-clean.png 1x, /img/revuc-logos/revuc-spring-z-clean.png 2x'" alt="RevolutionUC logo">
                     </a>
                 </h1>
                 <input id="menu-toggle" type="checkbox" class="menu-toggle">
