@@ -88,8 +88,10 @@ if (!registration_init) {
       // Show e sign waiver
       var waiverText = document.getElementById('normal-waiver-text');
       var minorWaiverText = document.getElementById('minor-waiver-text');
+      var waiverLink = document.getElementById('waiver-link');
       if( getAge(formData.get('dob')) < 18 ) {
         waiverText.style.display = 'none';
+        waiverLink.style.display = 'none';
         minorWaiverText.style.display = 'block';
       } else {
         waiverText.style.display = 'block';
@@ -120,12 +122,12 @@ if (!registration_init) {
       var acceptButton = document.getElementById('submit-e-sign');
       acceptButton.addEventListener('click', ()=> {
         eSignFormModal.style.display = 'none';
-        this._submitForm(formData);
+        this._submitForm(formData, true);
       });
 
     }
 
-    static _submitForm(formData) {
+    static _submitForm(formData, acceptedWaiver) {
       console.log("Registration::_submitForm");
 
       let jsonObj = {}
@@ -154,6 +156,7 @@ if (!registration_init) {
       if(jsonObj["glutenFree"] == "on"){jsonData["allergens"].push("GlutenFree")}
       jsonData["otherAllergens"] = jsonObj["otherDietaryRestrictions"]
       jsonData["educationLevel"] = jsonObj["education"]
+      jsonData["acceptedWaiver"] = acceptedWaiver
 
       //check if all reguired entries are filled in
       if(jsonData["firstName"] == "" ||
@@ -166,7 +169,8 @@ if (!registration_init) {
       jsonData["education"] == "" ||
       jsonData["shirtSize"] == "" ||
       jsonData["ethnicity"] == "" ||
-      jsonData["gender"] == ""
+      jsonData["gender"] == "" ||
+      jsonData["acceptedWaiver"] == false
          ){}
 
       var regHeaders = new Headers();
