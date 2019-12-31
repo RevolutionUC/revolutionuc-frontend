@@ -225,6 +225,7 @@ if (!registration_init) {
     }
 
     static _updateLabels(jsonErrors) {
+      console.log(jsonErrors);
       for (let error of jsonErrors) {
         document
           .querySelector(`label[for=${error.param}]`)
