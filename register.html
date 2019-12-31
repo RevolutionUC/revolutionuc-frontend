@@ -2,8 +2,7 @@
 layout: default
 title: Register
 permalink: /register/
-description: Registration for RevolutionUC — Hackathon at the University of Cincinnati - February 22-23, 2020
-published: true
+description: Registration for RevolutionUC — Hackathon at the University of Cincinnati from MONTH DAY-DAY, YEAR
 ---
       <div>
         <form name="registration">
@@ -272,6 +271,20 @@ published: true
             <small><sup id="agree-2">2</sup> I agree to at all times abide by and conform to the <a href="https://static.mlh.io/docs/mlh-code-of-conduct.pdf" target="_blank">Major League Hacking Code of Conduct</a> at the event.</small>
           </p>
         </section>
+        
+        <!-- The Modal -->
+        <div id="e-sign-waiver-modal" class="modal">
+          <!-- Modal content -->
+          <div class="modal-content">
+            <span class="close close-e-sign-modal">&times;</span>
+        
+            <div class="waiver-scroll" id="normal-waiver-text">{{ site.data.waiver.adult-waiver }}</div>
+            <div id="minor-waiver-text">{{ site.data.waiver.minor-waiver }}</div>
+            <button type="button" class="btn btn--waiver" id="submit-e-sign">Accept and Finish Registration</button>
+            <button type="button" class="btn btn--waiver close-e-sign-modal" id="close-waiver-form">Cancel</button>
+            <p id="waiver-link" class="waiver-link"> The contents of this document can be reviewd at any time <a href="/waiver" target="_blank" rel="noopener noreferrer">here</a>.</p>
+          </div>
+        </div>
       </div>
 
 <script src=/js/register.js async defer></script>
