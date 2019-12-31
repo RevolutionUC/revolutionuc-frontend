@@ -226,14 +226,14 @@ if (!registration_init) {
 
     static _updateLabels(jsonErrors) {
       console.log(jsonErrors);
-      for (let error of jsonErrors) {
+      for (let error of jsonErrors.message) {
         document
-          .querySelector(`label[for=${error.param}]`)
+          .querySelector(`label[for=${error.property}]`)
           .classList.add("error");
-        if (error.param == "email" && error.msg.includes("registered")) {
+        if (error.property == "email" && error.msg.includes("registered")) {
           // Email address has already been registered
           this._addEmailRegisteredWarning();
-        } else if (error.param == "resume" && error.msg.startsWith("LIMIT")) {
+        } else if (error.property == "resume" && error.msg.startsWith("LIMIT")) {
           this._addResumeLimitError();
         }
       }
