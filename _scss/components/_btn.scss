@@ -34,7 +34,7 @@
         }
     }
 
-    &.btn--register {
+    &.btn--register, &.btn--waiver {
         background-color: $grey;
         color: $white;
         -webkit-appearance: none;

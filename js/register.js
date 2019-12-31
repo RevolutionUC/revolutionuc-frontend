@@ -52,17 +52,14 @@ if (!registration_init) {
     static _onSubmit(e) {
       console.log("Registration::_onSubmit");
       e.preventDefault();
-
+      
       // Set the button as disabled and the text to 'Working...'
       this._submitButton.disabled = true;
       this._submitButton.textContent = "Working...";
 
       var formData = new FormData(this._formElement)
-      let jsonObj = {}
-      for (const [key, value] of formData.entries()) {
-        jsonObj[key] = value
-      }
 
+      // Validate data
       if(formData.get("firstName") == "" ||
       formData.get("lastName") == "" ||
       formData.get("email") == "" ||
@@ -88,6 +85,56 @@ if (!registration_init) {
            return;
       }
 
+      // Show e sign waiver
+      var waiverText = document.getElementById('normal-waiver-text');
+      var minorWaiverText = document.getElementById('minor-waiver-text');
+      var waiverLink = document.getElementById('waiver-link');
+      if( getAge(formData.get('dob')) < 18 ) {
+        waiverText.style.display = 'none';
+        waiverLink.style.display = 'none';
+        minorWaiverText.style.display = 'block';
+      } else {
+        waiverText.style.display = 'block';
+        minorWaiverText.style.display = 'none';
+      }
+
+      var eSignFormModal = document.getElementById('e-sign-waiver-modal');
+      eSignFormModal.style.display = 'block';
+
+      var closeButtons = document.getElementsByClassName('close-e-sign-modal');
+      [...closeButtons].forEach( btn=> {
+        btn.addEventListener('click', ()=> {
+          eSignFormModal.style.display = 'none';
+          this._submitButton.disabled = false;
+          this._submitButton.textContent = "Register";
+        });
+      });
+
+      window.onclick = event=> {
+        if (event.target == eSignFormModal) {
+          eSignFormModal.style.display = 'none';
+          this._submitButton.disabled = false;
+          this._submitButton.textContent = "Register";
+        }
+      }
+
+      // Call _submitForm if clicked accept
+      var acceptButton = document.getElementById('submit-e-sign');
+      acceptButton.addEventListener('click', ()=> {
+        eSignFormModal.style.display = 'none';
+        this._submitForm(formData, true);
+      });
+
+    }
+
+    static _submitForm(formData, acceptedWaiver) {
+      console.log("Registration::_submitForm");
+
+      let jsonObj = {}
+      for (const [key, value] of formData.entries()) {
+        jsonObj[key] = value
+      }
+
       let jsonData = {}
       jsonData["firstName"] = jsonObj["firstName"]
       jsonData["lastName"] = jsonObj["lastName"]
@@ -109,6 +156,7 @@ if (!registration_init) {
       if(jsonObj["glutenFree"] == "on"){jsonData["allergens"].push("GlutenFree")}
       jsonData["otherAllergens"] = jsonObj["otherDietaryRestrictions"]
       jsonData["educationLevel"] = jsonObj["education"]
+      jsonData["acceptedWaiver"] = acceptedWaiver
 
       //check if all reguired entries are filled in
       if(jsonData["firstName"] == "" ||
@@ -121,7 +169,8 @@ if (!registration_init) {
       jsonData["education"] == "" ||
       jsonData["shirtSize"] == "" ||
       jsonData["ethnicity"] == "" ||
-      jsonData["gender"] == ""
+      jsonData["gender"] == "" ||
+      jsonData["acceptedWaiver"] == false
          ){}
 
       var regHeaders = new Headers();
@@ -129,7 +178,8 @@ if (!registration_init) {
       //regHeaders.append('Accept', 'application/json');
       var uploadKey = ""
 
-      fetch("https://revolutionuc-api.herokuapp.com/api/registrant", {
+      // fetch("https://revolutionuc-api.herokuapp.com/api/registrant", {
+      fetch("http://localhost:8080/test", {
         method: "POST",
         headers: regHeaders,
         body: JSON.stringify(jsonData), //new FormData(this._formElement),
@@ -145,7 +195,8 @@ if (!registration_init) {
     }
 
     static _uploadResume(data, form) {
-      fetch("https://revolutionuc-api.herokuapp.com/api/uploadResume/" + data["uploadKey"], {
+      // fetch("https://revolutionuc-api.herokuapp.com/api/uploadResume/" + data["uploadKey"], {
+      fetch("http://localhost:8080/test", {
         mode: "no-cors",
         method: "POST",
         //headers: regHeaders,
