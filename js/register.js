@@ -146,6 +146,7 @@ if (!registration_init) {
       jsonData["hackathons"] = parseInt(jsonObj["hackathons"])
       jsonData["shirtSize"] = jsonObj["shirtSize"]
       jsonData["githubUsername"] = jsonObj["githubUsername"]
+      jsonData["acceptedWaiver"] = true
       jsonData["dateOfBirth"] = new Date(jsonObj["dob"]).toISOString()
       jsonData["allergens"] = []
       if(jsonObj["vegetarian"] == "on"){jsonData["allergens"].push("Vegetatian")}
