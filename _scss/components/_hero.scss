@@ -7,8 +7,8 @@
   height: $hero-height;
   min-height: 450px;
   padding: 0;
-  background-color: $white;
-  color: $black;
+  background-color: $prim-color-1;
+  color: $white;
   overflow: hidden;
 
   .hero__video {
@@ -43,7 +43,7 @@
   }
 
   a:hover {
-    color: $grey;
+    color: $prim-color-3;
   }
 }
 
