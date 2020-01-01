@@ -3,16 +3,16 @@ navbar:
   schedule: true
   hack-ideas: true
   prizing: false
-  sponsors: false
+  sponsors: true
   about: true
   faq: true
-  register: false
+  register: true
 
 homepage:
   livesite: false
 
   # The timeline options are: pre-registration, registration, post-registration
-  timeline: pre-registration
+  timeline: registration
 
 eventData:
   # Hackathon data
