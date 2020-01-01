@@ -15,25 +15,40 @@
 # image: svg of the logo
 # svg: true <- this is REQUIRED
 
-- name: Sponsor 1
-  link: /sponsors/
-  image: /img/sponsors/placeholder.png
+- name: Scripps
+  link: https://scripps.com/
+  image: https://assets.revolutionuc.com/sponsor-logos/2020/scripps.jpg
+  webp: https://assets.revolutionuc.com/sponsor-logos/2020/scripps.webp
+
+- name: Atomic Robot
+  link: https://atomicrobot.com/
+  image: https://assets.revolutionuc.com/sponsor-logos/2020/atomicrobot.png
   # webp: /img/sponsors/placeholder.webp
 
-- name: Sponsor 2
-  link: /sponsors/
-  image: /img/sponsors/placeholder.png
-  # webp: /img/sponsors/placeholder.webp
+- name: Wolfram Language
+  link: https://www.wolfram.com/hackathons/
+  image: https://assets.revolutionuc.com/sponsor-logos/2020/wolfram.svg
+  svg: true
 
-- name: Sponsor 3
-  link: /sponsors/
-  image: /img/sponsors/placeholder.png
-  # webp: /img/sponsors/placeholder.webp
+- name: Metarouter
+  link: https://www.metarouter.io/
+  image: https://assets.revolutionuc.com/sponsor-logos/2020/metarouter.svg
+  svg: true
 
-- name: Sponsor 4
-  link: /sponsors/
-  image: /img/sponsors/placeholder.png
-  # webp: /img/sponsors/placeholder.webp
+# - name: Kroger Technology
+#   link: https://www.kroger.com/livekt/
+#   image: /img/sponsors/kroger.svg
+#   svg: true
+
+# - name: "84.51°"
+#   link: https://8451.com/
+#   image: /img/sponsors/8451.png
+#   webp: /img/sponsors/8451.webp
+
+# - name: Fifth Third Bank
+#   link: http://53.com
+#   image: /img/sponsors/FifthThird.svg
+#   svg: true
   
 # - name: Sponsor 5
 #   link: /sponsors/

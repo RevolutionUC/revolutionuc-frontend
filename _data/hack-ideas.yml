@@ -1,50 +1,35 @@
 - topic: Beginner
-  ideas:
-    - idea: New to hackathons? New to tech? Try anything and ask for help!
+  image: https://assets.revolutionuc.com/website-images/2020/hack-ideas/ideas/0_beginner.svg
+  idea: Are you new to hackathons? No worries, at RevolutionUC you have the opportunity to work on a team to build a software or hardware project.  Many beginners make their first website, app, or game at RevolutionUC.  Attend our team formation and project brainstorming session to find a team and project that inspires you to build something great in 24 hours.
 
-- topic: Health and Well-Being
-  ideas:
-    - idea: Design and develop new and creative solutions to personal health.
-    - idea: How can we improve the life of a patient?
-    - idea: Innovate the way we learn, diagnose, and treat illness.
+- topic: Health & Well-Being
+  image: https://assets.revolutionuc.com/website-images/2020/hack-ideas/ideas/1_health.svg
+  idea: Be a part of the innovation that is happening in the health industry.  Help people live healthier and happier lives through innovative use of technology.  Design and develop new and creative solutions to promote personal health.  Use technology to improve the lives of patients.  Innovate the way we learn, diagnose, and treat illness.
 
 - topic: Equality & Inclusion
-  ideas:
-    - idea: Work to solve problems related to gender equality and inclusivity for marginalized groups.
-    - idea: How can we tackle a problem related to gender equality?
-    - idea: How can we promote inclusiveness for marginalized groups?
+  image: https://assets.revolutionuc.com/website-images/2020/hack-ideas/ideas/2_equality.svg
+  idea: Work to solve problems related to gender equality and inclusivity for marginalized groups.  Tackle a problem related to gender equality through the use of technology.  Promote inclusiveness for marginalized groups.
 
 - topic: Education
-  ideas:
-    - idea: Help to educate the next generation of students.
-    - idea: How can we better engage students?
-    - idea: How can we bring the classroom into the 21st century?
+  image: https://assets.revolutionuc.com/website-images/2020/hack-ideas/ideas/3_education.svg
+  idea: Help to educate the next generation of students.  Build a project that increases student engagement.  Bring the classroom into the 21st century with innovative interactions between students, teachers, and technology.
 
 - topic: Demystify Data
-  ideas:
-    - idea: Find new ways to analyze and use data.
-    - idea: How can we turn an arbitrary data set into something useful?
-    - idea: Is there a better way to analyze and easily view a large data set?
+  image: https://assets.revolutionuc.com/website-images/2020/hack-ideas/ideas/4_data.svg
+  idea: Find new ways to analyze and use data.  Discover useful insights from arbitrary data sets.  Develop  better ways to analyze and view big data.
 
 - topic: Cyber Security
-  ideas:
-    - idea: Ensure that platforms are stable and secure.
-    - idea: How can we prepare for known vulnerabilities, and ensure our system is designed to be secure?
-    - idea: How can we detect vulnerabilities or traces of an intrusion?
+  image: https://assets.revolutionuc.com/website-images/2020/hack-ideas/ideas/5_security.svg
+  idea: Ensure that platforms are stable and secure.  Build mechanisms for protecting systems from known vulnerabilities.  Build new methods of ensuring that software is designed to be secure.  Build detection systems that uncover exploited vulnerabilities or intrusions.
 
 - topic: Outreach
-  ideas:
-    - idea: Find ways to hep organizations and other individuals better communicate and organize.
-    - idea: How can we help organizations better reach their consumers?
-    - idea: How can we bring tech to all people?
+  image: https://assets.revolutionuc.com/website-images/2020/hack-ideas/ideas/6_outreach.svg
+  idea: Find ways to help organizations and other individuals better communicate and organize.  Build software that helps organizations better reach their consumers.  Use innovative technology to bring people together.
 
-- topic: Professional Development/Soft Skills
-  ideas:
-    - idea: The tech industry involves much more than programming or hardware. Find a way to use your non technical skills to improve the industry, or the world.
-    - idea: Have an amazing business idea? Develop a plan and realize how you can bring it to life.
-    - idea: Talk with mentors to discover their biggest non technical needs. How can we help them? Get creative, and unleash your ideas!
+- topic: Professional Development & Soft Skills
+  image: https://assets.revolutionuc.com/website-images/2020/hack-ideas/ideas/7_professional.svg
+  idea: The tech industry involves much more than programming or hardware. Find a way to use your non-technical skills to improve the industry, or the world.  Do you have an amazing business idea? Develop a plan and realize how you can bring it to life.  Talk with mentors to discover their biggest non-technical needs.  Find ways to solve these problems.  Get creative and unleash your ideas!
 
 - topic: Other
-  ideas:
-    - idea: Hackathons are fun, and so are puns. Incorporate your best puns into your projects.
-    - idea: Memes have become a cultural norm. Find a way to revolutionize how society creates or uses them.
+  image: https://assets.revolutionuc.com/website-images/2020/hack-ideas/ideas/8_other.svg
+  idea: Hackathons are fun, and so are puns. Incorporate your best puns into your projects.  Memes have become a cultural norm. Find a way to revolutionize how society creates or uses them.

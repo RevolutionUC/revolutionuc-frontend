@@ -26,8 +26,11 @@
 @import "components/dashboard";
 @import "components/card";
 @import "components/countdown-timer";
+@import "components/modal";
 
+@import "pages/hack-ideas";
 @import "pages/sponsors";
 @import "pages/faq";
 @import "pages/about";
-@import "pages/live-site"
+@import "pages/live-site";
+@import "pages/register";

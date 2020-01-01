@@ -52,17 +52,14 @@ if (!registration_init) {
     static _onSubmit(e) {
       console.log("Registration::_onSubmit");
       e.preventDefault();
-
+      
       // Set the button as disabled and the text to 'Working...'
       this._submitButton.disabled = true;
       this._submitButton.textContent = "Working...";
 
       var formData = new FormData(this._formElement)
-      let jsonObj = {}
-      for (const [key, value] of formData.entries()) {
-        jsonObj[key] = value
-      }
 
+      // Validate data
       if(formData.get("firstName") == "" ||
       formData.get("lastName") == "" ||
       formData.get("email") == "" ||
@@ -88,6 +85,56 @@ if (!registration_init) {
            return;
       }
 
+      // Show e sign waiver
+      var waiverText = document.getElementById('normal-waiver-text');
+      var minorWaiverText = document.getElementById('minor-waiver-text');
+      var waiverLink = document.getElementById('waiver-link');
+      if( getAge(formData.get('dob')) < 18 ) {
+        waiverText.style.display = 'none';
+        waiverLink.style.display = 'none';
+        minorWaiverText.style.display = 'block';
+      } else {
+        waiverText.style.display = 'block';
+        minorWaiverText.style.display = 'none';
+      }
+
+      var eSignFormModal = document.getElementById('e-sign-waiver-modal');
+      eSignFormModal.style.display = 'block';
+
+      var closeButtons = document.getElementsByClassName('close-e-sign-modal');
+      [...closeButtons].forEach( btn=> {
+        btn.addEventListener('click', ()=> {
+          eSignFormModal.style.display = 'none';
+          this._submitButton.disabled = false;
+          this._submitButton.textContent = "Register";
+        });
+      });
+
+      window.onclick = event=> {
+        if (event.target == eSignFormModal) {
+          eSignFormModal.style.display = 'none';
+          this._submitButton.disabled = false;
+          this._submitButton.textContent = "Register";
+        }
+      }
+
+      // Call _submitForm if clicked accept
+      var acceptButton = document.getElementById('submit-e-sign');
+      acceptButton.addEventListener('click', ()=> {
+        eSignFormModal.style.display = 'none';
+        this._submitForm(formData, true);
+      });
+
+    }
+
+    static _submitForm(formData, acceptedWaiver) {
+      console.log("Registration::_submitForm");
+
+      let jsonObj = {}
+      for (const [key, value] of formData.entries()) {
+        jsonObj[key] = value
+      }
+
       let jsonData = {}
       jsonData["firstName"] = jsonObj["firstName"]
       jsonData["lastName"] = jsonObj["lastName"]
@@ -109,6 +156,7 @@ if (!registration_init) {
       if(jsonObj["glutenFree"] == "on"){jsonData["allergens"].push("GlutenFree")}
       jsonData["otherAllergens"] = jsonObj["otherDietaryRestrictions"]
       jsonData["educationLevel"] = jsonObj["education"]
+      jsonData["acceptedWaiver"] = acceptedWaiver
 
       //check if all reguired entries are filled in
       if(jsonData["firstName"] == "" ||
@@ -121,7 +169,8 @@ if (!registration_init) {
       jsonData["education"] == "" ||
       jsonData["shirtSize"] == "" ||
       jsonData["ethnicity"] == "" ||
-      jsonData["gender"] == ""
+      jsonData["gender"] == "" ||
+      jsonData["acceptedWaiver"] == false
          ){}
 
       var regHeaders = new Headers();
@@ -159,6 +208,7 @@ if (!registration_init) {
     static _updateFormUI(response) {
       console.log(`Response status: ${response.status}`);
       if (response.status != 200 && response.status != 201) {
+        alert("There was an error. Please try refreshing the page, please make sure your phone number is correct, or try using a different email.");
         // Bad news bears
         response.json().then(jsonErrors => {
           this._updateLabels(jsonErrors);
@@ -176,14 +226,16 @@ if (!registration_init) {
     }
 
     static _updateLabels(jsonErrors) {
-      for (let error of jsonErrors) {
+      console.log(jsonErrors);
+
+      for (let error of jsonErrors.message) {
         document
-          .querySelector(`label[for=${error.param}]`)
+          .querySelector(`label[for=${error.property}]`)
           .classList.add("error");
-        if (error.param == "email" && error.msg.includes("registered")) {
+        if (error.property == "email" && error.msg.includes("registered")) {
           // Email address has already been registered
           this._addEmailRegisteredWarning();
-        } else if (error.param == "resume" && error.msg.startsWith("LIMIT")) {
+        } else if (error.property == "resume" && error.msg.startsWith("LIMIT")) {
           this._addResumeLimitError();
         }
       }

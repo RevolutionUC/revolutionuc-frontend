@@ -3,21 +3,25 @@ navbar:
   schedule: true
   hack-ideas: true
   prizing: false
-  sponsors: false
+  sponsors: true
   about: true
   faq: true
-  register: false
+  register: true
 
 homepage:
-  # Set false for normal homepage and true for livesite
   livesite: false
 
   # The timeline options are: pre-registration, registration, post-registration
-  timeline: pre-registration
+  timeline: registration
 
 eventData:
   # Hackathon data
-  date: February 22nd and 23rd, 2020
+  fullDate: February 22nd and 23rd, 2020
+  date:
+    month: February
+    firstDay: 22
+    secondDay: 23
+    year: 2020
   # Interest form url
   interestForm: https://forms.gle/LrmB5fpVQbaSy6To6
   # Submissions url
