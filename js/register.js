@@ -208,7 +208,7 @@ if (!registration_init) {
     static _updateFormUI(response) {
       console.log(`Response status: ${response.status}`);
       if (response.status != 200 && response.status != 201) {
-        alert("There was an error, please try refreshing the page, please make sure your phone number is correct, or try using a different email.");
+        alert("There was an error. Please try refreshing the page, please make sure your phone number is correct, or try using a different email.");
         // Bad news bears
         response.json().then(jsonErrors => {
           this._updateLabels(jsonErrors);
