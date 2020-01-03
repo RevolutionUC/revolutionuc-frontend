@@ -1,20 +1,20 @@
 {
-    "name": "RevolutionUC",
-    "short_name": "RevUC",
-    "start_url": ".",
-    "display": "browser",
-    "background_color": "#ffffff",
-    "theme_color": "#ffffff",
-    "lang": "en-US",
-    "orientation": "portrait-primary",
-    "description": "Home of RevolutionUC.  Cincinnati's largest student organized hackathon.",
-    "icons": [{
-      "src": "img/webapp-icons/webapp-icon-192.png",
-      "sizes": "192x192",
-      "type": "image/png"
-    }, {
-      "src": "img/webapp-icons/webapp-icon-512.png",
-      "sizes": "512x512",
-      "type": "image/png"
-    }]
-  }
+  "name": "RevolutionUC",
+  "short_name": "RevUC",
+  "start_url": ".",
+  "display": "browser",
+  "background_color": "#007049",
+  "theme_color": "#007049",
+  "lang": "en-US",
+  "orientation": "portrait-primary",
+  "description": "Home of RevolutionUC.  Cincinnati's largest student organized hackathon.",
+  "icons": [{
+    "src": "img/webapp-icons/webapp-icon-192.png",
+    "sizes": "192x192",
+    "type": "image/png"
+  }, {
+    "src": "img/webapp-icons/webapp-icon-512.png",
+    "sizes": "512x512",
+    "type": "image/png"
+  }]
+}

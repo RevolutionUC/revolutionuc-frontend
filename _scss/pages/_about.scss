@@ -30,26 +30,26 @@
             }
 
             &:nth-child(1) {
-                background-image: url(/img/placeholder.png);
+                background-image: url(https://assets.revolutionuc.com/website-images/2020/about/build-1x.png);
 
                 .item__text {
-                    background-color: $grey;
+                    background-color: $prim-color-1;
                 }
             }
 
             &:nth-child(2) {
-                background-image: url(/img/placeholder.png);
+                background-image: url(https://assets.revolutionuc.com/website-images/2020/about/learn-1x.png);
 
                 .item__text {
-                    background-color: $grey;
+                    background-color: $prim-color-2;
                 }
             }
 
             &:nth-child(3) {
-                background-image: url(/img/placeholder.png);
+                background-image: url(https://assets.revolutionuc.com/website-images/2020/about/grow-1x.png);
 
                 .item__text {
-                    background-color: $grey ;
+                    background-color: $prim-color-3;
                 }
             }
         }

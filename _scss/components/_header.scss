@@ -5,7 +5,7 @@
   top: 0;
   left: 0;
   z-index: 10;
-  background-color: $white;
+  background-color: $prim-color-1;
   padding: 0;
   margin: 0;
 
@@ -43,7 +43,7 @@
           display: inline-block;
 
           a {
-            color: $black;
+            color: $white;
             text-decoration: none;
             padding: $btn-padding;
             font-size: 17px;
@@ -51,16 +51,16 @@
 
             &:hover,
             &.navbar__active {
-              background-color: $grey;
-              color: $white;
+              background-color: $lightgrey;
+              color: $prim-color-1;
             }
 
             &.navbar__register {
-              background-color: $grey;
+              background-color: $prim-color-3;
               color: $white;
 
               &:hover {
-                background-color: darken($grey, 10%);
+                background-color: darken($prim-color-3, 10%);
               }
             }
           }
@@ -140,14 +140,10 @@
       label {
         display: inline-block;
         line-height: 60px;
-        fill: $white;
+        fill: $lightgrey;
         -webkit-transition: fill $header-transition-time ease;
         -ms-transition: fill $header-transition-time ease;
         transition: fill $header-transition-time ease;
-      }
-
-      svg {
-        fill: $black;
       }
 
       input:checked ~ label {
