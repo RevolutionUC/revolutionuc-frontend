@@ -45,6 +45,11 @@
   image: https://assets.revolutionuc.com/sponsor-logos/2020/wolfram.svg
   svg: true
 
+- name: StickerMule
+  link: http://hackp.ac/mlh-stickermule-hackathons
+  image: https://assets.revolutionuc.com/sponsor-logos/2020/sticker-mule.svg
+  svg: true
+
 # - name: Kroger Technology
 #   link: https://www.kroger.com/livekt/
 #   image: /img/sponsors/kroger.svg
