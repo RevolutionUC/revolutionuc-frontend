@@ -99,3 +99,29 @@
         margin-left: 0;
     }
 }
+
+.live--card-header {
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+
+    &.header-top {
+        margin-top: 0;
+    }
+}
+
+.live--side-bar-content {
+    display: flex; 
+    justify-content: center;
+}
+
+.live--card-p {
+    margin-top: 0.5rem;
+    margin-bottom: 0;
+}
+
+.live--link-list {
+    list-style: none;
+    padding-left: 0%;
+    margin-top: 0%;
+    margin-bottom: 0%;
+}
