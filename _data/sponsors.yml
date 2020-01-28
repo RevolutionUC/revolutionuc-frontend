@@ -20,6 +20,16 @@
   image: https://assets.revolutionuc.com/sponsor-logos/2020/FifthThird.svg
   svg: true
 
+- name: Worldpay
+  link: https://www.worldpay.com
+  image: https://assets.revolutionuc.com/sponsor-logos/2020/worldpay.png
+  webp: https://assets.revolutionuc.com/sponsor-logos/2020/worldpay.webp
+
+- name: CincyTech
+  link: http://cincytechusa.com/
+  image: https://assets.revolutionuc.com/sponsor-logos/2020/cincytech.png
+  webp: https://assets.revolutionuc.com/sponsor-logos/2020/cincytech.webp
+
 - name: Scripps
   link: https://scripps.com/
   image: https://assets.revolutionuc.com/sponsor-logos/2020/scripps.jpg
@@ -39,6 +49,16 @@
   link: https://8451.com/
   image: https://assets.revolutionuc.com/sponsor-logos/2020/8451.png
   webp: https://assets.revolutionuc.com/sponsor-logos/2020/8451.webp
+
+- name: Siemens PLM
+  link: https://www.plm.automation.siemens.com/
+  image: https://assets.revolutionuc.com/sponsor-logos/2020/siemens.svg
+  svg: true
+
+- name: GE Aviation
+  link: https://www.geaviation.com
+  image: https://assets.revolutionuc.com/sponsor-logos/2020/ge.svg
+  svg: true
 
 - name: Wolfram Language
   link: https://www.wolfram.com/hackathons/
