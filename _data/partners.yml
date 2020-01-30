@@ -25,6 +25,11 @@
   image: https://assets.revolutionuc.com/sponsor-logos/2020/mlh.svg
   svg: true
 
+- name: EECS-GSA
+  link: https://www.facebook.com/UC.EECSGSA
+  image: https://assets.revolutionuc.com/sponsor-logos/2020/eecsgsa.png
+  webp: https://assets.revolutionuc.com/sponsor-logos/2020/eecsgsa.webp
+
 # - name: Example 1
 #   link: /sponsors/
 #   image: /img/sponsors/placeholder.png
