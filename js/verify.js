@@ -51,13 +51,9 @@ if (window.location.href.indexOf("attendance") > -1) {
 
   if (confirm == "none" || id == "none") {
   } else {
-    document.title = "Confirm Attendance";
-    h1.textContent = "Attendance Confirmed";
-    if (confirm == 'true') {
-      content.textContent = "Thank You!  You have confirmed your attendance to RevolutionUC {{ site.data.config.eventData.date.year }}!";
-    } else if (confirm == 'false') {
-      content.textContent = "Thank You!  You have confirmed that you will NOT be attending RevolutionUC 2019.";
-    }
+    document.title = "Please wait...";
+    h1.textContent = "Please wait...";
+    content.textContent = "";
     
     var regHeaders = new Headers();
     regHeaders.append('Content-Type', 'application/json');
@@ -67,7 +63,8 @@ if (window.location.href.indexOf("attendance") > -1) {
     jsonData["isConfirmed"] = (confirm == 'true') ;
 
     fetch(
-      "https://revolutionuc-api.herokuapp.com/api/confirmAttendance/",
+      // "https://revolutionuc-api.herokuapp.com/api/confirmAttendance/",
+      "http://127.0.0.1:3000/api/confirmAttendance/",
       {
         method: "POST",
         headers: regHeaders,
@@ -75,7 +72,29 @@ if (window.location.href.indexOf("attendance") > -1) {
       }
     ).then(response => {
       if (response.status == 200 || response.status == 201) {
+        document.title = "Confirm Attendance";
+        h1.textContent = "Attendance Confirmed";
+        if (confirm == 'true') {
+          content.textContent = "Thank You!  You have confirmed your attendance to RevolutionUC 2020!";
+        } else if (confirm == 'false') {
+          content.textContent = "Thank You!  You have confirmed that you will NOT be attending RevolutionUC 2019.";
+        }
+      } else if (response.status == 500) {
+        response.json().then(body => {
+          if (body.error == "ConfirmedQuotaReached") {
+            document.title = "Waitlist";
+            h1.textContent = "You have been placed on the waitlist.";
+            content.textContent =
+            "The maximum number of people have already confirmed their attendance to RevolutionUC 2020.  As a result you have been placed on the waitlist.";
+          } else {
+            document.title = "Error";
+            h1.textContent = "Error";
+            content.textContent =
+            "There was a problem confirming your attendance.  Please contact us at info@revolutionuc.com.";
+          }
+        })
       } else {
+        document.title = "Error";
         h1.textContent = "Error";
         content.textContent =
           "There was a problem confirming your attendance.  Please contact us at info@revolutionuc.com.";
