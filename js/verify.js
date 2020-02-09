@@ -63,8 +63,7 @@ if (window.location.href.indexOf("attendance") > -1) {
     jsonData["isConfirmed"] = (confirm == 'true') ;
 
     fetch(
-      // "https://revolutionuc-api.herokuapp.com/api/confirmAttendance/",
-      "http://127.0.0.1:3000/api/confirmAttendance/",
+      "https://revolutionuc-api.herokuapp.com/api/confirmAttendance/",
       {
         method: "POST",
         headers: regHeaders,
