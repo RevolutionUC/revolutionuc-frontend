@@ -25,6 +25,11 @@
   image: https://assets.revolutionuc.com/sponsor-logos/2020/worldpay.png
   webp: https://assets.revolutionuc.com/sponsor-logos/2020/worldpay.webp
 
+- name: Northrop Grumman
+  link: https://www.northropgrumman.com/
+  image: https://assets.revolutionuc.com/sponsor-logos/2020/northropgrumman.png
+  webp: https://assets.revolutionuc.com/sponsor-logos/2020/northropgrumman.webp
+
 - name: CincyTech
   link: http://cincytechusa.com/
   image: https://assets.revolutionuc.com/sponsor-logos/2020/cincytech.png
@@ -70,12 +75,12 @@
   image: https://assets.revolutionuc.com/sponsor-logos/2020/sticker-mule.svg
   svg: true
 
-# - name: Kroger Technology
-#   link: https://www.kroger.com/livekt/
-#   image: /img/sponsors/kroger.svg
-#   svg: true
+# - name: Example 1
+#   link: https://example.com/
+#   image: https://assets.revolutionuc.com/sponsor-logos/YEAR/example.png
+#   webp: https://assets.revolutionuc.com/sponsor-logos/YEAR/example.webp
   
-# - name: Sponsor 5
-#   link: /sponsors/
-#   image: /img/sponsors/placeholder.svg
+# - name: Example 2
+#   link: https://example.com/
+#   image: https://assets.revolutionuc.com/sponsor-logos/YEAR/example.png
 #   svg: true
