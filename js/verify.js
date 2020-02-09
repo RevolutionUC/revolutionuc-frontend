@@ -87,13 +87,15 @@ if (window.location.href.indexOf("attendance") > -1) {
             if (body.error == "ConfirmedQuotaReached") {
               document.title = "Waitlist";
               h1.textContent = "You have been placed on the waitlist.";
-              content.textContent =
-              "The maximum number of people have already confirmed their attendance to RevolutionUC {{ site.data.config.eventData.date.year }}.  As a result you have been placed on the waitlist.";
+              content.innerHTML =
+              "<p>The maximum number of people have already confirmed their attendance to RevolutionUC {{ site.data.config.eventData.date.year }}.  As a result you have been placed on the waitlist.</p>" +
+              "<p>We will contact you if you are moved off of the waitlist, or you may attempt to check in the day of the event after the opening ceremony.</p>" + 
+              "<p>If you are NOT removed from the waitlist you are still welcome to participate, but you will not be provided meals or swag.</p>";
             } else {
               document.title = "Error";
               h1.textContent = "Error";
               content.textContent =
-              "There was a problem confirming your attendance.  Please contact us at info@revolutionuc.com.";
+                "There was a problem confirming your attendance.  Please contact us at info@revolutionuc.com.";
             }
           })
         } else {
@@ -103,7 +105,6 @@ if (window.location.href.indexOf("attendance") > -1) {
             "There was a problem confirming your attendance.  Please contact us at info@revolutionuc.com.";
         }
       }
-      }
-      );
+    });
   }
 }
