@@ -36,9 +36,13 @@
   event: Dinner
   location: Baldwin 544
 
+- time: 7:00 PM
+  event: Slideshow Karaoke
+  location: Baldwin 741
+
 - time: 8:00 PM
-  event: Cup Stacking
-  location: Rhodes 8th Floor Lobby
+  event: MLH Capture The Flag
+  location: Baldwin 741
 
 - date: February 23rd
 
