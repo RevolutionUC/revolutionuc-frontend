@@ -2,11 +2,11 @@
 
 - time: 11:00 AM
   event: Check-In Opens
-  location: 5th Floor Zimmer 
+  location: 4th Floor Zimmer 
 
 - time: 11:00 AM
   event: Sponsor Expo Begins
-  location: 5th Floor Zimmer 
+  location: 4th Floor Zimmer 
 
 - time: 11:00 AM
   event: Lunch
@@ -70,14 +70,14 @@
   event: Judging Begins
   location: Rhodes Hackerspace
 
-- time: 2:30 PM
+- time: 2:45 PM
   event: Final Demos
   location: Zimmer Auditorium
 
-- time: 3:15 PM
+- time: 3:30 PM
   event: Awards/Closing Ceremony
   location: Zimmer Auditorium
 
-- time: 4:00 PM
+- time: 4:30 PM
   event: Event Ends
   location: Zimmer Auditorium
