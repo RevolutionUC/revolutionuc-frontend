@@ -16,6 +16,8 @@ description: RevolutionUC Live Site
             </span>
         </div>
     </div>
+
+    {% if site.data.config.livesite.show-judging-info %}
     <div class="live-row">
         <div class="live-section live-section--judging card columns-12">
             <h3 class="live--card-header header-top text-center">IMPORTANT JUDGING INFORMATION</h3>
@@ -48,6 +50,9 @@ description: RevolutionUC Live Site
             <p class="live--card-p"><strong>5.</strong> Go home and get some sleep!</p>
         </div>
     </div>
+    {% endif %}
+
+    {% if site.data.config.livesite.show-travel-info %}
     <div class="live-row">
         <div class="live-section live-section--judging card columns-12">
             <h3 class="live--card-header header-top text-center">TRAVEL REIMBURSEMENT</h3>
@@ -64,6 +69,8 @@ description: RevolutionUC Live Site
             </p>
         </div>
     </div>
+    {% endif %}
+
     <div class="live-row">
         <div class="live-section card columns-3"> <!-- columns-2 -->
             <h3 class="live--card-header header-top text-center">Quick Links</h2>
