@@ -18,14 +18,28 @@ function initProgressBar(start, end, time = "day") {
     return;
   }
 
+  // figure out width
 
-  var bigDif = endDate.getTime() - startDate.getTime();
-  var dif = endDate.getTime() - now.getTime();
-  var width = 100;
-  var t = bigDif / 100;
-  var startFill = dif / t;
-  width = Math.floor(startFill);
-  barForeground.style.width = width + "%";
+  console.log(barBackground.clientWidth);
+  if (barBackground.clientWidth * (width/100) < 40) {
+    barForeground.style.width = 40 + "px";
+  } else {
+    var bigDif = endDate.getTime() - startDate.getTime();
+    var dif = endDate.getTime() - now.getTime();
+    var width = 100;
+    var t = bigDif / 100;
+    var startFill = dif / t;
+    width = Math.floor(startFill);
+    barForeground.style.width = width + "%";
+  }
+
+  // var bigDif = endDate.getTime() - startDate.getTime();
+  // var dif = endDate.getTime() - now.getTime();
+  // var width = 100;
+  // var t = bigDif / 100;
+  // var startFill = dif / t;
+  // width = Math.floor(startFill);
+  // barForeground.style.width = width + "%";
 
 
   function frame() {
@@ -36,12 +50,16 @@ function initProgressBar(start, end, time = "day") {
       clearInterval(id);
       barForeground.style.width = 0 + "%";
     } else {
-      width = percentFill;
-
-      if (barForeground.clientWidth <= 40 ) {
+      if (barBackground.clientWidth * (width/100) < 40) {
         barForeground.style.width = 40 + "px";
       } else {
+        width = percentFill;
         barForeground.style.width = width + "%";
+        // if (barForeground.clientWidth <= 40 ) {
+        //   barForeground.style.width = 40 + "px";
+        // } else {
+        //   barForeground.style.width = width + "%";
+        // }
       }
     }
   }
