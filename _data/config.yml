@@ -17,6 +17,8 @@ livesite:
     show-judging-info: true
     show-travel-info: true
 
+opening-ceremony-slides: 
+
 eventData:
   # Hackathon data
   fullDate: MONTH DAY and DAY, YEAR
