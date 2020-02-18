@@ -3,6 +3,7 @@
     height: 40px;
     background-color: $grey;
     margin-bottom: 1rem;
+    border-radius: 1rem;
 
     &.barBackground--home {
         @media (max-width: $small-breakpoint) {
@@ -11,11 +12,13 @@
         }
     }
 }
-.barForeground { // this bar shrinks to show the progress behing made
+.barForeground { // this bar shrinks to show the progress being made
     height: 40px;
     width: 99%; //99%;
-    background-color: $white;
+    background-color: $black;
     float: right;
+    border-radius: 1rem;
+
 
     &.barForeground--home {
         @media (max-width: $small-breakpoint) {

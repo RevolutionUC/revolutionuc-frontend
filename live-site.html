@@ -16,11 +16,13 @@ description: RevolutionUC Live Site
             </span>
         </div>
     </div>
+
+    {% if site.data.config.livesite.show-judging-info %}
     <div class="live-row">
         <div class="live-section live-section--judging card columns-12">
             <h3 class="live--card-header header-top text-center">IMPORTANT JUDGING INFORMATION</h3>
             <p class="live--card-p">
-                <strong>1.</strong> Please submit to <a href="https://revuc-viii.devpost.com" target="_">devpost</a>. The sooner you
+                <strong>1.</strong> Please submit to <a href="{{ site.data.config.eventData.submissions }}" target="_">devpost</a>. The sooner you
                 submit
                 the smoother our judging will go! When you submit, make sure your project
                 name, table number, and categories are correct! <strong>You can continue to edit your
@@ -48,6 +50,9 @@ description: RevolutionUC Live Site
             <p class="live--card-p"><strong>5.</strong> Go home and get some sleep!</p>
         </div>
     </div>
+    {% endif %}
+
+    {% if site.data.config.livesite.show-travel-info %}
     <div class="live-row">
         <div class="live-section live-section--judging card columns-12">
             <h3 class="live--card-header header-top text-center">TRAVEL REIMBURSEMENT</h3>
@@ -64,9 +69,21 @@ description: RevolutionUC Live Site
             </p>
         </div>
     </div>
+    {% endif %}
+
     <div class="live-row">
         <div class="live-section card columns-3"> <!-- columns-2 -->
-            <h3 class="live--card-header header-top text-center">Quick Links</h2>
+
+            <h3 class="live--card-header header-top text-center">Maps</h2>
+            <div class="live--side-bar-content">
+                <ul class="live--link-list maps">
+                    <li><a href="/img/placeholder.png" target="_blank">Map 1</a></li>
+                    <li><a href="/img/placeholder.png" targer="_blank">Map 2</a></li>
+                    <li><a href="/img/placeholder.png" targer="_blank">Map 3</a></li>
+                </ul>
+            </div>
+
+            <h3 class="live--card-header text-center">Quick Links</h2>
             <div class="live--side-bar-content">
                 <ul class="live--link-list">
                     <li><a href="https://slack.revolutionuc.com" target="_blank"><img src = '/img/icons/slack.png' style='vertical-align: middle' />Join our Slack</a></li>
@@ -82,7 +99,7 @@ description: RevolutionUC Live Site
         
             <h3 class="live--card-header text-center">Opening Slides</h3>
             <div class="live--side-bar-content">
-                <p class="live--card-p">Missed the opening ceremony?  You can view the opening ceremony slides <a href="https://docs.google.com/presentation/d/1p1SP9eHHQI_yABEDGWEAh82nNzMtCNdtnAoOxmNe2Ik/edit?usp=sharing">here</a>.</p>
+                <p class="live--card-p">Missed the opening ceremony?  You can view the opening ceremony slides <a href="{{ site.data.config.opening-ceremony-slides }}">here</a>.</p>
             </div>
         </div>
         <div class="live-section card columns-6"> <!-- columns-6 -->
@@ -139,4 +156,4 @@ description: RevolutionUC Live Site
 <br/>
 
 <script src="/js/countdown-timer.js"></script>
-<script>initProgressBar("2020/01/27 20:00:00", "2020/01/28 20:00:00", "hour");</script>
+<script>initProgressBar("2020/02/13 00:00:00", "2020/02/13 00:06:00", "hour");</script>
