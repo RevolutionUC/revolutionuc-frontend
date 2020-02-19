@@ -9,10 +9,15 @@ navbar:
   register: true
 
 homepage:
-  livesite: false
-
   # The timeline options are: pre-registration, registration, post-registration
   timeline: registration
+
+livesite:
+    show-livesite: true
+    show-judging-info: true
+    show-travel-info: true
+
+opening-ceremony-slides: 
 
 eventData:
   # Hackathon data
