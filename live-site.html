@@ -77,9 +77,12 @@ description: RevolutionUC Live Site
             <h3 class="live--card-header header-top text-center">Maps</h2>
             <div class="live--side-bar-content">
                 <ul class="live--link-list maps">
-                    <li><a href="/img/placeholder.png" target="_blank">Map 1</a></li>
+                    {% for map in site.data.maps %}
+                        <li><a href="{{ map.map-url }}" target="_blank">{{ map.map-title }}</a></li>
+                    {% endfor %}
+                    <!-- <li><a href="/img/placeholder.png" target="_blank">Map 1</a></li>
                     <li><a href="/img/placeholder.png" targer="_blank">Map 2</a></li>
-                    <li><a href="/img/placeholder.png" targer="_blank">Map 3</a></li>
+                    <li><a href="/img/placeholder.png" targer="_blank">Map 3</a></li> -->
                 </ul>
             </div>
 
