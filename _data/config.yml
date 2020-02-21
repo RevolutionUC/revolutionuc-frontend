@@ -17,8 +17,6 @@ livesite:
     show-judging-info: false
     show-travel-info: false
 
-opening-ceremony-slides: 
-
 eventData:
   # Hackathon data
   fullDate: February 22nd and 23rd, 2020
