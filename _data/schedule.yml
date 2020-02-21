@@ -50,6 +50,10 @@
   event: Midnight Snack
   location: Rhodes 8th Floor Lobby
 
+- time: 1:00 AM
+  event: Paper Airplane Hacktivity
+  location: Rhodes 8th Floor Lobby
+
 - time: 6:00 AM
   event: Lightning Talks
   location: Baldwin 544

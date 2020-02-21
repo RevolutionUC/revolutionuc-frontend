@@ -14,10 +14,8 @@ homepage:
 
 livesite:
     show-livesite: true
-    show-judging-info: true
-    show-travel-info: true
-
-opening-ceremony-slides: 
+    show-judging-info: false
+    show-travel-info: false
 
 eventData:
   # Hackathon data
