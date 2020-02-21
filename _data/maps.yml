@@ -1,8 +1,14 @@
-- map-title: Map 1
-  map-url: /img/placeholder.png
+- map-title: Building Locations
+  map-url: https://revolutionuc-assets.s3.us-east-2.amazonaws.com/maps/2020/overall-map.png
 
-- map-title: Map 2
-  map-url: /img/placeholder.png
+- map-title: Hackerspace Location
+  map-url: https://revolutionuc-assets.s3.us-east-2.amazonaws.com/maps/2020/rhodes-800.png
 
-- map-title: Map 3
-  map-url: /img/placeholder.png
+- map-title: Hackerspace Overflow
+  map-url: https://revolutionuc-assets.s3.us-east-2.amazonaws.com/maps/2020/baldwin-800.png
+
+- map-title: Workshop Locations & Overflow
+  map-url: https://revolutionuc-assets.s3.us-east-2.amazonaws.com/maps/2020/baldwin-700.png
+
+- map-title: Meal Location
+  map-url: https://revolutionuc-assets.s3.us-east-2.amazonaws.com/maps/2020/baldwin-500.png
