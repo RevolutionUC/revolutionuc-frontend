@@ -6,11 +6,11 @@ navbar:
   sponsors: true
   about: true
   faq: true
-  register: true
+  register: false
 
 homepage:
   # The timeline options are: pre-registration, registration, post-registration
-  timeline: registration
+  timeline: closed
 
 livesite:
     show-livesite: true
