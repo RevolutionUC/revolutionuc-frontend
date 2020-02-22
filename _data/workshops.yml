@@ -1,14 +1,14 @@
-- time: 2:00 - 2:30
-  company: Company 1
-  topic: Topic 1
-  room: Room 101
-
 - time: 2:45 - 3:15
-  company: Company 2
-  topic: Topic 2
-  room: Room 102
+  company: Fifth Third Bank
+  topic: Intro to AR
+  room: Baldwin 764
 
 - time: 3:30 - 4:00
-  company: Company 3
-  topic: Topic 3
-  room: Room 103
+  company: Noah Trenaman
+  topic: Hands-on Computer Vision with Tensorflow
+  room: Baldwin 749
+
+- time: 4:15 - 4:45
+  company: SALD
+  topic: Inclusive Leadership
+  room: Baldwin 764

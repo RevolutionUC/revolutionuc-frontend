@@ -77,9 +77,12 @@ description: RevolutionUC Live Site
             <h3 class="live--card-header header-top text-center">Maps</h2>
             <div class="live--side-bar-content">
                 <ul class="live--link-list maps">
-                    <li><a href="/img/placeholder.png" target="_blank">Map 1</a></li>
+                    {% for map in site.data.maps %}
+                        <li><a href="{{ map.map-url }}" target="_blank">{{ map.map-title }}</a></li>
+                    {% endfor %}
+                    <!-- <li><a href="/img/placeholder.png" target="_blank">Map 1</a></li>
                     <li><a href="/img/placeholder.png" targer="_blank">Map 2</a></li>
-                    <li><a href="/img/placeholder.png" targer="_blank">Map 3</a></li>
+                    <li><a href="/img/placeholder.png" targer="_blank">Map 3</a></li> -->
                 </ul>
             </div>
 
@@ -99,11 +102,32 @@ description: RevolutionUC Live Site
         
             <h3 class="live--card-header text-center">Opening Slides</h3>
             <div class="live--side-bar-content">
-                <p class="live--card-p">Missed the opening ceremony?  You can view the opening ceremony slides <a href="{{ site.data.config.opening-ceremony-slides }}">here</a>.</p>
+                <p class="live--card-p">Missed the opening ceremony?  You can view the opening ceremony slides <a href="opening-slides.html">here</a>.</p>
             </div>
         </div>
         <div class="live-section card columns-6"> <!-- columns-6 -->
-            <h3 class="live--card-header header-top">Schedule</h3>
+            <h3 class="live--card-header header-top">Workshops</h3>
+            <table class="live-table">
+                <thead>
+                    <th>Time</th>
+                    <th>Presenter</th>
+                    <th>Topic</th>
+                    <th>Location</th>
+                </thead>
+                <tbody>
+                    {% for item in site.data.workshops %}
+                    <tr>
+                        <td>
+                            <b>{{item.time}}</b>
+                        </td>
+                        <td>{{item.company}}</td>
+                        <td>{{item.topic}}</td>
+                        <td>{{item.room}}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+            <h3 class="live--card-header">Schedule</h3>
             <div>
                 {% for item in site.data.schedule %}
                 <div class="schedule-item flex">
@@ -125,27 +149,6 @@ description: RevolutionUC Live Site
                 </div>
                 {% endfor %}
             </div>
-            <h3 class="live--card-header">Workshop Schedule</h3>
-            <table class="live-table">
-                <thead>
-                    <th>Time</th>
-                    <th>Company</th>
-                    <th>Topic</th>
-                    <th>Location</th>
-                </thead>
-                <tbody>
-                    {% for item in site.data.workshops %}
-                    <tr>
-                        <td>
-                            <b>{{item.time}}</b>
-                        </td>
-                        <td>{{item.company}}</td>
-                        <td>{{item.topic}}</td>
-                        <td>{{item.room}}</td>
-                    </tr>
-                    {% endfor %}
-                </tbody>
-            </table>
         </div>
         <div class="live-section live-section--twitter card columns-3"> <!-- columns-4 -->
             <a class="twitter-timeline" data-width="100%" data-height="100%" data-dnt="true" href="https://twitter.com/Revolution_UC?ref_src=twsrc%5Etfw">Tweets by Revolution_UC</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
@@ -156,4 +159,4 @@ description: RevolutionUC Live Site
 <br/>
 
 <script src="/js/countdown-timer.js"></script>
-<script>initProgressBar("2020/02/13 00:00:00", "2020/02/13 00:06:00", "hour");</script>
+<script>initProgressBar("2020/02/22 13:30:00", "2020/02/23 13:30:00", "hour");</script>
