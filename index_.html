@@ -1,87 +1,50 @@
 ---
-layout: default
-container: false
+layout: homepage
 title: Home
+description: RevolutionUC Live Site
 ---
 
-        <div class="container container--fluid">
-                <div class="container container--fluid">
-                    <h2 class="text-center">Live Site</h2>
-                    <p class="countdownText countdownText--live" id="countdownText">Time is running out!</p>
-                    <div class="barBackground" id="barBackground">
-                        <span>
-                            <!-- <p class="countdownText" id="countdownText">Time is running out!</p> -->
-                            <div class="barForeground" id="barForeground"></div>
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="live-row">
-                    <div class="live-section card columns-2"> <!-- columns-2 -->
-                        <h3 class="text-center">Quick Links</h2>
-                        <ul style="list-style: none; text-align: center; padding-left: 0%; margin-top: 0%;">
-                            <li style="align-content: center;"><a href="https://slack.revolutionuc.com" target="_blank"><img src = '/img/icons/slack.png' style='vertical-align: middle' />Join our Slack</a></li>
-                            <li style="align-content: center;"><a href="https://revuc-viii.devpost.com/" targer="_blank"><img src = '/img/icons/devpost.png' style='vertical-align: middle' />Submit to Devpost</a></li>
-                            <li style="align-content: center;"><a href="/old_index"><img src = '/img/icons/revuc.png' style='vertical-align: middle' />Go to our homepage</a></li>
-                        </ul>
-            
-                        <h3 class="text-center" style="margin-top: 2em;">CTF</h3>
-                        <p style="margin-top: 0%;">If you wish to play Capture The Flag, please click <a href="http://54.224.29.246/" target="_blank">here</a> to register. After registering post in the #ctf channel to get the competition URL. You can also post there for any questions/support.</p>
-                    </div>
-                    <div class="live-section card columns-6"> <!-- columns-6 -->
-                        <h3 style="margin-bottom: 0;">Schedule</h3>
-                        <div>
-                            {% for item in site.data.schedule %}
-                            <div class="schedule-item flex">
-                                {% if item.date %}
-                                <div class="schedule-date">
-                                    <strong>{{item.date}}</strong>
-                                </div>
-                                {% else %}
-                                <div class="schedule-time">
-                                    {{item.time}}
-                                </div>
-                                <div class="schedule-event">
-                                    {{item.event}}
-                                </div>
-                                <div class="schedule-location">
-                                    {{item.location}}
-                                </div>
-                                {% endif %}
-                            </div>
-                            {% endfor %}
-                        </div>
-                        <h3>Workshop Schedule</h3>
-                        <table class="live-table">
-                            <thead>
-                                <th>Time</th>
-                                <th>Company</th>
-                                <th>Topic</th>
-                                <th>Location</th>
-                            </thead>
-                            <tbody>
-                                {% for item in site.data.workshops %}
-                                <tr>
-                                    <td>
-                                        <b>{{item.time}}</b>
-                                    </td>
-                                    <td>{{item.company}}</td>
-                                    <td>{{item.topic}}</td>
-                                    <td>{{item.room}}</td>
-                                </tr>
-                                {% endfor %}
-                            </tbody>
-                        </table>
-                    </div>
-                    <div class="live-section live-section--twitter card columns-4"> <!-- columns-4 -->
-                        <a class="twitter-timeline" data-lang="en" data-width="480" data-height="1600" data-dnt="true" data-theme="light" href="https://twitter.com/Revolution_UC?ref_src=twsrc%5Etfw">Tweets by Revolution_UC</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
-                    </div>
-                </div>
+<main>
+    <a id="main" name="main"></a>
+
+    <div class="container container--large">
+        <section class="flex">
+            <div class="image">
+                <img src="https://assets.revolutionuc.com/website-images/2020/home/home-1-1x.png" alt="Photo taken at RevolutionUC">
             </div>
-            
-            <br/>
-            
-            <script src="/js/countdown-timer.js"></script>
-            <script>initProgressBar("2019/03/02 13:30:00", "2019/03/03 13:30:00", "hour");</script>
-            <!-- <script>initProgressBar("2019/02/25 12:00:00", "2019/02/25 18:21:00", "hour");</script> -->
-            
+
+            <div class="text">
+                <p><strong>RevolutionUC</strong> is a 24-hour student hackathon at the University of Cincinnati that is organized by <a href="http://acmatuc.org/" target="_blank">ACM@UC</a>. We invite you to join 300+ motivated students for an awesome weekend of code, community, and self-improvement! You don&rsquo;t have to have to be a computer science major or engineering student to attend. It&rsquo;s a learning experience for students of all skill levels!</p>
+            </div>
+        </section>
+
+        <section class="flex flex--reverse-small section--no-padding-top">
+            <div class="text">
+                <p class="text-right">A <strong>hackathon</strong> is an event where people get together, form teams, build something new to solve a problem, and have fun doing it! Some project ideas include websites, mobile apps, robots, and more! A hackathon is an all-inclusive environment, you&rsquo;ll learn something new and meet people who are passionate about technology.</p>
+            </div>
+
+            <div class="image">
+                <img src="https://assets.revolutionuc.com/website-images/2020/home/home-2-1x.png" alt="Photo taken at RevolutionUC">
+            </div>
+        </section>
+    </div>
+
+    <section>
+        <div class="container container--small call-to-action">
+            <p class="text-center">RevolutionUC has been a leader in the Cincinnati hacker community since 2014. Check out submissions from previous hackathons.</p>
+
+            <div class="past-hacks">
+                {% for hack in site.data.past-hacks reversed %}
+                    <div class="hack hack--{{ hack.time | replace: ' ','-' }}">
+                        <div class="hack__image">
+                            <a href="{{ hack.link }}" target="_blank">
+                                <img class="past__hacks__image" src="{{ hack.image }}" alt="{{ hack.name }} logo">
+                                <div class="hack__text">{{ hack.time }}</div>
+                            </a>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+</main>
