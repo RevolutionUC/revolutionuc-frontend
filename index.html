@@ -1,160 +1,50 @@
 ---
-layout: default
-<!-- permalink: /live-site/ -->
-useContainer: false
+layout: homepage
+title: Home
 description: RevolutionUC Live Site
 ---
 
-<div class="container container--fluid">
-    <div class="live--container container--fluid">
-        <h2 class="text-center">Live Site</h2>
-        <p class="countdownText countdownText--live" id="countdownText">Time is running out!</p>
-        <div class="barBackground" id="barBackground">
-            <span>
-                <!-- <p class="countdownText" id="countdownText">Time is running out!</p> -->
-                <div class="barForeground" id="barForeground"></div>
-            </span>
-        </div>
+<main>
+    <a id="main" name="main"></a>
+
+    <div class="container container--large">
+        <section class="flex">
+            <div class="image">
+                <img src="https://assets.revolutionuc.com/website-images/2020/home/home-1-1x.png" alt="Photo taken at RevolutionUC">
+            </div>
+
+            <div class="text">
+                <p><strong>RevolutionUC</strong> is a 24-hour student hackathon at the University of Cincinnati that is organized by <a href="http://acmatuc.org/" target="_blank">ACM@UC</a>. We invite you to join 300+ motivated students for an awesome weekend of code, community, and self-improvement! You don&rsquo;t have to have to be a computer science major or engineering student to attend. It&rsquo;s a learning experience for students of all skill levels!</p>
+            </div>
+        </section>
+
+        <section class="flex flex--reverse-small section--no-padding-top">
+            <div class="text">
+                <p class="text-right">A <strong>hackathon</strong> is an event where people get together, form teams, build something new to solve a problem, and have fun doing it! Some project ideas include websites, mobile apps, robots, and more! A hackathon is an all-inclusive environment, you&rsquo;ll learn something new and meet people who are passionate about technology.</p>
+            </div>
+
+            <div class="image">
+                <img src="https://assets.revolutionuc.com/website-images/2020/home/home-2-1x.png" alt="Photo taken at RevolutionUC">
+            </div>
+        </section>
     </div>
 
-    {% if site.data.config.livesite.show-judging-info %}
-    <div class="live-row">
-        <div class="live-section live-section--judging card columns-12">
-            <h3 class="live--card-header header-top text-center">IMPORTANT JUDGING INFORMATION</h3>
-            <p class="live--card-p">
-                <strong>1.</strong> Please submit to <a href="{{ site.data.config.eventData.submissions }}" target="_">devpost</a>. The sooner you
-                submit
-                the smoother our judging will go! When you submit, make sure your project
-                name, table number, and categories are correct! <strong>You can continue to edit your
-                    submission until hacking ends at 1:30pm.</strong>
-            </p>
-            <p class="live--card-p">
-                <strong>2.</strong> Prepare for judging! You’ll be seen by 2 general judging groups, and by a
-                group or judge for each project category you submit to. You’ll have 3 minutes
-                to pitch your hack to our judges, remember to hit upon our three criteria:
-                Learning, Execution, and Originality. <strong>Remember to tell the judge what you
-                    learned this weekend!</strong> Be proud, this is your time to shine!
-            </p>
-            <p class="live--card-p">
-                <strong>3.</strong> Wait for dismissal to Zimmer Hall - Please don’t leave for closing ceremony
-                until we announce to do so via Slack!
-            </p>
-            <p class="live--card-p">
-                <strong>4.</strong> The top projects will be announced at the closing ceremony, and given the
-                chance to demo their projects to everyone, again for 3 minutes each. <strong>If you
-                    have a hardware hack or complex setup, it’s a good idea to film a video in
-                    case you make it to the final round!</strong> Our top projects will be chosen by our
-                judge panel, and <strong>all</strong> prizes will be announced at the end of the closing
-                ceremony!
-            </p>
-            <p class="live--card-p"><strong>5.</strong> Go home and get some sleep!</p>
-        </div>
-    </div>
-    {% endif %}
+    <section>
+        <div class="container container--small call-to-action">
+            <p class="text-center">RevolutionUC has been a leader in the Cincinnati hacker community since 2014. Check out submissions from previous hackathons.</p>
 
-    {% if site.data.config.livesite.show-travel-info %}
-    <div class="live-row">
-        <div class="live-section live-section--judging card columns-12">
-            <h3 class="live--card-header header-top text-center">TRAVEL REIMBURSEMENT</h3>
-            <p class="live--card-p">
-                We offer carpool reimbursement on a case by case basis - receipts must be provided to receive travel
-                reimbursement. We don’t offer reimbursement for flights. As a standard rule, we'll reimburse 15 cents
-                per mile
-                between UC and your school, up to $60 for a car with more than one participant, or $40 if traveling
-                alone.
-                If we have more reimbursement requests than anticipated, we'll drop the per mile rate fairly
-                to accommodate all reimbursement applicants. You'll be able to apply for travel reimbursement
-                following the event. If you’d like more information please do not
-                hesitate to email us at <a href="mailto:info@revolutionuc.com">info@revolutionuc.com</a>.
-            </p>
-        </div>
-    </div>
-    {% endif %}
-
-    <div class="live-row">
-        <div class="live-section card columns-3"> <!-- columns-2 -->
-
-            <h3 class="live--card-header header-top text-center">Maps</h2>
-            <div class="live--side-bar-content">
-                <ul class="live--link-list maps">
-                    {% for map in site.data.maps %}
-                        <li><a href="{{ map.map-url }}" target="_blank">{{ map.map-title }}</a></li>
-                    {% endfor %}
-                </ul>
-            </div>
-
-            <h3 class="live--card-header text-center">Quick Links</h2>
-            <div class="live--side-bar-content">
-                <ul class="live--link-list">
-                    <li><a href="https://slack.revolutionuc.com" target="_blank"><img src = '/img/icons/slack.png' style='vertical-align: middle' />Join our Slack</a></li>
-                    <li><a href="https://revuc-ix.devpost.com/" targer="_blank"><img src = '/img/icons/devpost.png' style='vertical-align: middle' />Submit to Devpost</a></li>
-                    <li><a href="/index_"><img src = '/img/icons/revuc.png' style='vertical-align: middle' />Go to our homepage</a></li>
-                    <li><a href="https://hardware.mlh.io/events/revolution-uc">MLH Hardware Lab</a></li>
-                </ul>
-            </div>
-
-            <h3 class="live--card-header text-center">CTF</h3>
-            <div class="live--side-bar-content">
-                <p class="live--card-p">If you wish to compete in Capture The Flag, please click <a href="http://ctf.cyberatuc.org/" target="_blank">here</a> to register. After registering post in the #ctf channel to get the competition URL. You can also post there for any questions/support.</p>
-            </div>
-        
-            <h3 class="live--card-header text-center">Opening Slides</h3>
-            <div class="live--side-bar-content">
-                <p class="live--card-p">Missed the opening ceremony?  You can view the opening ceremony slides <a href="os.html">here</a>.</p>
-            </div>
-        </div>
-        <div class="live-section card columns-6"> <!-- columns-6 -->
-            <h3 class="live--card-header header-top">Workshops</h3>
-            <table class="live-table">
-                <thead>
-                    <th>Time</th>
-                    <th>Presenter</th>
-                    <th>Topic</th>
-                    <th>Location</th>
-                </thead>
-                <tbody>
-                    {% for item in site.data.workshops %}
-                    <tr>
-                        <td>
-                            <b>{{item.time}}</b>
-                        </td>
-                        <td>{{item.company}}</td>
-                        <td>{{item.topic}}</td>
-                        <td>{{item.room}}</td>
-                    </tr>
-                    {% endfor %}
-                </tbody>
-            </table>
-            <h3 class="live--card-header">Schedule</h3>
-            <div>
-                {% for item in site.data.schedule %}
-                <div class="schedule-item flex">
-                    {% if item.date %}
-                    <div class="schedule-date">
-                        <strong>{{item.date}}</strong>
+            <div class="past-hacks">
+                {% for hack in site.data.past-hacks reversed %}
+                    <div class="hack hack--{{ hack.time | replace: ' ','-' }}">
+                        <div class="hack__image">
+                            <a href="{{ hack.link }}" target="_blank">
+                                <img class="past__hacks__image" src="{{ hack.image }}" alt="{{ hack.name }} logo">
+                                <div class="hack__text">{{ hack.time }}</div>
+                            </a>
+                        </div>
                     </div>
-                    {% else %}
-                    <div class="schedule-time">
-                        {{item.time}}
-                    </div>
-                    <div class="schedule-event">
-                        {{item.event}}
-                    </div>
-                    <div class="schedule-location">
-                        {{item.location}}
-                    </div>
-                    {% endif %}
-                </div>
                 {% endfor %}
             </div>
         </div>
-        <div class="live-section live-section--twitter card columns-3"> <!-- columns-4 -->
-            <a class="twitter-timeline" data-width="100%" data-height="100%" data-dnt="true" href="https://twitter.com/Revolution_UC?ref_src=twsrc%5Etfw">Tweets by Revolution_UC</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
-        </div>
-    </div>
-</div>
-
-<br/>
-
-<script src="/js/countdown-timer.js"></script>
-<script>initProgressBar("2020/02/22 13:30:00", "2020/02/23 13:30:00", "hour");</script>
+    </section>
+</main>
