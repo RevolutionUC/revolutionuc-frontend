@@ -11,7 +11,8 @@
     <p>And be notified when registration goes live!</p>
     <div class="hero__heading">
       <!-- Link to interest form -->
-      <a class="btn btn--primary" href="{{ site.data.config.eventData.interestForm }}" target="_">Interest Form</a>
+      <!-- <input type="email" /> -->
+      <a class="btn btn--primary" href="" target="_">Notify me</a>
     </div>
     {% endif %}
     <!-- ================================================== -->
@@ -100,23 +101,20 @@
         var startHeight = window.innerHeight/2;
         var stripeWidth = Math.trunc(Math.sqrt(Math.pow(window.innerWidth, 2) + Math.pow(window.innerHeight, 2)));
   
-        var rect1 = {x: 0, y: startHeight, width: stripeWidth, height: 50, borderWidth: 5, fill: '#1D9B42'};
-        var rect2 = {x: 0, y: startHeight + 75 * 1, width: stripeWidth, height: 50, borderWidth: 5, fill: '#7CC444'};
-        var rect3 = {x: 0, y: startHeight + 75 * 2, width: stripeWidth, height: 50, borderWidth: 5, fill: '#EBF348'};
-        var rect4 = {x: 0, y: startHeight + 75 * 3, width: stripeWidth, height: 50, borderWidth: 5, fill: '#FFC04B'};
+        var rect1 = {x: 0, y: startHeight, width: stripeWidth, height: 50, borderWidth: 5, fill: '#61CFFF'};
+        var rect2 = {x: 0, y: startHeight + 75 * 1, width: stripeWidth, height: 50, borderWidth: 5, fill: '#00DCC9'};
+        var rect3 = {x: 0, y: startHeight + 75 * 2, width: stripeWidth, height: 50, borderWidth: 5, fill: '#D4C5F7'};
   
         // context.setTransform(1,0.2,0.5,1,0,0);
         context.rotate(30 * Math.PI / 180);
         drawRectangle(rect1, context, 0.5);
         drawRectangle(rect2, context, 0.5);
         drawRectangle(rect3, context, 0.5);
-        drawRectangle(rect4, context, 0.5);
 
         var shapes = [];
         shapes.push(rect1);
         shapes.push(rect2);
         shapes.push(rect3);
-        shapes.push(rect4);
   
         // wait one second before starting animation
         setTimeout(function() {
