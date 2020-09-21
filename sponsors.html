@@ -47,7 +47,9 @@ description: Sponsoring organizations for RevolutionUC — Hackathon at the Univ
     {% endfor %}
   </div>
 
-  <div class="container"><h1 class="text-center">Partners</h1></div>
+  {% if site.data.partners %}
+    <div class="container"><h1 class="text-center">Partners</h1></div>
+  {% endif %}
 
   <div class="flex">
     {% for sponsor in site.data.partners %}
