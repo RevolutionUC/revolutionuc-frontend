@@ -3,14 +3,15 @@
     margin: 0;
     padding: 16px 20px;
     background-color: $prim-color-3;
-    color: $white;
+    color: $black;
     text-decoration: none;
     font-size: $btn-font-size;
+    font-family: $body-font-family;
     margin-bottom: 1rem;
 
     &.btn--primary {
         background-color: $prim-color-3;
-        color: $white;
+        color: $black;
 
         &:hover {
             background-color: darken($prim-color-3, 10%);

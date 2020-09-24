@@ -1,17 +1,20 @@
 {% include header.html %}
 
 <section class="hero__wrapper">
-  <div class="hero container container--small" style="z-index: 5;">
+  <div class="hero container container--small">
     <h1 class="hero__heading">RevolutionUC</h1>
 
     <!-- ========== Interest form info and button ========== -->
     {% if site.data.config.homepage.timeline == "pre-registration" %}
-    <p>Hackathon at the University of Cincinnati - {{ site.data.config.eventData.fullDate }}</p>
-    <p>Fill out the interest form to get updates about RevolutionUC 2020</p>
+    <p>A hackathon hosted at the University of Cincinnati - {{ site.data.config.eventData.fullDate }}</p>
+    <p>Sign up here to get updates about RevolutionUC 2021</p>
     <p>And be notified when registration goes live!</p>
-    <div class="hero__heading">
       <!-- Link to interest form -->
-      <a class="btn btn--primary" href="{{ site.data.config.eventData.interestForm }}" target="_">Interest Form</a>
+    <div class="hero__email">
+      <form id="email-notification">
+        <input name="emailAddress" class="hero__input" type="email" placeholder="Email" required />
+        <button type="submit" class="btn btn--primary hero__button">Notify me</a>
+      </form>
     </div>
     {% endif %}
     <!-- ================================================== -->
@@ -39,95 +42,19 @@
     <div class="down-chevron"><a href="#main">&#x2304;</a></div>
   </div>
 
-  <div style="overflow-x: hidden; overflow-y: hidden; width: 100%; position: absolute;top: 0;left: 0; height: 100%">
-    <div style="overflow-x: hidden; overflow-y: hidden; height: 100%;">
-      <canvas id="hero-canvas" style="width: 100%; height: 100%;"></canvas>
+  <div class="waveWrapper waveAnimation">
+    <div class="waveWrapperInner bgTop">
+      <div class="wave waveTop" style="background-image: url('https://assets.revolutionuc.com/website-images/2021/waves/waves1_blue.png')"></div>
     </div>
-
-    <script>
-        window.requestAnimFrame = (function(callback) {
-          return window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame || window.oRequestAnimationFrame || window.msRequestAnimationFrame ||
-          function(callback) {
-            window.setTimeout(callback, 1000 / 60);
-          };
-        })();
-  
-        function drawRectangle(rect, context, alpha) {
-          context.beginPath();
-          context.rect(rect.x, rect.y, rect.width, rect.height);
-          alphaNum = Math.floor(alpha * 255)
-          alphaStr = alphaNum.toString(16)
-          alphaStr = alphaNum < 16 ? '0' + alphaStr : alphaStr;
-          context.fillStyle = rect.fill + alphaStr;
-          context.fill();
-        }
-        
-        function animate(shapes, canvas, context, startTime) {
-          // clear
-          context.clearRect(0, 0, canvas.width, canvas.height);
-
-          canvas.width  = window.innerWidth;
-          canvas.height = window.innerHeight;
-          context.rotate(30 * Math.PI / 180);
-
-          // update
-          var time = (new Date()).getTime() - startTime;
-
-          var alpha = 0.5;
-
-          for(var i = 0; i < shapes.length; i++) {
-            var rec = shapes[i];
-
-            var startHeight = window.innerHeight/2;
-            rec.y = startHeight + 75 * i;
-            rec.width = Math.trunc(Math.sqrt(Math.pow(window.innerWidth, 2) + Math.pow(window.innerHeight, 2)));
-
-            alpha = Math.abs(alpha - (time % 10000)/10000);
-  
-            drawRectangle(rec, context, alpha);
-          }
-  
-          // request new frame
-          requestAnimFrame(function() {
-            animate(shapes, canvas, context, startTime);
-          });
-        }
-        
-        var canvas = document.getElementById('hero-canvas');
-        var context = canvas.getContext('2d');
-        canvas.width = window.innerWidth;
-        canvas.height = window.innerHeight;
-        var startHeight = window.innerHeight/2;
-        var stripeWidth = Math.trunc(Math.sqrt(Math.pow(window.innerWidth, 2) + Math.pow(window.innerHeight, 2)));
-  
-        var rect1 = {x: 0, y: startHeight, width: stripeWidth, height: 50, borderWidth: 5, fill: '#1D9B42'};
-        var rect2 = {x: 0, y: startHeight + 75 * 1, width: stripeWidth, height: 50, borderWidth: 5, fill: '#7CC444'};
-        var rect3 = {x: 0, y: startHeight + 75 * 2, width: stripeWidth, height: 50, borderWidth: 5, fill: '#EBF348'};
-        var rect4 = {x: 0, y: startHeight + 75 * 3, width: stripeWidth, height: 50, borderWidth: 5, fill: '#FFC04B'};
-  
-        // context.setTransform(1,0.2,0.5,1,0,0);
-        context.rotate(30 * Math.PI / 180);
-        drawRectangle(rect1, context, 0.5);
-        drawRectangle(rect2, context, 0.5);
-        drawRectangle(rect3, context, 0.5);
-        drawRectangle(rect4, context, 0.5);
-
-        var shapes = [];
-        shapes.push(rect1);
-        shapes.push(rect2);
-        shapes.push(rect3);
-        shapes.push(rect4);
-  
-        // wait one second before starting animation
-        setTimeout(function() {
-          var startTime = (new Date()).getTime();
-          animate(shapes, canvas, context, startTime);
-        }, 1000);
-    </script>
-    </body>  
-
+    <div class="waveWrapperInner bgMiddle">
+      <div class="wave waveMiddle" style="background-image: url('https://assets.revolutionuc.com/website-images/2021/waves/waves2_purple.png')"></div>
+    </div>
+    <div class="waveWrapperInner bgBottom">
+      <div class="wave waveBottom" style="background-image: url('https://assets.revolutionuc.com/website-images/2021/waves/waves3_teal.png')"></div>
+    </div>
   </div>
 </section>
+<script src=/js/subscribe.js async defer></script>
 
 {{ content }}
 
