@@ -34,7 +34,7 @@ description: RevolutionUC Live Site
             <p class="text-center">RevolutionUC has been a leader in the Cincinnati hacker community since 2014. Check out submissions from previous hackathons.</p>
 
             <div class="past-hacks">
-                {% fr hack in site.data.past-hacks revesed %}
+                {% for hack in site.data.past-hacks reversed %}
                     <div class="hack hack--{{ hack.time | replace: ' ','-' }}">
                         <div class="hack__image">
                             <a href="{{ hack.link }}" target="_blank">
