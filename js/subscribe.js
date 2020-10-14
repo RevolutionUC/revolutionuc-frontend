@@ -23,7 +23,7 @@ if (!subscription_init) {
 
       // Send the information to a Flow automation webhook
       fetch(
-        `https://prod-06.westus.logic.azure.com:443/workflows/08813ff34da44c4aa1c23da3d7e6d5e5/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=ODMZIKUDa9xBxV0LRPimnRy7Ph5mxcPHUxrn8MM_4ko`,
+        `https://prod-105.westus.logic.azure.com:443/workflows/dbc811edba974d159c9bd88be9df084e/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=0n2xeJ-xZaKgRiLXSjAv4aAcrQt0165QuOJwz4nHTi0`,
         {
           method: `POST`,
           body: JSON.stringify({ email }),
