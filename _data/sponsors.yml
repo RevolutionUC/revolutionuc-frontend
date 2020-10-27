@@ -60,6 +60,11 @@
 #   image: https://assets.revolutionuc.com/sponsor-logos/2020/siemens.svg
 #   svg: true
 # 
+- name: echoAR
+  link: https://www.echoar.xyz/
+  image: https://assets.revolutionuc.com/sponsor-logos/2021/echoAR.png
+  webp: https://assets.revolutionuc.com/sponsor-logos/2021/echoAR.webp
+# 
 # - name: GE Aviation
 #   link: https://www.geaviation.com
 #   image: https://assets.revolutionuc.com/sponsor-logos/2020/ge.svg
@@ -67,7 +72,7 @@
 # 
 - name: Wolfram Language
   link: https://www.wolfram.com/hackathons/
-  image: https://assets.revolutionuc.com/sponsor-logos/2020/wolfram.svg
+  image: https://assets.revolutionuc.com/sponsor-logos/2021/wolfram.svg
   svg: true
 # 
 # - name: StickerMule
