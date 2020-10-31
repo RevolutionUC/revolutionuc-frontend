@@ -45,10 +45,10 @@
 #   image: https://assets.revolutionuc.com/sponsor-logos/2020/atomicrobot.png
 #   webp: https://assets.revolutionuc.com/sponsor-logos/2020/atomicrobot.webp
 # 
-# - name: Metarouter
-#   link: https://www.metarouter.io/
-#   image: https://assets.revolutionuc.com/sponsor-logos/2020/metarouter.svg
-#   svg: true
+- name: Metarouter
+  link: https://www.metarouter.io/
+  image: https://assets.revolutionuc.com/sponsor-logos/2021/metarouter.svg
+  svg: true
 # 
 # - name: "84.51°"
 #   link: https://8451.com/
