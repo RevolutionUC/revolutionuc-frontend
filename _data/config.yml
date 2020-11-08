@@ -19,11 +19,11 @@ livesite:
 
 eventData:
   # Hackathon data
-  fullDate: Coming Spring 2021
+  fullDate: February 20th and 21st, 2021
   date:
-    month: TBD
-    firstDay: TBD
-    secondDay: TBD
+    month: February
+    firstDay: 20
+    secondDay: 21
     year: 2021
   # Interest form url
   # interestForm: https://forms.gle/LrmB5fpVQbaSy6To6
