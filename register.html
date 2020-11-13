@@ -25,7 +25,7 @@ description: Registration for RevolutionUC — Hackathon at the University of Ci
             </div>
           </div>
 
-          <div class="form-block b-bottom" id="shirtSize">
+          <!-- <div class="form-block b-bottom" id="shirtSize">
             <label class="tag" for="shirtSize">Shirt Size*</label>
             <div class="form-block__input">
               <div>
@@ -58,12 +58,19 @@ description: Registration for RevolutionUC — Hackathon at the University of Ci
                 <label for="XX-Large">XX-Large</label>
               </div>
             </div>
-          </div>
+          </div> -->
           
           <div class="form-block b-bottom">
             <label class="tag" for="email">Email*</label>
             <div class="form-block__input">
               <input name="email" id="email" type="email" placeholder="Email">
+            </div>
+          </div>
+          
+          <div class="form-block b-bottom">
+            <label class="tag" for="email">Confirm email*</label>
+            <div class="form-block__input">
+              <input name="confirmEmail" id="confirmEmail" type="email" placeholder="Confirm email">
             </div>
           </div>
 
@@ -83,6 +90,18 @@ description: Registration for RevolutionUC — Hackathon at the University of Ci
                 <input name="schoolOther" id="schoolOther" type="checkbox" class="button" data-toggle="true">
                 <label for="schoolOther"><small>I can't find my school</small></label>
               </div>
+            </div>
+          </div>
+
+          <div class="form-block b-bottom">
+            <label class="tag" for="education">Education*</label>
+            <div class="form-block__input">
+              <select name="education" id="education">
+                <option value="" disabled selected>Level of Education</option>
+                <option value="HighSchool">High School (16+)</option>
+                <option value="Undergraduate">Undergraduate</option>
+                <option value="Graduate">Graduate</option>
+              </select>
             </div>
           </div>
 
@@ -116,7 +135,7 @@ description: Registration for RevolutionUC — Hackathon at the University of Ci
             </div>
           </div>
 
-          <div class="form-block b-bottom">
+          <!-- <div class="form-block b-bottom">
             <label class="tag" for="dietaryRestrictions">Dietary Restrictions</label>
             <div class="form-block__input">
               <div>
@@ -139,31 +158,19 @@ description: Registration for RevolutionUC — Hackathon at the University of Ci
               <label for="glutenFree">Gluten&nbsp;Free</label>
               </div>
             </div>
-          </div>
+          </div> -->
 
-          <div class="form-block b-bottom">
+          <!-- <div class="form-block b-bottom">
             <label class="tag">Other dietary restrictions</label>
             <div class="form-block__input">
               <textarea name="otherDietaryRestrictions" cols="30" rows="5" placeholder="List other dietary restrictions here"></textarea>
             </div>
-          </div>
+          </div> -->
 
           <div class="form-block b-bottom">
             <label class="tag">GitHub</label>
             <div class="form-block__input">
               <input name="githubUsername" type="text" placeholder="GitHub username">
-            </div>
-          </div>
-
-          <div class="form-block b-bottom">
-            <label class="tag" for="education">Education*</label>
-            <div class="form-block__input">
-              <select name="education" id="education">
-                <option value="" disabled selected>Level of Education</option>
-                <option value="HighSchool">High School (16+)</option>
-                <option value="Undergraduate">Undergraduate</option>
-                <option value="Graduate">Graduate</option>
-              </select>
             </div>
           </div>
 
