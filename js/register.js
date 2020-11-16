@@ -152,7 +152,7 @@ if (!registration_init) {
       jsonData["school"] = jsonObj["school"]
       jsonData["major"] = jsonObj["major"]
       jsonData["gender"] = jsonObj["gender"]
-      jsonData["ethnicity"] = jsonObj["ethnicity"]
+      jsonData["ethnicity"] = formData.getAll("ethnicity")
       jsonData["howYouHeard"] = jsonObj["howYouHeard"]
       jsonData["hackathons"] = parseInt(jsonObj["hackathons"])
       // jsonData["shirtSize"] = jsonObj["shirtSize"]
