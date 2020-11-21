@@ -175,7 +175,7 @@ if (!registration_init) {
       var regHeaders = new Headers();
       regHeaders.append('Content-Type', 'application/json');
       //regHeaders.append('Accept', 'application/json');
-      fetch("http://localhost:3000/api/registrant", {
+      fetch("https://revolutionuc-api.herokuapp.com/api/registrant", {
         method: "POST",
         headers: regHeaders,
         body: JSON.stringify(jsonData), //new FormData(this._formElement),
