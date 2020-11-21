@@ -40,6 +40,8 @@ if (!registration_init) {
         "email",
         "school",
         "schoolOther",
+        "country",
+        "countryOther",
         "major",
         "dob",
         "phoneNumber",
@@ -67,6 +69,7 @@ if (!registration_init) {
         formData.get("confirmEmail") == "" ||
         formData.get("phoneNumber") == "" ||
         formData.get("school") == "" ||
+        formData.get("country") == "" ||
         formData.get("major") == null ||
         formData.get("dob") == "" ||
         formData.get("education") == null ||
@@ -150,6 +153,7 @@ if (!registration_init) {
       jsonData["email"] = jsonObj["email"]
       jsonData["phoneNumber"] = jsonObj["phoneNumber"]
       jsonData["school"] = jsonObj["school"]
+      jsonData["country"] = jsonObj["country"]
       jsonData["major"] = jsonObj["major"]
       jsonData["gender"] = jsonObj["gender"]
       jsonData["ethnicity"] = formData.getAll("ethnicity")
@@ -171,7 +175,7 @@ if (!registration_init) {
       var regHeaders = new Headers();
       regHeaders.append('Content-Type', 'application/json');
       //regHeaders.append('Accept', 'application/json');
-      fetch("https://revolutionuc-api.herokuapp.com/api/registrant", {
+      fetch("http://localhost:3000/api/registrant", {
         method: "POST",
         headers: regHeaders,
         body: JSON.stringify(jsonData), //new FormData(this._formElement),
