@@ -175,19 +175,24 @@ if (!registration_init) {
       var regHeaders = new Headers();
       regHeaders.append('Content-Type', 'application/json');
       //regHeaders.append('Accept', 'application/json');
-      fetch("https://revolutionuc-api.herokuapp.com/api/registrant", {
+      fetch("http://localhost:3000/api/registrant", {
         method: "POST",
         headers: regHeaders,
         body: JSON.stringify(jsonData), //new FormData(this._formElement),
       }).then(response => {
-        this._updateFormUI(null, response);
-        return response.json();
+        const result = this._updateFormUI(null, response);
+        if(result) {
+          return response.json();
+        }
       }).then(data => {
         console.log(data);
-        let form = new FormData();
-        form.append("resume", formData.get("resume"));
-        this._uploadResume(data, form)
+        if(data) {
+          let form = new FormData();
+          form.append("resume", formData.get("resume"));
+          this._uploadResume(data, form);
+        }
       }).catch(err => {
+        console.error(err);
         this._updateFormUI(err);
       });
     }
@@ -201,7 +206,7 @@ if (!registration_init) {
       }).then(response => {
         console.log(response);
         window.location = "/check-email";
-      });
+      }); 
     }
 
     static _updateFormUI(err, response) {
@@ -215,7 +220,7 @@ if (!registration_init) {
         console.log(`Response status: ${response.status}`);
 
        if (response.status !== 200 && response.status !== 201) {
-          alert("There was an error. Please try refreshing the page, or try using a different email.");
+          alert("There was an error while submission, please check the form for errors, or try again later.");
           // Bad news bears again
           response.json().then(jsonErrors => {
             this._updateLabels(jsonErrors);
@@ -228,6 +233,7 @@ if (!registration_init) {
           this._cleanDirtyLabels(this._labels);
           this._removeEmailRegisteredWarning();
           //window.location = "/check-email";
+          return true;
         }
       }
     }
@@ -237,7 +243,7 @@ if (!registration_init) {
 
       for (let error of jsonErrors.message) {
         document
-          .querySelector(`label[for=${error.property}]`)
+          .querySelector(`label[for=${error.split(` `)[0]}]`)
           .classList.add("error");
         if (error.property == "email" && error.msg.includes("registered")) {
           // Email address has already been registered
@@ -256,7 +262,7 @@ if (!registration_init) {
       };
 
       this._cleanDirtyLabels(
-        this._labels.diff(jsonErrors.map(elem => elem.param)),
+        this._labels.diff(jsonErrors.message.map(elem => elem.split(` `)[0])),
       );
     }
 
