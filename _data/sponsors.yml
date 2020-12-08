@@ -49,11 +49,11 @@
   link: https://www.metarouter.io/
   image: https://assets.revolutionuc.com/sponsor-logos/2021/metarouter.svg
   svg: true
-# 
-# - name: "84.51°"
-#   link: https://8451.com/
-#   image: https://assets.revolutionuc.com/sponsor-logos/2020/8451.png
-#   webp: https://assets.revolutionuc.com/sponsor-logos/2020/8451.webp
+
+- name: "84.51°"
+  link: https://8451.com/
+  image: https://assets.revolutionuc.com/sponsor-logos/2020/8451.png
+  webp: https://assets.revolutionuc.com/sponsor-logos/2020/8451.webp
 # 
 # - name: Siemens PLM
 #   link: https://www.plm.automation.siemens.com/
