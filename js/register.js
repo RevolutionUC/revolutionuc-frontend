@@ -192,7 +192,7 @@ if (!registration_init) {
           this._uploadResume(data, form);
         }
       }).catch(err => {
-        console.error(err);
+        // console.error(err);
         this._updateFormUI(err);
       });
     }

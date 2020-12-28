@@ -51,7 +51,7 @@ description: RevolutionUC Live Site
                 {% for hack in site.data.past-hacks reversed %}
                     <div class="hack hack--{{ hack.time | replace: ' ','-' }}">
                         <div class="hack__image">
-                            <a href="{{ hack.link }}" target="_blank">
+                            <a href="{{ hack.link }}" target="_blank" rel="noopener">
                                 <img class="past__hacks__image" src="{{ hack.image }}" alt="{{ hack.name }} logo">
                                 <div class="hack__text">{{ hack.time }}</div>
                             </a>
