@@ -15,11 +15,11 @@
 # image: svg of the logo
 # svg: true <- this is REQUIRED
 
-# - name: Fifth Third Bank
-#   link: http://53.com
-#   image: https://assets.revolutionuc.com/sponsor-logos/2020/FifthThird.svg
-#   svg: true
-# 
+- name: Fifth Third Bank
+  link: http://53.com
+  image: https://assets.revolutionuc.com/sponsor-logos/2021/FifthThird.svg
+  svg: true
+
 # - name: Worldpay
 #   link: https://www.worldpay.com
 #   image: https://assets.revolutionuc.com/sponsor-logos/2020/worldpay.png
