@@ -13,3 +13,8 @@ cd revolutionuc-frontend
 bundle install
 rake #runs bundle exec jekyll serve
 ```
+
+Images
+```sh
+magick 4x\*.jpg -resize 25% 1x\images.jpg && magick 4x\*.jpg -resize 50% 2x\images.jpg && magick 4x\*.jpg -resize 75% 3x\images.jpg
+```

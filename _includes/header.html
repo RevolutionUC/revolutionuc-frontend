@@ -49,7 +49,7 @@
         <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon/favicon-16x16.png">
         <link rel="shortcut icon" href="/img/favicon/favicon.ico">
 
-        <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Josefin+Sans|Lato:400,700">
+        <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Josefin+Sans|Lato:400,700&display=swap">
         <link rel="stylesheet" href="/css/main.min.css?{{ site.time | date: '%s%N' }}">
 
         <link rel="manifest" href="/manifest.webmanifest">
@@ -63,7 +63,13 @@
             <div class="header__container container">
                 <h1 class="header__title">
                     <a href="/">
-                        <img class="header__logo" src="https://assets.revolutionuc.com/email/revuc-logo-spring-2021.png" srcset="https://assets.revolutionuc.com/email/revuc-logo-spring-2021.png 1x, https://assets.revolutionuc.com/email/revuc-logo-spring-2021.png 2x" src="" srcset="" onerror="this.onerror=null; this.src='/img/revuc-logos/revuc-spring-2020.png'; this.srcset='/img/revuc-logos/revuc-spring-2020.png 1x, /img/revuc-logos/revuc-spring-2020.png 2x'" alt="RevolutionUC logo">
+                        <img
+                            class="header__logo"
+                            src="https://assets.revolutionuc.com/logo-128.png"
+                            srcset="https://assets.revolutionuc.com/logo-128.png 1x,
+                                    https://assets.revolutionuc.com/logo-256.png 2x"
+                            alt="RevolutionUC logo"
+                        >
                     </a>
                 </h1>
                 <input id="menu-toggle" type="checkbox" class="menu-toggle">

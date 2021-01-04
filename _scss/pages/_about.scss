@@ -30,7 +30,21 @@
             }
 
             &:nth-child(1) {
-                background-image: url(https://assets.revolutionuc.com/website-images/2020/about/build-1x.png);
+                background-image: url(https://assets.revolutionuc.com/website-images/2021/photos/1x/build.jpg);
+                background-image: 
+                    -webkit-image-set(
+                        url(https://assets.revolutionuc.com/website-images/2021/photos/1x/build.jpg) 1x,
+                        url(https://assets.revolutionuc.com/website-images/2021/photos/2x/build.jpg) 2x,
+                        url(https://assets.revolutionuc.com/website-images/2021/photos/3x/build.jpg) 3x,
+                        url(https://assets.revolutionuc.com/website-images/2021/photos/4x/build.jpg) 4x
+                    );
+                background-image: 
+                    image-set(
+                        url(https://assets.revolutionuc.com/website-images/2021/photos/1x/build.jpg) 1x,
+                        url(https://assets.revolutionuc.com/website-images/2021/photos/2x/build.jpg) 2x,
+                        url(https://assets.revolutionuc.com/website-images/2021/photos/3x/build.jpg) 3x,
+                        url(https://assets.revolutionuc.com/website-images/2021/photos/4x/build.jpg) 4x
+                    );
 
                 .item__text {
                     background-color: $prim-color-2;
@@ -38,7 +52,21 @@
             }
 
             &:nth-child(2) {
-                background-image: url(https://assets.revolutionuc.com/website-images/2020/about/learn-1x.png);
+                background-image: url(https://assets.revolutionuc.com/website-images/2021/photos/1x/learn.jpg);
+                background-image: 
+                    -webkit-image-set(
+                        url(https://assets.revolutionuc.com/website-images/2021/photos/1x/learn.jpg) 1x,
+                        url(https://assets.revolutionuc.com/website-images/2021/photos/2x/learn.jpg) 2x,
+                        url(https://assets.revolutionuc.com/website-images/2021/photos/3x/learn.jpg) 3x,
+                        url(https://assets.revolutionuc.com/website-images/2021/photos/4x/learn.jpg) 4x
+                    );
+                background-image: 
+                    image-set(
+                        url(https://assets.revolutionuc.com/website-images/2021/photos/1x/learn.jpg) 1x,
+                        url(https://assets.revolutionuc.com/website-images/2021/photos/2x/learn.jpg) 2x,
+                        url(https://assets.revolutionuc.com/website-images/2021/photos/3x/learn.jpg) 3x,
+                        url(https://assets.revolutionuc.com/website-images/2021/photos/4x/learn.jpg) 4x
+                    );
 
                 .item__text {
                     background-color: $prim-color-3;
@@ -46,12 +74,30 @@
             }
 
             &:nth-child(3) {
-                background-image: url(https://assets.revolutionuc.com/website-images/2020/about/grow-1x.png);
+                background-image: url(https://assets.revolutionuc.com/website-images/2021/photos/1x/grow.jpg);
+                background-image: 
+                    -webkit-image-set(
+                        url(https://assets.revolutionuc.com/website-images/2021/photos/1x/grow.jpg) 1x,
+                        url(https://assets.revolutionuc.com/website-images/2021/photos/2x/grow.jpg) 2x,
+                        url(https://assets.revolutionuc.com/website-images/2021/photos/3x/grow.jpg) 3x,
+                        url(https://assets.revolutionuc.com/website-images/2021/photos/4x/grow.jpg) 4x
+                    );
+                background-image: 
+                    image-set(
+                        url(https://assets.revolutionuc.com/website-images/2021/photos/1x/grow.jpg) 1x,
+                        url(https://assets.revolutionuc.com/website-images/2021/photos/2x/grow.jpg) 2x,
+                        url(https://assets.revolutionuc.com/website-images/2021/photos/3x/grow.jpg) 3x,
+                        url(https://assets.revolutionuc.com/website-images/2021/photos/4x/grow.jpg) 4x
+                    );
 
                 .item__text {
                     background-color: $prim-color-4;
                 }
             }
         }
+    }
+
+    .about-img {
+        width: 100%
     }
 }

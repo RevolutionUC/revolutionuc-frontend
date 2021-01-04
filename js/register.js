@@ -40,6 +40,8 @@ if (!registration_init) {
         "email",
         "school",
         "schoolOther",
+        "country",
+        "countryOther",
         "major",
         "dob",
         "phoneNumber",
@@ -60,29 +62,39 @@ if (!registration_init) {
       var formData = new FormData(this._formElement)
 
       // Validate data
-      if(formData.get("firstName") == "" ||
-      formData.get("lastName") == "" ||
-      formData.get("email") == "" ||
-      formData.get("phoneNumber") == "" ||
-      formData.get("school") == "" ||
-      formData.get("major") == null ||
-      formData.get("dob") == "" ||
-      formData.get("education") == null ||
-      formData.get("shirtSize") == "" ||
-      formData.get("ethnicity") == null ||
-      formData.get("gender") == null
-         ){
-           alert("Please fill in all required fields.");
-           this._submitButton.disabled = false;
-           this._submitButton.textContent = "Register";
-           return;
-         }
+      if(
+        formData.get("firstName") == "" ||
+        formData.get("lastName") == "" ||
+        formData.get("email") == "" ||
+        formData.get("confirmEmail") == "" ||
+        formData.get("phoneNumber") == "" ||
+        formData.get("school") == "" ||
+        formData.get("country") == "" ||
+        formData.get("major") == null ||
+        formData.get("dob") == "" ||
+        formData.get("education") == null ||
+        // formData.get("shirtSize") == "" ||
+        formData.get("ethnicity") == null ||
+        formData.get("gender") == null
+      ){
+        alert("Please fill in all required fields.");
+        this._submitButton.disabled = false;
+        this._submitButton.textContent = "Register";
+        return;
+      }
+      
+      if(formData.get("email") !== formData.get("confirmEmail")) {
+        alert("Emails do not match.");
+        this._submitButton.disabled = false;
+        this._submitButton.textContent = "Register";
+        return;
+      }
 
       if(getAge(formData.get("dob")) < 16) {
-          alert("You must at least 16 years old to participate in RevolutionUC.");
-          this._submitButton.disabled = false;
-           this._submitButton.textContent = "Register";
-           return;
+        alert("You must at least 16 years old to participate in RevolutionUC.");
+        this._submitButton.disabled = false;
+        this._submitButton.textContent = "Register";
+        return;
       }
 
       // Show e sign waiver
@@ -141,12 +153,13 @@ if (!registration_init) {
       jsonData["email"] = jsonObj["email"]
       jsonData["phoneNumber"] = jsonObj["phoneNumber"]
       jsonData["school"] = jsonObj["school"]
+      jsonData["country"] = jsonObj["country"]
       jsonData["major"] = jsonObj["major"]
       jsonData["gender"] = jsonObj["gender"]
-      jsonData["ethnicity"] = jsonObj["ethnicity"]
+      jsonData["ethnicity"] = formData.getAll("ethnicity")
       jsonData["howYouHeard"] = jsonObj["howYouHeard"]
       jsonData["hackathons"] = parseInt(jsonObj["hackathons"])
-      jsonData["shirtSize"] = jsonObj["shirtSize"]
+      // jsonData["shirtSize"] = jsonObj["shirtSize"]
       jsonData["githubUsername"] = jsonObj["githubUsername"]
       jsonData["acceptedWaiver"] = true
       jsonData["dateOfBirth"] = new Date(jsonObj["dob"]).toISOString()
@@ -159,38 +172,28 @@ if (!registration_init) {
       jsonData["educationLevel"] = jsonObj["education"]
       jsonData["acceptedWaiver"] = acceptedWaiver
 
-      //check if all reguired entries are filled in
-      if(jsonData["firstName"] == "" ||
-      jsonData["lastName"] == "" ||
-      jsonData["email"] == "" ||
-      jsonData["phoneNumber"] == "" ||
-      jsonData["school"] == "" ||
-      jsonData["major"] == "" ||
-      jsonData["dob"] == "" ||
-      jsonData["education"] == "" ||
-      jsonData["shirtSize"] == "" ||
-      jsonData["ethnicity"] == "" ||
-      jsonData["gender"] == "" ||
-      jsonData["acceptedWaiver"] == false
-         ){}
-
       var regHeaders = new Headers();
       regHeaders.append('Content-Type', 'application/json');
       //regHeaders.append('Accept', 'application/json');
-      var uploadKey = ""
-
       fetch("https://revolutionuc-api.herokuapp.com/api/registrant", {
         method: "POST",
         headers: regHeaders,
         body: JSON.stringify(jsonData), //new FormData(this._formElement),
       }).then(response => {
-        this._updateFormUI(response);
-        return response.json();
+        const result = this._updateFormUI(null, response);
+        if(result) {
+          return response.json();
+        }
       }).then(data => {
         console.log(data);
-        let form = new FormData();
-        form.append("resume", formData.get("resume"));
-        this._uploadResume(data, form)
+        if(data) {
+          let form = new FormData();
+          form.append("resume", formData.get("resume"));
+          this._uploadResume(data, form);
+        }
+      }).catch(err => {
+        // console.error(err);
+        this._updateFormUI(err);
       });
     }
 
@@ -203,26 +206,35 @@ if (!registration_init) {
       }).then(response => {
         console.log(response);
         window.location = "/check-email";
-      });
+      }); 
     }
 
-    static _updateFormUI(response) {
-      console.log(`Response status: ${response.status}`);
-      if (response.status != 200 && response.status != 201) {
-        alert("There was an error. Please try refreshing the page, please make sure your phone number is correct, or try using a different email.");
+    static _updateFormUI(err, response) {
+      if (err) {
         // Bad news bears
-        response.json().then(jsonErrors => {
-          this._updateLabels(jsonErrors);
-        });
+        alert("There was an error. Please try refreshing the page, or try using a different email.");
         // Set the button as enabled and the text to 'Register'
         this._submitButton.disabled = false;
         this._submitButton.textContent = "Register";
       } else {
-        // ...Good news bears
-        this._cleanDirtyLabels(this._labels);
-        this._removeEmailRegisteredWarning();
-        console.log(response);
-        //window.location = "/check-email";
+        console.log(`Response status: ${response.status}`);
+
+       if (response.status !== 200 && response.status !== 201) {
+          alert("There was an error while submission, please check the form for errors, or try again later.");
+          // Bad news bears again
+          response.json().then(jsonErrors => {
+            this._updateLabels(jsonErrors);
+          });
+          // Set the button as enabled and the text to 'Register'
+          this._submitButton.disabled = false;
+          this._submitButton.textContent = "Register";
+        } else {
+          // ...Good news bears
+          this._cleanDirtyLabels(this._labels);
+          this._removeEmailRegisteredWarning();
+          //window.location = "/check-email";
+          return true;
+        }
       }
     }
 
@@ -231,7 +243,7 @@ if (!registration_init) {
 
       for (let error of jsonErrors.message) {
         document
-          .querySelector(`label[for=${error.property}]`)
+          .querySelector(`label[for=${error.split(` `)[0]}]`)
           .classList.add("error");
         if (error.property == "email" && error.msg.includes("registered")) {
           // Email address has already been registered
@@ -250,7 +262,7 @@ if (!registration_init) {
       };
 
       this._cleanDirtyLabels(
-        this._labels.diff(jsonErrors.map(elem => elem.param)),
+        this._labels.diff(jsonErrors.message.map(elem => elem.split(` `)[0])),
       );
     }
 
@@ -258,7 +270,7 @@ if (!registration_init) {
       let labelElement;
       for (let label of labelsArray) {
         labelElement = document.querySelector(`label[for=${label}]`);
-        labelElement.classList.remove("error");
+        labelElement?.classList.remove("error");
         if (label == "email" && labelElement.innerText.includes("registered")) {
           this._removeEmailRegisteredWarning();
         } else if (label == "resume") {

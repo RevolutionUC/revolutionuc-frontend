@@ -25,7 +25,7 @@ description: Registration for RevolutionUC — Hackathon at the University of Ci
             </div>
           </div>
 
-          <div class="form-block b-bottom" id="shirtSize">
+          <!-- <div class="form-block b-bottom" id="shirtSize">
             <label class="tag" for="shirtSize">Shirt Size*</label>
             <div class="form-block__input">
               <div>
@@ -58,12 +58,19 @@ description: Registration for RevolutionUC — Hackathon at the University of Ci
                 <label for="XX-Large">XX-Large</label>
               </div>
             </div>
-          </div>
+          </div> -->
           
           <div class="form-block b-bottom">
             <label class="tag" for="email">Email*</label>
             <div class="form-block__input">
               <input name="email" id="email" type="email" placeholder="Email">
+            </div>
+          </div>
+          
+          <div class="form-block b-bottom">
+            <label class="tag" for="email">Confirm email*</label>
+            <div class="form-block__input">
+              <input name="confirmEmail" id="confirmEmail" type="email" placeholder="Confirm email">
             </div>
           </div>
 
@@ -83,6 +90,37 @@ description: Registration for RevolutionUC — Hackathon at the University of Ci
                 <input name="schoolOther" id="schoolOther" type="checkbox" class="button" data-toggle="true">
                 <label for="schoolOther"><small>I can't find my school</small></label>
               </div>
+            </div>
+          </div>
+
+          <div class="form-block b-bottom">
+            <label class="tag" for="country">Country*</label>
+
+            <div class="form-block__input">
+              <input class="input--country input--country-other hide" type="text" placeholder="Enter your country" />
+
+              <div class="full-width-flex flex input--country">
+                <input class="input--country-typeahead" name="country" id="country" list="country-list" placeholder="Search your country" />
+                <datalist id="country-list"></datalist>
+                <div id="country-dropdown-btn" class="dropdown-btn">&#9660;</div>
+              </div>
+
+              <div class="form-block__input">
+                <input name="countryOther" id="countryOther" type="checkbox" class="button" data-toggle="true">
+                <label for="countryOther"><small>I can't find my country</small></label>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-block b-bottom">
+            <label class="tag" for="education">Education*</label>
+            <div class="form-block__input">
+              <select name="education" id="education">
+                <option value="" disabled selected>Level of Education</option>
+                <option value="HighSchool">High School (16+)</option>
+                <option value="Undergraduate">Undergraduate</option>
+                <option value="Graduate">Graduate</option>
+              </select>
             </div>
           </div>
 
@@ -110,13 +148,18 @@ description: Registration for RevolutionUC — Hackathon at the University of Ci
           </div>
 
           <div class="form-block b-bottom">
-            <label class="tag" for="phoneNumber">Phone Number*</label>
+            <label class="tag" for="phoneNumber">
+              <div class="tooltip">Phone Number*
+                <span class="tooltiptext">Please include the country code</span>
+              </div>
+              <!-- Phone Number* -->
+            </label>
             <div class="form-block__input">
-              <input name="phoneNumber" id="phoneNumber" type="text" placeholder="513-867-5309">
+              <input name="phoneNumber" id="phoneNumber" type="text" placeholder="+15138675309">
             </div>
           </div>
 
-          <div class="form-block b-bottom">
+          <!-- <div class="form-block b-bottom">
             <label class="tag" for="dietaryRestrictions">Dietary Restrictions</label>
             <div class="form-block__input">
               <div>
@@ -139,31 +182,19 @@ description: Registration for RevolutionUC — Hackathon at the University of Ci
               <label for="glutenFree">Gluten&nbsp;Free</label>
               </div>
             </div>
-          </div>
+          </div> -->
 
-          <div class="form-block b-bottom">
+          <!-- <div class="form-block b-bottom">
             <label class="tag">Other dietary restrictions</label>
             <div class="form-block__input">
               <textarea name="otherDietaryRestrictions" cols="30" rows="5" placeholder="List other dietary restrictions here"></textarea>
             </div>
-          </div>
+          </div> -->
 
           <div class="form-block b-bottom">
             <label class="tag">GitHub</label>
             <div class="form-block__input">
               <input name="githubUsername" type="text" placeholder="GitHub username">
-            </div>
-          </div>
-
-          <div class="form-block b-bottom">
-            <label class="tag" for="education">Education*</label>
-            <div class="form-block__input">
-              <select name="education" id="education">
-                <option value="" disabled selected>Level of Education</option>
-                <option value="HighSchool">High School (16+)</option>
-                <option value="Undergraduate">Undergraduate</option>
-                <option value="Graduate">Graduate</option>
-              </select>
             </div>
           </div>
 
@@ -191,16 +222,26 @@ description: Registration for RevolutionUC — Hackathon at the University of Ci
           <div class="form-block b-bottom">
             <label class="tag" for="ethnicity">Race/Ethnicity*</label>
             <div class="form-block__input">
-              <select name="ethnicity" id="ethnicity">
-                <option value="" disabled selected>Race or Ethnicity</option>
-                <option value="Indian">American Indian or Alaskan Native</option>
-                <option value="Asian">Asian</option>
-                <option value="Black">Black or African American</option>
-                <option value="Islander">Native Hawaiian or other Pacific Islander</option>
-                <option value="White">White</option>
-                <option value="Latino">Hispanic or Latino</option>
-                <option value="Prefer Not">Prefer not to respond</option>
-              </select>
+              <input name="ethnicity" type="checkbox" class="button" id="Indian" value="Indian">
+              <label for="Indian">American Indian or Alaskan Native</label><br>
+
+              <input name="ethnicity" type="checkbox" class="button" id="Asian" value="Asian">
+              <label for="Asian">Asian</label><br>
+
+              <input name="ethnicity" type="checkbox" class="button" id="Black" value="Black">
+              <label for="Black">Black or African American</label><br>
+
+              <input name="ethnicity" type="checkbox" class="button" id="Islander" value="Islander">
+              <label for="Islander">Native Hawaiian or other Pacific Islander</label><br>
+
+              <input name="ethnicity" type="checkbox" class="button" id="White" value="White">
+              <label for="White">White</label><br>
+
+              <input name="ethnicity" type="checkbox" class="button" id="Latino" value="Latino">
+              <label for="Latino">Hispanic or Latino</label><br>
+
+              <input name="ethnicity" type="checkbox" class="button" id="Prefer Not" value="Prefer Not">
+              <label for="Prefer Not">Prefer not to respond</label>
             </div>
           </div>
 
@@ -218,17 +259,7 @@ description: Registration for RevolutionUC — Hackathon at the University of Ci
                 <option value="7">7</option>
                 <option value="8">8</option>
                 <option value="9">9</option>
-                <option value="10">10</option>
-                <option value="11">11</option>
-                <option value="12">12</option>
-                <option value="13">13</option>
-                <option value="14">14</option>
-                <option value="15">15</option>
-                <option value="16">16</option>
-                <option value="17">17</option>
-                <option value="18">18</option>
-                <option value="19">19</option>
-                <option value="20">20</option>
+                <option value="10">10+</option>
               </select>
             </div>
           </div>
@@ -256,20 +287,30 @@ description: Registration for RevolutionUC — Hackathon at the University of Ci
             <label class="tag">I agree*</label>
           </div>
 
+          <div class="form-block b-bottom">
+            <div class="form-block__input">
+              <input name="mlhEmails" type="checkbox" class="button" id="mlhEmails">
+              <label for="mlhEmails">MLH Informational Emails<sup><a data-turbolinks="false" href="#agree-3">3</a></sup></label>
+            </div>
+            <label class="tag">I agree</label>
+          </div>
+
           <div class="form-block">
-              <h4 style="margin-top: -10px">We have hit our projected capacity for RevolutionUC. 
+              <!-- <h4 style="margin-top: -10px">We have hit our projected capacity for RevolutionUC. 
                   As we confirm attendance, spots may open up, which we will give to waitlisted
                   participants in order of registration.</h4>
-              <button name="registrationSubmit" type="submit" disabled class="btn btn--register">Join Waitlist</button>  
-            <!-- <button name="registrationSubmit" type="submit" disabled class="btn btn--register">Register</button> -->
+              <button name="registrationSubmit" type="submit" disabled class="btn btn--register">Join Waitlist</button>   -->
+            <button name="registrationSubmit" type="submit" disabled class="btn btn--register">Register</button>
           </div>
         </form>
 
         <section>
           <p>
-            <small><sup id="agree-1">1</sup> I agree to the terms of both the <a href="https://github.com/MLH/mlh-policies/tree/master/prize-terms-and-conditions" target="_blank">MLH Contest Terms and Conditions</a> and the <a href="https://mlh.io/privacy" target="_blank">MLH Privacy Policy</a>. Please note that you may receive pre and post-event informational e-mails and occasional messages about hackathons from MLH as per the MLH Privacy Policy.</small>
+            <small><sup id="agree-1">1</sup>I authorize you to share my application/registration information with Major League Hacking for event administration, ranking, and MLH administration in-line with the <a href="https://mlh.io/privacy" target="_blank">MLH Privacy Policy</a>. I further agree to the terms of both the <a href="https://github.com/MLH/mlh-policies/tree/master/prize-terms-and-conditions" target="_blank">MLH Contest Terms and Conditions</a> and the <a href="https://mlh.io/privacy" target="_blank">MLH Privacy Policy</a>.</small>
             <br>
-            <small><sup id="agree-2">2</sup> I agree to at all times abide by and conform to the <a href="https://static.mlh.io/docs/mlh-code-of-conduct.pdf" target="_blank">Major League Hacking Code of Conduct</a> at the event.</small>
+            <small><sup id="agree-2">2</sup>I have read and agree to the <a href="https://static.mlh.io/docs/mlh-code-of-conduct.pdf" target="_blank">MLH Code of Conduct</a>.</small>
+            <br>
+            <small><sup id="agree-3">3</sup>I authorize MLH to send me pre- and post-event informational emails, which contain free credit and opportunities from their partners.</small>
           </p>
         </section>
         
@@ -294,8 +335,8 @@ description: Registration for RevolutionUC — Hackathon at the University of Ci
 <script>
   var typeahead_init = false;
   if (!typeahead_init) {
-    let promise = fetch('https://raw.githubusercontent.com/MLH/mlh-policies/master/schools.csv');
-    promise
+    const schools$ = fetch('https://raw.githubusercontent.com/MLH/mlh-policies/master/schools.csv');
+    schools$
       .then(response => response.text())
       .then(schools => {
       let arraySchools = schools.split("\n");
@@ -356,6 +397,68 @@ description: Registration for RevolutionUC — Hackathon at the University of Ci
         schoolOtherInput.classList.add('hide');
       }
     };
+    
+    const countries$ = fetch('/countries.json');
+    countries$
+      .then(response => response.json())
+      .then(({ countries }) => {
+      for (let country of countries) {
+        const newOption = document.createElement('option');
+
+        newOption.value = country;
+        newOption.innerText = country;
+        if (country == 'United States') newOption.setAttribute('selected', '');
+        document.querySelector('datalist#country-list').append(newOption);
+      }
+      const countryComplete = new Awesomplete(document.getElementById("country"), {list: "#country-list", minChars: 0, maxItems: 1000000});
+      Awesomplete.$('#country-dropdown-btn').addEventListener("click", function() {
+        if (countryComplete.ul.childNodes.length === 0) {
+          countryComplete.minChars = 0;
+          countryComplete.evaluate();
+        }
+        else if (countryComplete.ul.hasAttribute('hidden')) {
+          countryComplete.open();
+        }
+        else {
+          countryComplete.close();
+        }
+      });
+    });
+
+    const countryOtherButton = document.getElementById('countryOther');
+    const countryOtherInput = document.getElementsByClassName('input--country-other')[0];
+    const countryTypeaheadInput = document.getElementsByClassName('input--country-typeahead')[0];
+
+    countryOtherButton.onclick = () => {
+      // switches between 'input--country-typeahead' and 'input--country-other'
+      // shows 'input--country-typeahead' by default
+      const toggle = countryOtherButton.getAttribute('data-toggle');
+
+      if (toggle === 'true') {
+        // rollback to the 'other' (traditional) input
+        countryOtherButton.setAttribute('data-toggle', 'false');
+        countryOtherInput.setAttribute('name', 'country');
+        countryOtherInput.setAttribute('id', 'country');
+        countryTypeaheadInput.removeAttribute('name');
+        countryTypeaheadInput.removeAttribute('id');
+
+        // hide the typeahead input, show the 'other' input
+        countryOtherInput.classList.remove('hide');
+        document.getElementsByClassName('input--country')[1].classList.add('hide');
+      } else {
+        // use the typeahead input
+        countryOtherButton.setAttribute('data-toggle', 'true');
+        countryTypeaheadInput.setAttribute('name', 'country');
+        countryTypeaheadInput.setAttribute('id', 'country');
+        countryOtherInput.removeAttribute('name');
+        countryOtherInput.removeAttribute('id');
+
+        // hide the 'other' input, show the typeahead input
+        document.getElementsByClassName('input--country')[1].classList.remove('hide');
+        countryOtherInput.classList.add('hide');
+      }
+    };
+
     typeahead_init = true;
   }
 </script>

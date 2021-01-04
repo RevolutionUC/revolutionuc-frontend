@@ -10,11 +10,18 @@ description: RevolutionUC Live Site
     <div class="container container--large">
         <section class="flex">
             <div class="image">
-                <img src="https://assets.revolutionuc.com/website-images/2020/home/home-1-1x.png" alt="Photo taken at RevolutionUC">
+                <img
+                    srcset="https://assets.revolutionuc.com/website-images/2021/photos/1x/home-1.jpg,
+                            https://assets.revolutionuc.com/website-images/2021/photos/2x/home-1.jpg 2x,
+                            https://assets.revolutionuc.com/website-images/2021/photos/3x/home-1.jpg 3x,
+                            https://assets.revolutionuc.com/website-images/2021/photos/4x/home-1.jpg 4x"
+                    src="https://assets.revolutionuc.com/website-images/2021/photos/1x/home-1.jpg"
+                    alt="Photo taken at RevolutionUC"
+                >
             </div>
 
             <div class="text">
-                <p><strong>RevolutionUC</strong> is a 24-hour student hackathon at the University of Cincinnati that is organized by <a href="http://acmatuc.org/" target="_blank">ACM@UC</a>. We invite you to join 300+ motivated students for an awesome weekend of code, community, and self-improvement! You don&rsquo;t have to have to be a computer science major or engineering student to attend. It&rsquo;s a learning experience for students of all skill levels!</p>
+                <p><strong>RevolutionUC</strong> is a 24-hour student hackathon at the University of Cincinnati that is organized by <a href="http://acmatuc.org/" target="_blank" rel="noopener">ACM@UC</a>. We invite you to join 300+ motivated students for an awesome weekend of code, community, and self-improvement! You don&rsquo;t have to have to be a computer science major or engineering student to attend. It&rsquo;s a learning experience for students of all skill levels!</p>
             </div>
         </section>
 
@@ -24,7 +31,14 @@ description: RevolutionUC Live Site
             </div>
 
             <div class="image">
-                <img src="https://assets.revolutionuc.com/website-images/2020/home/home-2-1x.png" alt="Photo taken at RevolutionUC">
+                <img
+                    srcset="https://assets.revolutionuc.com/website-images/2021/photos/1x/home-2.jpg,
+                            https://assets.revolutionuc.com/website-images/2021/photos/2x/home-2.jpg 2x,
+                            https://assets.revolutionuc.com/website-images/2021/photos/3x/home-2.jpg 3x,
+                            https://assets.revolutionuc.com/website-images/2021/photos/4x/home-2.jpg 4x"
+                    src="https://assets.revolutionuc.com/website-images/2021/photos/1x/home-2.jpg"
+                    alt="Photo taken at RevolutionUC"
+                >
             </div>
         </section>
     </div>
@@ -37,7 +51,7 @@ description: RevolutionUC Live Site
                 {% for hack in site.data.past-hacks reversed %}
                     <div class="hack hack--{{ hack.time | replace: ' ','-' }}">
                         <div class="hack__image">
-                            <a href="{{ hack.link }}" target="_blank">
+                            <a href="{{ hack.link }}" target="_blank" rel="noopener">
                                 <img class="past__hacks__image" src="{{ hack.image }}" alt="{{ hack.name }} logo">
                                 <div class="hack__text">{{ hack.time }}</div>
                             </a>
