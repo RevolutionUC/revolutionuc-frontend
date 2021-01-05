@@ -132,10 +132,10 @@ if (!registration_init) {
 
       // Call _submitForm if clicked accept
       var acceptButton = document.getElementById('submit-e-sign');
-      acceptButton.addEventListener('click', ()=> {
+      acceptButton.onclick = ()=> {
         eSignFormModal.style.display = 'none';
         this._submitForm(formData, true);
-      });
+      };
 
     }
 
