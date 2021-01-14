@@ -74,12 +74,22 @@
 #   link: https://www.geaviation.com
 #   image: https://assets.revolutionuc.com/sponsor-logos/2020/ge.svg
 #   svg: true
-# 
+
 - name: Wolfram Language
   link: https://www.wolfram.com/hackathons/
   image: https://assets.revolutionuc.com/sponsor-logos/2021/wolfram.svg
   svg: true
-# 
+
+- name: Kinetic Vision
+  link: https://kinetic-vision.com/
+  image: https://assets.revolutionuc.com/sponsor-logos/2021/kineticvision.png
+  webp: https://assets.revolutionuc.com/sponsor-logos/2021/kineticvision.webp
+
+- name: Electronic Arts
+  link: https://www.ea.com/
+  image: https://assets.revolutionuc.com/sponsor-logos/2021/ea.png
+  webp: https://assets.revolutionuc.com/sponsor-logos/2021/ea.webp
+
 # - name: StickerMule
 #   link: http://hackp.ac/mlh-stickermule-hackathons
 #   image: https://assets.revolutionuc.com/sponsor-logos/2020/sticker-mule.svg
