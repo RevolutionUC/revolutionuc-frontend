@@ -20,10 +20,10 @@
 #   image: https://assets.revolutionuc.com/sponsor-logos/2020/cyberatuc.svg
 #   svg: true
 
-# - name: Major League Hacking
-#   link: https://mlh.io/
-#   image: https://assets.revolutionuc.com/sponsor-logos/2020/mlh.svg
-#   svg: true
+- name: Major League Hacking
+  link: https://mlh.io/
+  image: https://assets.revolutionuc.com/sponsor-logos/2021/mlh.svg
+  svg: true
 
 # - name: EECS-GSA
 #   link: https://www.facebook.com/UC.EECSGSA
