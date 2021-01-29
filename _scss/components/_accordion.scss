@@ -1,0 +1,43 @@
+.accordion {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    font-size: 0.9rem;
+    summary {
+        width: 100%;
+        padding: 1em;
+        background-color: #fafafa;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        list-style-type: none; // Remove the details marker
+        &:hover {
+            background-color: #c6c6c6;
+        }
+
+        &::-webkit-details-marker {
+            display: none;
+        }
+    }
+
+    details[open] summary ~ * {
+        animation: sweep-out 0.5s ease-in-out;
+    }
+
+    .accordion__content {
+        p {
+            margin: 0;
+            padding: 1em;
+        }
+    }
+}
+
+@keyframes sweep-out {
+    0% {
+        opacity: 0;
+        transform: translateY(-8px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
