@@ -6,12 +6,13 @@
     summary {
         width: 100%;
         padding: 1em;
-        background-color: #fafafa;
         cursor: pointer;
         transition: background-color 0.3s;
         list-style-type: none; // Remove the details marker
+        background-color: $prim-color-4;
+
         &:hover {
-            background-color: #c6c6c6;
+            background-color: lighten($prim-color-4, 5%);
         }
 
         &::-webkit-details-marker {
