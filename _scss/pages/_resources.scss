@@ -1,9 +1,10 @@
-.live-row {
+.resources-row {
     width: 100%;
     padding-bottom: 16px;
+
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    grid-gap: 16px;
+    grid-gap: 25px;
 
     .columns-12 {
         grid-column: span 12;
@@ -54,14 +55,8 @@
         }
     }
 
-    .live-section {
+    .resources-section {
         border-radius: 5px;
-
-        &.live-section--twitter {
-            @media (max-width: $medium-breakpoint) {
-                display: none;
-            }
-        }
 
         @media (max-width: $medium-breakpoint) {
             grid-column: span 12;
@@ -73,26 +68,17 @@
     }
 }
 
-.live-table {
+.resources-table {
     font-size: 2vmin;
     width: 100%;
 }
 
-.live--container {
+.resources--container {
     width: 100%;
     margin: 0 auto;
 }
 
-.live-section--judging {
-    @media (max-width: $medium-breakpoint) {
-        grid-column: span 12;
-        width: 100% !important; // fixes a bug with last columns not being 100%
-        float: none;
-        margin-left: 0;
-    }
-}
-
-.live--card-header {
+.resources--card-header {
     margin-top: 1rem;
     margin-bottom: 0.5rem;
 
@@ -101,23 +87,31 @@
     }
 }
 
-.live--side-bar-content {
-    display: flex;
-    justify-content: center;
+.container--links {
+  max-width: 1000px;
 }
 
-.live--card-p {
-    margin-top: 0.5rem;
+.resources-section {
+  details {
+    margin-top: 15px;
+  }
+
+  h3 {
+    margin-bottom: 5px;
+  }
+
+  ul {
+    list-style-type: disc;
+    margin-top: 0;
     margin-bottom: 0;
-}
 
-.live--link-list {
-    list-style: none;
-    padding-left: 0%;
-    margin-top: 0%;
-    margin-bottom: 0%;
-
-    &.maps {
-        text-align: center;
+    li {
+      margin-top: 5px;
     }
+  }
+
+  .accordion__content {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
 }
