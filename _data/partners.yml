@@ -15,10 +15,10 @@
 # image: svg of the logo
 # svg: true <- this is REQUIRED
 
-# - name: Cyber@UC
-#   link: https://www.cyberatuc.org
-#   image: https://assets.revolutionuc.com/sponsor-logos/2020/cyberatuc.svg
-#   svg: true
+- name: Cyber@UC
+  link: https://www.cyberatuc.org
+  image: https://assets.revolutionuc.com/sponsor-logos/2021/cyberatuc.svg
+  svg: true
 
 - name: Major League Hacking
   link: https://mlh.io/
