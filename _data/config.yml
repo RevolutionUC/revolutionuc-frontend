@@ -6,6 +6,7 @@ navbar:
   sponsors: true
   about: true
   faq: true
+  resources: true
   register: false
 
 homepage:
