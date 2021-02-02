@@ -1,14 +1,19 @@
-- time: 2:45 - 3:15
-  company: Fifth Third Bank
-  topic: Intro to AR
-  room: Baldwin 764
+#- time: 2:45 - 3:15
+#  company: Fifth Third Bank
+#  topic: Intro to AR
+#  room: Baldwin 764
+#
+#- time: 3:30 - 4:00
+#  company: Noah Trenaman
+#  topic: Hands-on Computer Vision with Tensorflow
+#  room: Baldwin 749
+#
+#- time: 4:15 - 4:45
+#  company: SALD
+#  topic: Inclusive Leadership
+#  room: Baldwin 764
 
-- time: 3:30 - 4:00
-  company: Noah Trenaman
-  topic: Hands-on Computer Vision with Tensorflow
-  room: Baldwin 749
-
-- time: 4:15 - 4:45
-  company: SALD
-  topic: Inclusive Leadership
-  room: Baldwin 764
+- time: 'TBD'
+  company: 'TBD'
+  topic: 'TBD'
+  room: 'TBD'

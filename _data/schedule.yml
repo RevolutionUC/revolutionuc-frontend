@@ -1,87 +1,98 @@
-- date: TBD
-  #
-  #- time: 11:00 AM
-  #  event: Check-In Opens
-  #  location: 4th Floor Zimmer 
-  #
-  #- time: 11:00 AM
-  #  event: Sponsor Expo Begins
-  #  location: 4th Floor Zimmer 
-  #
-  #- time: 11:00 AM
-  #  event: Lunch
-  #  location: Zimmer Auditorium
-  #
-  #- time: 12:00 PM
-  #  event: Opening Ceremony
-  #  location: Zimmer Auditorium
-  #
-  #- time: 1:00 PM
-  #  event: Team Formation
-  #  location: Zimmer 413
-  #
-  #- time: 1:30 PM
-  #  event: Hacking Begins
-  #  location: Rhodes Hackerspace
-  #
-  #- time: 2:00 PM
-  #  event: Capture The Flag Intro Session
-  #  location: Baldwin 749
-  #
-  #- time: 2:45 PM - 4:30 PM
-  #  event: Workshops
-  #  location: 7th Floor Baldwin
-  #
-  #- time: 6:00 PM
-  #  event: Dinner
-  #  location: Baldwin 544
-  #
-  #- time: 7:00 PM
-  #  event: Slideshow Karaoke
-  #  location: Baldwin 749
-  #
-  #- time: 8:00 PM
-  #  event: MLH Capture The Flag
-  #  location: Baldwin 749
-  #
-  #- date: February 23rd
-  #
-  #- time: 12:00 AM
-  #  event: Midnight Snack
-  #  location: Rhodes 8th Floor Lobby
-  #
-  #- time: 1:00 AM
-  #  event: Paper Airplane Hacktivity
-  #  location: Rhodes 8th Floor Lobby
-  #
-  #- time: 6:00 AM
-  #  event: Lightning Talks
-  #  location: Baldwin 544
-  #
-  #- time: 8:00 AM
-  #  event: Breakfast
-  #  location: Rhodes 8th Floor Lobby
-  #
-  #- time: 12:00 PM
-  #  event: Lunch
-  #  location: Baldwin 544
-  #
-  #- time: 1:30 PM
-  #  event: Hacking Ends
-  #  location: Rhodes Hackerspace
-  #
-  #- time: 1:30 PM
-  #  event: Judging Begins
-  #  location: Rhodes Hackerspace
-  #
-  #- time: 2:45 PM
-  #  event: Final Demos
-  #  location: Zimmer Auditorium
-  #
-  #- time: 3:30 PM
-  #  event: Awards/Closing Ceremony
-  #  location: Zimmer Auditorium
-  #
-  #- time: 4:30 PM
-  #  event: Event Ends
-  #  location: Zimmer Auditorium
+- date: February 22nd
+#
+#- time: 11:00 AM
+#  event: Check-In Opens
+#  location: 4th Floor Zimmer 
+#
+#- time: 11:00 AM
+#  event: Sponsor Expo Begins
+#  location: 4th Floor Zimmer 
+#
+#- time: 11:00 AM
+#  event: Lunch
+#  location: Zimmer Auditorium
+#
+#- time: 12:00 PM
+#  event: Opening Ceremony
+#  location: Zimmer Auditorium
+#
+#- time: 1:00 PM
+#  event: Team Formation
+#  location: Zimmer 413
+#
+#- time: 1:30 PM
+#  event: Hacking Begins
+#  location: Rhodes Hackerspace
+#
+#- time: 2:00 PM
+#  event: Capture The Flag Intro Session
+#  location: Baldwin 749
+#
+#- time: 2:45 PM - 4:30 PM
+#  event: Workshops
+#  location: 7th Floor Baldwin
+#
+#- time: 6:00 PM
+#  event: Dinner
+#  location: Baldwin 544
+#
+#- time: 7:00 PM
+#  event: Slideshow Karaoke
+#  location: Baldwin 749
+#
+#- time: 8:00 PM
+#  event: MLH Capture The Flag
+#  location: Baldwin 749
+
+- time: 'TBD'
+  event: 'TBD'
+  location: 'TBD'
+
+- date: February 23rd
+
+
+-  time: 'TBD'
+   event: 'TBD'
+   location: 'TBD'
+
+#- time: 12:00 AM
+#  event: Midnight Snack
+#  location: Rhodes 8th Floor Lobby
+#
+#- time: 1:00 AM
+#  event: Paper Airplane Hacktivity
+#  location: Rhodes 8th Floor Lobby
+#
+#- time: 6:00 AM
+#  event: Lightning Talks
+#  location: Baldwin 544
+#
+#- time: 8:00 AM
+#  event: Breakfast
+#  location: Rhodes 8th Floor Lobby
+#
+#- time: 12:00 PM
+#  event: Lunch
+#  location: Baldwin 544
+#
+#- time: 1:30 PM
+#  event: Hacking Ends
+#  location: Rhodes Hackerspace
+#
+#- time: 1:30 PM
+#  event: Judging Begins
+#  location: Rhodes Hackerspace
+#
+#- time: 2:45 PM
+#  event: Final Demos
+#  location: Zimmer Auditorium
+#
+#- time: 3:30 PM
+#  event: Awards/Closing Ceremony
+#  location: Zimmer Auditorium
+#
+#- time: 4:30 PM
+#  event: Event Ends
+#  location: Zimmer Auditorium
+#
+
