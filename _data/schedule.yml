@@ -6,6 +6,10 @@
 
 - date: February 20th
 
+- time: 10:00 AM
+  event: Sponsor Expo
+  location: Hopin 
+
 - time: 12:00 PM
   event: Opening Ceremony
   location: Hopin 
@@ -14,54 +18,54 @@
 #   event: Team Formation
 #   location: Discord
 
-#- time: 12:00 PM
-#  event: Opening Ceremony
-#  location: Zimmer Auditorium
-
 - time: 1:00 PM
   event: Hacking Begins
 
-# - time: 1:30 PM
-#   event: Meet the Mentors
-#   location: Discord
+- time: 1:00 PM
+  event: Team Formation
+  location: Hopin
 
-# - time: 1:30 PM
-#   event: CTF Intro Session
-#   location: Discord
+- time: 1:30 PM
+  event: Meet the Mentors
+  location: Discord
 
-# - time: 3:00 PM - 7:00 PM
-#   event: Workshops
-#   location: Hopin
+- time: 1:30 PM
+  event: CTF Intro Session
+  location: Discord
 
-# - time: 8:00 PM
-#   event: Networking Hour
-#   location: Hopin
+- time: 3:00 PM - 6:00 PM
+  event: Workshops
+  location: Hopin
 
-#- time: 7:00 PM
-#  event: Slideshow Karaoke
-#  location: Baldwin 749
-#
-#- time: 8:00 PM
-#  event: MLH Capture The Flag
-#  location: Baldwin 749
-  #
+- time: 8:00 PM
+  event: Network Hour
+  location: Hopin
+
+- time: 10:00 PM
+  event: Skribbl.io Tournament
+  location: Discord
+
 - date: February 21st
-#
-#- time: 12:00 AM
-#  event: Midnight Snack
-#  location: Rhodes 8th Floor Lobby
-#
-#- time: 1:00 AM
-#  event: Paper Airplane Hacktivity
-#  location: Rhodes 8th Floor Lobby
-#
-#- time: 6:00 AM
-#  event: Lightning Talks
-#  location: Baldwin 544
 
-# - time: 10:00 AM
-#   event: Submission Starts
-#   location: Devpost
+- time: 12:00 AM
+  event: Social Hour
+  location: Discord
+
+- time: 2:00 AM
+  event: Bob Ross MS Paint
+  location: Discord
+
+- time: 4:00 AM
+  event: Gaming Hour
+  location: Discord
+
+- time: 6:00 AM
+  event: Question of the Hour
+  location: Discord
+
+- time: 8:00 AM
+  event: Morning Stretches
+  location: Discord
 
 - time: 1:00 PM
   event: Hacking Ends
@@ -72,7 +76,7 @@
 
 - time: 1:30 PM - 3:30 PM
   event: Judging
-  location: Hopin
+  location: Discord
 
 #- time: 2:45 PM
 #  event: Final Demos
