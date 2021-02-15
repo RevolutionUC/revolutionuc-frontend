@@ -69,11 +69,6 @@
   link: https://www.twilio.com/
   image: https://assets.revolutionuc.com/sponsor-logos/2021/twilio.png
   webp: https://assets.revolutionuc.com/sponsor-logos/2021/twilio.webp
-# 
-# - name: GE Aviation
-#   link: https://www.geaviation.com
-#   image: https://assets.revolutionuc.com/sponsor-logos/2020/ge.svg
-#   svg: true
 
 - name: Wolfram Language
   link: https://www.wolfram.com/hackathons/
@@ -90,15 +85,15 @@
   image: https://assets.revolutionuc.com/sponsor-logos/2021/ea.png
   webp: https://assets.revolutionuc.com/sponsor-logos/2021/ea.webp
 
-# - name: StickerMule
-#   link: http://hackp.ac/mlh-stickermule-hackathons
-#   image: https://assets.revolutionuc.com/sponsor-logos/2020/sticker-mule.svg
-#   svg: true
-# 
-# - name: Example 1
-#   link: https://example.com/
-#   image: https://assets.revolutionuc.com/sponsor-logos/YEAR/example.png
-#   webp: https://assets.revolutionuc.com/sponsor-logos/YEAR/example.webp
+- name: StickerMule
+  link: http://hackp.ac/mlh-stickermule-hackathons
+  image: https://assets.revolutionuc.com/sponsor-logos/2021/sticker-mule.svg
+  svg: true
+
+- name: The Codex
+  link: https://thecodex.me/
+  image: https://assets.revolutionuc.com/sponsor-logos/2021/codex.png
+  webp: https://assets.revolutionuc.com/sponsor-logos/2021/codex.webp
   
 # - name: Example 2
 #   link: https://example.com/
