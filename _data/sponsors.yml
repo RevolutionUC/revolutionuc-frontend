@@ -95,6 +95,11 @@
   image: https://assets.revolutionuc.com/sponsor-logos/2021/codex.png
   webp: https://assets.revolutionuc.com/sponsor-logos/2021/codex.webp
   
+- name: GSG
+  link: https://www.uc.edu/campus-life/grad-student-gov.html
+  image: https://assets.revolutionuc.com/sponsor-logos/2021/GSG.png
+  webp: https://assets.revolutionuc.com/sponsor-logos/2021/GSG.webp
+  
 # - name: Example 2
 #   link: https://example.com/
 #   image: https://assets.revolutionuc.com/sponsor-logos/YEAR/example.png
