@@ -13,7 +13,8 @@ function initProgressBar(start, end, time = "day") {
   if (now.getTime() < startDate.getTime()) {
     barForeground.style.display = 'none';
     barBackground.style.display = 'none';
-    countdownText.style.display = 'none';
+    //countdownText.style.display = 'none';
+    countdownText.innerHTML = "Hacking Begins @ 1pm 02/20 !";
     return;
   } else if (now.getTime() > endDate.getTime()) {
     barForeground.style.width = '0%';
