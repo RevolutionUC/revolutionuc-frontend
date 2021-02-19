@@ -33,9 +33,25 @@
   event: CTF Intro Session
   location: Discord
 
-- time: 3:00 PM - 6:00 PM
-  event: Workshops
+- time: 3:00 PM
+  event: Data Visualization Workshop
   location: Hopin
+
+- time: 4:00 PM
+  event: Intro to UI Design with Adobe XD
+  location: Hopin
+
+- time: 5:00 PM
+  event: Diversity Workshop
+  location: Hopin
+
+- time: 6:00 PM
+  event: MLH No Light
+  location: Discord
+
+- time: 6:30 PM
+  event: MLH Cyber Security Challenge
+  location: Discord
 
 - time: 8:00 PM
   event: Network Hour
@@ -67,6 +83,9 @@
   event: Morning Stretches
   location: Discord
 
+- time: 12:00 PM
+  event: Submit to Devpost
+
 - time: 1:00 PM
   event: Hacking Ends
 
@@ -75,7 +94,7 @@
   location: Hopin
 
 - time: 1:30 PM - 3:30 PM
-  event: Judging
+  event: Live Judging
   location: Discord
 
 #- time: 2:45 PM
