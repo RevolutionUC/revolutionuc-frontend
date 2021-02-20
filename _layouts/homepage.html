@@ -29,6 +29,16 @@
     {% endif %}
     <!-- ================================================== -->
 
+    <!-- ========== Live button ========== -->
+    {% if site.data.config.homepage.timeline == "live" %}
+    <p>A hackathon hosted at the University of Cincinnati - {{ site.data.config.eventData.fullDate }}</p>
+    <p>Live now!</p>
+    <div class="hero__heading">
+      <a class="btn btn--primary" href="/live">Live Site</a>
+    </div>
+    {% endif %}
+    <!-- ================================================== -->
+
     <!-- ========== Post hackathon info and button ========== -->
     {% if site.data.config.homepage.timeline == "post-registration" %}
     <p>Thank you all for participating in this year's RevolutionUC!</p>
