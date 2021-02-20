@@ -10,8 +10,8 @@ navbar:
   register: false
 
 homepage:
-  # The timeline options are: pre-registration, registration, post-registration
-  timeline: registration
+  # The timeline options are: pre-registration, registration, live, post-registration
+  timeline: live
 
 livesite:
     show-livesite: false
