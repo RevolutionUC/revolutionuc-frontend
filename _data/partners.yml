@@ -14,28 +14,4 @@
 # If it is an svg:
 # image: svg of the logo
 # svg: true <- this is REQUIRED
-
-- name: Cyber@UC
-  link: https://www.cyberatuc.org
-  image: https://assets.revolutionuc.com/sponsor-logos/2021/cyberatuc.svg
-  svg: true
-
-- name: Major League Hacking
-  link: https://mlh.io/
-  image: https://assets.revolutionuc.com/sponsor-logos/2021/mlh.svg
-  svg: true
-
-# - name: EECS-GSA
-#   link: https://www.facebook.com/UC.EECSGSA
-#   image: https://assets.revolutionuc.com/sponsor-logos/2020/eecsgsa.png
-#   webp: https://assets.revolutionuc.com/sponsor-logos/2020/eecsgsa.webp
-
-# - name: Example 1
-#   link: /sponsors/
-#   image: /img/sponsors/placeholder.png
-#   # webp: /img/sponsors/placeholder.webp
-
-# - name: Example 2
-#   link: /sponsors/
-#   image: /img/sponsors/placeholder.svg
-#   svg: true
+#
