@@ -7,6 +7,7 @@ useContainer: false
 description: Event Schedule for RevolutionUC — Hackathon at the University of Cincinnati from February 20-21, 2021
 ---
 
+{% if site.data.schedule %}
 <div class="container">
     <div class="schedule">
         {% for item in site.data.schedule %}
@@ -30,6 +31,7 @@ description: Event Schedule for RevolutionUC — Hackathon at the University of 
         {% endfor %}
     </div>
 </div>
+{% endif %}
 
 
 <!-- Placeholder block, just delete the whole thing below -->
