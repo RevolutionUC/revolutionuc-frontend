@@ -9,319 +9,361 @@ description: Not sure how to get started at RevolutionUC? Explore the list of re
 ---
 
 <div class="container container--links section">
-    <div class="">
-      {% if site.data.resources.mentors.length %}
-        <div class="resources-section card columns-6">
-            <!-- columns-6 -->
-            <h3 class="resources--card-header header-top">Mentors</h3>
-            <table class="resources-table">
-                <thead>
-                    <th>Names</th>
-                    <th>Expertise</th>
-                    <th>Discord username</th>
-                </thead>
-                <tbody>
-                    <!-- Add some data-fetching for-loop here -->
-                    <tr>
-                        <td>
-                            <b>Robert'); DROP TABLE Students;--</b>
-                        </td>
-                        <td>Hacking nasa</td>
-                        <td>@xkcd327</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-      {% endif %}
+    {% if site.data.resources.mentors.length %}
+    <!-- <div class="resources-section card columns-6">
+        <h3 class="resources--card-header header-top">Mentors</h3>
+        <table class="resources-table">
+            <thead>
+                <th>Names</th>
+                <th>Expertise</th>
+                <th>Discord username</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <b>Robert'); DROP TABLE Students;--</b>
+                    </td>
+                    <td>Hacking nasa</td>
+                    <td>@xkcd327</td>
+                </tr>
+            </tbody>
+        </table>
+    </div> -->
+    {% endif %}
 
-        <div class="resources-section card">
-          <h3 class="resources--card-header header-top">Sponsor Resources!</h3>
-          <div class="accordion">
+    <div class="resources-section card">
+        <br>
+        <h3 class="resources--card-header header-top">Links!</h3>
+        <div class="accordion">
             <details>
-              <summary>The Codex Resources</summary>
-              <div class="accordion__content">
-                <p>
-                  Our amazing sponsors <a href="https://thecodex.me">The Codex</a> are the best platform to learn python by learning it hands-on! Create projects and applications with the help of their platform. Use the code 'REVOLUTIONUC' and get a month's free access to the 'Pro Create' Codex platform.
-                </p>
-                <p>Check out <a href="https://thecodex.me">The Codex</a> resources.</p>
-              </div>
-            </details>
-          </div>
-          <br>
-          <h3 class="resources--card-header header-top">MLH Resources!</h3>
-          <div class="accordion">
-            <details>
-              <summary>MLH Resources</summary>
-              <div class="accordion__content">
-                <p>
-                  Our partners at <a href="https://hack.mlh.io/software/">MLH</a> are providing hackers with upto 100$ in credits for Google Cloud, a cloud database by Datastax, GitHub Student pack, access to Radar SDKs & APIs for awesome location aware projects, access to Cockroach DB as well as a free domain for a year by Domain.com and GoDaddy!
-                </p>
-                <p>Check out <a href="https://hack.mlh.io/software/">Major League Hacking</a> resources. </p>
-              </div>
-            </details>
-          </div>
-          <br>
-          <h3 class="resources--card-header header-top">Links!</h3>
-          <div class="accordion">
-            <details>
-              <summary>Youtube</summary>
-              <div class="accordion__content">
-                <h4>Get started Programming:</h4>
-                <dl>
-                  <dt> <a href="https://www.youtube.com/channel/UCSxIcr2rZZcoU7rSGXaEQag">Coding 101</a> </dt>
-                  <dd>Coding 101 breaks down the basics of programming for beginners to help newcomers get started quickly.</dd>
-                  <dt> <a href="https://www.youtube.com/channel/UCO1cgjhGzsSYb1rsB4bFe4Q">FunFunFunction</a> </dt>
-                  <dd>Although FunFunFuntion focuses largely on JavaScript the videos also focus on larger topics and ideas within the programming world. The videos are varying in length from 15 minutes sometimes up to an hour!</dd>
-                  <dt> <a href="https://www.youtube.com/c/ProgrammingKnowledge">Programming Knowledge</a> </dt>
-                  <dd>ProgrammingKnowledge has a large number of playlists for a variety of technologies like Machine Learning, Linux, VMware as well as basic programming languages ranging from Java, Python, C, C++, PHP! </dd>
-                </dl>
-                
-                <h4>Learn Game Dev:</h4>
-                <dl>
-                  <dt> <a href="https://www.youtube.com/channel/UCG08EqOAXJk_YXPDsAvReSg">Unity</a> </dt>
-                  <dd>Unity software, one of the most popular platforms to develop games on has their own youtube channel which would help you hackers get started and gain helpful insight required develop the game that you want!</dd>
-                  <dt> <a href="https://www.youtube.com/extracredits">Extra Credits</a> </dt>
-                  <dd>Extra Credits’ channel is focused on all-things game design! They discuss game design, level design, and more detailed and nuanced topics to help you refine your skills for game development.</dd>
-                </dl>
-                
-                <h4>Learn Embedded Hardware / Hack IoT:</h4>
-                <dl>
-                  <dt> <a href="https://www.youtube.com/user/greatscottlab">Great Scott!</a> </dt>
-                  <dd>GreatScott!’s channel is great for looking at and learning from his hardware-based projects! His videos are extremely entertaining and highly informative. Delve into the IoT/embedded hardware world and come up with cool IoT hacks!</dd>
-                  <dt> <a href="https://www.youtube.com/c/learnelectronics">Learn Electronics</a> </dt>
-                  <dd>LearnElectronics is a channel focused on IoT devices and the projects discussed and reviewed would inspire you to make your own ideas.</dd>
-                </dl>
-              </div>
-            </details>
-          
-            <details>
-              <summary>Starter Kits</summary>
-              <div class="accordion__content">                                
-                <h3>
-                  Build Your Own
-                </h3>
-                <div class="resources-row">
-                  <div class="columns-6">
-                    <ul>
-                      <li>
-                        <a target="_blank" href="https://github.com/danistefanovic/build-your-own-x#build-your-own-3d-renderer">3D Renderer</a>
-                      </li>
-                      <li>
-                        <a target="_blank" href="https://github.com/danistefanovic/build-your-own-x#build-your-own-augmented-reality">Augmented Reality</a>
-                      </li>
-                      <li>
-                        <a target="_blank" href="https://github.com/danistefanovic/build-your-own-x#build-your-own-bittorrent-client">BitTorrent Client</a>
-                      </li>
-                      <li>
-                        <a target="_blank" href="https://github.com/danistefanovic/build-your-own-x#build-your-own-blockchain--cryptocurrency">Blockchain / Cryptocurrency</a>
-                      </li>
-                      <li>
-                        <a target="_blank" href="https://github.com/danistefanovic/build-your-own-x#build-your-own-bot">Bot</a>
-                      </li>
-                      <li>
-                        <a target="_blank" href="https://github.com/danistefanovic/build-your-own-x#build-your-own-command-line-tool">Command-Line Tool</a>
-                      </li>
-                      <li>
-                        <a target="_blank" href="https://github.com/danistefanovic/build-your-own-x#build-your-own-database">Database</a>
-                      </li>
-                      <li>
-                        <a target="_blank" href="https://github.com/danistefanovic/build-your-own-x#build-your-own-docker">Docker</a>
-                      </li>
-                      <li>
-                        <a target="_blank" href="https://github.com/danistefanovic/build-your-own-x#build-your-own-emulator--virtual-machine">Emulator / Virtual Machine</a>
-                      </li>
-                      <li>
-                        <a target="_blank" href="https://github.com/danistefanovic/build-your-own-x#build-your-own-front-end-framework--library">Front-end Framework / Library</a>
-                      </li>
-                      <li>
-                        <a target="_blank" href="https://github.com/danistefanovic/build-your-own-x#build-your-own-game">Game</a>
-                      </li>
-                      <li>
-                        <a target="_blank" href="https://github.com/danistefanovic/build-your-own-x#build-your-own-git">Git</a>
-                      </li>
-                      <li>
-                        <a target="_blank" href="https://github.com/danistefanovic/build-your-own-x#build-your-own-network-stack">Network Stack</a>
-                      </li>
-                      <li>
-                        <a target="_blank" href="https://github.com/danistefanovic/build-your-own-x#build-your-own-neural-network">Neural Network</a>
-                      </li>
-                    </ul>
-                  </div>
-                  <div class="columns-6">
-                    <ul>
-                      <li>
-                        <a target="_blank" href="https://github.com/danistefanovic/build-your-own-x#build-your-own-operating-system">Operating
-                        System</a>
-                      </li>
-                      <li>
-                        <a target="_blank" href="https://github.com/danistefanovic/build-your-own-x#build-your-own-physics-engine">Physics
-                        Engine</a>
-                      </li>
-                      <li>
-                        <a target="_blank" href="https://github.com/danistefanovic/build-your-own-x#build-your-own-programming-language">Programming
-                        Language</a>
-                      </li>
-                      <li>
-                        <a target="_blank" href="https://github.com/danistefanovic/build-your-own-x#build-your-own-regex-engine">Regex
-                        Engine</a>
-                      </li>
-                      <li>
-                        <a target="_blank" href="https://github.com/danistefanovic/build-your-own-x#build-your-own-search-engine">Search
-                        Engine</a>
-                      </li>
-                      <li>
-                        <a target="_blank" href="https://github.com/danistefanovic/build-your-own-x#build-your-own-shell">Shell</a>
-                      </li>
-                      <li>
-                        <a target="_blank" href="https://github.com/danistefanovic/build-your-own-x#build-your-own-template-engine">Template
-                        Engine</a>
-                      </li>
-                      <li>
-                        <a target="_blank" href="https://github.com/danistefanovic/build-your-own-x#build-your-own-text-editor">Text
-                        Editor</a>
-                      </li>
-                      <li>
-                        <a target="_blank" href="https://github.com/danistefanovic/build-your-own-x#build-your-own-visual-recognition-system">Visual
-                        Recognition System</a>
-                      </li>
-                      <li>
-                        <a target="_blank" href="https://github.com/danistefanovic/build-your-own-x#build-your-own-voxel-engine">Voxel
-                        Engine</a>
-                      </li>
-                      <li>
-                        <a target="_blank" href="https://github.com/danistefanovic/build-your-own-x#build-your-own-web-search-engine">Web
-                        Search Engine</a>
-                      </li>
-                      <li>
-                        <a target="_blank" href="https://github.com/danistefanovic/build-your-own-x#build-your-own-web-server">Web
-                        Server</a>
-                      </li>
-                      <li>
-                        <a target="_blank" href="https://github.com/danistefanovic/build-your-own-x#uncategorized">Uncategorized</a>
-                      </li>
-                    </ul>
-                  </div>
+                <summary>Youtube</summary>
+                <div class="accordion__content">
+                    <h4>Get started Programming:</h4>
+                    <dl>
+                        <dt> <a href="https://www.youtube.com/channel/UCSxIcr2rZZcoU7rSGXaEQag">Coding 101</a> </dt>
+                        <dd>Coding 101 breaks down the basics of programming for beginners to help newcomers get started
+                            quickly.
+                        </dd>
+                        <dt> <a href="https://www.youtube.com/channel/UCO1cgjhGzsSYb1rsB4bFe4Q">FunFunFunction</a> </dt>
+                        <dd>Although FunFunFuntion focuses largely on JavaScript the videos also focus on larger topics
+                            and ideas
+                            within the programming world. The videos are varying in length from 15 minutes sometimes up
+                            to an hour!
+                        </dd>
+                        <dt> <a href="https://www.youtube.com/c/ProgrammingKnowledge">Programming Knowledge</a> </dt>
+                        <dd>ProgrammingKnowledge has a large number of playlists for a variety of technologies like
+                            Machine
+                            Learning, Linux, VMware as well as basic programming languages ranging from Java, Python, C,
+                            C++, PHP!
+                        </dd>
+                    </dl>
+
+                    <h4>Learn Game Dev:</h4>
+                    <dl>
+                        <dt> <a href="https://www.youtube.com/channel/UCG08EqOAXJk_YXPDsAvReSg">Unity</a> </dt>
+                        <dd>Unity software, one of the most popular platforms to develop games on has their own youtube
+                            channel
+                            which would help you hackers get started and gain helpful insight required develop the game
+                            that you want!
+                        </dd>
+                        <dt> <a href="https://www.youtube.com/extracredits">Extra Credits</a> </dt>
+                        <dd>Extra Credits’ channel is focused on all-things game design! They discuss game design, level
+                            design, and
+                            more detailed and nuanced topics to help you refine your skills for game development.</dd>
+                    </dl>
+
+                    <h4>Learn Embedded Hardware / Hack IoT:</h4>
+                    <dl>
+                        <dt> <a href="https://www.youtube.com/user/greatscottlab">Great Scott!</a> </dt>
+                        <dd>GreatScott!’s channel is great for looking at and learning from his hardware-based projects!
+                            His videos
+                            are extremely entertaining and highly informative. Delve into the IoT/embedded hardware
+                            world and come up
+                            with cool IoT hacks!</dd>
+                        <dt> <a href="https://www.youtube.com/c/learnelectronics">Learn Electronics</a> </dt>
+                        <dd>LearnElectronics is a channel focused on IoT devices and the projects discussed and reviewed
+                            would
+                            inspire you to make your own ideas.</dd>
+                    </dl>
                 </div>
-                <h3>
-                  Boilerplate for Node.js Applications
-                </h3>
-                <p>
-                  Resource Link:&nbsp;
-                  <a target="_blank" href="https://github.com/sahat/hackathon-starter">github.com/sahat/hackathon-starter</a>
-                  <br>
-                  Live Demo:&nbsp;
-                  <a target="_blank" href="https://hackathon-starter.walcony.com/">hackathon-starter.walcony.com</a>
-                </p>
-                <p>
-                  If you have attended any hackathons in the past, then you know how much time it takes to get a
-                  project started:
-                  decide on what to build, pick a programming language, pick a web framework, pick a styling framework. A
-                  while later,
-                  you might have an initial project up on GitHub and only then can other team members start
-                  contributing.
-                </p>
-                <p>
-                  The primary focus is on simplicity and ease of use. The owner of this project also tried to make it
-                  as generic and reusable
-                  as possible to cover most use cases of hackathon web apps, without being too specific.
-                </p>
-              </div>
+            </details>
+
+            <details>
+                <summary>Starter Kits</summary>
+                <div class="accordion__content">
+                    <h3>
+                        Build Your Own
+                    </h3>
+                    <div class="resources-row">
+                        <div class="columns-6">
+                            <ul>
+                                <li>
+                                    <a target="_blank"
+                                        href="https://github.com/danistefanovic/build-your-own-x#build-your-own-3d-renderer">3D
+                                        Renderer</a>
+                                </li>
+                                <li>
+                                    <a target="_blank"
+                                        href="https://github.com/danistefanovic/build-your-own-x#build-your-own-augmented-reality">Augmented
+                                        Reality</a>
+                                </li>
+                                <li>
+                                    <a target="_blank"
+                                        href="https://github.com/danistefanovic/build-your-own-x#build-your-own-bittorrent-client">BitTorrent
+                                        Client</a>
+                                </li>
+                                <li>
+                                    <a target="_blank"
+                                        href="https://github.com/danistefanovic/build-your-own-x#build-your-own-blockchain--cryptocurrency">Blockchain
+                                        / Cryptocurrency</a>
+                                </li>
+                                <li>
+                                    <a target="_blank"
+                                        href="https://github.com/danistefanovic/build-your-own-x#build-your-own-bot">Bot</a>
+                                </li>
+                                <li>
+                                    <a target="_blank"
+                                        href="https://github.com/danistefanovic/build-your-own-x#build-your-own-command-line-tool">Command-Line
+                                        Tool</a>
+                                </li>
+                                <li>
+                                    <a target="_blank"
+                                        href="https://github.com/danistefanovic/build-your-own-x#build-your-own-database">Database</a>
+                                </li>
+                                <li>
+                                    <a target="_blank"
+                                        href="https://github.com/danistefanovic/build-your-own-x#build-your-own-docker">Docker</a>
+                                </li>
+                                <li>
+                                    <a target="_blank"
+                                        href="https://github.com/danistefanovic/build-your-own-x#build-your-own-emulator--virtual-machine">Emulator
+                                        / Virtual Machine</a>
+                                </li>
+                                <li>
+                                    <a target="_blank"
+                                        href="https://github.com/danistefanovic/build-your-own-x#build-your-own-front-end-framework--library">Front-end
+                                        Framework / Library</a>
+                                </li>
+                                <li>
+                                    <a target="_blank"
+                                        href="https://github.com/danistefanovic/build-your-own-x#build-your-own-game">Game</a>
+                                </li>
+                                <li>
+                                    <a target="_blank"
+                                        href="https://github.com/danistefanovic/build-your-own-x#build-your-own-git">Git</a>
+                                </li>
+                                <li>
+                                    <a target="_blank"
+                                        href="https://github.com/danistefanovic/build-your-own-x#build-your-own-network-stack">Network
+                                        Stack</a>
+                                </li>
+                                <li>
+                                    <a target="_blank"
+                                        href="https://github.com/danistefanovic/build-your-own-x#build-your-own-neural-network">Neural
+                                        Network</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="columns-6">
+                            <ul>
+                                <li>
+                                    <a target="_blank"
+                                        href="https://github.com/danistefanovic/build-your-own-x#build-your-own-operating-system">Operating
+                                        System</a>
+                                </li>
+                                <li>
+                                    <a target="_blank"
+                                        href="https://github.com/danistefanovic/build-your-own-x#build-your-own-physics-engine">Physics
+                                        Engine</a>
+                                </li>
+                                <li>
+                                    <a target="_blank"
+                                        href="https://github.com/danistefanovic/build-your-own-x#build-your-own-programming-language">Programming
+                                        Language</a>
+                                </li>
+                                <li>
+                                    <a target="_blank"
+                                        href="https://github.com/danistefanovic/build-your-own-x#build-your-own-regex-engine">Regex
+                                        Engine</a>
+                                </li>
+                                <li>
+                                    <a target="_blank"
+                                        href="https://github.com/danistefanovic/build-your-own-x#build-your-own-search-engine">Search
+                                        Engine</a>
+                                </li>
+                                <li>
+                                    <a target="_blank"
+                                        href="https://github.com/danistefanovic/build-your-own-x#build-your-own-shell">Shell</a>
+                                </li>
+                                <li>
+                                    <a target="_blank"
+                                        href="https://github.com/danistefanovic/build-your-own-x#build-your-own-template-engine">Template
+                                        Engine</a>
+                                </li>
+                                <li>
+                                    <a target="_blank"
+                                        href="https://github.com/danistefanovic/build-your-own-x#build-your-own-text-editor">Text
+                                        Editor</a>
+                                </li>
+                                <li>
+                                    <a target="_blank"
+                                        href="https://github.com/danistefanovic/build-your-own-x#build-your-own-visual-recognition-system">Visual
+                                        Recognition System</a>
+                                </li>
+                                <li>
+                                    <a target="_blank"
+                                        href="https://github.com/danistefanovic/build-your-own-x#build-your-own-voxel-engine">Voxel
+                                        Engine</a>
+                                </li>
+                                <li>
+                                    <a target="_blank"
+                                        href="https://github.com/danistefanovic/build-your-own-x#build-your-own-web-search-engine">Web
+                                        Search Engine</a>
+                                </li>
+                                <li>
+                                    <a target="_blank"
+                                        href="https://github.com/danistefanovic/build-your-own-x#build-your-own-web-server">Web
+                                        Server</a>
+                                </li>
+                                <li>
+                                    <a target="_blank"
+                                        href="https://github.com/danistefanovic/build-your-own-x#uncategorized">Uncategorized</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <h3>
+                        Boilerplate for Node.js Applications
+                    </h3>
+                    <p>
+                        Resource Link:&nbsp;
+                        <a target="_blank"
+                            href="https://github.com/sahat/hackathon-starter">github.com/sahat/hackathon-starter</a>
+                        <br>
+                        Live Demo:&nbsp;
+                        <a target="_blank"
+                            href="https://hackathon-starter.walcony.com/">hackathon-starter.walcony.com</a>
+                    </p>
+                    <p>
+                        If you have attended any hackathons in the past, then you know how much time it takes to get a
+                        project started:
+                        decide on what to build, pick a programming language, pick a web framework, pick a styling
+                        framework. A
+                        while later,
+                        you might have an initial project up on GitHub and only then can other team members start
+                        contributing.
+                    </p>
+                    <p>
+                        The primary focus is on simplicity and ease of use. The owner of this project also tried to make
+                        it
+                        as generic and reusable
+                        as possible to cover most use cases of hackathon web apps, without being too specific.
+                    </p>
+                </div>
             </details>
             <details>
-              <summary>MOOC Platforms</summary>
-              <div class="accordion__content">
-                <p>
-                  A massive open online course (MOOC) is an online course aimed at unlimited participation and open
-                  access via the web.
-                  In addition to traditional course materials, such as filmed lectures, readings, and problem sets,
-                  many MOOCs provide
-                  interactive courses with user forums or social media discussions to support community interactions
-                  among students,
-                  professors, and teaching assistants (TAs), as well as immediate feedback to quick quizzes and
-                  assignments.
-                </p>
-                <p>
-                  <strong>Note:&nbsp;</strong>MOOCs are great for learning. However, be careful to not submit code 
-                  from the tutorials/courses. MOOCs should be used solely for learning.
-                  <br>
-                  <ul>
-                    <li>
-                      <a target="_blank" href="https://www.coursera.org/">
-                        Coursera:
-                      </a>
-                      &nbsp;
-                      You can learn
-                      something new anytime, anywhere. Hundreds of free courses give you access to on-demand video
-                      lectures, homework
-                      exercises, and community discussion forums. Paid courses provide additional quizzes and projects
-                      as well as a
-                      shareable Course Certificate upon completion.
-                    </li>
-          
-                    <li>
-                      <a target="_blank" href="https://www.edx.org/">
-                        edX:
-                      </a>
-                      &nbsp;
-                      Supporting learners at every stage, whether entering the job market, changing fields, seeking a
-                      promotion or exploring
-                      new interests, edX delivers courses for curious minds on topics ranging from data and computer
-                      science to leadership
-                      and communications. edX is where you go to learn.
-                    </li>
-          
-                    <li>
-                      <a target="_blank" href="https://www.udemy.com/">
-                        Udemy:
-                      </a>
-                      &nbsp;
-                      Udemy is the leading global marketplace for teaching and learning, connecting millions of
-                      students to the skills they need to succeed.
-                      By connecting students all over the world to the best instructors, Udemy is helping individuals
-                      reach their goals and pursue their dreams.
-                    </li>
-          
-                    <li>
-                      <a target="_blank" href="https://www.lynda.com/">
-                        Lynda/LinkedIn Learning:
-                      </a>
-                      &nbsp;
-                      Lynda.com is a leading online learning platform that helps anyone learn business, software,
-                      technology and creative skills to achieve
-                      personal and professional goals. Through individual, corporate, academic and government
-                      subscriptions, members have access to the
-                      Lynda.com video library of engaging, top-quality courses.
-                    </li>
-          
-                    <li>
-                      <a target="_blank" href="https://aws.amazon.com/training/">
-                        Amazon AWS Training:
-                      </a>
-                      &nbsp;
-                      AWS Training
-                      and Certification helps you
-                      build and validate your cloud skills so you can get more out of the cloud. Our content is built
-                      by experts at AWS and updated
-                      regularly to keep pace with AWS updates, so you can be sure you’re learning the latest and
-                      keeping your cloud skills fresh.
-                    </li>
-          
-                    <li>
-                      <a target="_blank" href="https://docs.microsoft.com/en-us/learn/">
-                        Microsoft Learn:
-                      </a>
-                      &nbsp;
-                      Microsoft Learn is a free, online training platform that provides interactive learning for
-                      Microsoft products and more.
-                      Our goal is to help you become proficient on our technologies and learn more skills with fun,
-                      guided, hands-on, interactive
-                      content that's specific to your role and goals.
-                    </li>
-                  </ul>
-                </p>
-              </div>
+                <summary>MOOC Platforms</summary>
+                <div class="accordion__content">
+                    <p>
+                        A massive open online course (MOOC) is an online course aimed at unlimited participation and
+                        open
+                        access via the web.
+                        In addition to traditional course materials, such as filmed lectures, readings, and problem
+                        sets,
+                        many MOOCs provide
+                        interactive courses with user forums or social media discussions to support community
+                        interactions
+                        among students,
+                        professors, and teaching assistants (TAs), as well as immediate feedback to quick quizzes and
+                        assignments.
+                    </p>
+                    <p>
+                        <strong>Note:&nbsp;</strong>MOOCs are great for learning. However, be careful to not submit code
+                        from the tutorials/courses. MOOCs should be used solely for learning.
+                        <br>
+                    <ul>
+                        <li>
+                            <a target="_blank" href="https://www.coursera.org/">
+                                Coursera:
+                            </a>
+                            &nbsp;
+                            You can learn
+                            something new anytime, anywhere. Hundreds of free courses give you access to on-demand video
+                            lectures, homework
+                            exercises, and community discussion forums. Paid courses provide additional quizzes and
+                            projects
+                            as well as a
+                            shareable Course Certificate upon completion.
+                        </li>
+
+                        <li>
+                            <a target="_blank" href="https://www.edx.org/">
+                                edX:
+                            </a>
+                            &nbsp;
+                            Supporting learners at every stage, whether entering the job market, changing fields,
+                            seeking a
+                            promotion or exploring
+                            new interests, edX delivers courses for curious minds on topics ranging from data and
+                            computer
+                            science to leadership
+                            and communications. edX is where you go to learn.
+                        </li>
+
+                        <li>
+                            <a target="_blank" href="https://www.udemy.com/">
+                                Udemy:
+                            </a>
+                            &nbsp;
+                            Udemy is the leading global marketplace for teaching and learning, connecting millions of
+                            students to the skills they need to succeed.
+                            By connecting students all over the world to the best instructors, Udemy is helping
+                            individuals
+                            reach their goals and pursue their dreams.
+                        </li>
+
+                        <li>
+                            <a target="_blank" href="https://www.lynda.com/">
+                                Lynda/LinkedIn Learning:
+                            </a>
+                            &nbsp;
+                            Lynda.com is a leading online learning platform that helps anyone learn business, software,
+                            technology and creative skills to achieve
+                            personal and professional goals. Through individual, corporate, academic and government
+                            subscriptions, members have access to the
+                            Lynda.com video library of engaging, top-quality courses.
+                        </li>
+
+                        <li>
+                            <a target="_blank" href="https://aws.amazon.com/training/">
+                                Amazon AWS Training:
+                            </a>
+                            &nbsp;
+                            AWS Training
+                            and Certification helps you
+                            build and validate your cloud skills so you can get more out of the cloud. Our content is
+                            built
+                            by experts at AWS and updated
+                            regularly to keep pace with AWS updates, so you can be sure you’re learning the latest and
+                            keeping your cloud skills fresh.
+                        </li>
+
+                        <li>
+                            <a target="_blank" href="https://docs.microsoft.com/en-us/learn/">
+                                Microsoft Learn:
+                            </a>
+                            &nbsp;
+                            Microsoft Learn is a free, online training platform that provides interactive learning for
+                            Microsoft products and more.
+                            Our goal is to help you become proficient on our technologies and learn more skills with
+                            fun,
+                            guided, hands-on, interactive
+                            content that's specific to your role and goals.
+                        </li>
+                    </ul>
+                    </p>
+                </div>
             </details>
-          </div>
         </div>
     </div>
 </div>
