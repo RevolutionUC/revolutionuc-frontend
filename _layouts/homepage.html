@@ -2,19 +2,21 @@
 
 <section class="hero__wrapper">
   <div class="hero container container--small">
-    <h1 class="hero__heading">RevolutionUC</h1>
+    <div class="center_text">
+      <h1 class="hero__heading">RevolutionUC</h1>
 
-    <!-- ========== Interest form info and button ========== -->
-    {% if site.data.config.homepage.timeline == "pre-registration" %}
-    <p>A hackathon hosted at the University of Cincinnati - {{ site.data.config.eventData.fullDate }}</p>
-    <p>Sign up here to get updates about RevolutionUC {{ site.data.config.eventData.date.year }}</p>
-    <p>And be notified when registration goes live!</p>
-      <!-- Link to interest form -->
-    <div class="hero__email">
-      <form id="email-notification">
-        <input name="emailAddress" class="hero__input" type="email" placeholder="Email" required />
-        <button type="submit" class="btn btn--primary hero__button">Notify me</a>
-      </form>
+      <!-- ========== Interest form info and button ========== -->
+      {% if site.data.config.homepage.timeline == "pre-registration" %}
+      <p>A hackathon hosted at the University of Cincinnati <br>{{ site.data.config.eventData.fullDate }}</br></p>
+      <p>Sign up here to get updates about RevolutionUC {{ site.data.config.eventData.date.year }}</p>
+      <p>And be notified when registration goes live!</p>
+        <!-- Link to interest form -->
+      <div class="hero__email">
+        <form id="email-notification">
+          <input name="emailAddress" class="hero__input" type="email" placeholder="Email" required />
+          <button type="submit" class="btn btn--primary hero__button">Notify me</a>
+        </form>
+      </div>
     </div>
     {% endif %}
     <!-- ================================================== -->
