@@ -8,6 +8,7 @@
   min-height: 450px;
   padding: 0;
   background-color: $prim-color-1;
+  background: radial-gradient(#f1ad8b, $prim-color-1);
   color: $white;
   overflow: hidden;
 
@@ -48,6 +49,16 @@
     top: 0;
     margin: auto;
   }
+
+  // .waveWrapperInner {
+  //   position: absolute;
+  //   width: 100%;
+  //   overflow: hidden;
+  //   height: 100%;
+  //   bottom: -1px;
+  //   background: transparent;
+  // }
+
   .borderWrapper {
     position: absolute;
     width: 100%;
@@ -99,16 +110,21 @@
     height: 40%;
     left: 70%;
     bottom: 0%;
+    z-index: 20;
   }
 
   .cloud{
     position: absolute;
-    width: 70%;
-    height: 75%;
-    left: 14%;
-    bottom: 12%;
+    width: 65%;
+    height: 86%;
+    left: -2%;
+    right: 0%;
+    top: 10%;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    margin: auto;
   }
-
+    
   .comic_filter {
     position: absolute;
     width: 100%;
@@ -157,6 +173,20 @@
 
 .hero {
   z-index: 20;
+  color: $prim-color-2;
+  text-shadow:
+    0 0 5px white,
+    0 0 5px white,
+    0 0 5px white,
+    0 0 5px white,
+    0 0 5px white,
+    0 0 5px white,
+    5px 5px 2px black,
+    5px 5px 2px black,
+    5px 5px 2px black,
+    5px 5px 2px black,
+    5px 5px 2px black
+    ;
 
   .hero__heading {
     margin: 0;
