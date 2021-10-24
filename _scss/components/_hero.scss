@@ -89,21 +89,23 @@
   }
   .wave {
     position: absolute;
-    left: -10%;
+    left: -50%;
     bottom: -50%;
     width: 200%;
-    height: 100%;
-    background-repeat: repeat no-repeat;
-    background-position: center right;
+    height: 200%;
+    margin: auto;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
     transform-origin: center;
   }
-  .waveTop {
-    background-size: 100% 100%;
-    width: 2000px;
-    height: 2000px;
-  }
-  .waveAnimation .waveTop {
+
+  .pinWheel {
     animation: rotation 100s infinite linear;
+  }
+
+  .waveAnimation .waveTop {
+    animation: rotation 10s infinite linear;
   }
 
   .side_left {
@@ -122,18 +124,21 @@
     z-index: 20;
   }
 
-  .cloud{
-    position: absolute;
-    width: 70%;
-    height: 86%;
-    left: -2%;
-    right: 0%;
-    top: 10%;
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    margin: auto;
+  @media (min-width: $small-breakpoint) {
+    .cloud{
+      position: absolute;
+      width: 70%;
+      height: 86%;
+      left: 0%;
+      right: 0%;
+      top: 10%;
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+      margin: auto;
+      animation: move_cloud 8s linear infinite;
+    }
   }
-    
+
   .comic_filter {
     position: absolute;
     width: 100%;
@@ -154,9 +159,9 @@
   .waveBottom {
     background-size: 50% 100px;
   }
-  .waveAnimation .waveBottom {
-    animation: move_wave 60s linear infinite;
-  }
+  // .waveAnimation .waveBottom {
+  //   animation: move_wave 60s linear infinite;
+  // }
 }
 
 .down-chevron {
@@ -191,10 +196,6 @@
     0 0 5px white,
     0 0 5px white,
     5px 5px 2px black,
-    // 5px 5px 2px black,
-    // 5px 5px 2px black,
-    // 5px 5px 2px black,
-    // 5px 5px 2px black
     ;
 
   .hero__heading {
@@ -236,4 +237,22 @@
   to {
     transform: rotate(360deg);
   } 
+}
+
+@keyframes move_cloud {
+  0% {
+    transform: translate(0px, 0px);
+  }
+  25% {
+    transform: translate(0px, -15px);
+  } 
+  50% {
+    transform: translate(15px, -15px);
+  }
+  75% {
+    transform: translate(15px, 0px);
+  }
+  100% {
+    transform: translate(0px, 0px);
+  }
 }
