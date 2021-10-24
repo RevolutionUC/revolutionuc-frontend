@@ -20,7 +20,7 @@ livesite:
 
 eventData:
   # Hackathon data
-  fullDate: February 26th and 27th, 2022
+  fullDate: Feb 26th and 27th, 2022
   date:
     month: February
     firstDay: 26
