@@ -12,6 +12,11 @@
   color: $white;
   overflow: hidden;
 
+  ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: black;
+    opacity: 1; /* Firefox */
+  }  
+
   .hero__email {
     // margin-top: 10px;
     margin-top: -35px;
@@ -37,14 +42,16 @@
     input {
       height: 2.5rem;
       width: 16rem;
-      border: 2px solid #888;
-      border-radius: 0.5rem;
+      border: none;
+      border-radius: 0.3rem;
       outline: none;
-      background: transparent;
+      background: #43AA8B;
       color: #000000;
+      font-family: cursive;
       font-size: 1rem;
       text-indent: 1rem;
       transition: all 0.35s;
+      box-shadow: 0.04rem 0.04rem 0.04rem 0.005rem inset;
     }
   
     // input:focus {
@@ -66,8 +73,8 @@
     font-family: Sans-serif;
     font-size: 1rem;
     border: 0;
-    border-radius: 0.5rem;
-    background: #43AA8B;
+    border-radius: 0.3rem;
+    background: #254441;
     color: #f7f7f7;
     cursor: pointer;
     outline: none;
