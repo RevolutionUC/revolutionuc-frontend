@@ -9,14 +9,15 @@ $prim-color-1: #FC7F3F;
 $prim-color-2: #254441;
 $prim-color-3: #43AA8B;
 $prim-color-4: #FFFFFF;
+$prim-color-5: #CBFF4D;
 
 $mobile-nav-background-color: $white;
 $body-background-color: $white;
 $header-transition-time: 500ms;
 
 // Fonts
-$body-font-family: "Lato", sans-serif;
-$heading-font-family: "Josefin Sans", sans-serif;
+$body-font-family: "Lobster", cursive;
+$heading-font-family: url('/css/Psychedelia\ HM.ttf'), cursive;
 $base-font-size: 20px;
 $lead-font-size: 22px;
 
