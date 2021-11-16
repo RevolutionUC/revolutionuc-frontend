@@ -20,6 +20,9 @@
 
   .center_text {
     text-align: center;
+    @media (max-width: $small-breakpoint) {
+      font-size: 19px;
+    }
     font-size: 22px;
   }
 
