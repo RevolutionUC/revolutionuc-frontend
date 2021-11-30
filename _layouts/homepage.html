@@ -9,7 +9,7 @@
       <p>A hackathon hosted at the University of Cincinnati on {{ site.data.config.eventData.fullDate }}</p>
       <p>Sign up here to get updates about RevolutionUC {{ site.data.config.eventData.date.year }}</p>
       <p>And be notified when registration goes live!</p>
-    </div>
+    
         <!-- Link to interest form -->
       <div class="hero__email">
         <form id="email-notification">
@@ -23,8 +23,8 @@
 
     <!-- ========== Registration info and button ========== -->
     {% if site.data.config.homepage.timeline == "registration" %}
-    <p>A hackathon hosted at the University of Cincinnati - {{ site.data.config.eventData.fullDate }}</p>
-    <p>Interested? Register to participate!</p>
+      <p>A hackathon hosted at the University of Cincinnati - {{ site.data.config.eventData.fullDate }}</p>
+      <p>Interested? Register to participate!</p>
     <div class="hero__heading">
       <a class="btn btn--primary" href="/register">Register Now</a>
     </div>
@@ -50,6 +50,7 @@
     </div>
     {% endif %}
     <!-- ================================================== -->
+  </div>
 
     <div class="down-chevron"><a href="#main">&#x2304;</a></div>
   </div>
