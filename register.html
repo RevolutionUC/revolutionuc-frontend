@@ -5,26 +5,23 @@ permalink: /register/
 description: Registration for RevolutionUC — Hackathon at the University of Cincinnati from February 20-21, 2021
 ---
       <div>
-        <p class="early-text">Early Registration!</p>
-      </div>
-      <div>
-        <form id="registration" name="registration">
+        <form id="registration" name="registration" onsubmit = "return(validate());">
           <div class="circle top left"></div>
           <div class="circle top right"></div>
           <div class="circle bottom left"></div>
           <div class="circle bottom right"></div>
 
           <div class=" form-block b-bottom">
-            <label class="tag" for="firstName">First Name*</label>
+            <label class="tag" for="firstName" name="firstName" id="FirstName">First Name*</label>
             <div class="form-block__input">
-              <input name="firstName" id="firstName" type="text" placeholder="Bob">
+              <input class="input" name="firstName" id="firstName" type="text" placeholder="Bob">
             </div>
           </div>
 
           <div class="form-block b-bottom">
-            <label class="tag" for="lastName">Last Name*</label>
+            <label class="tag" for="lastName" id="LastName">Last Name*</label>
             <div class="form-block__input">
-              <input name="lastName" id="lastName" type="text" placeholder="Evans">
+              <input class="input" name="lastName" id="lastName" type="text" placeholder="Evans">
             </div>
           </div>
 
@@ -64,21 +61,21 @@ description: Registration for RevolutionUC — Hackathon at the University of Ci
           </div> -->
           
           <div class="form-block b-bottom">
-            <label class="tag" for="email">Email*</label>
+            <label class="tag" for="email" id="Email">Email*</label>
             <div class="form-block__input">
-              <input name="email" id="email" type="email" placeholder="Email">
+              <input class="input" name="email" id="email" type="email" placeholder="Email">
             </div>
           </div>
           
           <div class="form-block b-bottom">
-            <label class="tag" for="email">Confirm email*</label>
+            <label class="tag" for="email" id="ConfirmEmail">Confirm email*</label>
             <div class="form-block__input">
-              <input name="confirmEmail" id="confirmEmail" type="email" placeholder="Confirm email">
+              <input class="input" name="confirmEmail" id="confirmEmail" type="email" placeholder="Confirm email">
             </div>
           </div>
 
           <div class="form-block b-bottom">
-            <label class="tag" for="school">School*</label>
+            <label class="tag" for="school" id="School">School*</label>
 
             <div class="form-block__input">
               <input class="input--school input--school-other hide" type="text" placeholder="Enter your school" />
@@ -97,7 +94,7 @@ description: Registration for RevolutionUC — Hackathon at the University of Ci
           </div>
 
           <div class="form-block b-bottom">
-            <label class="tag" for="country">Country*</label>
+            <label class="tag" for="country" id="Country">Country*</label>
 
             <div class="form-block__input">
               <input class="input--country input--country-other hide" type="text" placeholder="Enter your country" />
@@ -116,7 +113,7 @@ description: Registration for RevolutionUC — Hackathon at the University of Ci
           </div>
 
           <div class="form-block b-bottom">
-            <label class="tag" for="education">Education*</label>
+            <label class="tag" for="education" id="Education">Education*</label>
             <div class="form-block__input">
               <select name="education" id="education">
                 <option value="" disabled selected>Level of Education</option>
@@ -128,7 +125,7 @@ description: Registration for RevolutionUC — Hackathon at the University of Ci
           </div>
 
           <div class="form-block b-bottom">
-            <label class="tag" for="major">Major*</label>
+            <label class="tag" for="major" id="Major">Major*</label>
             <div class="form-block__input">
               <select name="major" id="major">
                 <option value="" disabled selected>Major</option>
@@ -144,14 +141,14 @@ description: Registration for RevolutionUC — Hackathon at the University of Ci
           </div>
 
           <div class="form-block b-bottom">
-            <label class="tag" for="dob">Date of birth*</label>
+            <label class="tag" for="dob" id="DOB">Date of birth*</label>
             <div class="form-block__input">
               <input type="date" placeholder="mm/dd/yyyy" name="dob" id="dob">
             </div>
           </div>
 
           <div class="form-block b-bottom">
-            <label class="tag" for="phoneNumber">
+            <label class="tag" for="phoneNumber" id="PN">
               <div class="tooltip">Phone Number*
                 <span class="tooltiptext">Please include the country code</span>
               </div>
@@ -202,7 +199,7 @@ description: Registration for RevolutionUC — Hackathon at the University of Ci
           </div>
 
           <div class="form-block b-bottom">
-            <label for="gender" class="tag">Gender*</label>
+            <label for="gender" class="tag" id="Gender">Gender*</label>
             <div class="form-block__input">
               <select name="gender" id="gender">
                 <option value="" disabled selected>Gender</option>
@@ -223,7 +220,7 @@ description: Registration for RevolutionUC — Hackathon at the University of Ci
           </div>
 
           <div class="form-block b-bottom">
-            <label class="tag" for="ethnicity">Race/Ethnicity*</label>
+            <label class="tag" for="ethnicity" id="Ethnicity">Race/Ethnicity*</label>
             <div class="form-block__input">
               <input name="ethnicity" type="checkbox" class="button" id="Indian" value="Indian">
               <label for="Indian">American Indian or Alaskan Native</label><br>
@@ -465,6 +462,114 @@ description: Registration for RevolutionUC — Hackathon at the University of Ci
     typeahead_init = true;
   }
 </script>
+
+<script type = "text/javascript">
+     function validate() {
+
+      if( document.getElementById("firstName").value == "" ) {
+          document.getElementById("FirstName").style.color="red"; 
+      }
+      if( document.getElementById("firstName").value !== "" ) {
+          document.getElementById("FirstName").style.color="white"; 
+      }
+
+      if( document.getElementById("lastName").value == "" ) {
+          document.getElementById("LastName").style.color="red"; 
+      }
+      if( document.getElementById("lastName").value !== "" ) {
+          document.getElementById("LastName").style.color="white"; 
+      }
+
+      if( document.getElementById("email").value == "" ) {
+          document.getElementById("Email").style.color="red"; 
+      }
+      if( document.getElementById("email").value !== "" ) {
+          document.getElementById("Email").style.color="white"; 
+      }
+
+      if( document.getElementById("confirmEmail").value == "" ) {
+          document.getElementById("ConfirmEmail").style.color="red"; 
+      }
+      if( document.getElementById("confirmEmail").value !== "" ) {
+          document.getElementById("ConfirmEmail").style.color="white"; 
+      }
+
+      if( document.getElementById("country").value == "" ) {
+          document.getElementById("Country").style.color="red"; 
+      }
+      if( document.getElementById("country").value !== "" ) {
+          document.getElementById("Country").style.color="white"; 
+      }
+
+      if( document.getElementById("school").value == "" ) {
+          document.getElementById("School").style.color="red"; 
+      }
+      if( document.getElementById("school").value !== "" ) {
+          document.getElementById("School").style.color="white"; 
+      }
+
+      if( document.getElementById("education").value == "" ) {
+          document.getElementById("Education").style.color="red"; 
+      }
+      if( document.getElementById("education").value !== "" ) {
+          document.getElementById("Education").style.color="white"; 
+      }
+
+      if( document.getElementById("major").value == "" ) {
+          document.getElementById("Major").style.color="red"; 
+      }
+      if( document.getElementById("major").value !== "" ) {
+          document.getElementById("Major").style.color="white"; 
+      }
+
+      if( document.getElementById("dob").value == "" ) {
+          document.getElementById("DOB").style.color="red"; 
+      }
+      if( document.getElementById("dob").value !== "" ) {
+          document.getElementById("DOB").style.color="white"; 
+      }
+
+      if( document.getElementById("phoneNumber").value == "" ) {
+          document.getElementById("PN").style.color="red"; 
+      }
+      if( document.getElementById("phoneNumber").value !== "" ) {
+          document.getElementById("PN").style.color="white"; 
+      }
+      
+      if( document.getElementById("gender").value == "" ) {
+          document.getElementById("Gender").style.color="red"; 
+      }
+      if( document.getElementById("gender").value !== "" ) {
+          document.getElementById("Gender").style.color="white"; 
+      }
+
+      if( 
+        document.getElementById("Indian").checked ||
+        document.getElementById("Asian").checked ||
+        document.getElementById("Black").checked ||
+        document.getElementById("Islander").checked ||
+        document.getElementById("White").checked ||
+        document.getElementById("Latino").checked ||
+        document.getElementById("Prefer Not").checked
+      ){
+          document.getElementById("Ethnicity").style.color="white"; 
+      }
+      if( 
+        !document.getElementById("Indian").checked &&
+        !document.getElementById("Asian").checked &&
+        !document.getElementById("Black").checked &&
+        !document.getElementById("Islander").checked &&
+        !document.getElementById("White").checked &&
+        !document.getElementById("Latino").checked &&
+        !document.getElementById("Prefer Not").checked
+      ){
+          document.getElementById("Ethnicity").style.color="red"; 
+      }
+      return( true );
+     }
+  //-->
+</script>
+
 <script
 src="https://code.jquery.com/jquery-3.3.1.js"
 integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
