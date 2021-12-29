@@ -22,19 +22,15 @@ description: Hack Ideas to help guide your project at this year's RevolutionUC
                 <span id="close-{{ i }}" class="close">&times;</span>
 
                 <div class=live-row>
-                    <img class="hack__ideas__modal-image columns-12" src="{{ topic.image }}" alt="{{ topic.topic }} image">
+                    <h3 class="hack-idea-title columns-12">{{ topic.topic }}</h3>
                 </div>
-                
-                
-                <div class=live-row>
-                    <div id="prev-{{ i }}" class="columns-2 modal-nav__prev">&lt;</div>
-                    <div class="columns-8">
-                        <h3 class="hack-idea-title">{{ topic.topic }}</h3>
-                    </div>
-                    <div id="next-{{ i }}" class="columns-2 modal-nav__next">&gt;</div>
+
+                <div class="live-row">
+                    <div id="prev-{{ i }}" class="modal-nav__prev">&lt;</div>
+                    <img class="hack__ideas__modal-image columns-4" src="{{ topic.image }}" alt="{{ topic.topic }} image">
+                    <p class="hack__ideas__modal-text columns-6">{{ topic.idea }}</p>
+                    <div id="next-{{ i }}" class="modal-nav__next">&gt;</div>
                 </div>
-                
-                <p class="hack__ideas__modal-text">{{ topic.idea }}</p>
             </div>
         </div>
 
