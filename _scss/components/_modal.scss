@@ -37,12 +37,14 @@
     color: $grey;
     font-size: 2rem;
     text-align: left;
+    align-self: center;
   }
 
   .modal-nav__next {
     color: $grey;
     font-size: 2rem;
     text-align: right;
+    align-self: center;
   }
 
   .modal-nav__prev:hover,
