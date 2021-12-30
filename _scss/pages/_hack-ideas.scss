@@ -45,12 +45,14 @@
 
 .hack__ideas__modal-image {
     /* for the img inside your div */
-    display: block;
-    margin: 0 auto;
-    position: relative;
+    // display: block;
+    // margin: 0 auto;
+    // position: relative;
+
+    float: left;
     padding-top: 12px;
     max-height: 400px;
-    width: 80%;
+    width: 100%;
     @media (max-width: $medium-breakpoint) {
         width: 100%;
     }
