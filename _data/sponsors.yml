@@ -15,3 +15,13 @@
 # image: svg of the logo
 # svg: true <- this is REQUIRED
 #
+
+- name: Fifth Third Bank
+  link: http://53.com
+  image: https://assets.revolutionuc.com/sponsor-logos/2022/FifthThird.svg
+  svg: true
+
+- name: Digital Futures
+  link: https://ucdigitalfutures.com
+  image: https://assets.revolutionuc.com/sponsor-logos/2022/DF-Logo-BLK.png
+  svg: false
