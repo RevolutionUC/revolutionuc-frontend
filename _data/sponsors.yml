@@ -21,6 +21,11 @@
   image: https://assets.revolutionuc.com/sponsor-logos/2022/FifthThird.svg
   svg: true
 
+- name: Northrop Grumman
+  link: https://www.northropgrumman.com
+  image: https://assets.revolutionuc.com/sponsor-logos/2022/NG.png
+  svg: false
+
 - name: Digital Futures
   link: https://ucdigitalfutures.com
   image: https://assets.revolutionuc.com/sponsor-logos/2022/DFxOOR.png
