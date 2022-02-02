@@ -53,8 +53,8 @@
     padding-top: 12px;
     max-height: 400px;
     width: 100%;
-    @media (max-width: $medium-breakpoint) {
-        width: 100%;
+    @media (max-width: $small-breakpoint) {
+        max-width: 50%;
     }
 
     filter: brightness(1);
@@ -68,5 +68,13 @@
 }
 
 .hack__ideas__modal-text {
+  display: grid;
+  grid-template-columns: repeat(12);
+  grid-gap: 20px;
   margin: 0 2rem;
+  grid-column: span 7;
+  @media (max-width: $medium-breakpoint) {
+    margin: 0;
+    grid-column: span 12;
+  }
 }
