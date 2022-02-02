@@ -38,6 +38,9 @@
     font-size: 2rem;
     text-align: left;
     align-self: center;
+    @media (max-width: $small-breakpoint) {
+      display: none;
+    }
   }
 
   .modal-nav__next {
@@ -45,6 +48,9 @@
     font-size: 2rem;
     text-align: right;
     align-self: center;
+    @media (max-width: $small-breakpoint) {
+      display: none;
+    }
   }
 
   .modal-nav__prev:hover,
