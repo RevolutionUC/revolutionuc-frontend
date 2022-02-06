@@ -24,7 +24,7 @@ description: Event Schedule for RevolutionUC — Hackathon at the University of 
                 {{item.event}}
             </div>
             <div class="schedule-location">
-                {{item.location}}
+                {{item.location | markdownify}}
             </div>
             {% endif %}
         </div>

@@ -145,7 +145,7 @@ description: RevolutionUC Live Site
                         {{item.event}}
                     </div>
                     <div class="schedule-location">
-                        {{item.location}}
+                        {{item.location | markdownify}}
                     </div>
                     {% endif %}
                 </div>
