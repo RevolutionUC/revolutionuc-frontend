@@ -1,90 +1,90 @@
 .resources-row {
-    width: 100%;
-    padding-bottom: 16px;
+  width: 100%;
+  padding-bottom: 16px;
 
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    grid-gap: 25px;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-gap: 25px;
 
-    .columns-12 {
-        grid-column: span 12;
-    }
-    .columns-11 {
-        grid-column: span 11;
-    }
-    .columns-10 {
-        grid-column: span 10;
-    }
-    .columns-9 {
-        grid-column: span 9;
-    }
-    .columns-8 {
-        grid-column: span 8;
-    }
-    .columns-7 {
-        grid-column: span 7;
-    }
-    .columns-6 {
-        grid-column: span 6;
-    }
-    .columns-5 {
-        grid-column: span 5;
-    }
-    .columns-4 {
-        grid-column: span 4;
-    }
-    .columns-3 {
-        grid-column: span 3;
-    }
-    .columns-2 {
-        grid-column: span 2;
-    }
-    .columns-1 {
-        grid-column: span 1;
-    }
+  .columns-12 {
+    grid-column: span 12;
+  }
+  .columns-11 {
+    grid-column: span 11;
+  }
+  .columns-10 {
+    grid-column: span 10;
+  }
+  .columns-9 {
+    grid-column: span 9;
+  }
+  .columns-8 {
+    grid-column: span 8;
+  }
+  .columns-7 {
+    grid-column: span 7;
+  }
+  .columns-6 {
+    grid-column: span 6;
+  }
+  .columns-5 {
+    grid-column: span 5;
+  }
+  .columns-4 {
+    grid-column: span 4;
+  }
+  .columns-3 {
+    grid-column: span 3;
+  }
+  .columns-2 {
+    grid-column: span 2;
+  }
+  .columns-1 {
+    grid-column: span 1;
+  }
 
-    .columns-6,
-    .columns-5,
-    .columns-4,
-    .columns-3 {
-        @media (max-width: $small-breakpoint) {
-            grid-column: span 12;
-            width: 100% !important; // fixes a bug with last columns not being 100%
-            float: none;
-            margin-left: 0;
-        }
+  .columns-6,
+  .columns-5,
+  .columns-4,
+  .columns-3 {
+    @media (max-width: $small-breakpoint) {
+      grid-column: span 12;
+      width: 100% !important; // fixes a bug with last columns not being 100%
+      float: none;
+      margin-left: 0;
     }
+  }
 
-    .resources-section {
-        border-radius: 5px;
+  .resources-section {
+    border-radius: 5px;
 
-        @media (max-width: $medium-breakpoint) {
-            grid-column: span 12;
-            width: 100% !important; // fixes a bug with last columns not being 100%
-            float: none;
-            margin-left: 0;
-            margin-bottom: 20px;
-        }
+    @media (max-width: $medium-breakpoint) {
+      grid-column: span 12;
+      width: 100% !important; // fixes a bug with last columns not being 100%
+      float: none;
+      margin-left: 0;
+      margin-bottom: 20px;
     }
+  }
 }
 
 .resources-table {
-    font-size: 2vmin;
-    width: 100%;
+  font-size: 2vmin;
+  width: 100%;
 }
 
 .resources--container {
-    width: 100%;
-    margin: 0 auto;
+  width: 100%;
+  margin: 0 auto;
 }
 
 .resources--card-header {
-    margin-top: 1rem;
-    margin-bottom: 0.5rem;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
 
-    &.header-top {
-        margin-top: 0;
-    }
+  &.header-top {
+    margin-top: 0;
+  }
 }
 
 .container--links {
@@ -93,11 +93,15 @@
 
 .resources-section {
   details {
-    margin-top: 15px;
+    margin-top: 12px;
   }
 
-  h3 {
-    margin-bottom: 5px;
+  details > summary {
+    list-style-type: "▶️";
+  }
+
+  details[open] > summary {
+    list-style-type: "🔽";
   }
 
   ul {
@@ -106,7 +110,7 @@
     margin-bottom: 0;
 
     li {
-      margin-top: 5px;
+      margin-bottom: 10px;
     }
   }
 
@@ -116,7 +120,11 @@
   }
 
   .accordion__content {
-    padding-left: 10px;
-    padding-right: 10px;
+    h4 {
+      padding: 0 1.5em;
+    }
+    p {
+      margin: 3px 1em;
+    }
   }
 }
