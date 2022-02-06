@@ -212,6 +212,7 @@ if (!registration_init) {
     static _updateFormUI(err, response) {
       if (err) {
         // Bad news bears
+        console.log(err);
         alert("There was an error. Please try refreshing the page, or try using a different email.");
         // Set the button as enabled and the text to 'Register'
         this._submitButton.disabled = false;
@@ -219,7 +220,11 @@ if (!registration_init) {
       } else {
         console.log(`Response status: ${response.status}`);
 
-       if (response.status !== 200 && response.status !== 201) {
+        if (response.status === 409) {
+          alert("'You are already registered. Please check your email for the confirmation link or reach out to us at info@revolutionuc.com ");
+          this._submitButton.disabled = false;
+          this._submitButton.textContent = "Register";
+        } else if (response.status !== 200 && response.status !== 201) {
           alert("There was an error while submission, please check the form for errors, or try again later.");
           // Bad news bears again
           response.json().then(jsonErrors => {
