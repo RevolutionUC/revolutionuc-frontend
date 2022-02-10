@@ -35,3 +35,8 @@
   link: https://mule.to/p2kp
   image: https://assets.revolutionuc.com/sponsor-logos/2022/sticker-mule.svg
   svg: true
+
+- name: Medpace
+  link: https://medpace.com/careers
+  image: https://assets.revolutionuc.com/sponsor-logos/2022/medpace.png
+  svg: false
