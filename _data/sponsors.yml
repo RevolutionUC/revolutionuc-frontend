@@ -16,27 +16,37 @@
 # svg: true <- this is REQUIRED
 #
 
-- name: Fifth Third Bank
+- name: fifth-third
   link: http://53.com
   image: https://assets.revolutionuc.com/sponsor-logos/2022/FifthThird.svg
   svg: true
 
-- name: Northrop Grumman
-  link: https://www.northropgrumman.com
-  image: https://assets.revolutionuc.com/sponsor-logos/2022/NG.png
-  svg: false
-
-- name: Digital Futures
+- name: digital-futures
   link: https://ucdigitalfutures.com
   image: https://assets.revolutionuc.com/sponsor-logos/2022/DFxOOR.png
   svg: false
 
-- name: Sticker Mule
+- name: medpace
+  link: https://medpace.com/careers
+  image: https://assets.revolutionuc.com/sponsor-logos/2022/medpace.png
+  svg: false
+
+- name: northrop-grumman
+  link: https://www.northropgrumman.com
+  image: https://assets.revolutionuc.com/sponsor-logos/2022/NG.png
+  svg: false
+
+- name: eighty-four-fifty-one
+  link: https://www.8451.com/
+  image: https://assets.revolutionuc.com/sponsor-logos/2022/8451_logo_space_RGB.png
+  svg: false
+
+- name: stickermule
   link: https://mule.to/p2kp
   image: https://assets.revolutionuc.com/sponsor-logos/2022/sticker-mule.svg
   svg: true
 
-- name: Medpace
-  link: https://medpace.com/careers
-  image: https://assets.revolutionuc.com/sponsor-logos/2022/medpace.png
+- name: assembly-ai
+  link: https://www.assemblyai.com
+  image: https://assets.revolutionuc.com/sponsor-logos/2022/AssemblyAI.png
   svg: false
