@@ -147,7 +147,7 @@ description: RevolutionUC Live Site
                         {{item.event}}
                     </div>
                     <div class="schedule-location">
-                        {{item.location}}
+                        {{item.location | markdownify}}
                     </div>
                     {% endif %}
                 </div>
@@ -164,5 +164,5 @@ description: RevolutionUC Live Site
 <br/>
 
 <script src="/js/countdown-timer.js"></script>
-<!-- <script>initProgressBar("2021/02/20 13:00:00", "2021/02/21 13:00:00", "hour");</script> -->
-<script>initProgressBar("Sat Feb 26 2022 13:00:00 GMT-0500 (Eastern Standard Time)", "Sun Feb 27 2021 13:00:00 GMT-0500 (Eastern Standard Time)", "hour");</script>
+<script>initProgressBar("2022/02/26 12:00:00", "2022/02/27 12:00:00", "hour");</script>
+<script>initProgressBar("Sat Feb 26 2022 12:00:00 GMT-0500 (Eastern Standard Time)", "Sun Feb 27 2021 12:00:00 GMT-0500 (Eastern Standard Time)", "hour");</script>

@@ -14,7 +14,7 @@ function initProgressBar(start, end, time = "day") {
     barForeground.style.display = 'none';
     barBackground.style.display = 'none';
     //countdownText.style.display = 'none';
-    countdownText.innerHTML = 'Hacking begins at 1 pm 26th February!';
+    countdownText.innerHTML = 'Hacking begins at 12 pm 26th February!';
     return;
   } else if (now.getTime() > endDate.getTime()) {
     barForeground.style.width = '0%';

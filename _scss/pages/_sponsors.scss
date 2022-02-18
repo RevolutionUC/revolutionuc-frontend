@@ -7,12 +7,13 @@
 .flex {
   .sponsor-image {
     display: flex;
-    padding: 20px 20px;
+    padding: 20px 10px;
     flex: 0 0 50%;
     flex-grow: 0;
     flex-shrink: 0;
-    justify-content: center;
-    align-content: middle;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-content: space-around;
 
     img {
       margin-left: auto;
@@ -21,28 +22,32 @@
       width: auto;
       height: auto;
       // min-height: 50px;
-      max-height: 100px;
+      // max-height: 100px;
       border-radius: 0;
 
-      &.sponsor-image--jpmorgan-chase-co {
-        height: initial;
-        min-height: initial;
-      }
-
-      &.sponsor-image--ge-aviation {
-        max-height: 120px;
-      }
-      &.sponsor-image--tata-consultancy-services {
-          max-height: 120px;
-      }
-      &.sponsor-image--scripps {
-          max-height: 150px;
-      }
-      &.sponsor-image--uc-undergrad-research {
-          max-height: 120px;
-      }
-      &.sponsor-image--eecs-gsa {
+      &.sponsor-image--fifth-third {
+        height: 120px;
         max-height: 180px;
+      }
+      &.sponsor-image--digital-futures {
+        height: 100px;
+        width: 500px;
+        max-height: 180px;
+      }
+      &.sponsor-image--medpace {
+        max-height: 40px;
+      }
+      &.sponsor-image--northrop-grumman {
+        max-height: 50px;
+      }
+      &.sponsor-image--eighty-four-fifty-one {
+        max-height: 50px;
+      }
+      &.sponsor-image--stickermule {
+        max-height: 70px;
+      }
+      &.sponsor-image--assembly-ai {
+        max-height: 50px;
       }
     }
   }
