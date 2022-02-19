@@ -50,3 +50,8 @@
   link: https://www.assemblyai.com
   image: https://assets.revolutionuc.com/sponsor-logos/2022/AssemblyAI.png
   svg: false
+
+- name: aws
+  link: https://aws.amazon.com
+  image: https://assets.revolutionuc.com/sponsor-logos/2022/AWS_logo_RGB.png
+  svg: false
