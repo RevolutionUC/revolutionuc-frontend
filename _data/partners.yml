@@ -15,3 +15,13 @@
 # image: svg of the logo
 # svg: true <- this is REQUIRED
 #
+
+- name: MLH
+  link: https://mlh.io
+  image: https://assets.revolutionuc.com/sponsor-logos/2022/mlh-logo-color.png
+  svg: false
+
+- name: Cyber-at-UC
+  link: https://www.cyberatuc.org/
+  image: https://assets.revolutionuc.com/sponsor-logos/2022/4-cyberatuc.png
+  svg: false

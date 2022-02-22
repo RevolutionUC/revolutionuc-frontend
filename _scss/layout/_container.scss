@@ -17,6 +17,10 @@
     &.container--fluid {
         max-width: 100%;
     }
+
+    &.container--sponsor {
+        max-width: $container-sponsor;
+    }
 }
 
 @media (max-width: $x-small-breakpoint) {
