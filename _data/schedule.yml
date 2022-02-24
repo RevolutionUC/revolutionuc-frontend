@@ -15,16 +15,16 @@
   location: ACM@UC [Youtube](https://www.youtube.com/channel/UC817R8XmXS0Y9k--f0YFQOg)
   
 - time: 12:00 PM
-  event: Team Formation
-  location: 'Discord: 🔊 Mini-Event Room B'
-
-- time: 12:00 PM
   event: <b>Hacking Begins</b>
   location:
+  
+- time: 12:00 PM
+  event: Team Formation
+  location: 'Discord: 🔊 Mini-Event Room A'
 
 - time: 12:30 PM
   event: Meet the Mentors
-  location: 'Discord: 🔊 Mini-Event Room A'
+  location: 'Discord: 🔊 Mini-Event Room B'
 
 - time: 1:00 PM
   event: Cyber@UC CTF
