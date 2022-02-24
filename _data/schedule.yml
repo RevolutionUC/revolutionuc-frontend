@@ -2,7 +2,7 @@
 
 - time: 12:00 PM
   event: Check-in Opens
-  location: Discord 
+  location: 'Discord: [#check-in](https://discord.com/channels/748026840517574707/944422330296336396)'
 
 - date: February 26th
 
@@ -14,91 +14,71 @@
   event: <b>Opening Ceremony</b>
   location: ACM@UC [Youtube](https://www.youtube.com/channel/UC817R8XmXS0Y9k--f0YFQOg)
 
-- time: 11:55 AM
-  event: Team Formation Discord Message/Discord VC
-  location: Discord
-
 - time: 12:00 PM
   event: <b>Hacking Begins</b>
   location:
 
 - time: 12:30 PM
   event: Meet the Mentors
-  location: Discord
+  location: 'Discord: 🔊 Mini-Event Room A'
 
 - time: 1:00 PM
-  event: <b>Cuber@UC CTF</b>
-  location: Discord
+  event: <b>Cyber@UC CTF</b>
+  location: 'Discord: [#ctf](https://discord.com/channels/748026840517574707/938531565795958864)'
 
 - time: 2:00 PM
   event: Sponsor Office Hours
-  location: Discord
+  location: 'Discord: SPONSORS section'
 
 - time: 3:00 PM
-  event: "Workshop 1: DF - Storytelling with Augmented Reality"
-  location: Discord
+  event: "Workshop 1: Digital Futures - Storytelling with Augmented Reality"
+  location: 'Discord: [#workshop-1](https://discord.com/channels/748026840517574707/945199955960795186)'
 
 - time: 4:00 PM
   event: "Workshop 2: Fifth Third - Journey to Serverless"
-  location: Discord
+  location: 'Discord: [#workshop-2](https://discord.com/channels/748026840517574707/945200055160291358)'
 
 - time: 5:00 PM
   event: "Workshop 3: Build a Pokedex using React"
-  location: Discord
+  location: 'Discord: [#workshop-3](https://discord.com/channels/748026840517574707/945200076295372803)'
 
 - time: 6:00 PM
   event: MLH Mini Event - SlideShow Karaoke
-  location: Discord
-
-- time: 7:00 PM
-  event: Swag Request Form Sent Out
-  location: Discord
+  location: 'Discord: 🔊 Mini-Event Room B'
 
 - time: 8:00 PM
   event: Skribbl.io
-  location: Discord
+  location: 'Discord: 🔊 Mini-Event Room A'
 
 - time: 9:00 PM
   event: "Minecraft Build Your Own: Best Creation Wins (3 hours)"
-  location: Discord
+  location: 'Discord: 🔊 Minecraft'
 
 - date: February 27th
 
 - time: 12:00 AM
   event: "Social Hour: Make your own snack/drink"
-  location: Discord
+  location: 'Discord: 🔊 Mini-Event Room B'
 
 - time: 2:00 AM
   event: Bob Ross MS Paint
-  location: Discord
+  location: 'Discord: 🔊 Mini-Event Room A'
 
 - time: 4:00 AM
   event: Among Us
-  location: Discord
+  location: 'Discord: 🔊 Mini-Event Room B'
 
 - time: 6:00 AM
   event: Morning Trivia
-  location: Discord
+  location: 'Discord: 🔊 Mini-Event Room A'
 
 - time: 8:00 AM
   event: Morning Coffee with Funny Videos
-  location: Discord
-
-- time: 9:00 AM
-  event: Remind about Judging and Devpost
-  location: Discord
+  location: 'Discord: 🔊 Mini-Event Room B'
 
 - time: 12:00 PM
   event: <b>Hacking Ends</b>
   location:
-
-- time: 1:30 PM
-  event: <b>Judging Begins</b>
-  location: Discord
-
-- time: 3:30 PM
-  event: Judging Ends
-  location: Discord
 
 - time: 5:00 PM
   event: <b>Awards Ceremony</b>
