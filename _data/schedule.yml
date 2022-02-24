@@ -8,21 +8,98 @@
 
 - time: 10:00 AM
   event: Sponsor Expo
+  location: Zoom
+
+- time: 11:30 AM
+  event: <b>Opening Ceremony</b>
+  location: ACM@UC [Youtube](https://www.youtube.com/channel/UC817R8XmXS0Y9k--f0YFQOg)
+
+- time: 11:55 AM
+  event: Team Formation Discord Message/Discord VC
   location: Discord
 
 - time: 12:00 PM
-  event: Opening Ceremony
-  location: ACM@UC [Youtube](https://www.youtube.com/channel/UC817R8XmXS0Y9k--f0YFQOg)
+  event: <b>Hacking Begins</b>
+  location:
+
+- time: 12:30 PM
+  event: Meet the Mentors
+  location: Discord
+
+- time: 1:00 PM
+  event: <b>Cuber@UC CTF</b>
+  location: Discord
+
+- time: 2:00 PM
+  event: Sponsor Office Hours
+  location: Discord
+
+- time: 3:00 PM
+  event: "Workshop 1: DF - Storytelling with Augmented Reality"
+  location: Discord
+
+- time: 4:00 PM
+  event: "Workshop 2: Fifth Third - Journey to Serverless"
+  location: Discord
+
+- time: 5:00 PM
+  event: "Workshop 3: Build a Pokedex using React"
+  location: Discord
+
+- time: 6:00 PM
+  event: MLH Mini Event - SlideShow Karaoke
+  location: Discord
+
+- time: 7:00 PM
+  event: Swag Request Form Sent Out
+  location: Discord
+
+- time: 8:00 PM
+  event: Skribbl.io
+  location: Discord
+
+- time: 9:00 PM
+  event: "Minecraft Build Your Own: Best Creation Wins (3 hours)"
+  location: Discord
 
 - date: February 27th
 
-- time: 1:00 PM
-  event: Closing Ceremony
-  location: ACM@UC [Youtube](https://www.youtube.com/channel/UC817R8XmXS0Y9k--f0YFQOg)
+- time: 12:00 AM
+  event: "Social Hour: Make your own snack/drink"
+  location: Discord
+
+- time: 2:00 AM
+  event: Bob Ross MS Paint
+  location: Discord
+
+- time: 4:00 AM
+  event: Among Us
+  location: Discord
+
+- time: 6:00 AM
+  event: Morning Trivia
+  location: Discord
+
+- time: 8:00 AM
+  event: Morning Coffee with Funny Videos
+  location: Discord
+
+- time: 9:00 AM
+  event: Remind about Judging and Devpost
+  location: Discord
+
+- time: 12:00 PM
+  event: <b>Hacking Ends</b>
+  location:
+
+- time: 1:30 PM
+  event: <b>Judging Begins</b>
+  location: Discord
+
+- time: 3:30 PM
+  event: Judging Ends
+  location: Discord
 
 - time: 5:00 PM
-  event: Awards Ceremony
+  event: <b>Awards Ceremony</b>
   location: ACM@UC [Youtube](https://www.youtube.com/channel/UC817R8XmXS0Y9k--f0YFQOg)
-
-
-
