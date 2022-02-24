@@ -13,6 +13,10 @@
 - time: 11:30 AM
   event: <b>Opening Ceremony</b>
   location: ACM@UC [Youtube](https://www.youtube.com/channel/UC817R8XmXS0Y9k--f0YFQOg)
+  
+- time: 12:00 PM
+  event: Team Formation
+  location: 'Discord: 🔊 Mini-Event Room B'
 
 - time: 12:00 PM
   event: <b>Hacking Begins</b>
@@ -23,7 +27,7 @@
   location: 'Discord: 🔊 Mini-Event Room A'
 
 - time: 1:00 PM
-  event: <b>Cyber@UC CTF</b>
+  event: Cyber@UC CTF
   location: 'Discord: [#ctf](https://discord.com/channels/748026840517574707/938531565795958864)'
 
 - time: 2:00 PM
