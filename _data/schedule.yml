@@ -1,36 +1,36 @@
 - date: February 25th
 
-- time: 12:00 PM
+- time: 12:00 PM EST
   event: Check-in Opens
   location: 'Discord: [#check-in](https://discord.com/channels/748026840517574707/944422330296336396)'
 
 - date: February 26th
 
-- time: 10:00 AM
+- time: 10:00 AM EST
   event: Sponsor Expo
   location: Zoom
 
-- time: 11:30 AM
+- time: 11:30 AM EST
   event: <b>Opening Ceremony</b>
   location: ACM@UC [Youtube](https://www.youtube.com/channel/UC817R8XmXS0Y9k--f0YFQOg)
   
-- time: 12:00 PM
+- time: 12:00 PM EST
   event: <b>Hacking Begins</b>
   location:
   
-- time: 12:00 PM
+- time: 12:00 PM EST
   event: Team Formation
   location: 'Discord: 🔊 Mini-Event Room A'
 
-- time: 12:30 PM
+- time: 12:30 PM EST
   event: Meet the Mentors
   location: 'Discord: 🔊 Mini-Event Room B'
 
-- time: 1:00 PM
-  event: Cyber@UC CTF
+- time: 1:00 PM EST
+  event: Cyber@UC CTF Kickoff Session
   location: 'Discord: [#ctf](https://discord.com/channels/748026840517574707/938531565795958864)'
 
-- time: 2:00 PM
+- time: 2:00 PM EST
   event: Sponsor Office Hours
   location: 'Discord: SPONSORS section'
 
@@ -38,52 +38,52 @@
   event: "Workshop 1: Digital Futures - Storytelling with Augmented Reality"
   location: 'Discord: [#workshop-1](https://discord.com/channels/748026840517574707/945199955960795186)'
 
-- time: 4:00 PM
+- time: 4:00 PM EST
   event: "Workshop 2: Fifth Third - Journey to Serverless"
   location: 'Discord: [#workshop-2](https://discord.com/channels/748026840517574707/945200055160291358)'
 
-- time: 5:00 PM
+- time: 5:00 PM EST
   event: "Workshop 3: Build a Pokedex using React"
   location: 'Discord: [#workshop-3](https://discord.com/channels/748026840517574707/945200076295372803)'
 
-- time: 6:00 PM
+- time: 6:00 PM EST
   event: MLH Mini Event - SlideShow Karaoke
   location: 'Discord: 🔊 Mini-Event Room B'
 
-- time: 8:00 PM
+- time: 8:00 PM EST
   event: Skribbl.io
   location: 'Discord: 🔊 Mini-Event Room A'
 
-- time: 9:00 PM
+- time: 9:00 PM EST
   event: "Minecraft Build Your Own: Best Creation Wins (3 hours)"
   location: 'Discord: 🔊 Minecraft'
 
 - date: February 27th
 
-- time: 12:00 AM
+- time: 12:00 AM EST
   event: "Social Hour: Make your own snack/drink"
   location: 'Discord: 🔊 Mini-Event Room B'
 
-- time: 2:00 AM
+- time: 2:00 AM EST
   event: Bob Ross MS Paint
   location: 'Discord: 🔊 Mini-Event Room A'
 
-- time: 4:00 AM
+- time: 4:00 AM EST
   event: Among Us
   location: 'Discord: 🔊 Mini-Event Room B'
 
-- time: 6:00 AM
+- time: 6:00 AM EST
   event: Morning Trivia
   location: 'Discord: 🔊 Mini-Event Room A'
 
-- time: 8:00 AM
+- time: 8:00 AM EST
   event: Morning Coffee with Funny Videos
   location: 'Discord: 🔊 Mini-Event Room B'
 
-- time: 12:00 PM
+- time: 12:00 PM EST
   event: <b>Hacking Ends</b>
   location:
 
-- time: 5:00 PM
+- time: 5:00 PM EST
   event: <b>Awards Ceremony</b>
   location: ACM@UC [Youtube](https://www.youtube.com/channel/UC817R8XmXS0Y9k--f0YFQOg)
