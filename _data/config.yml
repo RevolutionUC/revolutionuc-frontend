@@ -11,7 +11,7 @@ navbar:
 
 homepage:
   # The timeline options are: pre-registration, registration, live, post-registration
-  timeline: registration
+  timeline: live
 
 livesite:
     show-livesite: false
