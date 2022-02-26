@@ -111,13 +111,36 @@
     margin-bottom: 0;
 }
 
-.live--link-list {
-    list-style: none;
-    padding-left: 0%;
-    margin-top: 0%;
-    margin-bottom: 0%;
+.live--link-table {
+    border-collapse: collapse;
+    th,
+    tr,
+    td {
+        border: none;
+    }
+    th {
+        background: inherit;
+        color: black;
+    }
+    .live--link-icon {
+        padding: 0;
+        width: 30px;
+    }
 
-    &.maps {
-        text-align: center;
+    .live--link-content {
+        width: 250px;
+        padding-right: 0;
+        font-size: 0.9rem;
     }
 }
+
+// .live--link-list {
+//     list-style: none;
+//     padding-left: 0%;
+//     margin-top: 0%;
+//     margin-bottom: 0%;
+
+//     &.maps {
+//         text-align: center;
+//     }
+// }
