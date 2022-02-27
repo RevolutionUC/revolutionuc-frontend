@@ -11,7 +11,7 @@ navbar:
 
 homepage:
   # The timeline options are: pre-registration, registration, live, post-registration
-  timeline: live
+  timeline: post-registration
 
 livesite:
     show-livesite: false
@@ -29,7 +29,7 @@ eventData:
   # Interest form url
   # interestForm: https://forms.gle/LrmB5fpVQbaSy6To6
   # Submissions url
-  submissions: https://revuc-x.devpost.com/submissions
+  submissions: https://revuc-xi.devpost.com/submissions
 
 MLH:
   # Change this to true when MLH accepts our hackathon application
