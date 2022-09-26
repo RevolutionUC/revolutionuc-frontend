@@ -5,13 +5,13 @@
 
 ## Getting Started
 
-Be sure you have [Jekyll](https://jekyllrb.com/), a static site builder, installed. You can follow [this guide](https://jekyllrb.com/docs/installation/) for installation (note: you already have ruby installed if you're on macOS).
+Be sure you have [Jekyll](https://jekyllrb.com/), a static site builder, installed. You can follow [this guide](https://jekyllrb.com/docs/installation/) for installation of Ruby and Jekyll. (Note that the current recommened Ruby version is Ruby 3, and the default MacOS Ruby version is no longer recommended)
 
 ```sh
 git clone https://github.com/RevolutionUC/revolutionuc-frontend.git 
 cd revolutionuc-frontend
 bundle install
-rake #runs bundle exec jekyll serve
+rake #runs bundle exec jekyll serve --livereload
 ```
 
 Images
