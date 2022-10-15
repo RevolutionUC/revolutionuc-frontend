@@ -12,7 +12,7 @@ description: Sign up for RevolutionUC 2023!
 </div>
 
 <div class="container">
-    <form name="interestForm" method="POST" data-netlify="true">
+    <form name="interestForm" method="POST" data-netlify="true" data-netlify-recaptcha="true">
       <p>
         <label> Name: <input type="text" name="name" /></label>
       </p>
@@ -25,6 +25,7 @@ description: Sign up for RevolutionUC 2023!
       <p>
         <button type="submit">Send</button>
       </p>
+    <div data-netlify-recaptcha="true"></div>
     </form>
 </div>
 
