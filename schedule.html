@@ -1,4 +1,4 @@
----
+    ---
 layout: default
 title: Schedule
 permalink: /schedule/
@@ -14,22 +14,22 @@ description: Event Schedule for RevolutionUC — Hackathon at the University of 
         <div class="schedule-item flex">
             {% if item.date %}
             <div class="schedule-date">
-                <strong>{{item.date}}</strong>
+                <strong><!--{{item.date}}--></strong>
             </div>
             {% else %}
             <div class="schedule-time">
-                {{item.time}}
+                <!--{{item.time}}-->
             </div>
             <div class="schedule-event">
-                {{item.event}}
+                <!--{{item.event}}-->
             </div>
             <div class="schedule-location">
-                {{item.location | markdownify}}
+                <!--{{item.location | markdownify}}-->
             </div>
             {% endif %}
         </div>
-        {% endfor %} -->
-    </div>
+        {% endfor %}
+    </div>  
 </div>
 {% endif %}
 
