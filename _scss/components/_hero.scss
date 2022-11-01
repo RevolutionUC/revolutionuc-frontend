@@ -10,8 +10,9 @@
   // background-color: $prim-color-1;
   // background: radial-gradient(#f1ad8b, $prim-color-1);
   // background: $prim-color-2;
-  background-image: url("./wood_tabletop2.jpeg");
-  color: $white;
+  // background-image: url("./wood_tabletop2.jpeg");
+  background-color: black;
+  // color: $white;
   overflow: hidden;
 
   .hero__email {
@@ -316,4 +317,11 @@
   100% {
     transform: translate(0px, 0px);
   }
+}
+
+.particles-js-absolute {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
