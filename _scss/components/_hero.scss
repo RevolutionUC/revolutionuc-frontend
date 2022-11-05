@@ -17,30 +17,15 @@
 
   .hero__email {
     margin-top: 10px;
-
-    #email-notification-input {
-      height: 3em;
-      border-radius: 9px;
-      background: rgba(158, 158, 158, 0.8);
-      border-style: none;
-      transition: background 300ms;
-    }
-
-    #email-notification-input:hover {
-      background: rgba(158, 158, 158, 1);
-    }
-
-    #email-notification-input:focus {
-      outline: none;
-    }
   }
 
-  .left_text {
+  #email-notification {
+    margin-top: 1.5rem;
+  }
+
+  .hero__text {
     text-align: left;
-    @media (max-width: $small-breakpoint) {
-      font-size: 19px;
-    }
-    font-size: 22px;
+    font-size: 32px;
     -webkit-text-stroke-width: 0.7px;
     -webkit-text-stroke-color: $black;
   }
@@ -66,8 +51,23 @@
   .hero__input {
     padding: 16px 20px;
     width: 75%;
+    height: 65px;
     font-family: $body-font-family;
     -webkit-text-stroke-width: 0px;
+    border-radius: 9px;
+    background: rgba(158, 158, 158, 0.8);
+    border-style: none;
+    transition: background 300ms;
+    font-size: 22px;
+  }
+
+  .hero__input:hover {
+    background: rgba(158, 158, 158, 1);
+  }
+
+  .hero__input:focus {
+    outline: none;
+    background: rgba(158, 158, 158, 1);
   }
 
   .hero__button {
@@ -77,9 +77,10 @@
   }
 
   .revuc-logo {
-    max-width: 222px;
+    max-width: 11.6vw;
+    min-width: 32px;
     position: absolute;
-    left: -18vw;
+    left: -15vw;
     top: 5vh;
   }
   /*
@@ -287,21 +288,22 @@
     ; */
 
   .hero__heading {
+    text-align: left;
     margin: 0;
-    font-size: 6.2em;
+    font-size: 120px;
     letter-spacing: 7px;
   }
 
   p {
     margin: 0;
-    font-size: 1.4em;
+    white-space: nowrap;
+    // font-size: 1.4em;
   }
 
   .btn {
-    margin-top: 1rem;
-    margin-right: 10px;
-    margin-left: 10px;
+    // margin-top: 1rem;
     border-radius: 9px;
+    height: 65px;
   }
 }
 
@@ -310,23 +312,107 @@
   flex-direction: row;
 }
 
+// Responsive design
+
+@media (max-width: $large-breakpoint) {
+
+  .hero {
+    #hero-text-wrapper {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      -webkit-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+    }
+  
+    .revuc-logo {
+      display: none;
+    }
+
+    .hero__heading {
+      font-size: 80px;
+      text-align: center;
+    }
+
+    .hero__text  {
+      text-align: center;
+      font-size: 24px;
+    }
+
+    .hero__input {
+      font-size: 24px;
+    }
+
+    #email-notification {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .hero__input {
+        width: 75%;
+      }
+
+      .btn {
+        margin-top: 1rem;
+        width: 50%;
+      }
+    }
+  }
+}
+
+@media (max-width: $medium-breakpoint) {
+  .hero {
+    .hero__heading {
+      font-size: 64px;
+    }
+
+    .hero__text {
+      font-size: 20px;
+    }
+
+  }
+}
+
 @media (max-width: $small-breakpoint) {
   // fixes issue with the buttons breaking lines on very small screens
   .hero {
     .btn {
       margin-bottom: 0;
     }
-  }
-}
 
-@media (max-width: $small-breakpoint) {
-  .hero{
     .hero__heading {
-      font-size: 2em;
+      font-size: 48px;
+    }
+
+    .hero__text {
+      font-size: 16px;
+    }
+
+    .hero__input {
+      font-size: 16px;
+      height: 50%;
+    }
+
+    .btn {
+      padding: 13px 8px;
+      font-size: 16px;
+      height: 40%;
     }
   }
 }
 
+@media (max-width: $x-small-breakpoint) {
+  .hero {
+    .hero__heading {
+      font-size: 42px;
+    }
+
+    .hero__text {
+      font-size: 14px;
+    }
+  }
+}
+/*
 @keyframes rotation {
   from {
     transform: rotate(0deg);
@@ -353,10 +439,11 @@
     transform: translate(0px, 0px);
   }
 }
-
+*/
 .particles-js-absolute {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
 }
