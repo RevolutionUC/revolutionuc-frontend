@@ -79,7 +79,7 @@
                         {% if site.data.config.navbar.sponsors%}<li><a {% if current[1] == 'sponsors' %} class="navbar__active" {% endif %} href="/sponsors">Sponsors</a></li>{% endif %}
                         {% if site.data.config.navbar.about%}<li><a {% if current[1] == 'about' %} class="navbar__active" {% endif %} href="/about">About</a></li>{% endif %}
                         {% if site.data.config.navbar.faq%}<li><a {% if current[1] == 'faq' %} class="navbar__active" {% endif %} href="/faq">FAQ</a></li>{% endif %}
-                        {% if site.data.config.navbar.resources%}<li><a class="navbar__resources" href="/resources">Resources</a></li>{% endif %}
+                        {% if site.data.config.navbar.resources%}<li><a {% if current[1] == 'resources' %} class="navbar__active" {% endif %} href="/resources">Resources</a></li>{% endif %}
                         {% if site.data.config.navbar.register%}<li><a class="navbar__register" href="/register">Register</a></li>{% endif %}
                     </ul>
                 </nav>
