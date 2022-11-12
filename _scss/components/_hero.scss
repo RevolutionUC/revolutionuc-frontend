@@ -44,12 +44,13 @@
 
   .hero__input {
     padding: 16px 20px;
+    margin: 2%;
     width: 75%;
     height: 65px;
     font-family: $body-font-family;
     -webkit-text-stroke-width: 0px;
     border-radius: 9px;
-    background: rgb(164, 164, 164);
+    background: rgb(255,255,255);// rgb(164, 164, 164);
     border-style: none;
     transition: background 300ms;
     font-size: 22px;
@@ -149,9 +150,9 @@
       transform-origin: center;
       opacity: 1;
       z-index: 15;
-    } 
+    }
   }
-  
+
   @media(max-width: $small-breakpoint){
     .vinyl {
       position: absolute;
@@ -165,7 +166,7 @@
       transform-origin: center;
       opacity: 1;
       z-index: 15;
-    } 
+    }
   }
 
   @media(min-width: $small-breakpoint){
@@ -266,6 +267,11 @@
   flex-direction: row;
 }
 
+// Email pre-reg styles
+.submit-success, .submit-error {
+    display: none;
+}
+
 // Responsive design
 
 @media (max-width: $large-breakpoint) {
@@ -278,7 +284,7 @@
       -webkit-transform: translate(-50%, -50%);
       transform: translate(-50%, -50%);
     }
-  
+
     .revuc-logo {
       display: none;
     }
@@ -378,7 +384,7 @@
   }
   to {
     transform: rotate(360deg);
-  } 
+  }
 }
 
 @keyframes move_cloud {
@@ -387,7 +393,7 @@
   }
   25% {
     transform: translate(0px, -15px);
-  } 
+  }
   50% {
     transform: translate(15px, -15px);
   }

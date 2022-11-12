@@ -12,15 +12,20 @@
         <!-- <p>A hackathon hosted at the University of Cincinnati on {{ site.data.config.eventData.fullDate }}</p> -->
         <p>Sign up here to get updates about RevolutionUC {{ site.data.config.eventData.date.year }}</p>
         <p>And be notified when registration goes live!</p>
-      
+
           <!-- Link to interest form -->
         <div class="hero__email">
-          <form id="email-notification">
-            <input name="emailAddress" class="hero__input" type="email" placeholder="Email here" required id="email-notification-input" />
-            <button type="submit" class="btn btn--primary hero__button">Notify me</a>
+          <form id="email-notification" name="email-preRegistration" method="POST" data-netlify="true" data-netlify-recaptcha="true">
+            <input name="emailAddress" class="hero__input" type="email" placeholder="Enter Email here..." required id="email-notification-input" />
+            <button type="submit" class="btn btn--primary hero__button">Notify me!</a>
+            <div data-netlify-recaptcha="true"></div>
+            <div class="submit-success"><p>Signed up!🎉</p></div>
+            <div class="submit-error"><p>Error 💔</p></div>
           </form>
-        
+
         </div>
+        <!-- Email Pre-reg script -->
+        <script src="/js/preRegistration.js"></script>
       {% endif %}
       <!-- ================================================== -->
 
@@ -43,7 +48,6 @@
       </div>
       {% endif %}
       <!-- ================================================== -->
-
       <!-- ========== Post hackathon info and button ========== -->
       {% if site.data.config.homepage.timeline == "post-registration" %}
       <p>Thank you all for participating in this year's RevolutionUC!</p>
@@ -54,7 +58,7 @@
       {% endif %}
       <!-- ================================================== -->
     </div>
-    
+
   </div>
 
     <!-- <div class="down-chevron"><a href="#main">&#x2304;</a></div> -->
@@ -66,7 +70,7 @@
     <!-- <div class="bgTop">
         <div class="wave pinWheel" style="background-image: url('https://assets.revolutionuc.com/website-images/2022/rot_asset_circle.png')"></div>
     </div> -->
-  
+
     <!-- <div class="waveWrapperInner bgTop">
       <div class="side_left waveMiddle" style="background-image: url('https://assets.revolutionuc.com/website-images/2022/Side_Border.png')"></div>
     </div>
