@@ -1,18 +1,21 @@
 // Colors
 $white: #f0f0f0;
-$black: #333;
+$black: #030303;
 $grey: #A9A9A9;
 $lightgrey: lightgrey;
 
-// $prim-color-1: #f7a177;
-$prim-color-1: #111;
-$prim-color-2: #fc7a1e;
-$prim-color-3: #fff;
-$prim-color-4: #8ad9f8;
-$prim-color-5: #ffe14d;
+// 2023 colors
+$prim-color-1: #fc7a1e;
+$prim-color-2: #ffe14d;
+$prim-color-3: #8ad9f8;
+$prim-color-4: #000;
+$prim-color-5: #000;
 
+$link-color: darken($prim-color-1, 19%);
+$accordion-hover-color: $prim-color-3;
 $mobile-nav-background-color: $white;
 $body-background-color: $white;
+$body-text-color: $black;
 $header-transition-time: 500ms;
 
 // Fonts

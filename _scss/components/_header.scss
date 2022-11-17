@@ -24,13 +24,13 @@
 }
 
 .header {
-  width: 100vw;
+  width: 100%;
   line-height: 1;
   position: fixed;
   top: 0;
   left: 0;
   z-index: 20;
-  background-color: $prim-color-1;
+  background-color: $black; // Black header for 2023 year
   padding: 0;
   margin: 0;
 
