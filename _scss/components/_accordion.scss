@@ -9,10 +9,10 @@
         cursor: pointer;
         transition: background-color 0.3s;
         list-style-type: none; // Remove the details marker
-        background-color: $prim-color-4;
+        background-color: inherit;
 
         &:hover {
-            background-color: lighten($prim-color-4, 5%);
+            background-color: $accordion-hover-color;
         }
 
         &::-webkit-details-marker {
@@ -20,7 +20,11 @@
         }
     }
 
-    details[open] summary ~ * {
+    details[open] > summary {
+        background-color: $accordion-hover-color;
+    }
+
+    details[open] > summary ~ * {
         animation: sweep-out 0.5s ease-in-out;
     }
 
