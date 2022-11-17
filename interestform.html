@@ -1,0 +1,62 @@
+---
+layout: default
+title: Interest form
+permalink: /interestform/
+useContainer: true
+description: Sign up for RevolutionUC 2023!
+---
+
+<div class="container">
+
+    <p>RevolutionUC is a student hackathon in which we invite students from across the midwest to partake in a weekend of code, community, and self-improvement. You don’t have to attend the University of Cincinnati and you don’t have to be a computer science major or engineering student. We’re looking for people who share our passion to do awesome things with technology.</p>
+</div>
+
+<div class="container">
+    <form name="interestForm" method="POST" data-netlify="true" data-netlify-recaptcha="true">
+      <p>
+        <label> Name: <input required type="text" name="name" /></label>
+      </p>
+      <p>
+        <label> Email: <input required type="email" name="email" /></label>
+      </p>
+      <p>
+        <label> University: <input required type="text" name="university" /></label>
+      </p>
+      <p>
+        <button type="submit">Send</button>
+      </p>
+    <div data-netlify-recaptcha="true"></div>
+    <div class="submit-success"><p>Message sent!🎉</p></div>
+    <div class="submit-error"><p>Error.</p></div>
+    </form>
+</div>
+
+<script>
+const submitSuccess = document.querySelector('.submit-success')
+const submitError = document.querySelector('.submit-error')
+
+const handleSubmit = (e) => {
+  e.preventDefault();
+  let myForm = document.getElementById("contact-form");
+  let formData = new FormData(myForm);
+  fetch("/", {
+    method: "POST",
+    headers: { "Content-Type": "application/x-www-form-urlencoded" },
+    body: new URLSearchParams(formData).toString(),
+  })
+
+    .then(() => { submitSuccess.style.display = 'block'; submitError.style.display = null; })
+    .catch((error) => { submitError.style.display = 'block'; submitSuccess.style.display = null; });
+};
+document
+  .querySelector("form")
+  .addEventListener("submit", handleSubmit);
+</script>
+<style>
+.submit-success, .submit-error {
+    display: none;
+}
+</style>
+
+
+

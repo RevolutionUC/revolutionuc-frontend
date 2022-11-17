@@ -1,67 +1,76 @@
 {% include header.html %}
 
-<section class="hero__wrapper">
-  <div class="hero container container--small center_text_heading">
-    <h1 class="hero__heading">RevolutionUC</h1>
-    <div class="center_text">
-      <!-- ========== Interest form info and button ========== -->
-      {% if site.data.config.homepage.timeline == "pre-registration" %}
-      <p>A hackathon hosted at the University of Cincinnati on {{ site.data.config.eventData.fullDate }}</p>
-      <p>Sign up here to get updates about RevolutionUC {{ site.data.config.eventData.date.year }}</p>
-      <p>And be notified when registration goes live!</p>
-    
-        <!-- Link to interest form -->
-      <div class="hero__email">
-        <form id="email-notification">
-          <input name="emailAddress" class="hero__input" type="email" placeholder="Email" required />
-          <button type="submit" class="btn btn--primary hero__button">Notify me</a>
-        </form>
-      
+<section class="hero__wrapper" id="particles-js">
+  <div class="hero container container--small center_text_heading particles-js-absolute flex-row">
+    <img class="revuc-logo" src="/img/revuc-logos/revuc-spring-2023.svg" alt="RevUC Logo">
+    <div id="hero-text-wrapper">
+      <img class="revuc-logo-res" src="/img/revuc-logos/revuc-spring-2023.svg" alt="RevUC Logo">
+      <h1 class="hero__heading">RevolutionUC</h1>
+      <div class="hero__text">
+        <!-- ========== Interest form info and button ========== -->
+        {% if site.data.config.homepage.timeline == "pre-registration" %}
+        <!-- <p>A hackathon hosted at the University of Cincinnati on {{ site.data.config.eventData.fullDate }}</p> -->
+        <p>Sign up here to get updates about RevolutionUC {{ site.data.config.eventData.date.year }}</p>
+        <p>And be notified when registration goes live!</p>
+
+          <!-- Link to interest form -->
+        <div class="hero__email">
+          <form id="email-notification" name="email-preRegistration" method="POST" data-netlify="true" data-netlify-recaptcha="true">
+            <input name="emailAddress" class="hero__input" type="email" placeholder="Enter Email here..." required id="email-notification-input" />
+            <button type="submit" class="btn btn--primary hero__button">Notify me!</a>
+            <div data-netlify-recaptcha="true"></div>
+            <div class="submit-success"><p>Signed up!🎉</p></div>
+            <div class="submit-error"><p>Error 💔</p></div>
+          </form>
+
+        </div>
+        <!-- Email Pre-reg script -->
+        <script src="/js/preRegistration.js"></script>
+      {% endif %}
+      <!-- ================================================== -->
+
+      <!-- ========== Registration info and button ========== -->
+      {% if site.data.config.homepage.timeline == "registration" %}
+      <p>A hackathon hosted at the University of Cincinnati - {{ site.data.config.eventData.fullDate }}</p>
+      <p>Interested? Register to participate!</p>
+      <div class="hero__heading">
+        <a class="btn btn--primary" href="/register">Register Now</a>
       </div>
-    {% endif %}
-    <!-- ================================================== -->
+      {% endif %}
+      <!-- ================================================== -->
 
-    <!-- ========== Registration info and button ========== -->
-    {% if site.data.config.homepage.timeline == "registration" %}
-    <p>A hackathon hosted at the University of Cincinnati - {{ site.data.config.eventData.fullDate }}</p>
-    <p>Interested? Register to participate!</p>
-    <div class="hero__heading">
-      <a class="btn btn--primary" href="/register">Register Now</a>
+      <!-- ========== Live button ========== -->
+      {% if site.data.config.homepage.timeline == "live" %}
+      <p>A hackathon hosted at the University of Cincinnati - {{ site.data.config.eventData.fullDate }}</p>
+      <p>Live now!</p>
+      <div class="hero__heading">
+        <a class="btn btn--primary" href="/live">Live Site</a>
+      </div>
+      {% endif %}
+      <!-- ================================================== -->
+      <!-- ========== Post hackathon info and button ========== -->
+      {% if site.data.config.homepage.timeline == "post-registration" %}
+      <p>Thank you all for participating in this year's RevolutionUC!</p>
+      <div class="hero__heading">
+        <!-- Link to submissions -->
+        <a class="btn btn--primary" href="{{ site.data.config.eventData.submissions }}" target="_" rel="noopener">View Submissions</a>
+      </div>
+      {% endif %}
+      <!-- ================================================== -->
     </div>
-    {% endif %}
-    <!-- ================================================== -->
 
-    <!-- ========== Live button ========== -->
-    {% if site.data.config.homepage.timeline == "live" %}
-    <p>A hackathon hosted at the University of Cincinnati - {{ site.data.config.eventData.fullDate }}</p>
-    <p>Live now!</p>
-    <div class="hero__heading">
-      <a class="btn btn--primary" href="/live">Live Site</a>
-    </div>
-    {% endif %}
-    <!-- ================================================== -->
-
-    <!-- ========== Post hackathon info and button ========== -->
-    {% if site.data.config.homepage.timeline == "post-registration" %}
-    <p>Thank you all for participating in this year's RevolutionUC!</p>
-    <div class="hero__heading">
-      <!-- Link to submissions -->
-      <a class="btn btn--primary" href="{{ site.data.config.eventData.submissions }}" target="_" rel="noopener">View Submissions</a>
-    </div>
-    {% endif %}
-    <!-- ================================================== -->
   </div>
 
-    <div class="down-chevron"><a href="#main">&#x2304;</a></div>
+    <!-- <div class="down-chevron"><a href="#main">&#x2304;</a></div> -->
   </div>
 
   <!-- theme / animation -->
 
-  <div class="waveWrapper waveAnimation">  
+  <!-- <div class="waveWrapper waveAnimation"> -->
     <!-- <div class="bgTop">
         <div class="wave pinWheel" style="background-image: url('https://assets.revolutionuc.com/website-images/2022/rot_asset_circle.png')"></div>
     </div> -->
-  
+
     <!-- <div class="waveWrapperInner bgTop">
       <div class="side_left waveMiddle" style="background-image: url('https://assets.revolutionuc.com/website-images/2022/Side_Border.png')"></div>
     </div>
@@ -78,22 +87,25 @@
       <div class="comic_filter" style="background-image: url('https://assets.revolutionuc.com/website-images/2022/comic_filter.png')"></div>
     </div> -->
 
-    <div class="bgMiddle">
+    <!-- <div class="bgMiddle"> -->
       <!-- <div class="vinyl pinWheel" style="background-image: url('https://assets.revolutionuc.com/website-images/2022/vinyl-cd.png')"></div> -->
-      <div class="vinyl pinWheel" style="background-image: url('css/Record1.png')"></div>
-    </div>
+      <!-- <div class="vinyl pinWheel" style="background-image: url('css/Record1.png')"></div> -->
+    <!-- </div> -->
 
     <!-- <div class="bgTop">
       <div class="vinyl-pin" style="background-image: url('css/vinyl-pin.png')"></div>
     </div> -->
 
 
-  </div>
-  
+  <!-- </div> -->
   <!-- fin theme -->
 
 </section>
 <script src=/js/subscribe.js async defer></script>
+
+ <!-- Import Particles.js -->
+<script src="/js/particles.js"></script>
+<script src="/js/app.js"></script>
 
 {{ content }}
 

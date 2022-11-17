@@ -2,7 +2,7 @@
   $hero-height: 100vh; // this essentially says 'lets use 90% height on .hero__wrapper'
 
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
   height: $hero-height;
   min-height: 450px;
@@ -10,54 +10,78 @@
   // background-color: $prim-color-1;
   // background: radial-gradient(#f1ad8b, $prim-color-1);
   // background: $prim-color-2;
-  background-image: url("./wood_tabletop2.jpeg");
-  color: $white;
+  // background-image: url("./wood_tabletop2.jpeg");
+  background-color: black;
+  // color: $white;
   overflow: hidden;
 
   .hero__email {
     margin-top: 10px;
   }
 
-  .center_text {
-    text-align: center;
-    @media (max-width: $small-breakpoint) {
-      font-size: 19px;
-    }
-    font-size: 22px;
-    -webkit-text-stroke-width: 0.7px;
-    -webkit-text-stroke-color: $black;
+  #email-notification {
+    margin-top: 1.5rem;
+  }
+
+  .hero__text {
+    text-align: left;
   }
 
   .center_text_heading{
     text-align: center;
   }
 
-  .hero__video {
-    // position: absolute;
-    // top: 0;
-    z-index: -1;
-    // width: 100%;
-    object-fit: cover;
-    width: 100%;
-    height: $hero-height;
-    max-height: $hero-height;
-    position: absolute;
-    top: 0;
-    left: 0;
-  }
+  // .hero__video {
+  //   z-index: -1;
+  //   object-fit: cover;
+  //   width: 100%;
+  //   height: $hero-height;
+  //   max-height: $hero-height;
+  //   position: absolute;
+  //   top: 0;
+  //   left: 0;
+  // }
 
   .hero__input {
     padding: 16px 20px;
+    margin: 2%;
     width: 75%;
+    height: 65px;
     font-family: $body-font-family;
     -webkit-text-stroke-width: 0px;
+    border-radius: 9px;
+    background: rgb(255,255,255);// rgb(164, 164, 164);
+    border-style: none;
+    transition: background 300ms;
+    font-size: 22px;
   }
+
+  // .hero__input:hover {
+  //   background: rgba(158, 158, 158, 1);
+  // }
+
+  // .hero__input:focus {
+  //   outline: none;
+  //   background: rgba(158, 158, 158, 1);
+  // }
 
   .hero__button {
     border: none;
     line-height: inherit;
-    -webkit-text-stroke-width: 0px;
   }
+
+  .revuc-logo-res {
+    display: none;
+  }
+
+  .revuc-logo {
+    max-width: 11.6vw;
+    min-width: 32px;
+    position: absolute;
+    left: -15vw;
+    top: 5vh;
+  }
+  /*
 
   .waveWrapper {
     overflow: hidden;
@@ -126,9 +150,9 @@
       transform-origin: center;
       opacity: 1;
       z-index: 15;
-    } 
+    }
   }
-  
+
   @media(max-width: $small-breakpoint){
     .vinyl {
       position: absolute;
@@ -142,7 +166,7 @@
       transform-origin: center;
       opacity: 1;
       z-index: 15;
-    } 
+    }
   }
 
   @media(min-width: $small-breakpoint){
@@ -199,55 +223,15 @@
   //   }
   // }
 
-  .comic_filter {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    left: 0;
-    bottom: 0;
-    background-position: center;
-    opacity: 0.2;
-    z-index: -1;
-  }
+  */
 
-  .waveMiddle {
-    background-size: 100% 100%;
-  }
-  // .waveAnimation .waveMiddle {
-  //   animation: move_wave 15s linear infinite;
-  // }
-  .waveBottom {
-    background-size: 50% 100px;
-  }
-  // .waveAnimation .waveBottom {
-  //   animation: move_wave 60s linear infinite;
-  // }
-}
-
-.down-chevron {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  display: block;
-  text-align: center;
-  font-size: 5em;
-  margin: 0 auto;
-
-  a {
-    color: inherit;
-    text-decoration: none;
-    cursor: pointer;
-  }
-
-  a:hover {
-    color: $prim-color-1;
-  }
 }
 
 .hero {
   z-index: 2;
-  color: $prim-color-2;
+  // color: $prim-color-2;
+  color: white;
+  /*
   text-shadow:
     0 0 5px white,
     0 0 5px white,
@@ -256,21 +240,101 @@
     // 0 0 5px white,
     // 0 0 5px white,
     // 5px 5px 2px black,
-    ;
+    ; */
 
   .hero__heading {
+    text-align: left;
     margin: 0;
-    font-size: 5em;
+    font-size: 120px;
     letter-spacing: 7px;
   }
 
   p {
     margin: 0;
+    white-space: nowrap;
+    // font-size: 1.4em;
   }
 
   .btn {
-    margin-top: 1rem;
-    margin-right: 10px;
+    // margin-top: 1rem;
+    border-radius: 9px;
+    height: 65px;
+  }
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+// Email pre-reg styles
+.submit-success, .submit-error {
+    display: none;
+}
+
+// Responsive design
+
+@media (max-width: $large-breakpoint) {
+
+  .hero {
+    #hero-text-wrapper {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      -webkit-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+    }
+
+    .revuc-logo {
+      display: none;
+    }
+
+    .revuc-logo-res {
+      display: inline;
+      max-width: 100px;
+    }
+
+    .hero__heading {
+      font-size: 80px;
+      text-align: center;
+    }
+
+    .hero__text  {
+      text-align: center;
+      font-size: 24px;
+    }
+
+    .hero__input {
+      font-size: 24px;
+    }
+
+    #email-notification {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .hero__input {
+        width: 75%;
+      }
+
+      .btn {
+        margin-top: 1rem;
+        width: 50%;
+      }
+    }
+  }
+}
+
+@media (max-width: $medium-breakpoint) {
+  .hero {
+    .hero__heading {
+      font-size: 64px;
+    }
+
+    .hero__text {
+      font-size: 20px;
+    }
+
   }
 }
 
@@ -280,24 +344,47 @@
     .btn {
       margin-bottom: 0;
     }
-  }
-}
 
-@media (max-width: $small-breakpoint) {
-  .hero{
     .hero__heading {
-      font-size: 2em;
+      font-size: 48px;
+    }
+
+    .hero__text {
+      font-size: 16px;
+    }
+
+    .hero__input {
+      font-size: 16px;
+      height: 50%;
+    }
+
+    .btn {
+      padding: 13px 8px;
+      font-size: 16px;
+      height: 40%;
     }
   }
 }
 
+@media (max-width: $x-small-breakpoint) {
+  .hero {
+    .hero__heading {
+      font-size: 42px;
+    }
+
+    .hero__text {
+      font-size: 14px;
+    }
+  }
+}
+/*
 @keyframes rotation {
   from {
     transform: rotate(0deg);
   }
   to {
     transform: rotate(360deg);
-  } 
+  }
 }
 
 @keyframes move_cloud {
@@ -306,7 +393,7 @@
   }
   25% {
     transform: translate(0px, -15px);
-  } 
+  }
   50% {
     transform: translate(15px, -15px);
   }
@@ -316,4 +403,11 @@
   100% {
     transform: translate(0px, 0px);
   }
+}
+*/
+.particles-js-absolute {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
