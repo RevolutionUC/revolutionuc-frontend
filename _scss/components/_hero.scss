@@ -1,27 +1,13 @@
 .hero__wrapper {
-  $hero-height: 100vh; // this essentially says 'lets use 90% height on .hero__wrapper'
-
   display: flex;
   flex-direction: row;
   justify-content: center;
-  height: $hero-height;
+  height: 100%;
   min-height: 450px;
   padding: 0;
-  // background-color: $prim-color-1;
-  // background: radial-gradient(#f1ad8b, $prim-color-1);
-  // background: $prim-color-2;
-  // background-image: url("./wood_tabletop2.jpeg");
-  background-color: black;
-  // color: $white;
+  background-color: $black;
+  color: $white;
   overflow: hidden;
-
-  .hero__email {
-    margin-top: 10px;
-  }
-
-  #email-notification {
-    margin-top: 1.5rem;
-  }
 
   .hero__text {
     text-align: left;
@@ -31,43 +17,17 @@
     text-align: center;
   }
 
-  // .hero__video {
-  //   z-index: -1;
-  //   object-fit: cover;
-  //   width: 100%;
-  //   height: $hero-height;
-  //   max-height: $hero-height;
-  //   position: absolute;
-  //   top: 0;
-  //   left: 0;
-  // }
-
   .hero__input {
     padding: 16px 20px;
     margin: 2%;
     width: 75%;
     height: 65px;
     font-family: $body-font-family;
-    -webkit-text-stroke-width: 0px;
     border-radius: 9px;
-    background: rgb(255,255,255);// rgb(164, 164, 164);
+    background: $white;
     border-style: none;
     transition: background 300ms;
     font-size: 22px;
-  }
-
-  // .hero__input:hover {
-  //   background: rgba(158, 158, 158, 1);
-  // }
-
-  // .hero__input:focus {
-  //   outline: none;
-  //   background: rgba(158, 158, 158, 1);
-  // }
-
-  .hero__button {
-    border: none;
-    line-height: inherit;
   }
 
   .revuc-logo-res {
@@ -81,166 +41,13 @@
     left: -15vw;
     top: 5vh;
   }
-  /*
-
-  .waveWrapper {
-    overflow: hidden;
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    top: 0;
-    margin: auto;
-  }
-
-  // .waveWrapperInner {
-  //   position: absolute;
-  //   width: 100%;
-  //   overflow: hidden;
-  //   height: 100%;
-  //   bottom: -1px;
-  //   background: transparent;
-  // }
-
-  .borderWrapper {
-    position: absolute;
-    width: 100%;
-    // overflow: hidden;
-    height: 100%;
-    bottom: -1px;
-    background: transparent;
-  }
-  .bgTop {
-    z-index: 20;
-    opacity: 1;
-  }
-  .bgMiddle {
-    z-index: 15;
-    opacity: 0.99;
-  }
-  .bgBottom {
-    z-index: 5;
-  }
-
-  @media (min-width: $small-breakpoint){
-    .wave {
-      position: absolute;
-      left: -50%;
-      bottom: -50%;
-      width: 200%;
-      height: 200%;
-      margin: auto;
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-position: center;
-      transform-origin: center;
-    }
-  }
-
-  @media(min-width: $small-breakpoint){
-    .vinyl {
-      position: absolute;
-      width: 150%;
-      height: 150%;
-      left: 10%;
-      bottom: -15%;
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: contain;
-      transform-origin: center;
-      opacity: 1;
-      z-index: 15;
-    }
-  }
-
-  @media(max-width: $small-breakpoint){
-    .vinyl {
-      position: absolute;
-      width: 200%;
-      height: 100%;
-      left: 0;
-      bottom: 0;
-      background-position: left;
-      background-repeat: no-repeat;
-      background-size: contain;
-      transform-origin: center;
-      opacity: 1;
-      z-index: 15;
-    }
-  }
-
-  @media(min-width: $small-breakpoint){
-    .vinyl-pin {
-      position: absolute;
-      left: 10%;
-      bottom: 0%;
-      width: 100%;
-      height: 50%;
-      margin: auto;
-      background-size: contain;
-      background-repeat: no-repeat;
-      background-position: left;
-      transform-origin: bottom left;
-    }
-  }
-
-  .pinWheel {
-    animation: rotation 100s infinite linear;
-  }
-
-  .waveAnimation .waveTop {
-    animation: rotation 10s infinite linear;
-  }
-
-  .side_left {
-    position: absolute;
-    width: 10%;
-    height: 100%;
-    z-index: 20;
-  }
-
-  .side_right {
-    position: absolute;
-    width: 30%;
-    height: 40%;
-    left: 70%;
-    bottom: 0%;
-    z-index: 20;
-  }
-
-  // @media (min-width: $small-breakpoint) {
-  //   .cloud{
-  //     position: absolute;
-  //     width: 70%;
-  //     height: 86%;
-  //     left: 0%;
-  //     right: 0%;
-  //     top: 10%;
-  //     background-repeat: no-repeat;
-  //     background-size: 100% 100%;
-  //     margin: auto;
-  //     animation: move_cloud 8s linear infinite;
-  //   }
-  // }
-
-  */
-
 }
 
 .hero {
+  display: flex;
+  flex-direction: row;
   z-index: 2;
-  // color: $prim-color-2;
-  color: white;
-  /*
-  text-shadow:
-    0 0 5px white,
-    0 0 5px white,
-    0 0 5px white,
-    0 0 5px white,
-    // 0 0 5px white,
-    // 0 0 5px white,
-    // 5px 5px 2px black,
-    ; */
+  color: $white;
 
   .hero__heading {
     text-align: left;
@@ -249,23 +56,13 @@
     letter-spacing: 7px;
   }
 
-  p {
-    margin: 0;
-    white-space: nowrap;
-    // font-size: 1.4em;
-  }
-
-  .btn {
-    // margin-top: 1rem;
+  .hero__button {
+    background-color: $white;
     border-radius: 9px;
     height: 65px;
   }
 }
 
-.flex-row {
-  display: flex;
-  flex-direction: row;
-}
 
 // Email pre-reg styles
 .submit-success, .submit-error {
