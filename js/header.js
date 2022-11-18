@@ -9,7 +9,7 @@ function header() {
   // Won't exist on non-root page
   if (window.location.pathname == "/") {
     var triggerHeight =
-      document.querySelector(".hero").getBoundingClientRect().top +
+      document.querySelector(".hero__wrapper").getBoundingClientRect().top +
       window.scrollY -
       headerHeight;
   }

@@ -3,7 +3,7 @@ const submitError = document.querySelector('.submit-error')
 
 const handleSubmit = (e) => {
   e.preventDefault();
-  let myForm = document.getElementById("contact-form");
+  let myForm = document.getElementById("email-notification");
   let formData = new FormData(myForm);
   fetch("/", {
     method: "POST",

@@ -123,18 +123,22 @@
         will-change: transform;
         position: fixed;
         transform: translateX(0);
-        width: 70%;
+        width: 60%;
         top: 0;
-        right: -70%;
+        right: -60%;
         height: 100vh;
         background-color: $mobile-nav-background-color;
         transition: transform 0.3s cubic-bezier(0, 0, 0.3, 1);
         margin-top: 0;
+        justify-content: end;
+        align-items: start;
+        padding-right: 5vw;
 
         ul {
           margin-top: 70px;
           text-align: right;
-
+          flex-direction: column;
+          
           li {
             display: block;
             width: 100%;
