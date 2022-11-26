@@ -13,21 +13,23 @@
         <p>Sign up here to get updates about RevolutionUC {{ site.data.config.eventData.date.year }}</p>
         <p>And be notified when registration goes live!</p>
 
-          <!-- Link to interest form -->
-        <div class="hero__email">
-          <form id="email-notification" name="email-preRegistration" method="POST" data-netlify="true" data-netlify-recaptcha="true">
-            <input name="emailAddress" class="hero__input" type="email" placeholder="Enter Email here..." required id="email-notification-input" />
-            <button type="submit" class="btn btn--primary hero__button">Notify me!</a>
-            <!-- <div data-netlify-recaptcha="true"></div> -->
-            <div class="submit-success"><p>Signed up!🎉</p></div>
-            <div class="submit-error"><p>Error 💔</p></div>
-          </form>
+        <form
+          id="email-notification"
+          name="email-preRegistration"
+          method="POST"
+          data-netlify="true"
+          data-netlify-recaptcha="true"
+          class="hero__email"
+        >
+          <input name="emailAddress" class="hero__input" type="email" placeholder="Enter Email here..." id="email-notification-input" required />
+          <button type="submit" class="btn btn--primary hero__button">Notify me!</button>
+        </form>
 
         </div>
         <!-- Email Pre-reg script -->
-        <script src="/js/preRegistration.js"></script>
-      {% endif %}
-      <!-- ================================================== -->
+        <script src="/js/subscribe.js" async defer></script>
+        {% endif %}
+      </div>
 
       <!-- ========== Registration info and button ========== -->
       {% if site.data.config.homepage.timeline == "registration" %}
@@ -61,47 +63,12 @@
 
   </div>
 
-    <!-- <div class="down-chevron"><a href="#main">&#x2304;</a></div> -->
-  </div>
-
-  <!-- theme / animation -->
-
-  <!-- <div class="waveWrapper waveAnimation"> -->
-    <!-- <div class="bgTop">
-        <div class="wave pinWheel" style="background-image: url('https://assets.revolutionuc.com/website-images/2022/rot_asset_circle.png')"></div>
-    </div> -->
-
-    <!-- <div class="waveWrapperInner bgTop">
-      <div class="side_left waveMiddle" style="background-image: url('https://assets.revolutionuc.com/website-images/2022/Side_Border.png')"></div>
-    </div>
-
-    <div class="waveWrapperInner bgTop">
-      <div class="side_right waveMiddle" style="background-image: url('https://assets.revolutionuc.com/website-images/2022/Corner_doodles2.png')"></div>
-    </div> -->
-
-    <!-- <div class="bgMiddle">
-      <div class="cloud" style="background-image: url('https://assets.revolutionuc.com/website-images/2022/cloud.png')"></div>
-    </div> -->
-
-    <!-- <div class="bgMiddle">
-      <div class="comic_filter" style="background-image: url('https://assets.revolutionuc.com/website-images/2022/comic_filter.png')"></div>
-    </div> -->
-
-    <!-- <div class="bgMiddle"> -->
-      <!-- <div class="vinyl pinWheel" style="background-image: url('https://assets.revolutionuc.com/website-images/2022/vinyl-cd.png')"></div> -->
-      <!-- <div class="vinyl pinWheel" style="background-image: url('css/Record1.png')"></div> -->
-    <!-- </div> -->
-
-    <!-- <div class="bgTop">
-      <div class="vinyl-pin" style="background-image: url('css/vinyl-pin.png')"></div>
-    </div> -->
 
 
   <!-- </div> -->
   <!-- fin theme -->
 
 </section>
-<script src=/js/subscribe.js async defer></script>
 
  <!-- Import Particles.js -->
 <script src="/js/particles.js"></script>

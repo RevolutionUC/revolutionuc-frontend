@@ -10,7 +10,6 @@ const handleSubmit = (e) => {
     headers: { "Content-Type": "application/x-www-form-urlencoded" },
     body: new URLSearchParams(formData).toString(),
   })
-
     .then(() => { submitSuccess.style.display = 'block'; submitError.style.display = null; })
     .catch((error) => { submitError.style.display = 'block'; submitSuccess.style.display = null; });
 };

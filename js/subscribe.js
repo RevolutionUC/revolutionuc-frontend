@@ -19,29 +19,39 @@ if (!subscription_init) {
       this._submitButton.disabled = true;
       this._submitButton.textContent = `Working...`;
 
-      const email = this._formElement.emailAddress.value;
+      // Submit data through Netlify form
+      fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: new URLSearchParams(new FormData(e.target)).toString()
+      })
+        .then((response) => {
+          this._updateFormUI(null, response);
+        })
+        .catch((error) => {
+          this._updateFormUI(error);
+        });
 
-      // Send the information to a Flow automation webhook
-      fetch(
-        `https://prod-105.westus.logic.azure.com:443/workflows/dbc811edba974d159c9bd88be9df084e/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=0n2xeJ-xZaKgRiLXSjAv4aAcrQt0165QuOJwz4nHTi0`,
-        {
-          method: `POST`,
-          body: JSON.stringify({ email }),
-          headers: { 'Content-Type': `application/json` }
-        }
-      ).then(response => {
-        this._updateFormUI(null, response);
-      }).catch(error => {
-        this._updateFormUI(error);
-      });
+      // fetch(
+      //   `https://prod-105.westus.logic.azure.com:443/workflows/dbc811edba974d159c9bd88be9df084e/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=0n2xeJ-xZaKgRiLXSjAv4aAcrQt0165QuOJwz4nHTi0`,
+      //   {
+      //     method: `POST`,
+      //     body: JSON.stringify({ email: this._formElement.emailAddress.value }),
+      //     headers: { 'Content-Type': `application/json` }
+      //   }
+      // ).then(response => {
+      //   this._updateFormUI(null, response);
+      // }).catch(error => {
+      //   this._updateFormUI(error);
+      // });
     }
 
     static _updateFormUI(error, response) {
       if (error || response.status != 202) {
-        alert(`There was an error. Please try refreshing the page or try again later.`);
+        alert("There was an error. Please try refreshing the page or try again later.");
       } else {
-        this._formElement.emailAddress.value = ``;
-        alert(`You have been added to the mailing list.`);
+        this._formElement.emailAddress.value = "";
+        alert("You have been added to the mailing list. 🎉");
       }
 
       this._submitButton.disabled = false;
