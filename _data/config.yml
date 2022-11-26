@@ -20,11 +20,11 @@ livesite:
 
 eventData:
   # Hackathon data
-  fullDate: Feb 26th and 27th, 2023
+  fullDate: Feb 25th and 26th, 2023
   date:
     month: February
-    firstDay: 26
-    secondDay: 27
+    firstDay: 25
+    secondDay: 26
     year: 2023
   # Interest form url
   # interestForm: https://forms.gle/LrmB5fpVQbaSy6To6
