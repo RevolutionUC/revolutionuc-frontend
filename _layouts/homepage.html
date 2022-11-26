@@ -3,9 +3,9 @@
 <section class="hero">
   <div id="particles-js"></div>
   <div class="hero__wrapper">
-    <img class="revuc-logo" src="/img/revuc-logos/revuc-spring-2023.svg" alt="RevUC Logo">
+    <img class="revuc-logo" src="/img/revuc-logos/revuc-spring-2023.svg" alt="RevUC Logo" />
     <div id="hero__text-wrapper ">
-      <img class="hero__header-image" src="/img/revuc-logos/revuc_long_white.png" alt="RevUC Long logo">
+      <img class="hero__header-image" src="/img/revuc-logos/revuc_long_white.png" alt="RevUC Long logo" />
       <div class="hero__text">
         <!-- ========== Interest form info and button ========== -->
         {% if site.data.config.homepage.timeline == "pre-registration" %}
@@ -24,7 +24,6 @@
           <button type="submit" class="btn btn--primary hero__button">Notify me!</button>
         </form>
 
-        </div>
         <!-- Email Pre-reg script -->
         <script src="/js/subscribe.js" async defer></script>
         {% endif %}
@@ -59,7 +58,6 @@
       {% endif %}
       <!-- ================================================== -->
     </div>
-
   </div>
 
 
@@ -69,10 +67,10 @@
 
 </section>
 
- <!-- Import Particles.js -->
+<script src="/js/subscribe.js" async defer></script>
+
+<!-- Import Particles.js -->
 <script src="/js/particles.js"></script>
 <script src="/js/app.js"></script>
 
-{{ content }}
-
-{% include footer.html %}
+{{ content }} {% include footer.html %}
