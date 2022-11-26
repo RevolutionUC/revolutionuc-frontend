@@ -47,7 +47,7 @@ if (!subscription_init) {
     }
 
     static _updateFormUI(error, response) {
-      if (error || response.status != 202) {
+      if (error || response.status >= 400) {
         alert("There was an error. Please try refreshing the page or try again later.");
       } else {
         this._formElement.emailAddress.value = "";
