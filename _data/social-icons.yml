@@ -4,14 +4,10 @@
   link: https://twitter.com/Revolution_UC
   svg: social/twitter.svg
 
-- name: Facebook
-  link: https://www.facebook.com/RevolutionUC/
-  svg: social/facebook.svg
-
 - name: Instagram
   link: https://www.instagram.com/revolution.uc/
   svg: social/instagram.svg
 
-- name: GitHub
-  link: https://github.com/RevolutionUC
-  svg: social/github.svg
+- name: LinkedIn
+  link: https://www.linkedin.com/company/revolutionuc/
+  svg: social/linkedin.svg
