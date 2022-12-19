@@ -59,11 +59,23 @@
         list-style-type: none;
         display: flex;
         justify-content: space-between;
+        align-items: center;
         gap: 2em;
         margin: 0;
         padding: 0;
         white-space: nowrap;
-        li {
+        .navbar__register {
+          padding: 0.5em 1em;
+          border-radius: 5px;
+          background-color: $prim-color-3;
+          color: $white;
+
+          &:hover {
+            background-color: darken($prim-color-3, 10%);
+          }
+        }
+        
+        li:not(.navbar__register) {
           display: inline-block;
           @extend %navlink-hover-animation;
           a {
@@ -76,17 +88,8 @@
               opacity: 0.7;
             }
 
-            &.navbar__active {
+            &.navbar__active:not(.navbar__register) {
               @extend %navlink-underline;
-            }
-
-            &.navbar__register {
-              background-color: $prim-color-3;
-              color: $white;
-
-              &:hover {
-                background-color: darken($prim-color-3, 10%);
-              }
             }
           }
         }
@@ -138,7 +141,7 @@
           margin-top: 70px;
           text-align: right;
           flex-direction: column;
-          
+
           li {
             display: block;
             width: 100%;
