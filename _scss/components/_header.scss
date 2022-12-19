@@ -67,14 +67,16 @@
         .navbar__register {
           padding: 0.5em 1em;
           border-radius: 5px;
-          background-color: $prim-color-3;
-          color: $white;
-
+          background-color: $prim-color-2;
+          a {
+            text-decoration: none;
+            font-weight: bold;
+          }
           &:hover {
-            background-color: darken($prim-color-3, 10%);
+            background-color: darken($prim-color-2, 10%);
           }
         }
-        
+
         li:not(.navbar__register) {
           display: inline-block;
           @extend %navlink-hover-animation;
