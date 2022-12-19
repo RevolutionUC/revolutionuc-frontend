@@ -29,7 +29,7 @@
     text-align: center;
     .hero__date {
       font-size: 1.15em;
-      span {
+      .hero__datedate {
         font-weight: bold;
       }
     }
@@ -40,7 +40,8 @@
     min-width: 32px;
     position: absolute;
     top: 2em;
-    left: -10.5em;
+    left: 0em;
+    transform: translateX(-110%);
   }
 }
 

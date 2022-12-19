@@ -9,9 +9,8 @@
       <div class="hero__text">
         <!-- ========== Interest form info and button ========== -->
         {% if site.data.config.homepage.timeline == "pre-registration" %}
-        <p class="hero__date">A hackathon hosted at the University of Cincinnati on <span>{{ site.data.config.eventData.fullDate }}</span></p>
+        <p class="hero__date">A hackathon hosted at the University of Cincinnati <br/> <span class="hero__datedate">{{ site.data.config.eventData.fullDate }}</span></p>
         <p>Sign up here to get updates about RevolutionUC {{ site.data.config.eventData.date.year }}</p>
-        <p>And be notified when registration goes live!</p>
 
         <form
           id="email-notification"

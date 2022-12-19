@@ -7,7 +7,7 @@ navbar:
   about: true
   faq: true
   resources: true
-  register: false
+  register: true
 
 homepage:
   # The timeline options are: pre-registration, registration, live, post-registration
@@ -20,7 +20,7 @@ livesite:
 
 eventData:
   # Hackathon data
-  fullDate: Feb 25th and 26th, 2023
+  fullDate: February 25 - 26, 2023
   date:
     month: February
     firstDay: 25
