@@ -6,9 +6,15 @@ function getAge(birthDateString) {
   var age = today.getFullYear() - birthDate.getFullYear();
   var m = today.getMonth() - birthDate.getMonth();
   if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
-      age--;
+    age--;
   }
   return age;
+}
+
+function getFullPhoneNumber() {
+  // The Intl-tel-input instance passed as a global variable
+  const intlPhoneNumber = window.iti.getNumber();
+  return intlPhoneNumber;
 }
 
 if (!registration_init) {
@@ -17,20 +23,12 @@ if (!registration_init) {
       console.log("Registration::init()");
 
       this._dataSharingBox = document.querySelector("input[name=dataSharing]");
-      this._codeOfConductBox = document.querySelector(
-        "input[name=codeOfConduct]",
-      );
+      this._codeOfConductBox = document.querySelector("input[name=codeOfConduct]");
       this._formElement = document.querySelector("form");
       this._submitButton = document.querySelector("form button[type=submit]");
 
-      this._dataSharingBox.addEventListener(
-        "change",
-        this._checkChange.bind(this),
-      );
-      this._codeOfConductBox.addEventListener(
-        "change",
-        this._checkChange.bind(this),
-      );
+      this._dataSharingBox.addEventListener("change", this._checkChange.bind(this));
+      this._codeOfConductBox.addEventListener("change", this._checkChange.bind(this));
       this._formElement.addEventListener("submit", this._onSubmit.bind(this));
 
       this._labels = [
@@ -47,22 +45,25 @@ if (!registration_init) {
         "phoneNumber",
         "education",
         "gender",
-        "resume",
+        "resume"
       ];
     }
 
     static _onSubmit(e) {
       console.log("Registration::_onSubmit");
       e.preventDefault();
-      
+
       // Set the button as disabled and the text to 'Working...'
       this._submitButton.disabled = true;
       this._submitButton.textContent = "Working...";
 
-      var formData = new FormData(this._formElement)
+      const formData = new FormData(this._formElement);
+
+      // Get International number from the intl-tel-input
+      formData.set("phoneNumber", getFullPhoneNumber());
 
       // Validate data
-      if(
+      if (
         formData.get("firstName") == "" ||
         formData.get("lastName") == "" ||
         formData.get("email") == "" ||
@@ -76,125 +77,145 @@ if (!registration_init) {
         // formData.get("shirtSize") == "" ||
         formData.get("ethnicity") == null ||
         formData.get("gender") == null
-      ){
+      ) {
         alert("Please fill in all required fields.");
         this._submitButton.disabled = false;
         this._submitButton.textContent = "Register";
         return;
       }
-      
-      if(formData.get("email") !== formData.get("confirmEmail")) {
+
+      if (formData.get("email") !== formData.get("confirmEmail")) {
         alert("Emails do not match.");
         this._submitButton.disabled = false;
         this._submitButton.textContent = "Register";
+        document.querySelector("#confirmEmail").scrollIntoView();
         return;
       }
 
-      if(getAge(formData.get("dob")) < 16) {
+      if (getAge(formData.get("dob")) < 16) {
         alert("You must at least 16 years old to participate in RevolutionUC.");
         this._submitButton.disabled = false;
         this._submitButton.textContent = "Register";
+        document.querySelector("#dob").scrollIntoView();
+        return;
+      }
+
+      if (!window.iti.isValidNumber()) {
+        alert("Please recheck and make sure you entered a valid phone number");
+        this._submitButton.disabled = false;
+        this._submitButton.textContent = "Register";
+        document.querySelector("#phoneNumber").scrollIntoView();
         return;
       }
 
       // Show e sign waiver
-      var waiverText = document.getElementById('normal-waiver-text');
-      var minorWaiverText = document.getElementById('minor-waiver-text');
-      var waiverLink = document.getElementById('waiver-link');
-      if( getAge(formData.get('dob')) < 18 ) {
-        waiverText.style.display = 'none';
-        waiverLink.style.display = 'none';
-        minorWaiverText.style.display = 'block';
+      var waiverText = document.getElementById("normal-waiver-text");
+      var minorWaiverText = document.getElementById("minor-waiver-text");
+      var waiverLink = document.getElementById("waiver-link");
+      if (getAge(formData.get("dob")) < 18) {
+        waiverText.style.display = "none";
+        waiverLink.style.display = "none";
+        minorWaiverText.style.display = "block";
       } else {
-        waiverText.style.display = 'block';
-        minorWaiverText.style.display = 'none';
+        waiverText.style.display = "block";
+        minorWaiverText.style.display = "none";
       }
 
-      var eSignFormModal = document.getElementById('e-sign-waiver-modal');
-      eSignFormModal.style.display = 'block';
+      var eSignFormModal = document.getElementById("e-sign-waiver-modal");
+      eSignFormModal.style.display = "block";
 
-      var closeButtons = document.getElementsByClassName('close-e-sign-modal');
-      [...closeButtons].forEach( btn=> {
-        btn.addEventListener('click', ()=> {
-          eSignFormModal.style.display = 'none';
+      var closeButtons = document.getElementsByClassName("close-e-sign-modal");
+      [...closeButtons].forEach((btn) => {
+        btn.addEventListener("click", () => {
+          eSignFormModal.style.display = "none";
           this._submitButton.disabled = false;
           this._submitButton.textContent = "Register";
         });
       });
 
-      window.onclick = event=> {
+      window.onclick = (event) => {
         if (event.target == eSignFormModal) {
-          eSignFormModal.style.display = 'none';
+          eSignFormModal.style.display = "none";
           this._submitButton.disabled = false;
           this._submitButton.textContent = "Register";
         }
-      }
-
-      // Call _submitForm if clicked accept
-      var acceptButton = document.getElementById('submit-e-sign');
-      acceptButton.onclick = ()=> {
-        eSignFormModal.style.display = 'none';
-        this._submitForm(formData, true);
       };
 
+      // Call _submitForm if clicked accept
+      var acceptButton = document.getElementById("submit-e-sign");
+      acceptButton.onclick = () => {
+        eSignFormModal.style.display = "none";
+        this._submitForm(formData, true);
+      };
     }
 
     static _submitForm(formData, acceptedWaiver) {
       console.log("Registration::_submitForm");
 
-      let jsonObj = {}
+      let jsonObj = {};
       for (const [key, value] of formData.entries()) {
-        jsonObj[key] = value
+        jsonObj[key] = value;
       }
 
-      let jsonData = {}
-      jsonData["firstName"] = jsonObj["firstName"]
-      jsonData["lastName"] = jsonObj["lastName"]
-      jsonData["email"] = jsonObj["email"]
-      jsonData["phoneNumber"] = jsonObj["phoneNumber"]
-      jsonData["school"] = jsonObj["school"]
-      jsonData["country"] = jsonObj["country"]
-      jsonData["major"] = jsonObj["major"]
-      jsonData["gender"] = jsonObj["gender"]
-      jsonData["ethnicity"] = formData.getAll("ethnicity")
-      jsonData["howYouHeard"] = jsonObj["howYouHeard"]
-      jsonData["hackathons"] = parseInt(jsonObj["hackathons"])
+      let jsonData = {};
+      jsonData["firstName"] = jsonObj["firstName"];
+      jsonData["lastName"] = jsonObj["lastName"];
+      jsonData["email"] = jsonObj["email"];
+      jsonData["phoneNumber"] = jsonObj["phoneNumber"];
+      jsonData["school"] = jsonObj["school"];
+      jsonData["country"] = jsonObj["country"];
+      jsonData["major"] = jsonObj["major"];
+      jsonData["gender"] = jsonObj["gender"];
+      jsonData["ethnicity"] = formData.getAll("ethnicity");
+      jsonData["howYouHeard"] = jsonObj["howYouHeard"];
+      jsonData["hackathons"] = parseInt(jsonObj["hackathons"]);
       // jsonData["shirtSize"] = jsonObj["shirtSize"]
-      jsonData["githubUsername"] = jsonObj["githubUsername"]
-      jsonData["acceptedWaiver"] = true
-      jsonData["dateOfBirth"] = new Date(jsonObj["dob"]).toISOString()
-      jsonData["allergens"] = []
-      if(jsonObj["vegetarian"] == "on"){jsonData["allergens"].push("Vegetatian")}
-      if(jsonObj["vegan"] == "on"){jsonData["allergens"].push("Vegan")}
-      if(jsonObj["peanutAllergy"] == "on"){jsonData["allergens"].push("PeanutAllergy")}
-      if(jsonObj["glutenFree"] == "on"){jsonData["allergens"].push("GlutenFree")}
-      jsonData["otherAllergens"] = jsonObj["otherDietaryRestrictions"]
-      jsonData["educationLevel"] = jsonObj["education"]
-      jsonData["acceptedWaiver"] = acceptedWaiver
+      jsonData["githubUsername"] = jsonObj["githubUsername"];
+      jsonData["acceptedWaiver"] = true;
+      jsonData["dateOfBirth"] = new Date(jsonObj["dob"]).toISOString();
+      jsonData["allergens"] = [];
+      if (jsonObj["vegetarian"] == "on") {
+        jsonData["allergens"].push("Vegetatian");
+      }
+      if (jsonObj["vegan"] == "on") {
+        jsonData["allergens"].push("Vegan");
+      }
+      if (jsonObj["peanutAllergy"] == "on") {
+        jsonData["allergens"].push("PeanutAllergy");
+      }
+      if (jsonObj["glutenFree"] == "on") {
+        jsonData["allergens"].push("GlutenFree");
+      }
+      jsonData["otherAllergens"] = jsonObj["otherDietaryRestrictions"];
+      jsonData["educationLevel"] = jsonObj["education"];
+      jsonData["acceptedWaiver"] = acceptedWaiver;
 
       var regHeaders = new Headers();
-      regHeaders.append('Content-Type', 'application/json');
+      regHeaders.append("Content-Type", "application/json");
       //regHeaders.append('Accept', 'application/json');
       fetch("https://revolutionuc-api.herokuapp.com/api/registrant", {
         method: "POST",
         headers: regHeaders,
-        body: JSON.stringify(jsonData), //new FormData(this._formElement),
-      }).then(response => {
-        const result = this._updateFormUI(null, response);
-        if(result) {
-          return response.json();
-        }
-      }).then(data => {
-        console.log(data);
-        if(data) {
-          let form = new FormData();
-          form.append("resume", formData.get("resume"));
-          this._uploadResume(data, form);
-        }
-      }).catch(err => {
-        // console.error(err);
-        this._updateFormUI(err);
-      });
+        body: JSON.stringify(jsonData) //new FormData(this._formElement),
+      })
+        .then((response) => {
+          const result = this._updateFormUI(null, response);
+          if (result) {
+            return response.json();
+          }
+        })
+        .then((data) => {
+          console.log(data);
+          if (data) {
+            let form = new FormData();
+            form.append("resume", formData.get("resume"));
+            this._uploadResume(data, form);
+          }
+        })
+        .catch((err) => {
+          // console.error(err);
+          this._updateFormUI(err);
+        });
     }
 
     static _uploadResume(data, form) {
@@ -202,11 +223,11 @@ if (!registration_init) {
         mode: "no-cors",
         method: "POST",
         //headers: regHeaders,
-        body: form,
-      }).then(response => {
+        body: form
+      }).then((response) => {
         console.log(response);
         window.location = "/check-email";
-      }); 
+      });
     }
 
     static _updateFormUI(err, response) {
@@ -227,7 +248,7 @@ if (!registration_init) {
         } else if (response.status !== 200 && response.status !== 201) {
           alert("There was an error while submission, please check the form for errors, or try again later.");
           // Bad news bears again
-          response.json().then(jsonErrors => {
+          response.json().then((jsonErrors) => {
             this._updateLabels(jsonErrors);
           });
           // Set the button as enabled and the text to 'Register'
@@ -247,9 +268,7 @@ if (!registration_init) {
       console.log(jsonErrors);
 
       for (let error of jsonErrors.message) {
-        document
-          .querySelector(`label[for=${error.split(` `)[0]}]`)
-          .classList.add("error");
+        document.querySelector(`label[for=${error.split(` `)[0]}]`).classList.add("error");
         if (error.property == "email" && error.msg.includes("registered")) {
           // Email address has already been registered
           this._addEmailRegisteredWarning();
@@ -260,15 +279,13 @@ if (!registration_init) {
 
       // TODO: consider removing this. Results in a
       // prototype dependency that isn't shared across modules
-      Array.prototype.diff = function(a) {
-        return this.filter(function(i) {
+      Array.prototype.diff = function (a) {
+        return this.filter(function (i) {
           return a.indexOf(i) < 0;
         });
       };
 
-      this._cleanDirtyLabels(
-        this._labels.diff(jsonErrors.message.map(elem => elem.split(` `)[0])),
-      );
+      this._cleanDirtyLabels(this._labels.diff(jsonErrors.message.map((elem) => elem.split(` `)[0])));
     }
 
     static _cleanDirtyLabels(labelsArray) {
