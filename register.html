@@ -5,7 +5,7 @@ permalink: /register/
 description: Registration for RevolutionUC — Hackathon at the University of Cincinnati from February 20-21, 2021
 ---
       <div>
-        <form id="registration" name="registration" onsubmit = "return(validate());">
+        <form id="registration" name="registration" onsubmit="validate()" action="" method="post">
           <div class="circle top left"></div>
           <div class="circle top right"></div>
           <div class="circle bottom left"></div>
@@ -21,7 +21,7 @@ description: Registration for RevolutionUC — Hackathon at the University of Ci
           <div class="form-block b-bottom">
             <label class="tag" for="lastName" id="LastName">Last Name*</label>
             <div class="form-block__input">
-              <input class="input" name="lastName" id="lastName" type="text" placeholder="Evans">
+              <input class="input" name="lastName" id="lastName" type="text" placeholder="Evans"/>
             </div>
           </div>
 
@@ -63,7 +63,7 @@ description: Registration for RevolutionUC — Hackathon at the University of Ci
           <div class="form-block b-bottom">
             <label class="tag" for="email" id="Email">Email*</label>
             <div class="form-block__input">
-              <input class="input" name="email" id="email" type="email" placeholder="Email">
+              <input class="input" name="email" id="email" type="email" placeholder="Email" required/>
             </div>
           </div>
           
@@ -155,7 +155,7 @@ description: Registration for RevolutionUC — Hackathon at the University of Ci
               <!-- Phone Number* -->
             </label>
             <div class="form-block__input">
-              <input name="phoneNumber" id="phoneNumber" type="text" placeholder="+15138675309">
+              <input name="phoneNumber" id="phoneNumber" type="text">
             </div>
           </div>
 
@@ -331,6 +331,7 @@ description: Registration for RevolutionUC — Hackathon at the University of Ci
         </div>
       </div>
 
+<script src="/js/intl-tel-input.js" defer></script>
 <script src=/js/register.js async defer></script>
 <script>
   var typeahead_init = false;
