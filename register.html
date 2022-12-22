@@ -4,459 +4,433 @@ title: Register
 permalink: /register/
 description: Registration for RevolutionUC — Hackathon at the University of Cincinnati from February 20-21, 2021
 ---
-      <div>
-        <form id="registration" name="registration" onsubmit="validate()" action="" method="post">
-          <div class="circle top left"></div>
-          <div class="circle top right"></div>
-          <div class="circle bottom left"></div>
-          <div class="circle bottom right"></div>
+<div>
+  <form id="registration" name="registration">
+    <div class="circle top left"></div>
+    <div class="circle top right"></div>
+    <div class="circle bottom left"></div>
+    <div class="circle bottom right"></div>
 
-          <div class=" form-block b-bottom">
-            <label class="tag" for="firstName" name="firstName" id="FirstName">First Name*</label>
-            <div class="form-block__input">
-              <input class="input" name="firstName" id="firstName" type="text" placeholder="Bob">
-            </div>
-          </div>
+    <div class="form-block b-bottom">
+      <label class="tag" for="firstName" name="firstName" id="firstName-label">First Name*</label>
+      <div class="form-block__input">
+        <input class="input" name="firstName" id="firstName" type="text" placeholder="Bob" required />
+      </div>
+    </div>
 
-          <div class="form-block b-bottom">
-            <label class="tag" for="lastName" id="LastName">Last Name*</label>
-            <div class="form-block__input">
-              <input class="input" name="lastName" id="lastName" type="text" placeholder="Evans"/>
-            </div>
-          </div>
+    <div class="form-block b-bottom">
+      <label class="tag" for="lastName" id="lastName-label">Last Name*</label>
+      <div class="form-block__input">
+        <input class="input" name="lastName" id="lastName" type="text" placeholder="Evans" required />
+      </div>
+    </div>
 
-          <!-- <div class="form-block b-bottom" id="shirtSize">
-            <label class="tag" for="shirtSize">Shirt Size*</label>
-            <div class="form-block__input">
-              <div>
-                <input name="shirtSize" type="radio" id="X-Small" value="X-Small">
-                <label for="X-Small">X-Small</label>
-              </div>
-              
-              <div>
-                <input name="shirtSize" type="radio" id="Small" value="Small">
-                <label for="Small">Small</label>
-              </div>
+    <div class="form-block b-bottom">
+      <label class="tag" for="email" id="email-label">Email*</label>
+      <div class="form-block__input">
+        <input class="input" name="email" id="email" type="email" placeholder="Email" required />
+      </div>
+    </div>
 
-              <div>
-                <input name="shirtSize" type="radio" id="Medium" value="Medium">
-                <label for="Medium">Medium</label>
-              </div>
+    <div class="form-block b-bottom">
+      <label class="tag" for="email" id="confirmEmail-label">Confirm email*</label>
+      <div class="form-block__input">
+        <input class="input" name="confirmEmail" id="confirmEmail" type="email" placeholder="Confirm email" required />
+      </div>
+    </div>
 
-              <div>
-                <input name="shirtSize" type="radio" id="Large" value="Large">
-                <label for="Large">Large</label>
-              </div>
+    <div class="form-block b-bottom">
+      <label class="tag" for="school" id="school-label">School*</label>
 
-              <div>
-                <input name="shirtSize" type="radio" id="X-Large" value="X-Large">
-                <label for="X-Large">X-Large</label>
-              </div>
+      <div class="form-block__input">
+        <input class="input--school input--school-other hide" type="text" placeholder="Enter your school" />
 
-              <div>
-                <input name="shirtSize" type="radio" id="XX-Large" value="XX-Large">
-                <label for="XX-Large">XX-Large</label>
-              </div>
-            </div>
-          </div> -->
-          
-          <div class="form-block b-bottom">
-            <label class="tag" for="email" id="Email">Email*</label>
-            <div class="form-block__input">
-              <input class="input" name="email" id="email" type="email" placeholder="Email" required/>
-            </div>
-          </div>
-          
-          <div class="form-block b-bottom">
-            <label class="tag" for="email" id="ConfirmEmail">Confirm email*</label>
-            <div class="form-block__input">
-              <input class="input" name="confirmEmail" id="confirmEmail" type="email" placeholder="Confirm email">
-            </div>
-          </div>
+        <div class="full-width-flex flex input--school">
+          <input class="input--school-typeahead" name="school" id="school" list="school-list" placeholder="Search your school" required />
+          <datalist id="school-list"></datalist>
+          <div id="school-dropdown-btn" class="dropdown-btn">&#9660;</div>
+        </div>
 
-          <div class="form-block b-bottom">
-            <label class="tag" for="school" id="School">School*</label>
-
-            <div class="form-block__input">
-              <input class="input--school input--school-other hide" type="text" placeholder="Enter your school" />
-
-              <div class="full-width-flex flex input--school">
-                <input class="input--school-typeahead" name="school" id="school" list="school-list" placeholder="Search your school" />
-                <datalist id="school-list"></datalist>
-                <div id="school-dropdown-btn" class="dropdown-btn">&#9660;</div>
-              </div>
-
-              <div class="form-block__input">
-                <input name="schoolOther" id="schoolOther" type="checkbox" class="button" data-toggle="true">
-                <label for="schoolOther"><small>I can't find my school</small></label>
-              </div>
-            </div>
-          </div>
-
-          <div class="form-block b-bottom">
-            <label class="tag" for="country" id="Country">Country*</label>
-
-            <div class="form-block__input">
-              <input class="input--country input--country-other hide" type="text" placeholder="Enter your country" />
-
-              <div class="full-width-flex flex input--country">
-                <input class="input--country-typeahead" name="country" id="country" list="country-list" placeholder="Search your country" />
-                <datalist id="country-list"></datalist>
-                <div id="country-dropdown-btn" class="dropdown-btn">&#9660;</div>
-              </div>
-
-              <div class="form-block__input">
-                <input name="countryOther" id="countryOther" type="checkbox" class="button" data-toggle="true">
-                <label for="countryOther"><small>I can't find my country</small></label>
-              </div>
-            </div>
-          </div>
-
-          <div class="form-block b-bottom">
-            <label class="tag" for="education" id="Education">Education*</label>
-            <div class="form-block__input">
-              <select name="education" id="education">
-                <option value="" disabled selected>Level of Education</option>
-                <option value="HighSchool">High School (16+)</option>
-                <option value="Undergraduate">Undergraduate</option>
-                <option value="Graduate">Graduate</option>
-              </select>
-            </div>
-          </div>
-
-          <div class="form-block b-bottom">
-            <label class="tag" for="major" id="Major">Major*</label>
-            <div class="form-block__input">
-              <select name="major" id="major">
-                <option value="" disabled selected>Major</option>
-                  {% for row in site.data.majors %}
-                    <option>
-                        {% for cell in row %}
-                          {{ cell[1] }}
-                        {% endfor %}
-                    </option>
-                  {% endfor %}
-              </select>
-            </div>
-          </div>
-
-          <div class="form-block b-bottom">
-            <label class="tag" for="dob" id="DOB">Date of birth*</label>
-            <div class="form-block__input">
-              <input type="date" placeholder="mm/dd/yyyy" name="dob" id="dob">
-            </div>
-          </div>
-
-          <div class="form-block b-bottom">
-            <label class="tag" for="phoneNumber" id="PN">
-              <div class="tooltip">Phone Number*
-                <span class="tooltiptext">Please include the country code</span>
-              </div>
-              <!-- Phone Number* -->
-            </label>
-            <div class="form-block__input">
-              <input name="phoneNumber" id="phoneNumber" type="text">
-            </div>
-          </div>
-
-          <!-- <div class="form-block b-bottom">
-            <label class="tag" for="dietaryRestrictions">Dietary Restrictions</label>
-            <div class="form-block__input">
-              <div>
-              <input name="vegetarian" id="vegetarian" type="checkbox">
-              <label for="vegetarian">Vegetarian</label>
-              </div>
-
-              <div>
-              <input name="vegan" id="vegan" type="checkbox">
-              <label for="vegan">Vegan</label>
-              </div>
-
-              <div>
-              <input name="peanutAllergy" id="peanutAllergy" type="checkbox">
-              <label for="peanutAllergy">Peanut&nbsp;Allergy</label>
-              </div>
-
-              <div>
-              <input name="glutenFree" id="glutenFree" type="checkbox">
-              <label for="glutenFree">Gluten&nbsp;Free</label>
-              </div>
-            </div>
-          </div> -->
-
-          <!-- <div class="form-block b-bottom">
-            <label class="tag">Other dietary restrictions</label>
-            <div class="form-block__input">
-              <textarea name="otherDietaryRestrictions" cols="30" rows="5" placeholder="List other dietary restrictions here"></textarea>
-            </div>
-          </div> -->
-
-          <div class="form-block b-bottom">
-            <label class="tag">GitHub</label>
-            <div class="form-block__input">
-              <input name="githubUsername" type="text" placeholder="GitHub username">
-            </div>
-          </div>
-
-          <div class="form-block b-bottom">
-            <label for="gender" class="tag" id="Gender">Gender*</label>
-            <div class="form-block__input">
-              <select name="gender" id="gender">
-                <option value="" disabled selected>Gender</option>
-                <option value="Male">Male</option>
-                <option value="Female">Female</option>
-                <option value="NonBinary">Non-binary / Third Gender</option>
-                <option value="Other">Other</option>
-                <option value="PreferNot">Prefer not to say</option>
-              </select>
-            </div>
-          </div>
-
-          <div class="form-block b-bottom">
-            <label class="tag" for="resume">Resume</label>
-            <div class="form-block__input">
-              <input name="resume" id="resume" type="file">
-            </div>
-          </div>
-
-          <div class="form-block b-bottom">
-            <label class="tag" for="ethnicity" id="Ethnicity">Race/Ethnicity*</label>
-            <div class="form-block__input">
-              <input name="ethnicity" type="checkbox" class="button" id="Indian" value="Indian">
-              <label for="Indian">American Indian or Alaskan Native</label><br>
-
-              <input name="ethnicity" type="checkbox" class="button" id="Asian" value="Asian">
-              <label for="Asian">Asian</label><br>
-
-              <input name="ethnicity" type="checkbox" class="button" id="Black" value="Black">
-              <label for="Black">Black or African American</label><br>
-
-              <input name="ethnicity" type="checkbox" class="button" id="Islander" value="Islander">
-              <label for="Islander">Native Hawaiian or other Pacific Islander</label><br>
-
-              <input name="ethnicity" type="checkbox" class="button" id="White" value="White">
-              <label for="White">White</label><br>
-
-              <input name="ethnicity" type="checkbox" class="button" id="Latino" value="Latino">
-              <label for="Latino">Hispanic or Latino</label><br>
-
-              <input name="ethnicity" type="checkbox" class="button" id="Prefer Not" value="Prefer Not">
-              <label for="Prefer Not">Prefer not to respond</label>
-            </div>
-          </div>
-
-          <div class="form-block b-bottom">
-            <label class="tag" for="hackathons">How many hackathons have you attended?</label>
-            <div class="form-block__input">
-              <select name="hackathons" id="hackathons">
-                <option value="0">0</option>
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-                <option value="6">6</option>
-                <option value="7">7</option>
-                <option value="8">8</option>
-                <option value="9">9</option>
-                <option value="10">10+</option>
-              </select>
-            </div>
-          </div>
-
-          <div class="form-block b-bottom">
-            <label class="tag" for="howYouHeard">How did you hear about RevUC?</label>
-            <div class="form-block__input">
-              <input name="howYouHeard" id="howYouHeard" type="text" placeholder="Twitter!">
-            </div>
-          </div>
-
-          <div class="form-block b-bottom">
-            <div class="form-block__input">
-              <input name="dataSharing" type="checkbox" class="button" id="dataSharing">
-              <label for="dataSharing">MLH Data Sharing<sup><a data-turbolinks="false" href="#agree-1">1</a></sup></label>
-            </div>
-            <label class="tag">I agree*</label>
-          </div>
-
-          <div class="form-block b-bottom">
-            <div class="form-block__input">
-              <input name="codeOfConduct" type="checkbox" class="button" id="codeOfConduct">
-              <label for="codeOfConduct">MLH Code of Conduct<sup><a data-turbolinks="false" href="#agree-2">2</a></sup></label>
-            </div>
-            <label class="tag">I agree*</label>
-          </div>
-
-          <div class="form-block b-bottom">
-            <div class="form-block__input">
-              <input name="mlhEmails" type="checkbox" class="button" id="mlhEmails">
-              <label for="mlhEmails">MLH Informational Emails<sup><a data-turbolinks="false" href="#agree-3">3</a></sup></label>
-            </div>
-            <label class="tag">I agree</label>
-          </div>
-
-          <div class="form-block">
-              <!-- <h4 style="margin-top: -10px">We have hit our projected capacity for RevolutionUC. 
-                  As we confirm attendance, spots may open up, which we will give to waitlisted
-                  participants in order of registration.</h4>
-              <button name="registrationSubmit" type="submit" disabled class="btn btn--register">Join Waitlist</button>   -->
-            <button name="registrationSubmit" type="submit" disabled class="btn btn--register">Register</button>
-          </div>
-        </form>
-
-        <section>
-          <p>
-            <small><sup id="agree-1">1</sup>I authorize you to share my application/registration information with Major League Hacking for event administration, ranking, and MLH administration in-line with the <a href="https://mlh.io/privacy" target="_blank">MLH Privacy Policy</a>. I further agree to the terms of both the <a href="https://github.com/MLH/mlh-policies/tree/master/prize-terms-and-conditions" target="_blank">MLH Contest Terms and Conditions</a> and the <a href="https://mlh.io/privacy" target="_blank">MLH Privacy Policy</a>.</small>
-            <br>
-            <small><sup id="agree-2">2</sup>I have read and agree to the <a href="https://static.mlh.io/docs/mlh-code-of-conduct.pdf" target="_blank">MLH Code of Conduct</a>.</small>
-            <br>
-            <small><sup id="agree-3">3</sup>I authorize MLH to send me pre- and post-event informational emails, which contain free credit and opportunities from their partners.</small>
-          </p>
-        </section>
-        
-        <!-- The Modal -->
-        <div id="e-sign-waiver-modal" class="modal">
-          <!-- Modal content -->
-          <div class="modal-content">
-            <span class="close close-e-sign-modal">&times;</span>
-
-            <p style="text-align: center; font-weight: bold;">To finish registration, please read and accept the following...</p>
-        
-            <div class="waiver-scroll" id="normal-waiver-text">{{ site.data.waiver.adult-waiver }}</div>
-            <div id="minor-waiver-text">{{ site.data.waiver.minor-waiver }}</div>
-            <button type="button" class="btn btn--waiver" id="submit-e-sign">Accept and Finish Registration</button>
-            <button type="button" class="btn btn--waiver close-e-sign-modal" id="close-waiver-form">Cancel</button>
-            <p id="waiver-link" class="waiver-link"> The contents of this document can be reviewed at any time <a href="/waiver" target="_blank" rel="noopener noreferrer">here</a>.</p>
-          </div>
+        <div class="form-block__input">
+          <input name="schoolOther" id="schoolOther" type="checkbox" class="button" data-toggle="true" />
+          <label for="schoolOther"><small>I can't find my school</small></label>
         </div>
       </div>
+    </div>
+
+    <div class="form-block b-bottom">
+      <label class="tag" for="country" id="country-label">Country*</label>
+
+      <div class="form-block__input">
+        <input class="input--country input--country-other hide" type="text" placeholder="Enter your country" />
+
+        <div class="full-width-flex flex input--country">
+          <input class="input--country-typeahead" name="country" id="country" list="country-list" placeholder="Search your country" required />
+          <datalist id="country-list"></datalist>
+          <div id="country-dropdown-btn" class="dropdown-btn">&#9660;</div>
+        </div>
+
+        <div class="form-block__input">
+          <input name="countryOther" id="countryOther" type="checkbox" class="button" data-toggle="true" />
+          <label for="countryOther"><small>I can't find my country</small></label>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-block b-bottom">
+      <label class="tag" for="education" id="education-label">Education*</label>
+      <div class="form-block__input">
+        <select name="education" id="education" required>
+          <option value="" disabled selected>Level of Education</option>
+          <option value="HighSchool">High School (16+)</option>
+          <option value="Undergraduate">Undergraduate</option>
+          <option value="Graduate">Graduate</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="form-block b-bottom">
+      <label class="tag" for="major" id="major-label">Major*</label>
+      <div class="form-block__input">
+        <select name="major" id="major" required>
+          <option value="" disabled selected>Major</option>
+          {% for row in site.data.majors %}
+          <option>{% for cell in row %} {{ cell[1] }} {% endfor %}</option>
+          {% endfor %}
+        </select>
+      </div>
+    </div>
+
+    <div class="form-block b-bottom">
+      <label class="tag" for="dob" id="dob-label">Date of birth*</label>
+      <div class="form-block__input">
+        <input type="date" placeholder="mm/dd/yyyy" name="dob" id="dob" required />
+      </div>
+    </div>
+
+    <div class="form-block b-bottom">
+      <label class="tag" for="phoneNumber" id="phoneNumber-label">Phone number*</label>
+      <div class="form-block__input">
+        <input name="phoneNumber" id="phoneNumber" type="text" required />
+      </div>
+    </div>
+
+    <!-- <div class="form-block b-bottom">
+      <label class="tag" for="dietaryRestrictions">Dietary Restrictions</label>
+      <div class="form-block__input">
+        <div>
+        <input name="vegetarian" id="vegetarian" type="checkbox">
+        <label for="vegetarian">Vegetarian</label>
+        </div>
+
+        <div>
+        <input name="vegan" id="vegan" type="checkbox">
+        <label for="vegan">Vegan</label>
+        </div>
+
+        <div>
+        <input name="peanutAllergy" id="peanutAllergy" type="checkbox">
+        <label for="peanutAllergy">Peanut&nbsp;Allergy</label>
+        </div>
+
+        <div>
+        <input name="glutenFree" id="glutenFree" type="checkbox">
+        <label for="glutenFree">Gluten&nbsp;Free</label>
+        </div>
+      </div>
+    </div> -->
+
+    <!-- <div class="form-block b-bottom">
+      <label class="tag">Other dietary restrictions</label>
+      <div class="form-block__input">
+        <textarea name="otherDietaryRestrictions" cols="30" rows="5" placeholder="List other dietary restrictions here"></textarea>
+      </div>
+    </div> -->
+
+    <div class="form-block b-bottom">
+      <label class="tag" for="githubUsername">GitHub</label>
+      <div class="form-block__input">
+        <input name="githubUsername" type="text" placeholder="GitHub username" id="githubUsername" />
+      </div>
+    </div>
+
+    <div class="form-block b-bottom">
+      <label for="gender" class="tag" id="gender-label">Gender*</label>
+      <div class="form-block__input">
+        <select name="gender" id="gender" required>
+          <option value="" disabled selected>Gender</option>
+          <option value="Male">Male</option>
+          <option value="Female">Female</option>
+          <option value="NonBinary">Non-binary / Third Gender</option>
+          <option value="Other">Other</option>
+          <option value="PreferNot">Prefer not to say</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="form-block b-bottom">
+      <label class="tag" for="resume" id="resume-label">Resume</label>
+      <div class="form-block__input">
+        <input name="resume" id="resume" type="file" />
+      </div>
+    </div>
+
+    <div class="form-block b-bottom">
+      <label class="tag" for="ethnicity" id="ethnicity-label">Race/Ethnicity*</label>
+      <div class="form-block__input">
+        <input name="ethnicity" type="checkbox" class="button" id="Indian" value="Indian" />
+        <label for="Indian">American Indian or Alaskan Native</label><br />
+
+        <input name="ethnicity" type="checkbox" class="button" id="Asian" value="Asian" />
+        <label for="Asian">Asian</label><br />
+
+        <input name="ethnicity" type="checkbox" class="button" id="Black" value="Black" />
+        <label for="Black">Black or African American</label><br />
+
+        <input name="ethnicity" type="checkbox" class="button" id="Islander" value="Islander" />
+        <label for="Islander">Native Hawaiian or other Pacific Islander</label><br />
+
+        <input name="ethnicity" type="checkbox" class="button" id="White" value="White" />
+        <label for="White">White</label><br />
+
+        <input name="ethnicity" type="checkbox" class="button" id="Latino" value="Latino" />
+        <label for="Latino">Hispanic or Latino</label><br />
+
+        <input name="ethnicity" type="checkbox" class="button" id="Prefer Not" value="Prefer Not" />
+        <label for="Prefer Not">Prefer not to respond</label>
+      </div>
+    </div>
+
+    <div class="form-block b-bottom">
+      <label class="tag" for="hackathons">How many hackathons have you attended?</label>
+      <div class="form-block__input">
+        <select name="hackathons" id="hackathons">
+          <option value="0">0</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10">10+</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="form-block b-bottom">
+      <label class="tag" for="howYouHeard">How did you hear about RevUC?</label>
+      <div class="form-block__input">
+        <input name="howYouHeard" id="howYouHeard" type="text" placeholder="Twitter!" />
+      </div>
+    </div>
+
+    <div class="form-block b-bottom">
+      <div class="form-block__input">
+        <input name="dataSharing" type="checkbox" class="button" id="dataSharing" />
+        <label for="dataSharing" id="dataSharing-label"
+          >MLH Data Sharing<sup><a data-turbolinks="false" href="#agree-1">1</a></sup></label
+        >
+      </div>
+      <label class="tag">I agree*</label>
+    </div>
+
+    <div class="form-block b-bottom">
+      <div class="form-block__input">
+        <input name="codeOfConduct" type="checkbox" class="button" id="codeOfConduct" />
+        <label for="codeOfConduct" id="codeOfConduct-label"
+          >MLH Code of Conduct<sup><a data-turbolinks="false" href="#agree-2">2</a></sup></label
+        >
+      </div>
+      <label class="tag">I agree*</label>
+    </div>
+
+    <div class="form-block b-bottom">
+      <div class="form-block__input">
+        <input name="mlhEmails" type="checkbox" class="button" id="mlhEmails" />
+        <label for="mlhEmails" id="mlhEmails-label"
+          >MLH Informational Emails<sup><a data-turbolinks="false" href="#agree-3">3</a></sup></label
+        >
+      </div>
+      <label class="tag">I agree</label>
+    </div>
+
+    <div class="form-block">
+      <!-- <h4 style="margin-top: -10px">We have hit our projected capacity for RevolutionUC. 
+            As we confirm attendance, spots may open up, which we will give to waitlisted
+            participants in order of registration.</h4>
+        <button name="registrationSubmit" type="submit" disabled class="btn btn--register">Join Waitlist</button>   -->
+      <button name="registrationSubmit" type="submit" class="btn btn--register" disabled>Register</button>
+    </div>
+  </form>
+
+  <section>
+    <p>
+      <small
+        ><sup id="agree-1">1</sup>I authorize you to share my application/registration information with Major League Hacking for event administration,
+        ranking, and MLH administration in-line with the <a href="https://mlh.io/privacy" target="_blank">MLH Privacy Policy</a>. I further agree to
+        the terms of both the
+        <a href="https://github.com/MLH/mlh-policies/tree/master/prize-terms-and-conditions" target="_blank">MLH Contest Terms and Conditions</a>
+        and the
+        <a href="https://mlh.io/privacy" target="_blank">MLH Privacy Policy</a>.</small
+      >
+      <br />
+      <small
+        ><sup id="agree-2">2</sup>I have read and agree to the
+        <a href="https://static.mlh.io/docs/mlh-code-of-conduct.pdf" target="_blank">MLH Code of Conduct</a>.</small
+      >
+      <br />
+      <small
+        ><sup id="agree-3">3</sup>I authorize MLH to send me pre- and post-event informational emails, which contain free credit and opportunities
+        from their partners.</small
+      >
+    </p>
+  </section>
+
+  <!-- The Modal -->
+  <div id="e-sign-waiver-modal" class="modal">
+    <!-- Modal content -->
+    <div class="modal-content">
+      <span class="close close-e-sign-modal">&times;</span>
+
+      <p style="text-align: center; font-weight: bold">To finish registration, please read and accept the following...</p>
+
+      <div class="waiver-scroll" id="normal-waiver-text">{{ site.data.waiver.adult-waiver }}</div>
+      <div id="minor-waiver-text">{{ site.data.waiver.minor-waiver }}</div>
+      <button type="button" class="btn btn--waiver" id="submit-e-sign">Accept and Finish Registration</button>
+      <button type="button" class="btn btn--waiver close-e-sign-modal" id="close-waiver-form">Cancel</button>
+      <p id="waiver-link" class="waiver-link">
+        The contents of this document can be reviewed at any time
+        <a href="/waiver" target="_blank" rel="noopener noreferrer">here</a>.
+      </p>
+    </div>
+  </div>
+</div>
 
 <script src="/js/intl-tel-input.js" defer></script>
-<script src=/js/register.js async defer></script>
+<script src="/js/register.js" async defer></script>
 <script>
   var typeahead_init = false;
   if (!typeahead_init) {
-    const schools$ = fetch('https://raw.githubusercontent.com/MLH/mlh-policies/master/schools.csv');
+    const schools$ = fetch("https://raw.githubusercontent.com/MLH/mlh-policies/master/schools.csv");
     schools$
-      .then(response => response.text())
-      .then(schools => {
-      let arraySchools = schools.split("\n");
-      arraySchools.shift();
-      for (school of arraySchools) {
-        let newOption = document.createElement('option');
+      .then((response) => response.text())
+      .then((schools) => {
+        let arraySchools = schools.split("\n");
+        arraySchools.shift();
+        for (school of arraySchools) {
+          let newOption = document.createElement("option");
 
-        newOption.value = school;
-        newOption.innerText = school;
-        if (school == 'The University of Cincinnati') newOption.setAttribute('selected', '');
-        document.querySelector('datalist#school-list').append(newOption);
-      }
-      var schoolComplete = new Awesomplete(document.getElementById("school"), {list: "#school-list", minChars: 0, maxItems: 1000000});
-      Awesomplete.$('#school-dropdown-btn').addEventListener("click", function() {
-        if (schoolComplete.ul.childNodes.length === 0) {
-          schoolComplete.minChars = 0;
-          schoolComplete.evaluate();
+          newOption.value = school;
+          newOption.innerText = school;
+          if (school == "The University of Cincinnati") newOption.setAttribute("selected", "");
+          document.querySelector("datalist#school-list").append(newOption);
         }
-        else if (schoolComplete.ul.hasAttribute('hidden')) {
-          schoolComplete.open();
-        }
-        else {
-          schoolComplete.close();
-        }
+        var schoolComplete = new Awesomplete(document.getElementById("school"), { list: "#school-list", minChars: 0, maxItems: 1000000 });
+        Awesomplete.$("#school-dropdown-btn").addEventListener("click", function () {
+          if (schoolComplete.ul.childNodes.length === 0) {
+            schoolComplete.minChars = 0;
+            schoolComplete.evaluate();
+          } else if (schoolComplete.ul.hasAttribute("hidden")) {
+            schoolComplete.open();
+          } else {
+            schoolComplete.close();
+          }
+        });
       });
-    });
 
-    const schoolOtherButton = document.getElementById('schoolOther');
-    const schoolOtherInput = document.getElementsByClassName('input--school-other')[0];
-    const schoolTypeaheadInput = document.getElementsByClassName('input--school-typeahead')[0];
+    const schoolOtherButton = document.getElementById("schoolOther");
+    const schoolOtherInput = document.getElementsByClassName("input--school-other")[0];
+    const schoolTypeaheadInput = document.getElementsByClassName("input--school-typeahead")[0];
 
     schoolOtherButton.onclick = () => {
       // switches between 'input--school-typeahead' and 'input--school-other'
       // shows 'input--school-typeahead' by default
-      const toggle = schoolOtherButton.getAttribute('data-toggle');
+      const toggle = schoolOtherButton.getAttribute("data-toggle");
 
-      if (toggle === 'true') {
+      if (toggle === "true") {
         // rollback to the 'other' (traditional) input
-        schoolOtherButton.setAttribute('data-toggle', 'false');
-        schoolOtherInput.setAttribute('name', 'school');
-        schoolOtherInput.setAttribute('id', 'school');
-        schoolTypeaheadInput.removeAttribute('name');
-        schoolTypeaheadInput.removeAttribute('id');
+        schoolOtherButton.setAttribute("data-toggle", "false");
+        schoolOtherInput.setAttribute("name", "school");
+        schoolOtherInput.setAttribute("id", "school");
+        schoolTypeaheadInput.removeAttribute("name");
+        schoolTypeaheadInput.removeAttribute("id");
 
         // hide the typeahead input, show the 'other' input
-        schoolOtherInput.classList.remove('hide');
-        document.getElementsByClassName('input--school')[1].classList.add('hide');
+        schoolOtherInput.classList.remove("hide");
+        document.getElementsByClassName("input--school")[1].classList.add("hide");
       } else {
         // use the typeahead input
-        schoolOtherButton.setAttribute('data-toggle', 'true');
-        schoolTypeaheadInput.setAttribute('name', 'school');
-        schoolTypeaheadInput.setAttribute('id', 'school');
-        schoolOtherInput.removeAttribute('name');
-        schoolOtherInput.removeAttribute('id');
+        schoolOtherButton.setAttribute("data-toggle", "true");
+        schoolTypeaheadInput.setAttribute("name", "school");
+        schoolTypeaheadInput.setAttribute("id", "school");
+        schoolOtherInput.removeAttribute("name");
+        schoolOtherInput.removeAttribute("id");
 
         // hide the 'other' input, show the typeahead input
-        document.getElementsByClassName('input--school')[1].classList.remove('hide');
-        schoolOtherInput.classList.add('hide');
+        document.getElementsByClassName("input--school")[1].classList.remove("hide");
+        schoolOtherInput.classList.add("hide");
       }
     };
-    
-    const countries$ = fetch('/countries.json');
+
+    const countries$ = fetch("/countries.json");
     countries$
-      .then(response => response.json())
+      .then((response) => response.json())
       .then(({ countries }) => {
-      for (let country of countries) {
-        const newOption = document.createElement('option');
+        for (let country of countries) {
+          const newOption = document.createElement("option");
 
-        newOption.value = country;
-        newOption.innerText = country;
-        if (country == 'United States') newOption.setAttribute('selected', '');
-        document.querySelector('datalist#country-list').append(newOption);
-      }
-      const countryComplete = new Awesomplete(document.getElementById("country"), {list: "#country-list", minChars: 0, maxItems: 1000000});
-      Awesomplete.$('#country-dropdown-btn').addEventListener("click", function() {
-        if (countryComplete.ul.childNodes.length === 0) {
-          countryComplete.minChars = 0;
-          countryComplete.evaluate();
+          newOption.value = country;
+          newOption.innerText = country;
+          if (country == "United States") newOption.setAttribute("selected", "");
+          document.querySelector("datalist#country-list").append(newOption);
         }
-        else if (countryComplete.ul.hasAttribute('hidden')) {
-          countryComplete.open();
-        }
-        else {
-          countryComplete.close();
-        }
+        const countryComplete = new Awesomplete(document.getElementById("country"), { list: "#country-list", minChars: 0, maxItems: 1000000 });
+        Awesomplete.$("#country-dropdown-btn").addEventListener("click", function () {
+          if (countryComplete.ul.childNodes.length === 0) {
+            countryComplete.minChars = 0;
+            countryComplete.evaluate();
+          } else if (countryComplete.ul.hasAttribute("hidden")) {
+            countryComplete.open();
+          } else {
+            countryComplete.close();
+          }
+        });
       });
-    });
 
-    const countryOtherButton = document.getElementById('countryOther');
-    const countryOtherInput = document.getElementsByClassName('input--country-other')[0];
-    const countryTypeaheadInput = document.getElementsByClassName('input--country-typeahead')[0];
+    const countryOtherButton = document.getElementById("countryOther");
+    const countryOtherInput = document.getElementsByClassName("input--country-other")[0];
+    const countryTypeaheadInput = document.getElementsByClassName("input--country-typeahead")[0];
 
     countryOtherButton.onclick = () => {
       // switches between 'input--country-typeahead' and 'input--country-other'
       // shows 'input--country-typeahead' by default
-      const toggle = countryOtherButton.getAttribute('data-toggle');
+      const toggle = countryOtherButton.getAttribute("data-toggle");
 
-      if (toggle === 'true') {
+      if (toggle === "true") {
         // rollback to the 'other' (traditional) input
-        countryOtherButton.setAttribute('data-toggle', 'false');
-        countryOtherInput.setAttribute('name', 'country');
-        countryOtherInput.setAttribute('id', 'country');
-        countryTypeaheadInput.removeAttribute('name');
-        countryTypeaheadInput.removeAttribute('id');
+        countryOtherButton.setAttribute("data-toggle", "false");
+        countryOtherInput.setAttribute("name", "country");
+        countryOtherInput.setAttribute("id", "country");
+        countryTypeaheadInput.removeAttribute("name");
+        countryTypeaheadInput.removeAttribute("id");
 
         // hide the typeahead input, show the 'other' input
-        countryOtherInput.classList.remove('hide');
-        document.getElementsByClassName('input--country')[1].classList.add('hide');
+        countryOtherInput.classList.remove("hide");
+        document.getElementsByClassName("input--country")[1].classList.add("hide");
       } else {
         // use the typeahead input
-        countryOtherButton.setAttribute('data-toggle', 'true');
-        countryTypeaheadInput.setAttribute('name', 'country');
-        countryTypeaheadInput.setAttribute('id', 'country');
-        countryOtherInput.removeAttribute('name');
-        countryOtherInput.removeAttribute('id');
+        countryOtherButton.setAttribute("data-toggle", "true");
+        countryTypeaheadInput.setAttribute("name", "country");
+        countryTypeaheadInput.setAttribute("id", "country");
+        countryOtherInput.removeAttribute("name");
+        countryOtherInput.removeAttribute("id");
 
         // hide the 'other' input, show the typeahead input
-        document.getElementsByClassName('input--country')[1].classList.remove('hide');
-        countryOtherInput.classList.add('hide');
+        document.getElementsByClassName("input--country")[1].classList.remove("hide");
+        countryOtherInput.classList.add("hide");
       }
     };
 
@@ -464,114 +438,8 @@ description: Registration for RevolutionUC — Hackathon at the University of Ci
   }
 </script>
 
-<script type = "text/javascript">
-     function validate() {
-
-      if( document.getElementById("firstName").value == "" ) {
-          document.getElementById("FirstName").style.color="red"; 
-      }
-      if( document.getElementById("firstName").value !== "" ) {
-          document.getElementById("FirstName").style.color="white"; 
-      }
-
-      if( document.getElementById("lastName").value == "" ) {
-          document.getElementById("LastName").style.color="red"; 
-      }
-      if( document.getElementById("lastName").value !== "" ) {
-          document.getElementById("LastName").style.color="white"; 
-      }
-
-      if( document.getElementById("email").value == "" ) {
-          document.getElementById("Email").style.color="red"; 
-      }
-      if( document.getElementById("email").value !== "" ) {
-          document.getElementById("Email").style.color="white"; 
-      }
-
-      if( document.getElementById("confirmEmail").value == "" ) {
-          document.getElementById("ConfirmEmail").style.color="red"; 
-      }
-      if( document.getElementById("confirmEmail").value !== "" ) {
-          document.getElementById("ConfirmEmail").style.color="white"; 
-      }
-
-      if( document.getElementById("country").value == "" ) {
-          document.getElementById("Country").style.color="red"; 
-      }
-      if( document.getElementById("country").value !== "" ) {
-          document.getElementById("Country").style.color="white"; 
-      }
-
-      if( document.getElementById("school").value == "" ) {
-          document.getElementById("School").style.color="red"; 
-      }
-      if( document.getElementById("school").value !== "" ) {
-          document.getElementById("School").style.color="white"; 
-      }
-
-      if( document.getElementById("education").value == "" ) {
-          document.getElementById("Education").style.color="red"; 
-      }
-      if( document.getElementById("education").value !== "" ) {
-          document.getElementById("Education").style.color="white"; 
-      }
-
-      if( document.getElementById("major").value == "" ) {
-          document.getElementById("Major").style.color="red"; 
-      }
-      if( document.getElementById("major").value !== "" ) {
-          document.getElementById("Major").style.color="white"; 
-      }
-
-      if( document.getElementById("dob").value == "" ) {
-          document.getElementById("DOB").style.color="red"; 
-      }
-      if( document.getElementById("dob").value !== "" ) {
-          document.getElementById("DOB").style.color="white"; 
-      }
-
-      if( document.getElementById("phoneNumber").value == "" ) {
-          document.getElementById("PN").style.color="red"; 
-      }
-      if( document.getElementById("phoneNumber").value !== "" ) {
-          document.getElementById("PN").style.color="white"; 
-      }
-      
-      if( document.getElementById("gender").value == "" ) {
-          document.getElementById("Gender").style.color="red"; 
-      }
-      if( document.getElementById("gender").value !== "" ) {
-          document.getElementById("Gender").style.color="white"; 
-      }
-
-      if( 
-        document.getElementById("Indian").checked ||
-        document.getElementById("Asian").checked ||
-        document.getElementById("Black").checked ||
-        document.getElementById("Islander").checked ||
-        document.getElementById("White").checked ||
-        document.getElementById("Latino").checked ||
-        document.getElementById("Prefer Not").checked
-      ){
-          document.getElementById("Ethnicity").style.color="white"; 
-      }
-      if( 
-        !document.getElementById("Indian").checked &&
-        !document.getElementById("Asian").checked &&
-        !document.getElementById("Black").checked &&
-        !document.getElementById("Islander").checked &&
-        !document.getElementById("White").checked &&
-        !document.getElementById("Latino").checked &&
-        !document.getElementById("Prefer Not").checked
-      ){
-          document.getElementById("Ethnicity").style.color="red"; 
-      }
-      return( true );
-     }
-  //-->
-</script>
-
 <script
-src="https://code.jquery.com/jquery-3.3.1.js"
-integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
-crossorigin="anonymous"></script>
+  src="https://code.jquery.com/jquery-3.3.1.js"
+  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+  crossorigin="anonymous"
+></script>
