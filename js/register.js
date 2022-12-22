@@ -63,49 +63,82 @@ if (!registration_init) {
       formData.set("phoneNumber", getFullPhoneNumber());
 
       // Validate data
+      // Other fields are guranteed to have values due to native "required" attribute
+      const ethicnityLabel = document.getElementById("ethnicity-label");
       if (
-        formData.get("firstName") == "" ||
-        formData.get("lastName") == "" ||
-        formData.get("email") == "" ||
-        formData.get("confirmEmail") == "" ||
-        formData.get("phoneNumber") == "" ||
-        formData.get("school") == "" ||
-        formData.get("country") == "" ||
-        formData.get("major") == null ||
-        formData.get("dob") == "" ||
-        formData.get("education") == null ||
-        // formData.get("shirtSize") == "" ||
-        formData.get("ethnicity") == null ||
-        formData.get("gender") == null
+        !document.getElementById("Indian").checked &&
+        !document.getElementById("Asian").checked &&
+        !document.getElementById("Black").checked &&
+        !document.getElementById("Islander").checked &&
+        !document.getElementById("White").checked &&
+        !document.getElementById("Latino").checked &&
+        !document.getElementById("Prefer Not").checked
       ) {
-        alert("Please fill in all required fields.");
+        alert("Please choose your Ethinicty");
         this._submitButton.disabled = false;
         this._submitButton.textContent = "Register";
+        ethicnityLabel.style.color = "red";
+        ethicnityLabel.scrollIntoView();
         return;
+      } else {
+        ethicnityLabel.style.color = "white";
       }
 
+      // if (
+      //   formData.get("firstName") == "" ||
+      //   formData.get("lastName") == "" ||
+      //   formData.get("email") == "" ||
+      //   formData.get("confirmEmail") == "" ||
+      //   formData.get("phoneNumber") == "" ||
+      //   formData.get("school") == "" ||
+      //   formData.get("country") == "" ||
+      //   formData.get("major") == null ||
+      //   formData.get("dob") == "" ||
+      //   formData.get("education") == null ||
+      //   // formData.get("shirtSize") == "" ||
+      //   formData.get("ethnicity") == null ||
+      //   formData.get("gender") == null
+      // ) {
+      //   alert("Please fill in all required fields.");
+      //   this._submitButton.disabled = false;
+      //   this._submitButton.textContent = "Register";
+      //   return;
+      // }
+
+      const confirmEmailLabel = document.querySelector("#confirmEmail-label");
       if (formData.get("email") !== formData.get("confirmEmail")) {
         alert("Emails do not match.");
         this._submitButton.disabled = false;
         this._submitButton.textContent = "Register";
-        document.querySelector("#confirmEmail").scrollIntoView();
+        confirmEmailLabel.style.color = "red";
+        confirmEmailLabel.scrollIntoView();
         return;
+      } else {
+        confirmEmailLabel.style.color = "white";
       }
 
+      const dobLabel = document.querySelector("#dob-label");
       if (getAge(formData.get("dob")) < 16) {
         alert("You must at least 16 years old to participate in RevolutionUC.");
         this._submitButton.disabled = false;
         this._submitButton.textContent = "Register";
-        document.querySelector("#dob").scrollIntoView();
+        dobLabel.style.color = "red";
+        dobLabel.scrollIntoView();
         return;
+      } else {
+        dobLabel.style.color = "white";
       }
 
+      const phoneNumberLabel = document.querySelector("#phoneNumber-label");
       if (!window.iti.isValidNumber()) {
         alert("Please recheck and make sure you entered a valid phone number");
         this._submitButton.disabled = false;
         this._submitButton.textContent = "Register";
-        document.querySelector("#phoneNumber").scrollIntoView();
+        phoneNumberLabel.style.color = "red";
+        phoneNumberLabel.scrollIntoView();
         return;
+      } else {
+        phoneNumberLabel.style.color = "white";
       }
 
       // Show e sign waiver
