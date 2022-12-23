@@ -7,7 +7,7 @@ navbar:
   about: true
   faq: true
   resources: true
-  register: true
+  register: false
 
 homepage:
   # The timeline options are: pre-registration, registration, live, post-registration
