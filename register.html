@@ -4,6 +4,7 @@ title: Register
 permalink: /register/
 description: Registration for RevolutionUC — Hackathon at the University of Cincinnati from February 20-21, 2021
 ---
+
 <div>
   <form id="registration" name="registration">
     <div class="circle top left"></div>
@@ -95,7 +96,7 @@ description: Registration for RevolutionUC — Hackathon at the University of Ci
         <select name="major" id="major" required>
           <option value="" disabled selected>Major</option>
           {% for row in site.data.majors_mlh %}
-            <option>{% for cell in row %} {{ cell[1] }} {% endfor %}</option>
+          <option>{% for cell in row %} {{ cell[1] }} {% endfor %}</option>
           {% endfor %}
         </select>
       </div>
@@ -109,7 +110,12 @@ description: Registration for RevolutionUC — Hackathon at the University of Ci
     </div>
 
     <div class="form-block b-bottom">
-      <label class="tag" for="phoneNumber" id="phoneNumber-label">Phone number*</label>
+      <label class="tag" for="phoneNumber" id="phoneNumber-label">
+        <div class="tooltip">
+          Phone Number*
+          <span class="tooltiptext">Choose country code & just type number, no spaces or brackets</span>
+        </div>
+      </label>
       <div class="form-block__input">
         <input name="phoneNumber" id="phoneNumber" type="text" required />
       </div>
