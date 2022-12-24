@@ -95,7 +95,7 @@ description: Registration for RevolutionUC — Hackathon at the University of Ci
         <select name="major" id="major" required>
           <option value="" disabled selected>Major</option>
           {% for row in site.data.majors_mlh %}
-          <option>{% for cell in row %} {{ cell[1] }} {% endfor %}</option>
+            <option>{% for cell in row %} {{ cell[1] }} {% endfor %}</option>
           {% endfor %}
         </select>
       </div>
