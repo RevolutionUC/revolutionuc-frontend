@@ -1,6 +1,3 @@
----
----
-
 function getUrlVars() {
   var vars = {};
   var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(
@@ -23,7 +20,7 @@ function getUrlParam(parameter, defaultvalue) {
 
 if (window.location.href.indexOf("verify") > -1) {
   var user = getUrlParam("user", "none");
-  var h1 = document.getElementsByTagName("h1")[1];
+  var h1 = document.getElementsByTagName("h1")[0];
   var content = document.getElementsByName("textValue")[0];
 
   if (user == "none") {
@@ -33,7 +30,7 @@ if (window.location.href.indexOf("verify") > -1) {
     content.textContent =
       "Congratulations!  You are registered for RevolutionUC!";
 
-    fetch("https://revolutionuc-api.herokuapp.com/api/verify/" + user, {
+    fetch("https://web-production-66b6.up.railway.app/api/verify/" + user, {
       method: "POST"
     }).then(response => {
       if (response.status == 200 || response.status == 201) {
@@ -66,7 +63,7 @@ if (window.location.href.indexOf("attendance") > -1) {
     jsonData["isConfirmed"] = (confirm == 'true') ;
 
     fetch(
-      "https://revolutionuc-api.herokuapp.com/api/confirmAttendance/",
+      "https://web-production-66b6.up.railway.app/api/confirmAttendance/",
       {
         method: "POST",
         headers: regHeaders,
