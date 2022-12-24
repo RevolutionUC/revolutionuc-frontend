@@ -4,6 +4,7 @@ title: Register
 permalink: /register/
 description: Registration for RevolutionUC — Hackathon at the University of Cincinnati from February 20-21, 2021
 ---
+
 <div>
   <form id="registration" name="registration">
     <div class="circle top left"></div>
@@ -94,7 +95,7 @@ description: Registration for RevolutionUC — Hackathon at the University of Ci
       <div class="form-block__input">
         <select name="major" id="major" required>
           <option value="" disabled selected>Major</option>
-          {% for row in site.data.majors %}
+          {% for row in site.data.majors_mlh %}
           <option>{% for cell in row %} {{ cell[1] }} {% endfor %}</option>
           {% endfor %}
         </select>
@@ -109,7 +110,12 @@ description: Registration for RevolutionUC — Hackathon at the University of Ci
     </div>
 
     <div class="form-block b-bottom">
-      <label class="tag" for="phoneNumber" id="phoneNumber-label">Phone number*</label>
+      <label class="tag" for="phoneNumber" id="phoneNumber-label">
+        <div class="tooltip">
+          Phone Number*
+          <span class="tooltiptext">Choose country code & just type number, no spaces or brackets</span>
+        </div>
+      </label>
       <div class="form-block__input">
         <input name="phoneNumber" id="phoneNumber" type="text" required />
       </div>
@@ -223,7 +229,33 @@ description: Registration for RevolutionUC — Hackathon at the University of Ci
     <div class="form-block b-bottom">
       <label class="tag" for="howYouHeard">How did you hear about RevUC?</label>
       <div class="form-block__input">
-        <input name="howYouHeard" id="howYouHeard" type="text" placeholder="Twitter!" />
+        <!-- <input name="howYouHeard" id="howYouHeard" type="text" placeholder="Twitter!" /> -->
+        <input name="howYouHeard" type="checkbox" class="button" id="howYouHeard-searchEngine" value="searchEngine" />
+        <label for="howYouHeard-searchEngine">Search Engine</label><br />
+
+        <input name="howYouHeard" type="checkbox" class="button" id="howYouHeard-RevolutionUCWebsite" value="RevolutionUCWebsite" />
+        <label for="howYouHeard-RevolutionUCWebsite">RevolutionUC Website</label><br />
+
+        <input name="howYouHeard" type="checkbox" class="button" id="howYouHeard-Facebook" value="Facebook" />
+        <label for="howYouHeard-Facebook">Facebook</label><br />
+
+        <input name="howYouHeard" type="checkbox" class="button" id="howYouHeard-Twitter" value="Twitter" />
+        <label for="howYouHeard-Twitter">Twitter</label><br />
+
+        <input name="howYouHeard" type="checkbox" class="button" id="howYouHeard-Instagram" value="Instagram" />
+        <label for="howYouHeard-Instagram">Instagram</label><br />
+
+        <input name="howYouHeard" type="checkbox" class="button" id="howYouHeard-LinkedIn" value="LinkedIn" />
+        <label for="howYouHeard-LinkedIn">LinkedIn</label><br />
+
+        <input name="howYouHeard" type="checkbox" class="button" id="howYouHeard-Email" value="Email" />
+        <label for="howYouHeard-Email">Email</label><br />
+
+        <input name="howYouHeard" type="checkbox" class="button" id="howYouHeard-WordOfMouth" value="WordOfMouth" />
+        <label for="howYouHeard-WordOfMouth">Word of Mouth</label><br />
+
+        <input name="howYouHeard" type="checkbox" class="button" id="howYouHeard-Other" value="Other" />
+        <label for="howYouHeard-Other">Other</label><br />
       </div>
     </div>
 
