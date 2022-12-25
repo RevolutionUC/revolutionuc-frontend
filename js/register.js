@@ -187,6 +187,7 @@ if (!registration_init) {
 
       let jsonObj = {};
       for (const [key, value] of formData.entries()) {
+        console.log(key, value);
         jsonObj[key] = value;
       }
 
