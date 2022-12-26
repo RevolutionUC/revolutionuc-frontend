@@ -187,6 +187,7 @@ if (!registration_init) {
 
       let jsonObj = {};
       for (const [key, value] of formData.entries()) {
+        console.log(key, value);
         jsonObj[key] = value;
       }
 
@@ -200,7 +201,7 @@ if (!registration_init) {
       jsonData["major"] = jsonObj["major"];
       jsonData["gender"] = jsonObj["gender"];
       jsonData["ethnicity"] = formData.getAll("ethnicity");
-      jsonData["howYouHeard"] = jsonObj["howYouHeard"];
+      jsonData["howYouHeard"] = formData.getAll("howYouHeard");
       jsonData["hackathons"] = parseInt(jsonObj["hackathons"]);
       // jsonData["shirtSize"] = jsonObj["shirtSize"]
       jsonData["githubUsername"] = jsonObj["githubUsername"];
