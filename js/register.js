@@ -255,7 +255,7 @@ if (!registration_init) {
     static _uploadResume(data, form) {
       fetch("https://web-production-66b6.up.railway.app/api/uploadResume/" + data["uploadKey"], {
         method: "POST",
-        mode: 'cors',
+        mode: 'no-cors',
         //headers: regHeaders,
         body: form
       }).then((response) => {
