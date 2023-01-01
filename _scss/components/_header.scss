@@ -75,13 +75,13 @@ html {
         .navbar__register {
           padding: 0.5em 1em;
           border-radius: 5px;
-          background-color: $prim-color-2;
+          background-color: $prim-color-3;
           a {
             text-decoration: none;
             font-weight: bold;
           }
           &:hover {
-            background-color: darken($prim-color-2, 10%);
+            background-color: darken($prim-color-3, 10%);
           }
         }
 
@@ -157,7 +157,7 @@ html {
             width: 100%;
             background-color: $mobile-nav-background-color;
             a {
-              color: $black;
+              color: $black !important;
               display: inline-block;
               width: 100%;
             }

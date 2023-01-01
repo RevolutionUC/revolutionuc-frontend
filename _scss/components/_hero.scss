@@ -18,11 +18,14 @@
   color: $white;
   position: relative;
 
-  .hero__heading {
-    text-align: left;
+  .hero__cta {
+    text-align: center;
     margin: 0;
-    font-size: 120px;
-    letter-spacing: 7px;
+    font-size: 2rem;
+    letter-spacing: 4px;
+    a {
+      border-radius: 10px;
+    }
   }
 
   .hero__text {
@@ -86,20 +89,14 @@
 
 @media (max-width: $large-breakpoint) {
   .hero {
-    .hero__heading {
-      font-size: 80px;
+    .hero__cta {
+      font-size: 1.5rem;
       text-align: center;
     }
 
     .hero__text {
       text-align: center;
       font-size: 24px;
-    }
-
-    .revuc-logo {
-      position: static;
-      text-align: center;
-      min-width: 100px;
     }
 
     #email-notification {
@@ -113,12 +110,21 @@
 
 @media (max-width: $medium-breakpoint) {
   .hero {
-    .hero__heading {
-      font-size: 64px;
+    .hero__cta {
+      font-size: 1.5rem;
     }
 
     .hero__text {
       font-size: 20px;
+    }
+
+    .revuc-logo {
+      position: absolute;
+      left: 50%;
+      top: -55%;
+      transform: translateX(-50%);
+      text-align: center;
+      min-width: 100px;
     }
   }
 }
@@ -130,8 +136,8 @@
       margin-bottom: 0;
     }
 
-    .hero__heading {
-      font-size: 48px;
+    .hero__cta {
+      font-size: 1.25rem;
     }
 
     .hero__text {
@@ -145,7 +151,6 @@
 
     .btn {
       padding: 13px 8px;
-      font-size: 16px;
       height: 40%;
     }
   }
@@ -153,8 +158,8 @@
 
 @media (max-width: $x-small-breakpoint) {
   .hero {
-    .hero__heading {
-      font-size: 42px;
+    .hero__cta {
+      font-size: 1.25rem;
     }
 
     .hero__text {

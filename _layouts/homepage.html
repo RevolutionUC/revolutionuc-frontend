@@ -9,16 +9,13 @@
       <div class="hero__text">
         <!-- ========== Interest form info and button ========== -->
         {% if site.data.config.homepage.timeline == "pre-registration" %}
-        <p class="hero__date">A hackathon hosted at the University of Cincinnati <br/> <span class="hero__datedate">{{ site.data.config.eventData.fullDate }}</span></p>
+        <p class="hero__date">
+          A hackathon hosted at the University of Cincinnati <br />
+          <span class="hero__datedate">{{ site.data.config.eventData.fullDate }}</span>
+        </p>
         <p>Sign up here to get updates about RevolutionUC {{ site.data.config.eventData.date.year }}</p>
 
-        <form
-          id="email-notification"
-          name="email-preRegistration"
-          method="POST"
-          data-netlify="true"
-          class="hero__email"
-        >
+        <form id="email-notification" name="email-preRegistration" method="POST" data-netlify="true" class="hero__email">
           <input name="emailAddress" class="hero__input" type="email" placeholder="Enter Email here..." id="email-notification-input" required />
           <button type="submit" class="btn btn--primary hero__button">Notify me!</button>
         </form>
@@ -26,44 +23,44 @@
         <!-- Email Pre-reg script -->
         <script src="/js/subscribe.js" async defer></script>
         {% endif %}
-      </div>
 
-      <!-- ========== Registration info and button ========== -->
-      {% if site.data.config.homepage.timeline == "registration" %}
-      <p>A hackathon hosted at the University of Cincinnati - {{ site.data.config.eventData.fullDate }}</p>
-      <p>Interested? Register to participate!</p>
-      <div class="hero__heading">
-        <a class="btn btn--primary" href="/register">Register Now</a>
-      </div>
-      {% endif %}
-      <!-- ================================================== -->
+        <!-- ========== Registration info and button ========== -->
+        {% if site.data.config.homepage.timeline == "registration" %}
+        <p class="hero__date">
+          A hackathon hosted at the University of Cincinnati <br />
+          <span class="hero__datedate">{{ site.data.config.eventData.fullDate }}</span>
+        </p>
+        <p>Interested? Register to participate!</p>
+        <div class="hero__cta">
+          <a class="btn btn--primary" href="/register">Register Now</a>
+        </div>
+        {% endif %}
+        <!-- ================================================== -->
 
-      <!-- ========== Live button ========== -->
-      {% if site.data.config.homepage.timeline == "live" %}
-      <p>A hackathon hosted at the University of Cincinnati - {{ site.data.config.eventData.fullDate }}</p>
-      <p>Live now!</p>
-      <div class="hero__heading">
-        <a class="btn btn--primary" href="/live">Live Site</a>
+        <!-- ========== Live button ========== -->
+        {% if site.data.config.homepage.timeline == "live" %}
+        <p>A hackathon hosted at the University of Cincinnati - {{ site.data.config.eventData.fullDate }}</p>
+        <p>Live now!</p>
+        <div class="hero__cta">
+          <a class="btn btn--primary" href="/live">Live Site</a>
+        </div>
+        {% endif %}
+        <!-- ================================================== -->
+        <!-- ========== Post hackathon info and button ========== -->
+        {% if site.data.config.homepage.timeline == "post-registration" %}
+        <p>Thank you all for participating in this year's RevolutionUC!</p>
+        <div class="hero__cta">
+          <!-- Link to submissions -->
+          <a class="btn btn--primary" href="{{ site.data.config.eventData.submissions }}" target="_" rel="noopener">View Submissions</a>
+        </div>
+        {% endif %}
+        <!-- ================================================== -->
       </div>
-      {% endif %}
-      <!-- ================================================== -->
-      <!-- ========== Post hackathon info and button ========== -->
-      {% if site.data.config.homepage.timeline == "post-registration" %}
-      <p>Thank you all for participating in this year's RevolutionUC!</p>
-      <div class="hero__heading">
-        <!-- Link to submissions -->
-        <a class="btn btn--primary" href="{{ site.data.config.eventData.submissions }}" target="_" rel="noopener">View Submissions</a>
-      </div>
-      {% endif %}
-      <!-- ================================================== -->
     </div>
   </div>
 
-
-
   <!-- </div> -->
   <!-- fin theme -->
-
 </section>
 
 <script src="/js/subscribe.js" async defer></script>
