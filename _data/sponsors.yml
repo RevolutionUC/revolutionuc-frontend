@@ -16,37 +16,58 @@
 # svg: true <- this is REQUIRED
 #
 
-- name: fifth-third
-  link: http://53.com
-  image: https://assets.revolutionuc.com/sponsor-logos/2022/FifthThird.svg
-  svg: true
+diamond:
+  - name: fifth-third
+    link: https://www.53.com/content/fifth-third/en/personal-banking/about.html
+    image: https://assets.revolutionuc.com/sponsor-logos/2022/FifthThird.svg
+    svg: true
 
-- name: digital-futures
-  link: https://ucdigitalfutures.com
-  image: https://assets.revolutionuc.com/sponsor-logos/2022/DFxOOR.png
-  svg: false
+  - name: 1819-hub
+    link: https://innovation.uc.edu
+    image: https://assets.revolutionuc.com/sponsor-logos/2023/1819hub.png
+    svg: false
 
-- name: northrop-grumman
-  link: https://www.northropgrumman.com
-  image: https://assets.revolutionuc.com/sponsor-logos/2022/NG.png
-  svg: false
+platinum:
+  - name: clerk-dev
+    link: https://clerk.dev/
+    image: https://assets.revolutionuc.com/sponsor-logos/2023/clerk-logo.svg
+    svg: true
 
-- name: eighty-four-fifty-one
-  link: https://www.8451.com/
-  image: https://assets.revolutionuc.com/sponsor-logos/2022/8451_logo_space_RGB.png
-  svg: false
+gold:
+  - name: northrop-grumman
+    link: https://www.northropgrumman.com
+    image: https://assets.revolutionuc.com/sponsor-logos/2023/northrop.svg
+    svg: true
 
-- name: stickermule
-  link: https://mule.to/p2kp
-  image: https://assets.revolutionuc.com/sponsor-logos/2022/sticker-mule.svg
-  svg: true
+silver:
+  - name: School of IT
+    link: https://cech.uc.edu/schools/it.html
+    image: https://scontent.fbkl1-1.fna.fbcdn.net/v/t39.30808-6/306090236_738236017474874_301087750375988776_n.png?_nc_cat=101&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=tTtu_K_a-WEAX_Bdspm&_nc_ht=scontent.fbkl1-1.fna&oh=00_AfDW9e6ve2f0Q4Ml2lDNTJeoEzyIvEQ-Gschg8BBxWEZ6w&oe=63E176C4
+    svg: false
 
-- name: assembly-ai
-  link: https://www.assemblyai.com
-  image: https://assets.revolutionuc.com/sponsor-logos/2022/AssemblyAI.png
-  svg: false
+money:
+  - name: stickermule
+    link: https://mule.to/p3ob
+    image: https://assets.revolutionuc.com/sponsor-logos/2022/sticker-mule.svg
+    svg: true
 
-- name: aws
-  link: https://aws.amazon.com
-  image: https://assets.revolutionuc.com/sponsor-logos/2022/AWS_logo_RGB.png
-  svg: false
+  - name: CEAS Trinubal
+    link: https://www.tribunal.uc.edu/
+    image: https://www.tribunal.uc.edu/themes/custom/ceas_tribunal/images/tribunal_logo_color.png
+    svg: false
+
+prize:
+  - name: echo-3d
+    link: https://www.echo3d.com/
+    image: https://assets.revolutionuc.com/sponsor-logos/2023/echo3d.png
+    svg: false
+
+  - name: kinetic-vision
+    link: https://kinetic-vision.com/
+    image: https://assets.revolutionuc.com/sponsor-logos/2023/kineticvision.png
+    svg: false
+
+  - name: wolfram
+    link: https://www.wolfram.com/language/
+    image: https://assets.revolutionuc.com/sponsor-logos/2023/wolfram.svg
+    svg: true
