@@ -7,32 +7,31 @@ useContainer: false
 description: Event Schedule for RevolutionUC — Hackathon at the University of Cincinnati from February 20-21, 2021
 ---
 
+<div class="container">
+  <p>
+    Our schedule is still <strong>tentative</strong>, and could change in the future. Check back often for the latest up-to-date schedule!
+  </p>
+</div>
+
 {% if site.data.schedule %}
 <div class="container">
-    <div class="schedule">
-        <!-- {% for item in site.data.schedule %}
-        <div class="schedule-item flex">
-            {% if item.date %}
-            <div class="schedule-date">
-                <strong>{{item.date}}</strong>
-            </div>
-            {% else %}
-            <div class="schedule-time">
-                {{item.time}}
-            </div>
-            <div class="schedule-event">
-                {{item.event}}
-            </div>
-            <div class="schedule-location">
-                {{item.location | markdownify}}
-            </div>
-            {% endif %}
-        </div>
-        {% endfor %} -->
+  <div class="schedule">
+    {% for item in site.data.schedule %}
+    <div class="schedule-item flex">
+      {% if item.date %}
+      <div class="schedule-date">
+        <strong>{{item.date}}</strong>
+      </div>
+      {% else %}
+      <div class="schedule-time">{{item.time}}</div>
+      <div class="schedule-event">{{item.event}}</div>
+      <div class="schedule-location">{{item.location | markdownify}}</div>
+      {% endif %}
     </div>
+    {% endfor %}
+  </div>
 </div>
 {% endif %}
-
 
 <!-- Placeholder block, just delete the whole thing below -->
 

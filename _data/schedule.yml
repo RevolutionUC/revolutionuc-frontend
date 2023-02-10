@@ -1,89 +1,67 @@
 - date: February 25th
 
-- time: 12:00 PM EST
+- time: 10:30 AM
   event: Check-in Opens
-  location: 'Discord: [#check-in](https://discord.com/channels/748026840517574707/944422330296336396)'
+  location:
 
-- date: February 26th
+- time: 10:30 AM
+  event: Lunch
+  location:
 
-- time: 10:00 AM EST
-  event: Sponsor Expo
-  location: Zoom
+- time: 10:30 AM
+  event: Sponsor Expo Opens
+  location:
 
-- time: 11:30 AM EST
+- time: 11:30 AM
   event: <b>Opening Ceremony</b>
-  location: ACM@UC [Youtube](https://www.youtube.com/channel/UC817R8XmXS0Y9k--f0YFQOg)
+  location:
   
-- time: 12:00 PM EST
+- time: 12:30 PM
   event: <b>Hacking Begins</b>
   location:
   
-- time: 12:00 PM EST
-  event: Team Formation
-  location: 'Discord: 🔊 Mini-Event Room A'
+- time: 1:45 PM
+  event: Workshop Sessions Begin
+  location:
 
-- time: 12:30 PM EST
-  event: Meet the Mentors
-  location: 'Discord: 🔊 Mini-Event Room B'
+- time: 6:00 PM
+  event: Dinner
+  location:
 
-- time: 1:00 PM EST
-  event: Cyber@UC CTF Kickoff Session
-  location: 'Discord: [#ctf](https://discord.com/channels/748026840517574707/938531565795958864)'
+- time: 7:00 PM
+  event: MLH Capture The Flag
+  location:
 
-- time: 2:00 PM EST
-  event: Sponsor Office Hours
-  location: 'Discord: SPONSORS section'
+- time: 8:00 PM
+  event: MLH Bob Ross with MS Paint
+  location:
 
-- time: 3:00 PM EST
-  event: "Workshop 1: Digital Futures - Storytelling with Augmented Reality"
-  location: 'Discord: [#workshop-1](https://discord.com/channels/748026840517574707/945199955960795186)'
+- date: February 26th
 
-- time: 4:00 PM EST
-  event: "Workshop 2: Fifth Third - Journey to Serverless"
-  location: 'Discord: [#workshop-2](https://discord.com/channels/748026840517574707/945200055160291358)'
+- time: 12:00 AM
+  event: Midnight Snack
+  location:
 
-- time: 5:00 PM EST
-  event: "Workshop 3: Build a Pokedex using React"
-  location: 'Discord: [#workshop-3](https://discord.com/channels/748026840517574707/945200076295372803)'
+- time: 1:00 AM
+  event: Paper Airplane Compeition
+  location:
 
-- time: 6:00 PM EST
-  event: MLH Mini Event - SlideShow Karaoke
-  location: 'Discord: 🔊 Mini-Event Room B'
+- time: 6:00 AM
+  event: Wikipedia Race
+  location:
 
-- time: 8:00 PM EST
-  event: Skribbl.io
-  location: 'Discord: 🔊 Mini-Event Room A'
+- time: 8:00 AM
+  event: Breakfast
+  location:
 
-- time: 9:00 PM EST
-  event: "Minecraft Build Your Own: Best Creation Wins (3 hours)"
-  location: 'Discord: 🔊 Minecraft'
+- time: 12:00 PM
+  event: Lunch
+  location:
 
-- date: February 27th
-
-- time: 12:00 AM EST
-  event: "Social Hour: Make your own snack/drink"
-  location: 'Discord: 🔊 Mini-Event Room B'
-
-- time: 2:00 AM EST
-  event: Bob Ross MS Paint
-  location: 'Discord: 🔊 Mini-Event Room A'
-
-- time: 4:00 AM EST
-  event: Among Us
-  location: 'Discord: 🔊 Mini-Event Room B'
-
-- time: 6:00 AM EST
-  event: Morning Trivia
-  location: 'Discord: 🔊 Mini-Event Room A'
-
-- time: 8:00 AM EST
-  event: Morning Coffee with Funny Videos
-  location: 'Discord: 🔊 Mini-Event Room B'
-
-- time: 12:00 PM EST
+- time: 12:30 PM
   event: <b>Hacking Ends</b>
   location:
 
-- time: 5:00 PM EST
-  event: <b>Awards Ceremony</b>
-  location: ACM@UC [Youtube](https://www.youtube.com/channel/UC817R8XmXS0Y9k--f0YFQOg)
+- time: 2:30 PM
+  event: <b>Closing Ceremony Begins</b>
+  location:

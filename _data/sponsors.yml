@@ -22,11 +22,6 @@ diamond:
     image: https://assets.revolutionuc.com/sponsor-logos/2022/FifthThird.svg
     svg: true
 
-  - name: 1819-hub
-    link: https://innovation.uc.edu
-    image: https://assets.revolutionuc.com/sponsor-logos/2023/1819hub.png
-    svg: false
-
 platinum:
   - name: clerk-dev
     link: https://clerk.dev/
@@ -51,7 +46,12 @@ money:
     image: https://assets.revolutionuc.com/sponsor-logos/2022/sticker-mule.svg
     svg: true
 
-  - name: CEAS Trinubal
+  - name: 1819-hub
+    link: https://innovation.uc.edu
+    image: https://assets.revolutionuc.com/sponsor-logos/2023/1819hub.png
+    svg: false
+    
+  - name: CEAS Tribunal
     link: https://www.tribunal.uc.edu/
     image: https://www.tribunal.uc.edu/themes/custom/ceas_tribunal/images/tribunal_logo_color.png
     svg: false
