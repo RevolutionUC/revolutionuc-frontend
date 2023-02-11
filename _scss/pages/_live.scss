@@ -56,6 +56,8 @@
 
     .live-section {
         border-radius: 5px;
+        max-height: 1000px;
+        overflow-y: auto;
 
         &.live-section--twitter {
             @media (max-width: $medium-breakpoint) {
