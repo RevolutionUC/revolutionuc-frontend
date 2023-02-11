@@ -5,71 +5,94 @@ description: RevolutionUC Live Site
 ---
 
 <main>
-    <a id="main" name="main"></a>
+  <a id="main" name="main"></a>
+  <div class="container container--large">
+    <section class="flex">
+      <div class="image">
+        <img
+          srcset="
+            https://assets.revolutionuc.com/website-images/2023/photos/1x/home-1.png,
+            https://assets.revolutionuc.com/website-images/2023/photos/2x/home-1.png 2x,
+            https://assets.revolutionuc.com/website-images/2023/photos/3x/home-1.png 3x,
+            https://assets.revolutionuc.com/website-images/2023/photos/4x/home-1.png 4x
+          "
+          src="https://assets.revolutionuc.com/website-images/2023/photos/2x/home-1.png"
+          alt="Photo taken at RevolutionUC"
+        />
+      </div>
 
-    <div class="container container--large">
-        <section class="flex">
-            <div class="image">
-                <img
-                    srcset="https://assets.revolutionuc.com/website-images/2023/photos/1x/home-1.png,
-                            https://assets.revolutionuc.com/website-images/2023/photos/2x/home-1.png 2x,
-                            https://assets.revolutionuc.com/website-images/2023/photos/3x/home-1.png 3x,
-                            https://assets.revolutionuc.com/website-images/2023/photos/4x/home-1.png 4x"
-                    alt="Photo taken at RevolutionUC"
-                >
-            </div>
-
-            <div class="text">
-                <p><strong>RevolutionUC</strong> is a 24-hour student hackathon at the University of Cincinnati that is organized by <a href="http://acmatuc.org/" target="_blank" rel="noopener">ACM@UC</a>. We invite you to join 300+ motivated students for an awesome weekend of code, community, and self-improvement! You don&rsquo;t have to have to be a computer science major or engineering student to attend. It&rsquo;s a learning experience for students of all skill levels!</p>
-            </div>
-        </section>
-
-        <section class="flex flex--reverse-small section--no-padding-top">
-            <div class="text">
-                <p class="text-right">A <strong>hackathon</strong> is an event where people get together, form teams, build something new to solve a problem, and have fun doing it! Some project ideas include websites, mobile apps, robots, and more! A hackathon is an all-inclusive environment, you&rsquo;ll learn something new and meet people who are passionate about technology.</p>
-            </div>
-
-            <div class="image">
-                <img
-                    srcset="https://assets.revolutionuc.com/website-images/2021/photos/1x/home-2.jpg,
-                            https://assets.revolutionuc.com/website-images/2021/photos/2x/home-2.jpg 2x,
-                            https://assets.revolutionuc.com/website-images/2021/photos/3x/home-2.jpg 3x,
-                            https://assets.revolutionuc.com/website-images/2021/photos/4x/home-2.jpg 4x"
-                    src="https://assets.revolutionuc.com/website-images/2021/photos/1x/home-2.jpg"
-                    alt="Photo taken at RevolutionUC"
-                >
-            </div>
-        </section>
-        <section class="flex section--no-padding-top">
-            <div class="image">
-                <img
-                    src="/img/1819-innovation-img.jpg"
-                    alt="Photo of The 1819 Innovation Center"
-                >
-            </div>
-
-            <div class="text">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Morbi quis commodo odio aenean sed adipiscing diam donec adipiscing. Porta non pulvinar neque laoreet suspendisse interdum. Elementum curabitur vitae nunc sed velit dignissim sodales ut eu. Molestie at elementum eu facilisis sed odio (Photo taken from the <a href="https://innovation.uc.edu/" target="_blank" rel="noopener">1819 Innovation Hub Website</a>).</p>
-            </div>
-        </section>
-    </div>
-
-    <section>
-        <div class="past-hacks-wrappers container call-to-action">
-            <p class="text-center">RevolutionUC has been a leader in the Cincinnati hacker community since 2014. Check out submissions from previous hackathons.</p>
-
-            <div class="past-hacks">
-                {% for hack in site.data.past-hacks reversed %}
-                    <div class="hack hack--{{ hack.time | replace: ' ','-' }}">
-                        <div class="hack__image">
-                            <a href="{{ hack.link }}" target="_blank" rel="noopener">
-                                <img class="past__hacks__image" src="{{ hack.image }}" alt="{{ hack.name }} logo">
-                                <div class="hack__text">{{ hack.time }}</div>
-                            </a>
-                        </div>
-                    </div>
-                {% endfor %}
-            </div>
-        </div>
+      <div class="text">
+        <p>
+          <strong>RevolutionUC</strong> is a 24-hour student hackathon at the University of Cincinnati that is organized
+          by <a href="http://acmatuc.org/" target="_blank" rel="noopener">ACM@UC</a>. We invite you to join 300+
+          motivated students for an awesome weekend of code, community, and self-improvement! You don&rsquo;t have to
+          have to be a computer science major or engineering student to attend. It&rsquo;s a learning experience for
+          students of all skill levels!
+        </p>
+      </div>
     </section>
+
+    <section class="flex flex--reverse-small section--no-padding-top">
+      <div class="text">
+        <p class="text-right">
+          A <strong>hackathon</strong> is an event where people get together, form teams, build something new to solve a
+          problem, and have fun doing it! Some project ideas include websites, mobile apps, robots, and more! A
+          hackathon is an all-inclusive environment, you&rsquo;ll learn something new and meet people who are passionate
+          about technology.
+        </p>
+      </div>
+
+      <div class="image">
+        <img
+          srcset="
+            https://assets.revolutionuc.com/website-images/2021/photos/1x/home-2.jpg,
+            https://assets.revolutionuc.com/website-images/2021/photos/2x/home-2.jpg 2x,
+            https://assets.revolutionuc.com/website-images/2021/photos/3x/home-2.jpg 3x,
+            https://assets.revolutionuc.com/website-images/2021/photos/4x/home-2.jpg 4x
+          "
+          src="https://assets.revolutionuc.com/website-images/2021/photos/1x/home-2.jpg"
+          alt="Photo taken at RevolutionUC"
+        />
+      </div>
+    </section>
+    <section class="flex section--no-padding-top">
+      <div class="image">
+        <img src="/img/1819-innovation-img.jpg" alt="Photo of The 1819 Innovation Hub" />
+      </div>
+
+      <div class="text">
+        <p>
+          This year, we will be hosting the entire hackathon in-person at the
+          <strong>1819 Innovation Hub</strong>! The 1819 Innovation Hub is located at 2900
+          Reading Rd, Cincinnati, OH 45206 and is a fantastic facility with many beautiful classrooms and collaborative
+          work spaces. Visit their website at
+          <a href="https://innovation.uc.edu" target="_blank" rel="noopener">innovation.uc.edu</a> to learn more about
+          our amazing venue this year!
+          (Photo taken from the 1819 Innovation Hub Website).</p>
+        </p>
+      </div>
+    </section>
+  </div>
+
+  <section>
+    <div class="past-hacks-wrappers container call-to-action">
+      <p class="text-center">
+        RevolutionUC has been a leader in the Cincinnati hacker community since 2014. Check out submissions from
+        previous hackathons.
+      </p>
+
+      <div class="past-hacks">
+        {% for hack in site.data.past-hacks reversed %}
+        <div class="hack hack--{{ hack.time | replace: ' ','-' }}">
+          <div class="hack__image">
+            <a href="{{ hack.link }}" target="_blank" rel="noopener">
+              <img class="past__hacks__image" src="{{ hack.image }}" alt="{{ hack.name }} logo" />
+              <div class="hack__text">{{ hack.time }}</div>
+            </a>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
 </main>
