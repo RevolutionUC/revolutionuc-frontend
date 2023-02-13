@@ -37,7 +37,7 @@ if (window.location.href.indexOf("verify") > -1) {
       } else {
         h1.textContent = "Error";
         content.textContent =
-          "There was a problem verifying your registration.  Please contact us at info@revolutionuc.com.";
+          "There was a problem verifying your registration. Please contact us at info@revolutionuc.com.";
       }
     });
   }
@@ -46,7 +46,7 @@ if (window.location.href.indexOf("verify") > -1) {
 if (window.location.href.indexOf("attendance") > -1) {
   var confirm = getUrlParam("confirm", "none");
   var id = getUrlParam("id", "none");
-  var h1 = document.getElementsByTagName("h1")[1];
+  var h1 = document.getElementsByTagName("h1")[0];
   var content = document.getElementsByName("textValue")[0];
 
   if (confirm == "none" || id == "none") {
@@ -73,19 +73,19 @@ if (window.location.href.indexOf("attendance") > -1) {
       if (confirm == 'false') {
         document.title = "Confirm Attendance";
         h1.textContent = "Attendance Confirmed";
-        content.textContent = "Thank You!  You have confirmed that you will NOT be attending RevolutionUC {{ site.data.config.eventData.date.year }}.";
+        content.textContent = "Thank You! You have confirmed that you will NOT be attending RevolutionUC 2023.";
       } else if (confirm == 'true') {
         if (response.status == 200 || response.status == 201) {
           document.title = "Confirm Attendance";
           h1.textContent = "Attendance Confirmed";
-          content.textContent = "Thank You!  You have confirmed your attendance to RevolutionUC {{ site.data.config.eventData.date.year }}!";
+          content.textContent = "Thank You! You have confirmed your attendance to RevolutionUC 2023!";
         } else if (response.status == 500) {
           response.json().then(body => {
             if (body.error == "ConfirmedQuotaReached") {
               document.title = "Waitlist";
               h1.textContent = "You have been placed on the waitlist.";
               content.innerHTML =
-              "<p>The maximum number of people have already confirmed their attendance to RevolutionUC {{ site.data.config.eventData.date.year }}.  As a result you have been placed on the waitlist.</p>" +
+              "<p>The maximum number of people have already confirmed their attendance to RevolutionUC 2023. As a result you have been placed on the waitlist.</p>" +
               "<p>We will contact you if you are moved off of the waitlist, or you may attempt to check in the day of the event after the opening ceremony.</p>" + 
               "<p>If you are NOT removed from the waitlist you are still welcome to participate, but you will not be provided meals or swag.</p>";
             } else {
