@@ -1,6 +1,6 @@
 - date: February 25th
 
-- time: 10:30 AM
+- time: 10:00 AM
   event: Check-in Opens
   location:
 
@@ -19,31 +19,42 @@
 - time: 12:30 PM
   event: <b>Hacking Begins</b>
   location:
+
+- time: 1:30 PM - 2:00PM
+  event: Cyber@UC Capture The Flag Intro Session
+  location:
   
-- time: 1:45 PM
-  event: Workshop Sessions Begin
+- time: 2:30 PM - 3:00PM
+  event: Workshop 1&#58; "Stop Brainstorming and Start Innovating" by 5/3
+  location:
+
+- time: 3:30PM - 4:00PM
+  event: Workshop 2&#58; "Auth with Clerk in Next.js" by Clerk.dev
   location:
 
 - time: 6:00 PM
-  event: Dinner
+  event: Dinner&#58; Buca
   location:
 
 - time: 7:00 PM
-  event: MLH Capture The Flag
+  event: MLH Bob Ross with MS Paint
   location:
 
 - time: 8:00 PM
-  event: MLH Bob Ross with MS Paint
+  event: MLH Capture The Flag
   location:
+
+- time: 9:00PM - 12:00AM
+  event: Esports Lab open until midnight
 
 - date: February 26th
 
 - time: 12:00 AM
-  event: Midnight Snack
+  event: Midnight Snack&#58; Potbelly Shakes and Cookies
   location:
 
 - time: 1:00 AM
-  event: Paper Airplane Compeition
+  event: Paper Airplane Competition
   location:
 
 - time: 6:00 AM
@@ -51,11 +62,11 @@
   location:
 
 - time: 8:00 AM
-  event: Breakfast
+  event: Breakfast&#58; Einstein Bro's
   location:
 
 - time: 12:00 PM
-  event: Lunch
+  event: Lunch&#58; Chipotle
   location:
 
 - time: 12:30 PM

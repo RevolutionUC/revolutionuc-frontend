@@ -92,14 +92,14 @@ if (window.location.href.indexOf("attendance") > -1) {
               document.title = "Error";
               h1.textContent = "Error";
               content.textContent =
-                "There was a problem confirming your attendance.  Please contact us at info@revolutionuc.com.";
+                "There was a problem confirming your attendance. Please contact us at info@revolutionuc.com.";
             }
           })
         } else {
           document.title = "Error";
           h1.textContent = "Error";
           content.textContent =
-            "There was a problem confirming your attendance.  Please contact us at info@revolutionuc.com.";
+            "There was a problem confirming your attendance. Please contact us at info@revolutionuc.com.";
         }
       }
     });
