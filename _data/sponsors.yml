@@ -35,11 +35,25 @@ gold:
     svg: true
 
 silver:
-  - name: School of IT
+  - name: school-of-it
     link: https://cech.uc.edu/schools/it.html
     image: https://itsc-flipbook.cech.uc.edu/img/soit_logo.2fac3ba9.png
     svg: false
 
+  - name: ipal
+    link: https://www.instagram.com/ucipals/
+    image: https://assets.revolutionuc.com/sponsor-logos/2023/ipal.png
+    svg: false
+
+  - name: cincy-venture
+    link: https://cincinnati.ventures/
+    image: https://assets.revolutionuc.com/sponsor-logos/2023/cincy-ventures.svg
+    svg: true
+
+  - name: medpace
+    link: https://www.medpace.com/
+    image: https://assets.revolutionuc.com/sponsor-logos/2023/medpace.png
+    svg: false
 money:
   - name: stickermule
     link: https://mule.to/p3ob
@@ -51,7 +65,7 @@ money:
     image: https://assets.revolutionuc.com/sponsor-logos/2023/1819hub.png
     svg: false
     
-  - name: CEAS Tribunal
+  - name: ceas-tribunal
     link: https://www.tribunal.uc.edu/
     image: https://www.tribunal.uc.edu/themes/custom/ceas_tribunal/images/tribunal_logo_color.png
     svg: false

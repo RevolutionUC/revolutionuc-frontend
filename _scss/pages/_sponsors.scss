@@ -9,7 +9,7 @@
 }
 
 .sponsor-image {
-  flex: 1 1 0;
+  min-width: 200px;
   :where(img) {
     height: 100%;
     margin-left: auto;
@@ -19,6 +19,12 @@
     max-height: 100px;
     border-radius: 0;
   }
+}
+
+.sponsor-high-tier, .sponsor-medium-tier {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 // .sponsor-diamond {
@@ -51,7 +57,7 @@
 
 // This image is a bit big to we have to manually downsize it
 [id="clerk-dev-image"] {
-  max-height: 100px;
+  max-height: 200px;
 }
 
 [id="mlh-image"] {
@@ -62,13 +68,29 @@
   max-height: 90px;
 }
 
+[id="medpace-image"] {
+  max-height: 50px;
+}
+
+[id="kinetic-vision-image"] {
+  max-height: 60px;
+}
+
+[id="ceas-tribunal-image"] {
+  max-height: 80px;
+}
+
 // These images ảe a bit small since there is many whitespace round to we manually upsize them
 [id="stickermule-image"] {
   max-height: 120px;
 }
 
 [id="fifth-third-image"] {
-  max-height: 130px;
+  max-height: 140px;
+}
+
+[id="cincy-venture-image"] {
+  max-height: 105px;
 }
 
 

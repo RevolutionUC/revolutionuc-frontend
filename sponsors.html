@@ -10,7 +10,7 @@ description: Sponsoring organizations for RevolutionUC — Hackathon at the Univ
 
 <section class="container container--sponsor section">
   <div class="sponsor-list">
-    <div class="flex sponsor-high-tier">
+    <div class="flex sponsor-ultimate-tier">
       {% for sponsor in site.data.sponsors.diamond %}
         <div class="sponsor-image">
           <a href="{{ sponsor.link }}" target="_blank noopenner">
@@ -22,7 +22,9 @@ description: Sponsoring organizations for RevolutionUC — Hackathon at the Univ
           </a>
         </div>
       {% endfor %}
+    </div>
 
+    <div class="flex sponsor-high-tier">
       {% for sponsor in site.data.sponsors.platinum %}
         <div class="sponsor-image">
           <a href="{{ sponsor.link }}" target="_blank noopenner">
@@ -34,9 +36,7 @@ description: Sponsoring organizations for RevolutionUC — Hackathon at the Univ
           </a>
         </div>
       {% endfor %}
-    </div>
-
-    <div class="flex sponsor-medium-tier">
+      
       {% for sponsor in site.data.sponsors.gold %}
         <div class="sponsor-image">
           <a href="{{ sponsor.link }}" target="_blank noopenner">
@@ -48,7 +48,8 @@ description: Sponsoring organizations for RevolutionUC — Hackathon at the Univ
           </a>
         </div>
       {% endfor %}
-
+    </div>
+    <div class="flex sponsor-medium-tier">
       {% for sponsor in site.data.sponsors.silver %}
         <div class="sponsor-image">
           <a href="{{ sponsor.link }}" target="_blank noopenner">
@@ -60,7 +61,7 @@ description: Sponsoring organizations for RevolutionUC — Hackathon at the Univ
           </a>
         </div>
       {% endfor %}
-    </div>
+      </div>
 
     <div class="flex">
       {% for sponsor in site.data.sponsors.money %}
