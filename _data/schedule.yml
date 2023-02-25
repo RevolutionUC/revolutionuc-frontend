@@ -10,11 +10,11 @@
 
 - time: 10:30 AM
   event: Sponsor Expo Opens
-  location:
+  location: 260
 
 - time: 11:30 AM
   event: <b>Opening Ceremony</b>
-  location:
+  location: 230
   
 - time: 12:30 PM
   event: <b>Hacking Begins</b>
@@ -22,19 +22,19 @@
 
 - time: 1:30 PM - 2:00PM
   event: Cyber@UC Capture The Flag Intro Session
-  location:
+  location: 210A
   
 - time: 2:30 PM - 3:00PM
   event: Workshop 1&#58; "Stop Brainstorming and Start Innovating" by 5/3
-  location:
+  location: 210A
 
 - time: 3:30PM - 4:00PM
   event: Workshop 2&#58; "Auth with Clerk in Next.js" by Clerk.dev
-  location:
+  location: 210A
 
 - time: 4:30PM - 5:00PM
   event: Workshop 3&#58; "Intro to Design Systems" by Liz
-  location:
+  location: 210A
 
 - time: 6:00 PM
   event: Dinner&#58; Buca
@@ -42,11 +42,11 @@
 
 - time: 7:00 PM
   event: MLH Bob Ross with MS Paint
-  location:
+  location: 210A
 
 - time: 8:00 PM
-  event: MLH Capture The Flag
-  location:
+  event: MLH Snyk Cybersecurity Challenge
+  location: 210A
 
 - time: 9:00PM - 12:00AM
   event: Esports Lab open until midnight
@@ -79,4 +79,4 @@
 
 - time: 2:30 PM
   event: <b>Closing Ceremony Begins</b>
-  location:
+  location: 230
