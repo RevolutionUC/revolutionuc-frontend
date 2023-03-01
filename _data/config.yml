@@ -11,10 +11,10 @@ navbar:
 
 homepage:
   # The timeline options are: pre-registration, registration, live, post-registration
-  timeline: live
+  timeline: post-registration
 
 livesite:
-  show-livesite: true
+  show-livesite: false
   show-judging-info: false
   show-travel-info: false
 
